@@ -21,11 +21,20 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main"
-        android:layout_height="250dp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <include layout="@layout/audiolist_main"
-        android:layout_height="300dp" />
+        <ListView
+            android:id="@+id/audioList"
+            style="@style/Widget.AppCompat.ListView"
+            android:layout_width="wrap_content"
+            android:layout_height="551dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="8dp">
+
+        </ListView>
+    </FrameLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
