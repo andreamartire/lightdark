@@ -3,6 +3,7 @@
 import urllib.request
 import re
 import requests
+import json
 
 print ('Start')
 
@@ -32,10 +33,18 @@ for i in range(len(rows)):
 
 #Example http://www.radio3.rai.it/dl/portaleRadio/Programmi/Page-9fe19bce-1c27-4b63-b41e-2d7581d21374.html?set=ContentSet-b63181f3-deec-4cb7-84db-96169b0725e7&type=A
 
+audiobooks = []
+bookId = 0
+
 print ("=== Content List ===")
 for i in range(len(listContentId)):
 	i = i+2
 	print (listContentId[i])
+
+	book = {}
+	book['id'] = bookId
+	bookContents = []
+	chapterId = 0
 	
 	#esclude libro non ancora disponibile
 	if (listContentId[i] != 'ContentSet-c8dea08e-d95a-40ef-8f07-13276ee004b0'):
@@ -44,7 +53,7 @@ for i in range(len(listContentId)):
 		receivedNotFound = False
 
 		while (not receivedNotFound):
-			print ("J="+str(j))
+			#print ("J="+str(j))
 			url = 'http://www.radio3.rai.it/dl/portaleRadio/programmi/json/liste/' + listContentId[i] + '-json-A-' + str(j) + '.html'
 			params = {}
 			headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0',
@@ -62,21 +71,55 @@ for i in range(len(listContentId)):
 			response = requests.get(url, params=params, headers=headers)
 	
 			try:
-				
 				#print (response)
 				listElements = response.json()['list']
 
-				print (listElements)
+				#print (listElements)
+
 
 				for el in listElements:
-					print (" * " + el['desc'] + " - " + el['name'] + "\n\t" + el['mp3'])
-					#print ("Mp3: " + el['mp3'])
+					chapter = {}
+
+					print ("------------------------------------")
+					print ("Desc: " + el['desc'])					
+					print ("Name: " + el['name'])
+					print ("Mp3: " + el['mp3'])
+
+					chapter['id'] = chapterId
+					chapter['title'] = el['name']
+					chapter['desc'] = el['desc']
+					chapter['url'] = el['mp3']
+					chapter['format'] = 'mp3'
+
+					chapterId = chapterId + 1
+					
+					print ('Chapter: ' + str(chapter))
+	
+					bookContents.append(chapter) 
+
 			except:
 				receivedNotFound = True
 
-
 			j = j+1
+		
+		book['contents'] = bookContents
+		audiobooks.append(book)
 
 	if i >= 3:
 		break
+	
+	bookId = bookId + 1
+	chapterId = 0
+
+data = {}
+data['version'] = 0
+data['config'] = {}
+data['audiobooks'] = audiobooks
+json_data = json.dumps(data)
+
+print(json.dumps(data, sort_keys=True, indent=4))
+
+out_file = open("config.json","w")
+out_file.write(json.dumps(data, sort_keys=True, indent=4))
+out_file.close()
 
