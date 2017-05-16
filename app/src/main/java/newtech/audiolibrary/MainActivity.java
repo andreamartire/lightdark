@@ -1,71 +1,61 @@
 package newtech.audiolibrary;
 
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.os.Environment;
+import android.support.v4.media.session.MediaButtonReceiver;
+import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.View;
+import android.widget.Button;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
-    private ListView lv;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        lv = (ListView) findViewById(R.id.audioList);
+        try {
 
-        // Instanciating an array list (you don't need to do this,
-        // you already have yours).
-        List<String> your_array_list = new ArrayList<String>();
-        your_array_list.add("test1");
-        your_array_list.add("test2");
-        your_array_list.add("test3");
-        your_array_list.add("test4");
-        your_array_list.add("test5");
+            playFromResource(R.raw.test);
 
-        // This is the array adapter, it takes the context of the activity as a
-        // first parameter, the type of list view as a second parameter and your
-        // array as a third parameter.
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_list_item_1,
-                your_array_list );
+            playFromUrl("http://users.skynet.be/fa046054/home/P22/track37.mp3");
 
-        lv.setAdapter(arrayAdapter);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+        }catch (Error e){
+            e.printStackTrace();
         }
+    }
 
-        return super.onOptionsItemSelected(item);
+    public void playFromResource(int res){
+        mediaPlayer = MediaPlayer.create(this.getApplicationContext(), R.raw.test);
+        mediaPlayer.start();
+    }
+
+    public void playFromUrl(String url) throws IOException{
+        mediaPlayer = new MediaPlayer();
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        mediaPlayer.setDataSource(url);
+        mediaPlayer.prepare(); // might take long! (for buffering, etc)
+        mediaPlayer.start();
+    }
+
+    public void onDestroy() {
+
+        mediaPlayer.stop();
+        super.onDestroy();
+
     }
 }
+
