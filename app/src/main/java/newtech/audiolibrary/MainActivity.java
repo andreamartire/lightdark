@@ -2,6 +2,7 @@ package newtech.audiolibrary;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -16,20 +17,50 @@ import android.widget.Button;
 
 import java.io.IOException;
 
+import newtech.audiolibrary.task.DownloadTask;
+
 public class MainActivity extends Activity {
 
     private MediaPlayer mediaPlayer;
+
+    // declare the dialog as a member field of your activity
+    ProgressDialog mProgressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String myUrl = "http://users.skynet.be/fa046054/home/P22/track37.mp3";
+        //String myUrl = "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=rGKIDnvU46geeqqEEqual";
+
+        // instantiate it within the onCreate method
+        mProgressDialog = new ProgressDialog(MainActivity.this);
+        mProgressDialog.setMessage("A message");
+        mProgressDialog.setIndeterminate(false);
+        mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        mProgressDialog.setCancelable(true);
+
+        mProgressDialog.show(this, "dialog title",  "dialog message", true);
+
+        // execute this when the downloader must be fired
+        final DownloadTask downloadTask = new DownloadTask(MainActivity.this, mProgressDialog);
+        downloadTask.execute(myUrl, "/sdcard/donwloaded_file.mp3");
+
+        Log.d("MyApp","Start Thread Download");
+
+        mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                downloadTask.cancel(true);
+            }
+        });
+
         try {
 
-            playFromResource(R.raw.test);
+            //playFromResource(R.raw.test);
 
-            playFromUrl("http://users.skynet.be/fa046054/home/P22/track37.mp3");
+            //playFromUrl(myUrl);
 
         }catch (Exception e){
             e.printStackTrace();
