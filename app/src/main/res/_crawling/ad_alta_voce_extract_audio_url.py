@@ -4,6 +4,7 @@ import urllib.request
 import re
 import requests
 import json
+import time
 
 print ('Start')
 
@@ -25,10 +26,11 @@ listContentId = []
 for i in range(len(rows)):
 	#print ("ROW: " + rows[i] + "\n");
 	if (regContent.match(rows[i])):
+		# escludo intestazione Letture
 		if (regNotContent.match(rows[i])):
-			print("--- " + str(regNotContent.match(rows[i]).group(1)) + "---")
+			print("--- EXCLUDE --- " + str(regNotContent.match(rows[i]).group(1)) + "---")
 		else:
-			#print(str(regContent.match(rows[i]).group(1)))
+			print("--- ADD ---"+str(regContent.match(rows[i]).group(1)))
 			listContentId.append(str(regContent.match(rows[i]).group(1)))
 
 #Example http://www.radio3.rai.it/dl/portaleRadio/Programmi/Page-9fe19bce-1c27-4b63-b41e-2d7581d21374.html?set=ContentSet-b63181f3-deec-4cb7-84db-96169b0725e7&type=A
@@ -38,7 +40,7 @@ bookId = 0
 
 print ("=== Content List ===")
 for i in range(len(listContentId)):
-	i = i+2
+	
 	print (listContentId[i])
 
 	book = {}
@@ -105,21 +107,25 @@ for i in range(len(listContentId)):
 		book['contents'] = bookContents
 		audiobooks.append(book)
 
-	if i >= 3:
-		break
+	#if i >= 3:
+	#	break
+	time.sleep(1)
 	
 	bookId = bookId + 1
 	chapterId = 0
 
-data = {}
-data['version'] = 0
-data['config'] = {}
-data['audiobooks'] = audiobooks
+	data = {}
+	data['version'] = 0
+	data['config'] = {}
+	data['audiobooks'] = audiobooks
+
+	out_file = open("config.json","w")
+	out_file.write(json.dumps(data, sort_keys=True, indent=4))
+	out_file.close()
+
 json_data = json.dumps(data)
 
 print(json.dumps(data, sort_keys=True, indent=4))
 
-out_file = open("config.json","w")
-out_file.write(json.dumps(data, sort_keys=True, indent=4))
-out_file.close()
+
 
