@@ -40,37 +40,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         //playTest();
-
-        readConfigFile();
-    }
-
-    private void readConfigFile() {
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(
-                    new InputStreamReader(getAssets().open("config.json")));
-
-            String message = org.apache.commons.io.IOUtils.toString(reader);
-
-            JsonParser parser = new JsonParser();
-            JsonObject o = parser.parse(message).getAsJsonObject();
-
-            JsonElement audioBooks = o.get("audiobooks");
-            JsonArray audioBooksArray = audioBooks.getAsJsonArray();
-
-            message += "";
-
-        } catch (IOException e) {
-            //log the exception
-        } finally {
-            if (reader != null) {
-                try {
-                    reader.close();
-                } catch (IOException e) {
-                    //log the exception
-                }
-            }
-        }
     }
 
     private void playTest() {
