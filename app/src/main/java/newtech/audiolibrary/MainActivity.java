@@ -15,7 +15,15 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 import newtech.audiolibrary.task.DownloadTask;
 
@@ -31,6 +39,41 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //playTest();
+
+        readConfigFile();
+    }
+
+    private void readConfigFile() {
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(
+                    new InputStreamReader(getAssets().open("config.json")));
+
+            String message = org.apache.commons.io.IOUtils.toString(reader);
+
+            JsonParser parser = new JsonParser();
+            JsonObject o = parser.parse(message).getAsJsonObject();
+
+            JsonElement audioBooks = o.get("audiobooks");
+            JsonArray audioBooksArray = audioBooks.getAsJsonArray();
+
+            message += "";
+
+        } catch (IOException e) {
+            //log the exception
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    //log the exception
+                }
+            }
+        }
+    }
+
+    private void playTest() {
         String myUrl = "http://users.skynet.be/fa046054/home/P22/track37.mp3";
         //String myUrl = "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=rGKIDnvU46geeqqEEqual";
 
