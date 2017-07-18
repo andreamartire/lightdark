@@ -5,6 +5,7 @@ import re
 import requests
 import json
 import time
+import traceback
 
 print ('Start')
 
@@ -47,12 +48,17 @@ for i in range(len(listContentId)):
 	book['id'] = bookId
 	bookContents = []
 	chapterId = 0
+
+	image = ''
+	image_300 = ''
+	image_433 = ''	
 	
 	#esclude libro non ancora disponibile
-	if (listContentId[i] != 'ContentSet-c8dea08e-d95a-40ef-8f07-13276ee004b0'):
-
+	if (1<2):
 		j = 0
 		receivedNotFound = False
+		
+		
 
 		while (not receivedNotFound):
 			#print ("J="+str(j))
@@ -61,7 +67,7 @@ for i in range(len(listContentId)):
 			headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0',
 				   'Accept' : 'text/html, */*; q=0.01',
 				   'Accept-Language' : 'en-US,en;q=0.5',
-				   'Accept-Encoding' : 'deflate',
+				   'Accept-Encoding' : 'gzip, deflate',
 				   'X-Requested-With': 'XMLHttpRequest',
 				   'Host': 'www.radio3.rai.it',
 				   'Referer': 'http://www.radio3.rai.it/dl/portaleRadio/Programmi/Page-9fe19bce-1c27-4b63-b41e-2d7581d21374.html?set=' + listContentId[i] + '&type=A',
@@ -70,46 +76,88 @@ for i in range(len(listContentId)):
 				   'Cache-Control': 'max-age=0'
 			} 
 
-			response = requests.get(url, params=params, headers=headers)
-	
+			#http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=7ESImH65m1oeeqqEEqual
+
+			response = requests.get(url, params=params, headers=headers)		
+
 			try:
-				#print (response)
-				listElements = response.json()['list']
-
-				#print (listElements)
-
+				print (response)
+				listElements = response.json().get('list',[])
+				
+				print ('\n\n\n------------------ ELEMENTS ------------------\n\n\n')
+				print (listElements)
 
 				for el in listElements:
 					chapter = {}
 
 					print ("------------------------------------")
-					print ("Desc: " + el['desc'])					
-					print ("Name: " + el['name'])
-					print ("Mp3: " + el['mp3'])
+					print (el)
+					print ("Desc: " + el.get('desc', ''))					
+					print ("Name: " + el.get('name', ''))
+					print ("Mp3: " + el.get('mp3', ''))
+					print ("WebLink: " + el.get('weblink', ''))
 
+					chapter['contentId'] = listContentId[i]
 					chapter['id'] = chapterId
-					chapter['title'] = el['name']
-					chapter['desc'] = el['desc']
-					chapter['url'] = el['mp3']
+					chapter['title'] = el.get('name', '')
+					chapter['desc'] = el.get('desc', '')
+					chapter['url'] = el.get('mp3', '')
 					chapter['format'] = 'mp3'
+					chapter['weblink'] = el.get('weblink', '')
+					chapter['webLinkLookup'] = False
 
+					image = el.get('image', '')
+					image_300 = el.get('image_300', '')	
+					image_433 = el.get('image_433', '')
+
+					if(chapter['url'] == ''):
+						#force detect audio url
+						print ('\n\nFORCED ' + chapter['weblink'] + '\n\n')
+						
+						wp = urllib.request.urlopen(chapter['weblink'])
+						sourceBookPage = wp.read()
+
+						#print ("\n\n\n")
+						#print (sourceBookPage)
+						#print ("\n\n\n")
+
+						# var audioUrl = "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=7ESImH65m1oeeqqEEqual";
+						regAudioUrl = re.compile(".*?audioUrl\s*=\s*\"(.*?)\"")
+						
+						if (regAudioUrl.match(str(sourceBookPage))):
+							print("--- URL ---"+str(regAudioUrl.match(str(sourceBookPage)).group(1)))
+							chapter['url'] = str(regAudioUrl.match(str(sourceBookPage)).group(1))
+							chapter['webLinkLookup'] = True
+	
 					chapterId = chapterId + 1
 					
 					print ('Chapter: ' + str(chapter))
-	
-					bookContents.append(chapter) 
 
+					bookContents.append(chapter)
 			except:
 				receivedNotFound = True
+				print ('----------------------- Exception ---------------------')
+				traceback.print_exc()
+				print(url)
 
 			j = j+1
 		
 		book['contents'] = bookContents
-		audiobooks.append(book)
+		
+		book['metadata'] = {		
+			'image': 'http://www.rai.tv' + image,
+			'other_images' : {
+				'image_300' : 'http://www.rai.tv' + image_300,
+				'image_433' : 'http://www.rai.tv' + image_433,
+			},
+			'provider' : {
+				'name' : 'Ad Alta Voce',
+				'site' : 'http://www.adaltavoce.rai.it/',
+				'image' : ''
+			}
+		},
 
-	#if i >= 3:
-	#	break
-	time.sleep(1)
+		audiobooks.append(book)
 	
 	bookId = bookId + 1
 	chapterId = 0
@@ -119,9 +167,13 @@ for i in range(len(listContentId)):
 	data['config'] = {}
 	data['audiobooks'] = audiobooks
 
-	out_file = open("config.json","w")
+	out_file = open("config_test.json","w")
 	out_file.write(json.dumps(data, sort_keys=True, indent=4))
 	out_file.close()
+
+	if i >= 1:
+		break
+	time.sleep(1)
 
 json_data = json.dumps(data)
 
