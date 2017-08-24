@@ -30,6 +30,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import newtech.audiolibrary.bean.Chapter;
+
 public class AudioBookShowList extends Activity {
 
     private static String CONTENTS = "contents";
@@ -42,7 +44,7 @@ public class AudioBookShowList extends Activity {
         ListView listView = (ListView)findViewById(R.id.audiobooks_listview);
 
         List<String> bookTitles = new ArrayList<>();
-        final Map<String,List<String>> chaptersByTitle = new HashMap<String,List<String>>();
+        final Map<String,List<Chapter>> chaptersByTitle = new HashMap<String,List<Chapter>>();
 
         BufferedReader reader = null;
         try {
@@ -65,13 +67,18 @@ public class AudioBookShowList extends Activity {
 
                 //iterate over chapters
                 if(!chaptersByTitle.containsKey(title)){
-                    chaptersByTitle.put(title, new LinkedList<String>());
+                    chaptersByTitle.put(title, new LinkedList<Chapter>());
                 }
 
                 Iterator it = obj.get(CONTENTS).getAsJsonArray().iterator();
                 while (it.hasNext()){
-                    JsonElement chapter = (JsonElement) it.next();
-                    chaptersByTitle.get(title).add(chapter.getAsJsonObject().get("title").getAsString());
+                    JsonElement jsonChapter = (JsonElement) it.next();
+
+                    Chapter chapter = new Chapter();
+                    chapter.setTitle(jsonChapter.getAsJsonObject().get("title").getAsString());
+                    chapter.setUrl(jsonChapter.getAsJsonObject().get("url").getAsString());
+
+                    chaptersByTitle.get(title).add(chapter);
                 }
             }
 
@@ -94,19 +101,17 @@ public class AudioBookShowList extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> adapterView, View v, int i, long l){
+                //manage tap on audiobook list
                 Intent intent = new Intent(v.getContext(), ChapterShowList.class);
 
                 String title = (String) adapterView.getItemAtPosition(i);
 
+                //pass data thought intent to another activity
                 intent.putExtra(ChapterShowList.TITLE, title);
                 intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) chaptersByTitle.get(title));
 
                 startActivity(intent);
             }
         });
-    }
-
-    private void readConfigFile() {
-
     }
 }
