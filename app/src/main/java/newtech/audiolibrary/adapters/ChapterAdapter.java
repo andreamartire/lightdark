@@ -42,6 +42,7 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
             TextView chapterTitle = (TextView) convertView.findViewById(R.id.chapterTitle);
             chapterTitle.setText(chapter.getTitle());
         }
+
         return convertView;
     }
 }

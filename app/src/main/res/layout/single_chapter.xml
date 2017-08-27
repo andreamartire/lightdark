@@ -6,7 +6,7 @@
 
     <TextView
         android:id="@+id/chapterTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.6"
         android:padding="10dip"
@@ -16,21 +16,22 @@
     <ProgressBar
         android:id="@+id/downloadProgressBar"
         style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/playButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
-        android:text="Play" />
+        android:text="Play"
+        android:onClick="myClickHandler"/>
 
     <Button
         android:id="@+id/downloadButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
         android:text="Download" />

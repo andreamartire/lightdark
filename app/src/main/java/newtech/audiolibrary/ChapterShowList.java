@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -48,62 +49,39 @@ public class ChapterShowList extends Activity {
         ArrayAdapter<Chapter> arrayAdapter = new ChapterAdapter(this.getBaseContext(), R.layout.single_chapter, chapters);
         chaptersListView.setAdapter(arrayAdapter);
 
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                //.add(R.id.chapterView, new PlaceholderFragment())
-                    .commit();
-
-        }
+        View singleChapterView = this.getLayoutInflater().inflate(R.layout.single_chapter, chaptersListView, false);
+        Button playButton = (Button) singleChapterView.findViewById(R.id.playButton);
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment implements View.OnClickListener {
+    public void myClickHandler(View v) {
+        //get the row the clicked button is in
+        LinearLayout linearLayout = (LinearLayout)v.getParent();
 
-        public PlaceholderFragment() {}
+        //manage tap on chapter's list
+        AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        TextView title = (TextView) linearLayout.findViewById(R.id.chapterTitle);
 
-            View rootView = inflater.inflate(R.layout.single_chapter, container, false);
-            Button playButton = (Button) rootView.findViewById(R.id.playButton);
 
-            //init tap listener
-            playButton.setOnClickListener(this);
-
-            return rootView;
-        }
-
-        @Override
-        public void onClick(View v) {
-            //manage tap on chapter's list
-            AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-
-            RelativeLayout rl = (RelativeLayout) v.getParent();
-            TextView title = (TextView) rl.findViewById(R.id.chapterTitle);
-            Chapter chapter = (Chapter) title.getText();
-
-            builder.setMessage(chapter.getUrl()).setTitle("Play " + chapter.getTitle()).setCancelable(true);
-            AlertDialog dialog = builder.create();
-            dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                @Override
-                public void onCancel(DialogInterface dialog) {
-                    mediaPlayer.stop();
-                    mediaPlayer.release(); // release resources
-                }
-            });
-            dialog.show();
-
-            mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-            try {
-                mediaPlayer.setDataSource(chapter.getUrl());
-                mediaPlayer.prepare(); // might take long! (for buffering, etc)
-                mediaPlayer.start();
-            } catch (IOException e) {
-                e.printStackTrace();
+        builder.setMessage(title.getText()).setTitle("Play " + title.getText()).setCancelable(true);
+        AlertDialog dialog = builder.create();
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                mediaPlayer.stop();
+                mediaPlayer.release(); // release resources
             }
-        }
+        });
+        dialog.show();
+
+//        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+//        try {
+//            mediaPlayer.setDataSource(chapter.getUrl());
+//            mediaPlayer.prepare(); // might take long! (for buffering, etc)
+//            mediaPlayer.start();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     private List<String> getTitles(List<Chapter> chapters) {
