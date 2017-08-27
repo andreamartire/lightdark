@@ -171,9 +171,7 @@ for i in range(len(listContentId)):
 	out_file.write(json.dumps(data, sort_keys=True, indent=4))
 	out_file.close()
 
-	if i >= 1:
-		break
-	time.sleep(1)
+	time.sleep(10)
 
 json_data = json.dumps(data)
 
