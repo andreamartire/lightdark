@@ -67,7 +67,7 @@ public class AudioBookShowList extends Activity {
 
                 //iterate over chapters
                 if(!chaptersByTitle.containsKey(title)){
-                    chaptersByTitle.put(title, new LinkedList<Chapter>());
+                    chaptersByTitle.put(title, new ArrayList<Chapter>());
                 }
 
                 Iterator it = obj.get(CONTENTS).getAsJsonArray().iterator();
