@@ -21,8 +21,9 @@
         android:layout_weight="0.2"
         android:visibility="invisible" />
 
-    <Button
+    <newtech.audiolibrary.stream.ChapterPlayStreamButton
         android:id="@+id/playButton"
+        android:theme="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
