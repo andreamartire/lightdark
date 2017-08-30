@@ -28,13 +28,15 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
         android:text="Play"
-        android:onClick="myClickHandler"/>
+        android:onClick="myClickPlayHandler"/>
 
-    <Button
+    <newtech.audiolibrary.stream.ChapterDownloadButton
         android:id="@+id/downloadButton"
+        android:theme="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
-        android:text="Download" />
+        android:text="Download"
+        android:onClick="myClickDownloadHandler"/>
 
 </LinearLayout>

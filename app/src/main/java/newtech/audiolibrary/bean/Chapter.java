@@ -7,6 +7,7 @@ import java.io.Serializable;
  */
 
 public class Chapter implements Serializable {
+    String bookTitle;
     String title;
     String url;
     String localFile;
@@ -19,6 +20,14 @@ public class Chapter implements Serializable {
         this.title = title;
         this.url = url;
         this.localFile = localFile;
+    }
+
+    public String getBookTitle() {
+        return bookTitle;
+    }
+
+    public void setBookTitle(String bookTitle) {
+        this.bookTitle = bookTitle;
     }
 
     public String getUrl() {

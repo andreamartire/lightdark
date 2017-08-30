@@ -6,6 +6,7 @@ package newtech.audiolibrary;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -16,12 +17,15 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
 import newtech.audiolibrary.adapters.ChapterAdapter;
 import newtech.audiolibrary.bean.Chapter;
+import newtech.audiolibrary.stream.ChapterDownloadButton;
 import newtech.audiolibrary.stream.ChapterPlayStreamButton;
+import newtech.audiolibrary.task.DownloadTask;
 
 public class ChapterShowList extends Activity {
 
@@ -44,7 +48,7 @@ public class ChapterShowList extends Activity {
         chaptersListView.setAdapter(arrayAdapter);
     }
 
-    public void myClickHandler(View v) {
+    public void myClickPlayHandler(View v) {
         //get the row the clicked button is in
         LinearLayout linearLayout = (LinearLayout)v.getParent();
 
@@ -78,6 +82,54 @@ public class ChapterShowList extends Activity {
             mediaPlayer.prepare(); // might take long! (for buffering, etc)
             mediaPlayer.start();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // declare the dialog as a member field of your activity
+    ProgressDialog mProgressDialog;
+
+    public void myClickDownloadHandler(View v) {
+        //get the row the clicked button is in
+        LinearLayout linearLayout = (LinearLayout)v.getParent();
+
+        ChapterDownloadButton downloadButton = (ChapterDownloadButton) v;
+
+        //manage tap on chapter's list
+        AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+
+        TextView title = (TextView) linearLayout.findViewById(R.id.chapterTitle);
+
+        Chapter currentChapter = downloadButton.getChapter();
+
+        builder.setMessage(currentChapter.getUrl())
+                .setTitle("Download " + currentChapter.getTitle())
+                .setCancelable(true);
+
+        try {
+            //execute download
+
+            // instantiate it within the onCreate method
+            ProgressDialog mProgressDialog = new ProgressDialog(ChapterShowList.this);
+            mProgressDialog.setIndeterminate(true);
+            mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            mProgressDialog.setCancelable(true);
+            mProgressDialog.setMessage(currentChapter.getUrl());
+            mProgressDialog.setTitle("Download " + currentChapter.getTitle());
+
+            // execute this when the downloader must be fired
+            final DownloadTask downloadTask = new DownloadTask(ChapterShowList.this, mProgressDialog);
+            String dirPath = this.getBaseContext().getFilesDir() + File.separator + currentChapter.getBookTitle();
+            String fileName = currentChapter.getTitle() + ".mp3";
+            downloadTask.execute(currentChapter.getUrl(), dirPath, fileName);
+
+            mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                @Override
+                public void onCancel(DialogInterface dialog) {
+                    downloadTask.cancel(true);
+                }
+            });
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

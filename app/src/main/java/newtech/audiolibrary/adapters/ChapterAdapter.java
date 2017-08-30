@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Chapter;
+import newtech.audiolibrary.stream.ChapterDownloadButton;
 import newtech.audiolibrary.stream.ChapterPlayStreamButton;
 
 /**
@@ -46,6 +47,9 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
 
             ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) convertView.findViewById(R.id.playButton);
             playStreamButton.setChapter(chapter);
+
+            ChapterDownloadButton downloadButton = (ChapterDownloadButton) convertView.findViewById(R.id.downloadButton);
+            downloadButton.setChapter(chapter);
         }
 
         return convertView;

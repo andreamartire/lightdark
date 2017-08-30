@@ -75,7 +75,8 @@ public class AudioBookShowList extends Activity {
                     JsonElement jsonChapter = (JsonElement) it.next();
 
                     Chapter chapter = new Chapter();
-                    chapter.setTitle(jsonChapter.getAsJsonObject().get("title").getAsString());
+                    chapter.setBookTitle(title.replaceAll("/", "_"));
+                    chapter.setTitle(jsonChapter.getAsJsonObject().get("title").getAsString().replaceAll("/", "_"));
                     chapter.setUrl(jsonChapter.getAsJsonObject().get("url").getAsString());
 
                     chaptersByTitle.get(title).add(chapter);

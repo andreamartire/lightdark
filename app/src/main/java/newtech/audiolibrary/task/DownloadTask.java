@@ -7,6 +7,7 @@ import android.os.PowerManager;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -38,7 +39,8 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         HttpURLConnection connection = null;
         try {
             URL url = new URL(sUrl[0]);
-            String filepath = sUrl[1];
+            String dir = sUrl[1];
+            String fileName = sUrl[2];
 
             connection = (HttpURLConnection) url.openConnection();
             connection.connect();
@@ -56,7 +58,17 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
 
             // download the file
             input = connection.getInputStream();
-            output = new FileOutputStream(filepath);// /sdcard/file_name.extension
+
+            if(!new File(dir).exists()){
+                new File(dir).mkdir();
+            }
+            //if file not exists
+            if(!new File(dir + File.separator + fileName).exists()){
+                //create it. avoid exception no such file
+                new File(dir + File.separator + fileName).createNewFile();
+            }
+
+            output = new FileOutputStream(dir + File.separator + fileName);
 
             byte data[] = new byte[4096];
             long total = 0;
