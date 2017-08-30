@@ -37,12 +37,14 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         InputStream input = null;
         OutputStream output = null;
         HttpURLConnection connection = null;
+        String dir = null;
         try {
             URL url = new URL(sUrl[0]);
-            String dir = sUrl[1];
+            dir = sUrl[1];
             String fileName = sUrl[2];
 
             connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestProperty("User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36");
             connection.connect();
 
             // expect HTTP 200 OK, so we don't mistakenly save error report
@@ -68,6 +70,7 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
                 new File(dir + File.separator + fileName).createNewFile();
             }
 
+            Log.d("MyApp","Saving file to: " + dir + File.separator + fileName);
             output = new FileOutputStream(dir + File.separator + fileName);
 
             byte data[] = new byte[4096];
@@ -92,8 +95,17 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
             mProgressDialog.dismiss();
             
         } catch (Exception e) {
+
             e.printStackTrace();
-            return e.toString();
+
+            // TODO Refactoring
+            File[] filesList = new File(dir).listFiles();
+            for(File f : filesList){
+                long size = f.length();
+                System.out.println("Size: " + size);
+            }
+
+            return null;// TODO manage exception e.toString();
         } finally {
             try {
                 if (output != null)
