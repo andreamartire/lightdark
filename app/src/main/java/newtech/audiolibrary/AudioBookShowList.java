@@ -5,14 +5,12 @@ package newtech.audiolibrary;
  */
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -26,7 +24,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -34,8 +31,17 @@ import newtech.audiolibrary.bean.Chapter;
 
 public class AudioBookShowList extends Activity {
 
-    private static String CONTENTS = "contents";
-    private static String AUDIOBOOKS = "audiobooks";
+    private static String audiobooks = "audiobooks";
+    private static String contents = "contents";
+    private static String metadata = "metadata";
+    private static String provider = "provider";
+    private static String name = "name";
+    private static String title = "title";
+    private static String url = "url";
+
+    private static String DEFAULT_PROVIDER = "default_provider";
+    private static String DEFAULT_TITLE = "default_title";
+    private static String DEFAULT_BOOK = "default_book";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,35 +60,74 @@ public class AudioBookShowList extends Activity {
 
             JsonObject o = new JsonParser().parse(message).getAsJsonObject();
 
-            JsonElement audioBooks = o.get(AUDIOBOOKS);
-            JsonArray audioBooksArray = audioBooks.getAsJsonArray();
+            JsonElement audioBooks = o.get(audiobooks);
+            if(audioBooks != null){
+                JsonArray audioBooksArray = audioBooks.getAsJsonArray();
 
-            for (int i = 0 ; i < audioBooksArray.size(); i++) {
-                JsonObject obj = audioBooksArray.get(i).getAsJsonObject();
+                for (int i = 0 ; i < audioBooksArray.size(); i++) {
+                    JsonObject obj = audioBooksArray.get(i).getAsJsonObject();
 
-                JsonElement firstElBook = obj.get(CONTENTS).getAsJsonArray().get(0);
-                String title = firstElBook.getAsJsonObject().get("title").getAsString();
+                    //setting provider
+                    String providerName = DEFAULT_PROVIDER;
+                    String bookTitle = DEFAULT_BOOK;
+                    if(obj.get(metadata) != null && obj.get(metadata).getAsJsonArray().size() > 0){
+                        JsonElement metadataObj = obj.get(metadata).getAsJsonArray().get(0);
+                        if(metadataObj != null){
+                            JsonElement providerObj = metadataObj.getAsJsonObject().get(AudioBookShowList.provider);
+                            if(providerObj != null){
+                                JsonElement providerNameObj = providerObj.getAsJsonObject().get(name);
+                                if(providerNameObj != null){
+                                    providerName = providerNameObj.getAsString();
+                                }
+                            }
 
-                bookTitles.add(title);
+                            JsonElement bookTitleObj = metadataObj.getAsJsonObject().get(title);
+                            if(bookTitleObj != null){
+                                bookTitle = bookTitleObj.getAsString();
+                            }
+                        }
+                    }
 
-                //iterate over chapters
-                if(!chaptersByTitle.containsKey(title)){
-                    chaptersByTitle.put(title, new ArrayList<Chapter>());
-                }
+                    if(obj.get(contents) != null && obj.get(contents).getAsJsonArray().size() > 0){
+                        JsonElement firstContentElement = obj.get(contents).getAsJsonArray().get(0);
 
-                Iterator it = obj.get(CONTENTS).getAsJsonArray().iterator();
-                while (it.hasNext()){
-                    JsonElement jsonChapter = (JsonElement) it.next();
+                        // fallback management. if book have metadata without title, select first chapter
+                        if(DEFAULT_BOOK.equals(bookTitle) && firstContentElement != null){
+                            bookTitle = firstContentElement.getAsJsonObject().get("title").getAsString();
+                        }
 
-                    Chapter chapter = new Chapter();
-                    chapter.setBookTitle(title.replaceAll("/", "_"));
-                    chapter.setTitle(jsonChapter.getAsJsonObject().get("title").getAsString().replaceAll("/", "_"));
-                    chapter.setUrl(jsonChapter.getAsJsonObject().get("url").getAsString());
+                        //add book entry
+                        bookTitles.add(bookTitle);
 
-                    chaptersByTitle.get(title).add(chapter);
+                        //init book's chapters list
+                        if(!chaptersByTitle.containsKey(bookTitle)){
+                            chaptersByTitle.put(bookTitle, new ArrayList<Chapter>());
+                        }
+
+                        //setting chapters
+                        Iterator it = obj.get(contents).getAsJsonArray().iterator();
+                        while (it.hasNext()){
+                            JsonElement jsonChapter = (JsonElement) it.next();
+
+                            Chapter chapter = new Chapter();
+
+                            chapter.setAppDir(this.getBaseContext().getFilesDir().getAbsolutePath());
+                            chapter.setProviderName(providerName);
+                            chapter.setBookTitle(bookTitle != null ? bookTitle.replaceAll("/", "_") : DEFAULT_TITLE);
+
+                            JsonObject chapterObj = jsonChapter.getAsJsonObject();
+                            if(chapterObj != null){
+                                if(chapterObj.get(title) != null && chapterObj.get(url) != null){
+                                    chapter.setTitle(chapterObj.get(title).getAsString().replaceAll("/", "_"));
+                                    chapter.setUrl(chapterObj.get(url).getAsString());
+                                }
+                            }
+
+                            chaptersByTitle.get(bookTitle).add(chapter);
+                        }
+                    }
                 }
             }
-
         } catch (IOException e) {
             //log the exception
         } finally {

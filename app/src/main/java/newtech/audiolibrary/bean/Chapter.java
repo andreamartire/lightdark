@@ -1,5 +1,6 @@
 package newtech.audiolibrary.bean;
 
+import java.io.File;
 import java.io.Serializable;
 
 /**
@@ -7,19 +8,25 @@ import java.io.Serializable;
  */
 
 public class Chapter implements Serializable {
+
+    public static String MP3_EXTENSION = ".mp3";
+
+    String appDir;
+    String providerName;
     String bookTitle;
     String title;
     String url;
-    String localFile;
 
     public Chapter(){
 
     }
 
-    public Chapter(String title, String url, String localFile) {
-        this.title = title;
-        this.url = url;
-        this.localFile = localFile;
+    public String getProviderName() {
+        return providerName;
+    }
+
+    public void setProviderName(String providerName) {
+        this.providerName = providerName;
     }
 
     public String getBookTitle() {
@@ -38,19 +45,41 @@ public class Chapter implements Serializable {
         this.url = url;
     }
 
-    public String getLocalFile() {
-        return localFile;
-    }
-
-    public void setLocalFile(String localFile) {
-        this.localFile = localFile;
-    }
-
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getAppDir() {
+        return appDir;
+    }
+
+    public void setAppDir(String appDir) {
+        this.appDir = appDir;
+    }
+
+    public String getBookDir() {
+        return getProviderDir() + File.separator + getBookTitle();
+    }
+
+    public String getFileName(){
+        return getTitle() + MP3_EXTENSION;
+    }
+
+    public String getProviderDir(){
+        return getAppDir() + File.separator + getProviderName();
+    }
+
+    public String getLocalFilePath() {
+        return getProviderDir() + File.separator + getBookTitle() + File.separator + getFileName();
+    }
+
+    public Boolean existsLocalFile() {
+        String localFilePath = getLocalFilePath();
+        boolean exists = new File(localFilePath).exists();
+        return exists;
     }
 }

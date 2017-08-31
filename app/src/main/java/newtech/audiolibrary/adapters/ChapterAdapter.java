@@ -10,7 +10,6 @@ import android.widget.TextView;
 import java.io.File;
 import java.util.ArrayList;
 
-import newtech.audiolibrary.ChapterShowList;
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Chapter;
 import newtech.audiolibrary.stream.ChapterDownloadButton;
@@ -50,13 +49,8 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
             ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) convertView.findViewById(R.id.playButton);
             playStreamButton.setChapter(chapter);
 
-            // TODO Refactoring
-            String dirPath = this.getContext().getFilesDir() + File.separator + chapter.getBookTitle();
-            String fileName = chapter.getTitle() + ChapterShowList.MP3_EXTENSION;
-            String localFile = dirPath + File.separator + fileName;
-            if(new File(localFile).exists()){
+            if(chapter.existsLocalFile()){
                 playStreamButton.setText("PLAY");
-                chapter.setLocalFile(localFile);
             }
 
             ChapterDownloadButton downloadButton = (ChapterDownloadButton) convertView.findViewById(R.id.downloadButton);

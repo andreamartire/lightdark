@@ -12,14 +12,12 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -33,7 +31,6 @@ public class ChapterShowList extends Activity {
 
     public static String CHAPTERS = "CHAPTERS";
     public static String TITLE = "TITLE";
-    public static String MP3_EXTENSION = ".mp3";
 
     public static MediaPlayer mediaPlayer = new MediaPlayer();
 
@@ -79,7 +76,7 @@ public class ChapterShowList extends Activity {
         dialog.show();
 
         try {
-            if(currentChapter.getLocalFile() == null){
+            if(!currentChapter.existsLocalFile()){
                 //stream from web
                 mediaPlayer = new MediaPlayer();
                 mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -87,7 +84,8 @@ public class ChapterShowList extends Activity {
                 mediaPlayer.prepare(); // might take long! (for buffering, etc)
             }else{
                 //play local resource
-                mediaPlayer = MediaPlayer.create(this, Uri.parse(currentChapter.getLocalFile()));
+                String localFilePath = currentChapter.getLocalFilePath();
+                mediaPlayer = MediaPlayer.create(this, Uri.parse(localFilePath));
                 mediaPlayer.setLooping(false);
             }
 
@@ -129,10 +127,12 @@ public class ChapterShowList extends Activity {
             mProgressDialog.setTitle("Download " + currentChapter.getTitle());
 
             // execute this when the downloader must be fired
-            final DownloadTask downloadTask = new DownloadTask(ChapterShowList.this, mProgressDialog);
-            String dirPath = this.getBaseContext().getFilesDir() + File.separator + currentChapter.getBookTitle();
-            String fileName = currentChapter.getTitle() + MP3_EXTENSION;
-            downloadTask.execute(currentChapter.getUrl(), dirPath, fileName);
+            final DownloadTask downloadTask = new DownloadTask(this, mProgressDialog, currentChapter, v);
+
+            String bookDir = currentChapter.getBookTitle();
+            String fileName = currentChapter.getFileName();
+
+            downloadTask.execute();
 
             mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
                 @Override

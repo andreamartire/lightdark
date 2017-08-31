@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.PowerManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import java.io.File;
@@ -14,6 +15,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+
+import newtech.audiolibrary.bean.Chapter;
+import newtech.audiolibrary.utils.MyFileUtils;
 
 /**
  * Created by andrea on 17/05/17.
@@ -26,10 +30,15 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
     private Context context;
     private PowerManager.WakeLock mWakeLock;
     private ProgressDialog mProgressDialog;
+    private View view;
 
-    public DownloadTask(Context context, ProgressDialog mProgressDialog) {
+    private Chapter chapter;
+
+    public DownloadTask(Context context, ProgressDialog mProgressDialog, Chapter chapter, View view) {
         this.context = context;
         this.mProgressDialog = mProgressDialog;
+        this.chapter = chapter;
+        this.view = view;
     }
 
     @Override
@@ -37,11 +46,17 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         InputStream input = null;
         OutputStream output = null;
         HttpURLConnection connection = null;
-        String dir = null;
+
+        String providerDir = null;
+        String bookDir = null;
+        String fileName = null;
+
         try {
-            URL url = new URL(sUrl[0]);
-            dir = sUrl[1];
-            String fileName = sUrl[2];
+            URL url = new URL(chapter.getUrl());
+
+            providerDir = chapter.getProviderDir();
+            bookDir = chapter.getBookDir();
+            fileName = chapter.getFileName();
 
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestProperty("User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36");
@@ -61,17 +76,14 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
             // download the file
             input = connection.getInputStream();
 
-            if(!new File(dir).exists()){
-                new File(dir).mkdir();
-            }
-            //if file not exists
-            if(!new File(dir + File.separator + fileName).exists()){
-                //create it. avoid exception no such file
-                new File(dir + File.separator + fileName).createNewFile();
-            }
+            MyFileUtils.mkDir(providerDir);
+            MyFileUtils.mkDir(bookDir);
 
-            Log.d("MyApp","Saving file to: " + dir + File.separator + fileName);
-            output = new FileOutputStream(dir + File.separator + fileName);
+            //create it. avoid exception no such file
+            MyFileUtils.touchFile(bookDir + File.separator + fileName);
+
+            Log.d("MyApp","Saving file to: " + bookDir + File.separator + fileName);
+            output = new FileOutputStream(bookDir + File.separator + fileName);
 
             byte data[] = new byte[4096];
             long total = 0;
@@ -98,14 +110,17 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
 
             e.printStackTrace();
 
-            // TODO Refactoring
-            File[] filesList = new File(dir).listFiles();
-            for(File f : filesList){
-                long size = f.length();
-                System.out.println("Size: " + size);
+            // TODO
+            File[] filesList = new File(bookDir).listFiles();
+            if(filesList != null){
+                for(File f : filesList){
+                    long size = f.length();
+                    System.out.println("File: " + f.getAbsolutePath());
+                    System.out.println("Size: " + size);
+                }
             }
 
-            return null;// TODO manage exception e.toString();
+            return e.toString();
         } finally {
             try {
                 if (output != null)
@@ -150,5 +165,8 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
             Toast.makeText(context, "Download error: " + result, Toast.LENGTH_LONG).show();
         else
             Toast.makeText(context, "File downloaded", Toast.LENGTH_SHORT).show();
+        //view.getParent().refreshDrawableState();
+        //view.refreshDrawableState();
+
     }
 }

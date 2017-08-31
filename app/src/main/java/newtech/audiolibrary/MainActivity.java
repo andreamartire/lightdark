@@ -56,15 +56,15 @@ public class MainActivity extends Activity {
         mProgressDialog.show(this, "dialog title",  "dialog message", true);
 
         // execute this when the downloader must be fired
-        final DownloadTask downloadTask = new DownloadTask(MainActivity.this, mProgressDialog);
-        downloadTask.execute(myUrl, "/sdcard/donwloaded_file.mp3");
+        //final DownloadTask downloadTask = new DownloadTask(this, mProgressDialog, null);
+        //downloadTask.execute(myUrl, "/sdcard/donwloaded_file.mp3");
 
         Log.d("MyApp","Start Thread Download");
 
         mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
-                downloadTask.cancel(true);
+                //downloadTask.cancel(true);
             }
         });
 
