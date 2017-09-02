@@ -27,6 +27,8 @@ import newtech.audiolibrary.utils.MyFileUtils;
 // that way, you can easily modify the UI thread from here
 public class DownloadTask extends AsyncTask<String, Integer, String> {
 
+    private int MAX_RETRY = 10;
+
     private Context context;
     private PowerManager.WakeLock mWakeLock;
     private ProgressDialog mProgressDialog;
@@ -51,89 +53,101 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         String bookDir = null;
         String fileName = null;
 
-        try {
-            URL url = new URL(chapter.getUrl());
+        long total = 0;
+        int fileLength = 0;
 
-            providerDir = chapter.getProviderDir();
-            bookDir = chapter.getBookDir();
-            fileName = chapter.getFileName();
+        boolean fileDownloaded = false;
+        int retryNum = 0;
 
-            connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestProperty("User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36");
-            connection.connect();
-
-            // expect HTTP 200 OK, so we don't mistakenly save error report
-            // instead of the file
-            if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
-                return "Server returned HTTP " + connection.getResponseCode()
-                        + " " + connection.getResponseMessage();
-            }
-
-            // this will be useful to display download percentage
-            // might be -1: server did not report the length
-            int fileLength = connection.getContentLength();
-
-            // download the file
-            input = connection.getInputStream();
-
-            MyFileUtils.mkDir(providerDir);
-            MyFileUtils.mkDir(bookDir);
-
-            //create it. avoid exception no such file
-            MyFileUtils.touchFile(bookDir + File.separator + fileName);
-
-            Log.d("MyApp","Saving file to: " + bookDir + File.separator + fileName);
-            output = new FileOutputStream(bookDir + File.separator + fileName);
-
-            byte data[] = new byte[4096];
-            long total = 0;
-            int count;
-            while ((count = input.read(data)) != -1) {
-
-                Log.d("MyApp","GeT Data");
-
-                // allow canceling with back button
-                if (isCancelled()) {
-                    input.close();
-                    return null;
-                }
-                total += count;
-                // publishing the progress....
-                if (fileLength > 0) // only if total length is known
-                    publishProgress((int) (total * 100 / fileLength));
-                output.write(data, 0, count);
-            }
-
-            mProgressDialog.dismiss();
-            
-        } catch (Exception e) {
-
-            e.printStackTrace();
-
-            // TODO
-            File[] filesList = new File(bookDir).listFiles();
-            if(filesList != null){
-                for(File f : filesList){
-                    long size = f.length();
-                    System.out.println("File: " + f.getAbsolutePath());
-                    System.out.println("Size: " + size);
-                }
-            }
-
-            return e.toString();
-        } finally {
+        while (!fileDownloaded && retryNum < 3){
             try {
-                if (output != null)
-                    output.close();
-                if (input != null)
-                    input.close();
-            } catch (IOException ignored) {
+                URL url = new URL(chapter.getUrl());
+
+                providerDir = chapter.getProviderDir();
+                bookDir = chapter.getBookDir();
+                fileName = chapter.getFileName();
+
+                connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestProperty("User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36");
+                connection.connect();
+
+                // expect HTTP 200 OK, so we don't mistakenly save error report
+                // instead of the file
+                if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
+                    return "Server returned HTTP " + connection.getResponseCode()
+                            + " " + connection.getResponseMessage();
+                }
+
+                // this will be useful to display download percentage
+                // might be -1: server did not report the length
+                fileLength = connection.getContentLength();
+
+                // download the file
+                input = connection.getInputStream();
+
+                MyFileUtils.mkDir(providerDir);
+                MyFileUtils.mkDir(bookDir);
+
+                //create it. avoid exception no such file
+                MyFileUtils.touchFile(bookDir + File.separator + fileName);
+
+                Log.d("MyApp","Saving file to: " + bookDir + File.separator + fileName);
+                output = new FileOutputStream(bookDir + File.separator + fileName);
+
+                byte data[] = new byte[4096];
+
+                int count;
+                while ((count = input.read(data)) != -1) {
+
+                    Log.d("MyApp","GeT Data");
+
+                    // allow canceling with back button
+                    if (isCancelled()) {
+                        input.close();
+                        return null;
+                    }
+                    total += count;
+                    // publishing the progress....
+                    if (fileLength > 0) // only if total length is known
+                        publishProgress((int) (total * 100 / fileLength));
+                    output.write(data, 0, count);
+                }
+
+                mProgressDialog.dismiss();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+
+                // TODO
+                File[] filesList = new File(bookDir).listFiles();
+                if(filesList != null){
+                    for(File f : filesList){
+                        long size = f.length();
+                        System.out.println("File: " + f.getAbsolutePath());
+                        System.out.println("Size: " + size);
+                    }
+                }
+            } finally {
+                try {
+                    if (output != null)
+                        output.close();
+                    if (input != null)
+                        input.close();
+                } catch (IOException ignored) {
+                }
+
+                if (connection != null)
+                    connection.disconnect();
             }
 
-            if (connection != null)
-                connection.disconnect();
+            fileDownloaded = total == fileLength;
+
+            if(!fileDownloaded && retryNum < MAX_RETRY){
+                retryNum++;
+            }
         }
-        return null;
+
+        return fileDownloaded ? null : "Error";
     }
 
     @Override
@@ -152,9 +166,9 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
     protected void onProgressUpdate(Integer... progress) {
         super.onProgressUpdate(progress);
         // if we get here, length is known, now set indeterminate to false
-        mProgressDialog.setIndeterminate(false);
-        mProgressDialog.setMax(100);
-        mProgressDialog.setProgress(progress[0]);
+        //mProgressDialog.setIndeterminate(false);
+        //mProgressDialog.setMax(100);
+        //mProgressDialog.setProgress(progress[0]);
     }
 
     @Override

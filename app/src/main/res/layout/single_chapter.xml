@@ -27,8 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
-        android:text="Stream"
-        android:onClick="myClickPlayHandler"/>
+        android:text="Stream"/>
 
     <newtech.audiolibrary.stream.ChapterDownloadButton
         android:id="@+id/downloadButton"
@@ -36,7 +35,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
-        android:text="Download"
-        android:onClick="myClickDownloadHandler"/>
+        android:text="Download"/>
 
 </LinearLayout>

@@ -32,8 +32,6 @@ public class ChapterShowList extends Activity {
     public static String CHAPTERS = "CHAPTERS";
     public static String TITLE = "TITLE";
 
-    public static MediaPlayer mediaPlayer = new MediaPlayer();
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,102 +44,5 @@ public class ChapterShowList extends Activity {
 
         ArrayAdapter<Chapter> arrayAdapter = new ChapterAdapter(this.getBaseContext(), R.layout.single_chapter, chapters);
         chaptersListView.setAdapter(arrayAdapter);
-    }
-
-    public void myClickPlayHandler(View v) {
-        //get the row the clicked button is in
-        LinearLayout linearLayout = (LinearLayout)v.getParent();
-
-        ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) v;
-
-        //manage tap on chapter's list
-        AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-
-        TextView title = (TextView) linearLayout.findViewById(R.id.chapterTitle);
-
-        Chapter currentChapter = playStreamButton.getChapter();
-
-        builder.setMessage(currentChapter.getUrl())
-                .setTitle("Play " + currentChapter.getTitle())
-                .setCancelable(true);
-
-        AlertDialog dialog = builder.create();
-        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-            @Override
-            public void onCancel(DialogInterface dialog) {
-                mediaPlayer.stop();
-                mediaPlayer.release(); // release resources
-            }
-        });
-        dialog.show();
-
-        try {
-            if(!currentChapter.existsLocalFile()){
-                //stream from web
-                mediaPlayer = new MediaPlayer();
-                mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-                mediaPlayer.setDataSource(currentChapter.getUrl());
-                mediaPlayer.prepare(); // might take long! (for buffering, etc)
-            }else{
-                //play local resource
-                String localFilePath = currentChapter.getLocalFilePath();
-                mediaPlayer = MediaPlayer.create(this, Uri.parse(localFilePath));
-                mediaPlayer.setLooping(false);
-            }
-
-            mediaPlayer.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // declare the dialog as a member field of your activity
-    ProgressDialog mProgressDialog;
-
-    public void myClickDownloadHandler(View v) {
-        //get the row the clicked button is in
-        LinearLayout linearLayout = (LinearLayout)v.getParent();
-
-        ChapterDownloadButton downloadButton = (ChapterDownloadButton) v;
-
-        //manage tap on chapter's list
-        AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-
-        TextView title = (TextView) linearLayout.findViewById(R.id.chapterTitle);
-
-        Chapter currentChapter = downloadButton.getChapter();
-
-        builder.setMessage(currentChapter.getUrl())
-                .setTitle("Download " + currentChapter.getTitle())
-                .setCancelable(true);
-
-        try {
-            //execute download
-
-            // instantiate it within the onCreate method
-            ProgressDialog mProgressDialog = new ProgressDialog(ChapterShowList.this);
-            mProgressDialog.setIndeterminate(true);
-            mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-            mProgressDialog.setCancelable(true);
-            mProgressDialog.setMessage(currentChapter.getUrl());
-            mProgressDialog.setTitle("Download " + currentChapter.getTitle());
-
-            // execute this when the downloader must be fired
-            final DownloadTask downloadTask = new DownloadTask(this, mProgressDialog, currentChapter, v);
-
-            String bookDir = currentChapter.getBookTitle();
-            String fileName = currentChapter.getFileName();
-
-            downloadTask.execute();
-
-            mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                @Override
-                public void onCancel(DialogInterface dialog) {
-                    downloadTask.cancel(true);
-                }
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 }
