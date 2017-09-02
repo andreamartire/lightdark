@@ -24,4 +24,14 @@ public class MyFileUtils {
             e.printStackTrace();
         }
     }
+
+    public static void deleteFileIfExists(String filePath) {
+        try {
+            if(new File(filePath).exists()){
+                new File(filePath).delete();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -58,16 +58,18 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
 
         boolean fileDownloaded = false;
         int retryNum = 0;
+        Exception exception = null;
 
-        while (!fileDownloaded && retryNum < 3){
+        providerDir = chapter.getProviderDir();
+        bookDir = chapter.getBookDir();
+        fileName = chapter.getFileName();
+
+        String filePath = bookDir + File.separator + fileName;
+
+        while (!fileDownloaded && retryNum < MAX_RETRY){
             try {
-                URL url = new URL(chapter.getUrl());
 
-                providerDir = chapter.getProviderDir();
-                bookDir = chapter.getBookDir();
-                fileName = chapter.getFileName();
-
-                connection = (HttpURLConnection) url.openConnection();
+                connection = (HttpURLConnection) new URL(chapter.getUrl()).openConnection();
                 connection.setRequestProperty("User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36");
                 connection.connect();
 
@@ -88,11 +90,11 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
                 MyFileUtils.mkDir(providerDir);
                 MyFileUtils.mkDir(bookDir);
 
-                //create it. avoid exception no such file
-                MyFileUtils.touchFile(bookDir + File.separator + fileName);
+                MyFileUtils.deleteFileIfExists(filePath);
+                MyFileUtils.touchFile(filePath);//create it. avoid exception no such file
 
-                Log.d("MyApp","Saving file to: " + bookDir + File.separator + fileName);
-                output = new FileOutputStream(bookDir + File.separator + fileName);
+                Log.d("MyApp","Saving file to: " + filePath);
+                output = new FileOutputStream(filePath);
 
                 byte data[] = new byte[4096];
 
@@ -116,6 +118,7 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
                 mProgressDialog.dismiss();
 
             } catch (Exception e) {
+                exception = e;
                 e.printStackTrace();
 
                 // TODO
@@ -140,14 +143,24 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
                     connection.disconnect();
             }
 
-            fileDownloaded = total == fileLength;
+            fileDownloaded = total >= fileLength;
 
-            if(!fileDownloaded && retryNum < MAX_RETRY){
-                retryNum++;
+            if(!fileDownloaded){
+                if(retryNum < MAX_RETRY) {
+                    retryNum++;
+                }else{
+                    //delete file partially downloaded
+                    MyFileUtils.deleteFileIfExists(filePath);
+                }
+            }else{
+                //downloaded
+                exception = null;
             }
         }
 
-        return fileDownloaded ? null : "Error";
+        String errorMessage = exception != null ? exception.getMessage() : "";
+
+        return fileDownloaded ? null : errorMessage;
     }
 
     @Override
@@ -166,9 +179,11 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
     protected void onProgressUpdate(Integer... progress) {
         super.onProgressUpdate(progress);
         // if we get here, length is known, now set indeterminate to false
-        //mProgressDialog.setIndeterminate(false);
-        //mProgressDialog.setMax(100);
-        //mProgressDialog.setProgress(progress[0]);
+        mProgressDialog.setIndeterminate(false);
+        mProgressDialog.setMax(100);
+        mProgressDialog.setProgress(progress[0]);
+
+        Log.d("MyApp","Progress: " + progress[0]);
     }
 
     @Override
