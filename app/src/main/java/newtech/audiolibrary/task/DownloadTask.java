@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.os.PowerManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -16,6 +18,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Chapter;
 import newtech.audiolibrary.utils.MyFileUtils;
 
@@ -192,10 +195,13 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         mProgressDialog.dismiss();
         if (result != null)
             Toast.makeText(context, "Download error: " + result, Toast.LENGTH_LONG).show();
-        else
+        else {
             Toast.makeText(context, "File downloaded", Toast.LENGTH_SHORT).show();
-        //view.getParent().refreshDrawableState();
-        //view.refreshDrawableState();
 
+            //force repaint chapter list view
+            ListView chapterListView = (ListView) view.getRootView().findViewById(R.id.chapters_listview);
+            final ArrayAdapter adapter = ((ArrayAdapter) chapterListView.getAdapter());
+            adapter.notifyDataSetChanged();
+        }
     }
 }

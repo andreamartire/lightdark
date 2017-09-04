@@ -56,12 +56,13 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
             ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) convertView.findViewById(R.id.playButton);
             playStreamButton.setChapter(chapter);
 
-            if(chapter.existsLocalFile()){
-                playStreamButton.setText("PLAY");
-            }
-
             ChapterDownloadButton downloadButton = (ChapterDownloadButton) convertView.findViewById(R.id.downloadButton);
             downloadButton.setChapter(chapter);
+
+            if(chapter.existsLocalFile()){
+                playStreamButton.setText("PLAY");
+                downloadButton.setVisibility(View.INVISIBLE);
+            }
         }
 
         return convertView;
