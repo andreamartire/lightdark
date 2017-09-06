@@ -3,6 +3,7 @@ package newtech.audiolibrary.stream;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -14,7 +15,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.io.Serializable;
 
+import newtech.audiolibrary.ChapterPlayer;
+import newtech.audiolibrary.ChapterShowList;
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Chapter;
 
@@ -71,7 +75,7 @@ public class ChapterPlayStreamButton extends AppCompatButton {
 
                 Chapter currentChapter = playStreamButton.getChapter();
 
-                builder.setMessage(currentChapter.getUrl())
+                /*builder.setMessage(currentChapter.getUrl())
                         .setTitle("Play " + currentChapter.getTitle())
                         .setCancelable(true);
 
@@ -102,7 +106,15 @@ public class ChapterPlayStreamButton extends AppCompatButton {
                     mediaPlayer.start();
                 } catch (IOException e) {
                     e.printStackTrace();
-                }
+                }*/
+
+                //manage chapter play
+                Intent intent = new Intent(v.getContext(), ChapterPlayer.class);
+
+                //pass data thought intent to another activity
+                intent.putExtra(ChapterPlayer.CHAPTER, currentChapter);
+
+                currentContext.startActivity(intent);
             }
         });
     }
