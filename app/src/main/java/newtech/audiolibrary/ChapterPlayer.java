@@ -8,6 +8,8 @@ import android.app.Activity;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.concurrent.ScheduledExecutorService;
@@ -19,10 +21,14 @@ public class ChapterPlayer extends Activity {
 
     public static String CHAPTER = "CHAPTER";
 
-    public static MediaPlayer mediaPlayer;
-    public static TextView currentDurationView;
+    static MediaPlayer mediaPlayer;
 
-    ScheduledExecutorService mScheduledExecutorService;
+    static TextView currentDurationView;
+    static TextView totalDurationView;
+
+    static Button backwardButton10;
+    static Button playPauseButton;
+    static Button forwardButton10;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,10 +37,58 @@ public class ChapterPlayer extends Activity {
 
         Chapter currentChapter = (Chapter) getIntent().getSerializableExtra(CHAPTER);
 
-        TextView title = (TextView) findViewById(R.id.playChapter_title);
-        TextView totalDuration = (TextView) findViewById(R.id.playChapter_totalDuration);
-
+        totalDurationView = (TextView) findViewById(R.id.playChapter_totalDuration);
         currentDurationView = (TextView) findViewById(R.id.playChapter_currentDuration);
+
+        playPauseButton = (Button) findViewById(R.id.playPauseButton);
+        playPauseButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v) {
+                if(mediaPlayer.isPlaying()){
+                    mediaPlayer.pause();
+                    playPauseButton.setText("|>");
+                }else{
+                    mediaPlayer.start();
+                    playPauseButton.setText("||");
+                    updatePlayer();
+                }
+            }
+        });
+
+        backwardButton10 = (Button) findViewById(R.id.backwardButton10);
+        backwardButton10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*int currPos = mediaPlayer.getCurrentPosition();
+                // + 10 sec
+                int newPos = currPos + 10*1000;
+                if(newPos > mediaPlayer.getDuration()){
+                    // last second
+                    newPos = mediaPlayer.getDuration() - 1000;
+                }
+                mediaPlayer.pause();
+                mediaPlayer.seekTo(newPos);
+                updatePlayer();
+                mediaPlayer.start();*/
+            }
+        });
+
+        forwardButton10 = (Button) findViewById(R.id.backwardButton10);
+        forwardButton10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*int currPos = mediaPlayer.getCurrentPosition();
+                // - 10 sec
+                int newPos = currPos - 10*1000;
+                if(newPos < 0){
+                    newPos = 0;
+                }
+                mediaPlayer.pause();
+                mediaPlayer.seekTo(newPos);
+                updatePlayer();
+                mediaPlayer.start();*/
+            }
+        });
 
         try {
             //play local resource
@@ -43,12 +97,11 @@ public class ChapterPlayer extends Activity {
             mediaPlayer.setLooping(false);
             mediaPlayer.start();
 
-            //init elements
+            //init title label
+            final TextView title = (TextView) findViewById(R.id.playChapter_title);
             title.setText(currentChapter.getTitle());
-            totalDuration.setText(formatDuration(mediaPlayer.getDuration()));
 
-            currentDurationView.setText(formatDuration(mediaPlayer.getCurrentPosition()));
-            currentDurationView.post(updatePlayerCurrentDuration);
+            updatePlayer();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -65,21 +118,19 @@ public class ChapterPlayer extends Activity {
         }
     }
 
-    public static Runnable updatePlayerCurrentDuration = new Runnable() {
-        public void run() {
-            int currentDuration;
-            if (mediaPlayer.isPlaying()) {
-                currentDuration = mediaPlayer.getCurrentPosition();
-                updatePlayer(currentDuration);
-                currentDurationView.postDelayed(this, 1000);
-            }else {
-                currentDurationView.removeCallbacks(this);
+    public void updatePlayer(){
+        totalDurationView.setText(formatDuration(mediaPlayer.getDuration()));
+        currentDurationView.setText(formatDuration(mediaPlayer.getCurrentPosition()));
+        currentDurationView.post(new Runnable() {
+            public void run() {
+                if (mediaPlayer.isPlaying()) {
+                    updatePlayer();
+                    currentDurationView.postDelayed(this, 1000);
+                }else {
+                    currentDurationView.removeCallbacks(this);
+                }
             }
-        }
-    };
-
-    public static void updatePlayer(int currentDuration){
-        currentDurationView.setText(formatDuration(currentDuration));
+        });;
     }
 
     public static String formatDuration(int duration) {

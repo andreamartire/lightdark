@@ -18,12 +18,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <newtech.audiolibrary.player.PlayPauseButton
-            android:id="@+id/playPauseButton"
-            android:theme="@style/Widget.AppCompat.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Pause"/>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/backwardButton10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="10s"/>
+
+                <Button
+                    android:id="@+id/playPauseButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="||"/>
+
+                <Button
+                    android:id="@+id/forwardButton10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=">10s"/>
+        </LinearLayout>
 
 </LinearLayout>
