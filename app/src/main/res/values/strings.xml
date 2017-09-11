@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AudioLibrary</string>
+    <string name="player.button.backward30"><![CDATA[30s<]]></string>
+    <string name="player.button.backward10"><![CDATA[10s<]]></string>
+    <string name="player.button.forward10"><![CDATA[>10s]]></string>
+    <string name="player.button.forward30"><![CDATA[>30s]]></string>
 </resources>

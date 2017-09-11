@@ -22,11 +22,18 @@
             android:orientation="horizontal" android:layout_width="match_parent"
             android:layout_height="match_parent">
                 <Button
+                    android:id="@+id/backwardButton30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/player.button.backward30"/>
+
+                <Button
                     android:id="@+id/backwardButton10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="10s"/>
+                    android:text="@string/player.button.backward10"/>
 
                 <Button
                     android:id="@+id/playPauseButton"
@@ -40,7 +47,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text=">10s"/>
+                    android:text="@string/player.button.forward10"/>
+
+                <Button
+                    android:id="@+id/forwardButton30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/player.button.forward30"/>
         </LinearLayout>
 
 </LinearLayout>

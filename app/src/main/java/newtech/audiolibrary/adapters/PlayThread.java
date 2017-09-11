@@ -19,13 +19,13 @@ import newtech.audiolibrary.bean.Chapter;
  * Created by MartireAn on 10/09/2017.
  */
 
-public class TestThread extends AsyncTask<String, Integer, String> {
+public class PlayThread extends AsyncTask<String, Integer, String> {
 
     static MediaPlayer mediaPlayer;
     Activity currentContext;
     Chapter currentChapter;
 
-    public TestThread(Activity currentContext, Chapter currentChapter) {
+    public PlayThread(Activity currentContext, Chapter currentChapter) {
         this.currentContext = currentContext;
         this.currentChapter = currentChapter;
     }
@@ -120,5 +120,26 @@ public class TestThread extends AsyncTask<String, Integer, String> {
             mediaPlayer.stop();
             mediaPlayer.release();
         }
+    }
+
+    public void forwardPlay(int seconds) {
+        int currPos = mediaPlayer.getCurrentPosition();
+        // + 10 sec
+        int newPos = currPos + seconds*1000;
+        if(newPos > mediaPlayer.getDuration()){
+            // last second
+            newPos = mediaPlayer.getDuration() - 1000;
+        }else if(newPos < 0){
+            // reset to start
+            newPos = 0;
+        }
+        mediaPlayer.pause();
+        mediaPlayer.seekTo(newPos);
+        updatePlayer();
+        mediaPlayer.start();
+    }
+
+    public void backwardPlay(int seconds) {
+        forwardPlay(-seconds);
     }
 }
