@@ -1,8 +1,10 @@
 package newtech.audiolibrary.adapters;
 
 import android.app.AlertDialog;
+import android.content.ClipData;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.drawable.Icon;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Chapter;
+import newtech.audiolibrary.stream.ChapterDeleteButton;
 import newtech.audiolibrary.stream.ChapterDownloadButton;
 import newtech.audiolibrary.stream.ChapterPlayStreamButton;
 
@@ -49,7 +52,6 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
                 LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 convertView = vi.inflate(R.layout.single_chapter, null);
             }
-
             TextView chapterTitle = (TextView) convertView.findViewById(R.id.chapterTitle);
             chapterTitle.setText(chapter.getTitle());
 
@@ -59,9 +61,13 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
             ChapterDownloadButton downloadButton = (ChapterDownloadButton) convertView.findViewById(R.id.downloadButton);
             downloadButton.setChapter(chapter);
 
+            ChapterDeleteButton deleteButton = (ChapterDeleteButton) convertView.findViewById(R.id.deleteButton);
+            deleteButton.setChapter(chapter);
+
             if(chapter.existsLocalFile()){
-                playStreamButton.setText("PLAY");
+                //TODO playStreamButton.setIcon(Icon.create(R.drawable.ic_play_arrow_black_24dp));
                 downloadButton.setVisibility(View.INVISIBLE);
+                deleteButton.setVisibility(View.VISIBLE);
             }
         }
 

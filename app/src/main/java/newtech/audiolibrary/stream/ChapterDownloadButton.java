@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.widget.AppCompatButton;
+import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -19,7 +20,7 @@ import newtech.audiolibrary.task.DownloadTask;
  * Created by MartireAn on 28/08/2017.
  */
 
-public class ChapterDownloadButton extends AppCompatButton{
+public class ChapterDownloadButton extends AppCompatImageButton {
 
     Chapter chapter;
 

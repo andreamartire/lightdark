@@ -1,11 +1,13 @@
 package newtech.audiolibrary.adapters;
 
 import android.app.Activity;
+import android.graphics.drawable.Icon;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.io.File;
@@ -66,13 +68,13 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
 
     public void toogle() {
 
-        final TextView playPauseButton = (Button) currentContext.findViewById(R.id.playPauseButton);
+        final ImageButton playPauseButton = (ImageButton) currentContext.findViewById(R.id.playPauseButton);
         if(mediaPlayer.isPlaying()){
             mediaPlayer.pause();
-            playPauseButton.setText("|>");
+            //TODO playPauseButton.setImageIcon(currentContext.getDrawable(R.id.).get);
         }else{
             mediaPlayer.start();
-            playPauseButton.setText("||");
+            //TODO playPauseButton.setText("||");
             updatePlayer();
         }
     }
@@ -105,7 +107,6 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                 }
             });
 
-
             updatePlayer();
 
         } catch (IOException e) {
@@ -116,9 +117,13 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
     }
 
     public void stop() {
-        if(mediaPlayer != null && mediaPlayer.isPlaying()){
-            mediaPlayer.stop();
-            mediaPlayer.release();
+        try{
+            if(mediaPlayer != null && mediaPlayer.isPlaying()){
+                mediaPlayer.stop();
+                mediaPlayer.release();
+            }
+        }catch (Throwable t){
+            t.printStackTrace();
         }
     }
 

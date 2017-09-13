@@ -8,6 +8,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.widget.AppCompatButton;
+import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +27,7 @@ import newtech.audiolibrary.bean.Chapter;
  * Created by MartireAn on 28/08/2017.
  */
 
-public class ChapterPlayStreamButton extends AppCompatButton {
+public class ChapterPlayStreamButton extends AppCompatImageButton {
 
     Chapter chapter;
 
@@ -75,7 +76,7 @@ public class ChapterPlayStreamButton extends AppCompatButton {
 
                 Chapter currentChapter = playStreamButton.getChapter();
 
-                /*builder.setMessage(currentChapter.getUrl())
+                builder.setMessage(currentChapter.getUrl())
                         .setTitle("Play " + currentChapter.getTitle())
                         .setCancelable(true);
 
@@ -106,7 +107,7 @@ public class ChapterPlayStreamButton extends AppCompatButton {
                     mediaPlayer.start();
                 } catch (IOException e) {
                     e.printStackTrace();
-                }*/
+                }
 
                 //manage chapter play
                 Intent intent = new Intent(v.getContext(), ChapterPlayer.class);

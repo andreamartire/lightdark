@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import newtech.audiolibrary.adapters.PlayThread;
 import newtech.audiolibrary.bean.Chapter;
@@ -27,7 +28,7 @@ public class ChapterPlayer extends Activity {
 
         tt = new PlayThread(this, currentChapter);
 
-        Button playPauseButton = (Button) findViewById(R.id.playPauseButton);
+        ImageButton playPauseButton = (ImageButton) findViewById(R.id.playPauseButton);
         playPauseButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View v) {
@@ -35,7 +36,7 @@ public class ChapterPlayer extends Activity {
             }
         });
 
-        Button backwardButton10 = (Button) findViewById(R.id.backwardButton10);
+        ImageButton backwardButton10 = (ImageButton) findViewById(R.id.backwardButton10);
         backwardButton10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +44,7 @@ public class ChapterPlayer extends Activity {
             }
         });
 
-        Button backwardButton30 = (Button) findViewById(R.id.backwardButton30);
+        ImageButton backwardButton30 = (ImageButton) findViewById(R.id.backwardButton30);
         backwardButton30.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +52,7 @@ public class ChapterPlayer extends Activity {
             }
         });
 
-        Button forwardButton10 = (Button) findViewById(R.id.forwardButton10);
+        ImageButton forwardButton10 = (ImageButton) findViewById(R.id.forwardButton10);
         forwardButton10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +60,7 @@ public class ChapterPlayer extends Activity {
             }
         });
 
-        Button forwardButton30 = (Button) findViewById(R.id.forwardButton30);
+        ImageButton forwardButton30 = (ImageButton) findViewById(R.id.forwardButton30);
         forwardButton30.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,7 +68,7 @@ public class ChapterPlayer extends Activity {
             }
         });
 
-       tt.execute();
+        tt.execute();
     }
 
     @Override
