@@ -193,8 +193,9 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
     protected void onPostExecute(String result) {
         mWakeLock.release();
         mProgressDialog.dismiss();
-        if (result != null)
+        if (result != null){
             Toast.makeText(context, "Download error: " + result, Toast.LENGTH_LONG).show();
+        }
         else {
             Toast.makeText(context, "File downloaded", Toast.LENGTH_SHORT).show();
 
