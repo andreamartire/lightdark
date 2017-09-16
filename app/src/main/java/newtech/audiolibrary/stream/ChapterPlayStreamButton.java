@@ -31,8 +31,6 @@ public class ChapterPlayStreamButton extends AppCompatImageButton {
 
     Chapter chapter;
 
-    public static MediaPlayer mediaPlayer = new MediaPlayer();
-
     public ChapterPlayStreamButton(Context context) {
         this(context, null);
         this.setClickListener();
@@ -72,42 +70,7 @@ public class ChapterPlayStreamButton extends AppCompatImageButton {
                 //manage tap on chapter's list
                 AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
 
-                TextView title = (TextView) linearLayout.findViewById(R.id.chapterTitle);
-
                 Chapter currentChapter = playStreamButton.getChapter();
-
-                builder.setMessage(currentChapter.getUrl())
-                        .setTitle("Play " + currentChapter.getTitle())
-                        .setCancelable(true);
-
-                AlertDialog dialog = builder.create();
-                dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                    @Override
-                    public void onCancel(DialogInterface dialog) {
-                        mediaPlayer.stop();
-                        mediaPlayer.release(); // release resources
-                    }
-                });
-                dialog.show();
-
-                try {
-                    if (!currentChapter.existsLocalFile()) {
-                        //stream from web
-                        mediaPlayer = new MediaPlayer();
-                        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-                        mediaPlayer.setDataSource(currentChapter.getUrl());
-                        mediaPlayer.prepare(); // might take long! (for buffering, etc)
-                    } else {
-                        //play local resource
-                        String localFilePath = currentChapter.getLocalFilePath();
-                        mediaPlayer = MediaPlayer.create(currentContext, Uri.parse(localFilePath));
-                        mediaPlayer.setLooping(false);
-                    }
-
-                    mediaPlayer.start();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
 
                 //manage chapter play
                 Intent intent = new Intent(v.getContext(), ChapterPlayer.class);

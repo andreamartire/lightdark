@@ -7,7 +7,6 @@ package newtech.audiolibrary;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import newtech.audiolibrary.adapters.PlayThread;
@@ -17,7 +16,7 @@ public class ChapterPlayer extends Activity {
 
     public static String CHAPTER = "CHAPTER";
 
-    static PlayThread tt;
+    static PlayThread playThread;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,13 +25,13 @@ public class ChapterPlayer extends Activity {
 
         Chapter currentChapter = (Chapter) getIntent().getSerializableExtra(CHAPTER);
 
-        tt = new PlayThread(this, currentChapter);
+        playThread = new PlayThread(this, currentChapter);
 
         ImageButton playPauseButton = (ImageButton) findViewById(R.id.playPauseButton);
         playPauseButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View v) {
-                tt.toogle();
+                playThread.toggle();
             }
         });
 
@@ -40,7 +39,7 @@ public class ChapterPlayer extends Activity {
         backwardButton10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tt.backwardPlay(10);
+                playThread.backwardPlay(10);
             }
         });
 
@@ -48,7 +47,7 @@ public class ChapterPlayer extends Activity {
         backwardButton30.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tt.backwardPlay(30);
+                playThread.backwardPlay(30);
             }
         });
 
@@ -56,7 +55,7 @@ public class ChapterPlayer extends Activity {
         forwardButton10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tt.forwardPlay(10);
+                playThread.forwardPlay(10);
             }
         });
 
@@ -64,17 +63,17 @@ public class ChapterPlayer extends Activity {
         forwardButton30.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tt.forwardPlay(30);
+                playThread.forwardPlay(30);
             }
         });
 
-        tt.execute();
+        playThread.execute();
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
 
-        tt.stop();
+        playThread.stop();
     }
 }

@@ -66,15 +66,14 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         );
     }
 
-    public void toogle() {
-
+    public void toggle() {
         final ImageButton playPauseButton = (ImageButton) currentContext.findViewById(R.id.playPauseButton);
         if(mediaPlayer.isPlaying()){
             mediaPlayer.pause();
-            //TODO playPauseButton.setImageIcon(currentContext.getDrawable(R.id.).get);
+            playPauseButton.setImageResource(R.drawable.ic_play_arrow_black_24dp);
         }else{
             mediaPlayer.start();
-            //TODO playPauseButton.setText("||");
+            playPauseButton.setImageResource(R.drawable.ic_pause_black_24dp);
             updatePlayer();
         }
     }
