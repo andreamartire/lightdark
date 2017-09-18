@@ -27,6 +27,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import newtech.audiolibrary.adapters.BookAdapter;
+import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
 
 public class AudioBookShowList extends Activity {
@@ -49,7 +51,7 @@ public class AudioBookShowList extends Activity {
         setContentView(R.layout.activity_audiobooks);
         ListView listView = (ListView)findViewById(R.id.audiobooks_listview);
 
-        List<String> bookTitles = new ArrayList<>();
+        ArrayList<Book> bookTitles = new ArrayList<>();
         final Map<String,List<Chapter>> chaptersByTitle = new HashMap<String,List<Chapter>>();
 
         BufferedReader reader = null;
@@ -96,8 +98,9 @@ public class AudioBookShowList extends Activity {
                             bookTitle = firstContentElement.getAsJsonObject().get("title").getAsString();
                         }
 
+
                         //add book entry
-                        bookTitles.add(bookTitle);
+                        bookTitles.add(new Book(bookTitle));
 
                         //init book's chapters list
                         if(!chaptersByTitle.containsKey(bookTitle)){
@@ -140,7 +143,7 @@ public class AudioBookShowList extends Activity {
             }
         }
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.single_book, R.id.bookView, bookTitles);
+        BookAdapter arrayAdapter = new BookAdapter(this.getBaseContext(), R.layout.single_book, bookTitles);
         listView.setAdapter(arrayAdapter);
 
         //init tap listener
@@ -150,11 +153,13 @@ public class AudioBookShowList extends Activity {
                 //manage tap on audiobook list
                 Intent intent = new Intent(v.getContext(), ChapterShowList.class);
 
-                String title = (String) adapterView.getItemAtPosition(i);
+                Book book = (Book) adapterView.getItemAtPosition(i);
 
                 //pass data thought intent to another activity
                 intent.putExtra(ChapterShowList.TITLE, title);
-                intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) chaptersByTitle.get(title));
+
+                //TODO review chapters container in book
+                intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) chaptersByTitle.get(book.getTitle()));
 
                 startActivity(intent);
             }

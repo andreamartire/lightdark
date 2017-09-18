@@ -65,11 +65,11 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
             deleteButton.setChapter(chapter);
 
             if(chapter.existsLocalFile()){
-                playStreamButton.setImageResource(R.drawable.ic_play_arrow_black_24dp);
+                playStreamButton.setImageResource(R.drawable.ic_play_arrow_black_72dp);
                 downloadButton.setVisibility(View.INVISIBLE);
                 deleteButton.setVisibility(View.VISIBLE);
-            }else {
-                playStreamButton.setImageResource(R.drawable.ic_subscriptions_black_24dp);
+            } else {
+                playStreamButton.setImageResource(R.drawable.ic_subscriptions_black_72dp);
                 downloadButton.setVisibility(View.VISIBLE);
                 deleteButton.setVisibility(View.INVISIBLE);
             }

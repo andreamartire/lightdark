@@ -70,10 +70,10 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         final ImageButton playPauseButton = (ImageButton) currentContext.findViewById(R.id.playPauseButton);
         if(mediaPlayer.isPlaying()){
             mediaPlayer.pause();
-            playPauseButton.setImageResource(R.drawable.ic_play_arrow_black_24dp);
+            playPauseButton.setImageResource(R.drawable.ic_play_arrow_black_72dp);
         }else{
             mediaPlayer.start();
-            playPauseButton.setImageResource(R.drawable.ic_pause_black_24dp);
+            playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
             updatePlayer();
         }
     }

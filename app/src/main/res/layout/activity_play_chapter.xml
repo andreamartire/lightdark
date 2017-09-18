@@ -26,34 +26,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_replay_30_black_24dp"/>
+                    android:src="@drawable/ic_replay_30_black_72dp"/>
 
                 <ImageButton
                     android:id="@+id/backwardButton10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_replay_10_black_24dp"/>
+                    android:src="@drawable/ic_replay_10_black_72dp"/>
 
                 <ImageButton
                     android:id="@+id/playPauseButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_pause_black_24dp"/>
+                    android:src="@drawable/ic_pause_black_72dp"/>
 
                 <ImageButton
                     android:id="@+id/forwardButton10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_forward_10_black_24dp"/>
+                    android:src="@drawable/ic_forward_10_black_72dp"/>
 
                 <ImageButton
                     android:id="@+id/forwardButton30"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_forward_30_black_24dp"/>
+                    android:src="@drawable/ic_forward_30_black_72dp"/>
         </LinearLayout>
 </LinearLayout>
