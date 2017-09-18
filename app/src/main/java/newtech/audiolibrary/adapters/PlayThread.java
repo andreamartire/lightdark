@@ -119,8 +119,8 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         try{
             if(mediaPlayer != null && mediaPlayer.isPlaying()){
                 mediaPlayer.stop();
-                mediaPlayer.release();
             }
+            mediaPlayer.release();
         }catch (Throwable t){
             t.printStackTrace();
         }
@@ -137,10 +137,16 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             // reset to start
             newPos = 0;
         }
+
+        boolean wasPlaying = mediaPlayer.isPlaying();
+
         mediaPlayer.pause();
         mediaPlayer.seekTo(newPos);
         updatePlayer();
-        mediaPlayer.start();
+
+        if(wasPlaying){
+            mediaPlayer.start();
+        }
     }
 
     public void backwardPlay(int seconds) {

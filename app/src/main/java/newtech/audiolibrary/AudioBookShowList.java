@@ -26,6 +26,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import newtech.audiolibrary.adapters.BookAdapter;
 import newtech.audiolibrary.bean.Book;
@@ -98,9 +99,12 @@ public class AudioBookShowList extends Activity {
                             bookTitle = firstContentElement.getAsJsonObject().get("title").getAsString();
                         }
 
+                        Book book = new Book(bookTitle);
+                        String randomBook = "book" + (new Random().nextInt(Integer.MAX_VALUE)%9+1) +"_small";
+                        book.setImageResId(this.getResources().getIdentifier(randomBook, "drawable", this.getPackageName()));
 
                         //add book entry
-                        bookTitles.add(new Book(bookTitle));
+                        bookTitles.add(book);
 
                         //init book's chapters list
                         if(!chaptersByTitle.containsKey(bookTitle)){
@@ -160,6 +164,8 @@ public class AudioBookShowList extends Activity {
 
                 //TODO review chapters container in book
                 intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) chaptersByTitle.get(book.getTitle()));
+
+                intent.putExtra(ChapterShowList.BOOK_IMAGE_ID, (Serializable) book.getImageResId());
 
                 startActivity(intent);
             }

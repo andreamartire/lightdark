@@ -47,8 +47,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
             bookTitle.setText(book.getTitle());
 
             ImageView imageView = (ImageView) convertView.findViewById(R.id.bookImageView);
-            String randomBook = "book" + (new Random().nextInt(Integer.MAX_VALUE)%9+1) +"_small";
-            imageView.setImageResource(getContext().getResources().getIdentifier(randomBook, "drawable", getContext().getPackageName()));
+            imageView.setImageResource(book.getImageResId());
         }
 
         return convertView;
