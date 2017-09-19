@@ -46,11 +46,15 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                 currentDurationView.setText(formatDuration(mediaPlayer.getCurrentPosition()));
                 currentDurationView.post(new Runnable() {
                     public void run() {
-                        if (mediaPlayer.isPlaying()) {
-                            currentDurationView.postDelayed(this, 1000);
-                            currentDurationView.setText(formatDuration(mediaPlayer.getCurrentPosition()));
-                        }else {
-                            currentDurationView.removeCallbacks(this);
+                        try {
+                            if (mediaPlayer.isPlaying()) {
+                                currentDurationView.postDelayed(this, 1000);
+                                currentDurationView.setText(formatDuration(mediaPlayer.getCurrentPosition()));
+                            } else {
+                                currentDurationView.removeCallbacks(this);
+                            }
+                        } catch (java.lang.IllegalStateException e){
+                            //nothing
                         }
                     }
                 });
@@ -118,8 +122,8 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         try{
             if(mediaPlayer != null && mediaPlayer.isPlaying()){
                 mediaPlayer.stop();
+                mediaPlayer.release();
             }
-            mediaPlayer.release();
         }catch (Throwable t){
             t.printStackTrace();
         }
