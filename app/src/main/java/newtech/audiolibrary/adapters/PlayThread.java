@@ -93,6 +93,7 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
                 public void onPrepared(MediaPlayer mp) {
+                    updatePlayer();
                     mediaPlayer.start();
                 }
             });
@@ -105,8 +106,6 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                     title.setText(currentChapter.getTitle());
                 }
             });
-
-            updatePlayer();
 
         } catch (IOException e) {
             e.printStackTrace();
