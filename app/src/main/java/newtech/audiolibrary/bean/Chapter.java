@@ -17,8 +17,19 @@ public class Chapter implements Serializable {
     String title;
     String url;
 
+    // used only for saving current playing chapter
+    int currentDuration;
+
     public Chapter(){
 
+    }
+
+    public int getCurrentDuration() {
+        return currentDuration;
+    }
+
+    public void setCurrentDuration(int currentDuration) {
+        this.currentDuration = currentDuration;
     }
 
     public String getProviderName() {

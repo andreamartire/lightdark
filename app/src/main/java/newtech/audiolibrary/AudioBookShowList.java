@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -29,8 +30,10 @@ import java.util.Map;
 import java.util.Random;
 
 import newtech.audiolibrary.adapters.BookAdapter;
+import newtech.audiolibrary.adapters.PlayThread;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
+import newtech.audiolibrary.utils.MyFileUtils;
 
 public class AudioBookShowList extends Activity {
 
@@ -170,5 +173,14 @@ public class AudioBookShowList extends Activity {
                 startActivity(intent);
             }
         });
+
+        Chapter oldPlayerState = PlayThread.getPlayerState(this);
+        if(oldPlayerState != null){
+            Toast.makeText(this, "Player was playing: " + oldPlayerState.getFileName() + " at duration: " + oldPlayerState.getCurrentDuration(), Toast.LENGTH_LONG).show();
+
+            //TODO manage player state
+
+            PlayThread.deletePlayerState(this);
+        }
     }
 }

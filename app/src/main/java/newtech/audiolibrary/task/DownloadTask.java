@@ -124,15 +124,7 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
                 exception = e;
                 e.printStackTrace();
 
-                // TODO
-                File[] filesList = new File(bookDir).listFiles();
-                if(filesList != null){
-                    for(File f : filesList){
-                        long size = f.length();
-                        System.out.println("File: " + f.getAbsolutePath());
-                        System.out.println("Size: " + size);
-                    }
-                }
+                MyFileUtils.listDirFiles(bookDir);
             } finally {
                 try {
                     if (output != null)
