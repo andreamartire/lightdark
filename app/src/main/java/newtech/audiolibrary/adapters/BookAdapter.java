@@ -44,7 +44,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
             }
 
             TextView bookTitle = (TextView) convertView.findViewById(R.id.bookTitleView);
-            bookTitle.setText(book.getTitle());
+            bookTitle.setText(book.getBookTitle());
 
             ImageView imageView = (ImageView) convertView.findViewById(R.id.bookImageView);
             imageView.setImageResource(book.getImageResId());

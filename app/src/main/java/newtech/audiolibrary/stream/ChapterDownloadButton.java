@@ -68,7 +68,7 @@ public class ChapterDownloadButton extends AppCompatImageButton {
                 Chapter currentChapter = downloadButton.getChapter();
 
                 builder.setMessage(currentChapter.getUrl())
-                        .setTitle("Download " + currentChapter.getTitle())
+                        .setTitle("Download " + currentChapter.getChapterTitle())
                         .setCancelable(true);
 
                 try {
@@ -80,12 +80,12 @@ public class ChapterDownloadButton extends AppCompatImageButton {
                     mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
                     mProgressDialog.setCancelable(true);
                     mProgressDialog.setMessage(currentChapter.getUrl());
-                    mProgressDialog.setTitle("Download " + currentChapter.getTitle());
+                    mProgressDialog.setTitle("Download " + currentChapter.getChapterTitle());
 
                     // execute this when the downloader must be fired
                     final DownloadTask downloadTask = new DownloadTask(currentContext, mProgressDialog, currentChapter, v);
 
-                    String bookDir = currentChapter.getBookTitle();
+                    String bookDir = currentChapter.getBook().getBookTitle();
                     String fileName = currentChapter.getFileName();
 
                     downloadTask.execute();

@@ -5,12 +5,15 @@ package newtech.audiolibrary;
  */
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.JsonArray;
@@ -55,8 +58,7 @@ public class AudioBookShowList extends Activity {
         setContentView(R.layout.activity_audiobooks);
         ListView listView = (ListView)findViewById(R.id.audiobooks_listview);
 
-        ArrayList<Book> bookTitles = new ArrayList<>();
-        final Map<String,List<Chapter>> chaptersByTitle = new HashMap<String,List<Chapter>>();
+        ArrayList<Book> bookList = new ArrayList<>();
 
         BufferedReader reader = null;
         try {
@@ -103,16 +105,16 @@ public class AudioBookShowList extends Activity {
                         }
 
                         Book book = new Book(bookTitle);
+                        book.setProviderName(providerName);
+                        book.setAppDir(this.getBaseContext().getFilesDir().getAbsolutePath());
+                        //FIXME
+                        book.setBookTitle(bookTitle != null ? bookTitle.replaceAll("/", "_") : DEFAULT_TITLE);
+
                         String randomBook = "book" + (new Random().nextInt(Integer.MAX_VALUE)%9+1) +"_small";
                         book.setImageResId(this.getResources().getIdentifier(randomBook, "drawable", this.getPackageName()));
 
                         //add book entry
-                        bookTitles.add(book);
-
-                        //init book's chapters list
-                        if(!chaptersByTitle.containsKey(bookTitle)){
-                            chaptersByTitle.put(bookTitle, new ArrayList<Chapter>());
-                        }
+                        bookList.add(book);
 
                         //setting chapters
                         Iterator it = obj.get(contents).getAsJsonArray().iterator();
@@ -121,19 +123,15 @@ public class AudioBookShowList extends Activity {
 
                             Chapter chapter = new Chapter();
 
-                            chapter.setAppDir(this.getBaseContext().getFilesDir().getAbsolutePath());
-                            chapter.setProviderName(providerName);
-                            chapter.setBookTitle(bookTitle != null ? bookTitle.replaceAll("/", "_") : DEFAULT_TITLE);
-
                             JsonObject chapterObj = jsonChapter.getAsJsonObject();
                             if(chapterObj != null){
                                 if(chapterObj.get(title) != null && chapterObj.get(url) != null){
-                                    chapter.setTitle(chapterObj.get(title).getAsString().replaceAll("/", "_"));
+                                    chapter.setChapterTitle(chapterObj.get(title).getAsString().replaceAll("/", "_"));
                                     chapter.setUrl(chapterObj.get(url).getAsString());
+                                    chapter.setBook(book);
+                                    book.getChapters().add(chapter);
                                 }
                             }
-
-                            chaptersByTitle.get(bookTitle).add(chapter);
                         }
                     }
                 }
@@ -150,7 +148,7 @@ public class AudioBookShowList extends Activity {
             }
         }
 
-        BookAdapter arrayAdapter = new BookAdapter(this.getBaseContext(), R.layout.single_book, bookTitles);
+        BookAdapter arrayAdapter = new BookAdapter(this.getBaseContext(), R.layout.single_book, bookList);
         listView.setAdapter(arrayAdapter);
 
         //init tap listener
@@ -163,22 +161,52 @@ public class AudioBookShowList extends Activity {
                 Book book = (Book) adapterView.getItemAtPosition(i);
 
                 //pass data thought intent to another activity
-                intent.putExtra(ChapterShowList.TITLE, title);
-
-                //TODO review chapters container in book
-                intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) chaptersByTitle.get(book.getTitle()));
 
                 intent.putExtra(ChapterShowList.BOOK_IMAGE_ID, (Serializable) book.getImageResId());
+
+                intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) book.getChapters());
 
                 startActivity(intent);
             }
         });
 
+        final Context me = this;
+
+        Button playingResumeButton = (Button) this.findViewById(R.id.currentPlayingResumeButton);
+        playingResumeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Chapter playingChapter = PlayThread.getPlayerState(me);
+
+                if(playingChapter != null){
+                    //manage tap on audiobook list
+                    Intent intent = new Intent(v.getContext(), ChapterShowList.class);
+
+                    Book currentBook = playingChapter.getBook();
+
+                    //pass data thought intent to another activity
+                    /*
+                    intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) chaptersByTitle.get(currentBook.getBookTitle()));
+
+                    intent.putExtra(ChapterShowList.BOOK_IMAGE_ID, (Serializable) currentBook.getImageResId());
+
+                    startActivity(intent);
+                    */
+                }
+            }
+        });
+
         Chapter oldPlayerState = PlayThread.getPlayerState(this);
         if(oldPlayerState != null){
-            Toast.makeText(this, "Player was playing: " + oldPlayerState.getFileName() + " at duration: " + oldPlayerState.getCurrentDuration(), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Player was playing: " + oldPlayerState.getFileName() + " at duration: " + oldPlayerState.getCurrentDuration() + "/" + oldPlayerState.getTotalDuration(), Toast.LENGTH_LONG).show();
 
-            //TODO manage player state
+            TextView playingBookTitle = (TextView) this.findViewById(R.id.currentPlayingBookTitle);
+            playingBookTitle.setText(oldPlayerState.getBook().getBookTitle());
+            TextView playingChapterTitle = (TextView) this.findViewById(R.id.currentPlayingChapterTitle);
+            playingChapterTitle.setText(oldPlayerState.getFileName());
+            TextView playingChapterPercentage = (TextView) this.findViewById(R.id.currentPlayingChapterPercentage);
+            playingChapterPercentage.setText(oldPlayerState.getCurrentDuration()+"/"+oldPlayerState.getTotalDuration());
 
             PlayThread.deletePlayerState(this);
         }

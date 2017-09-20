@@ -2,6 +2,8 @@ package newtech.audiolibrary.bean;
 
 import java.io.File;
 import java.io.Serializable;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -10,19 +12,24 @@ import java.util.Random;
 
 public class Book implements Serializable {
 
-    String title;
+    String appDir;
+    String providerName;
+    String bookTitle;
+
     int imageResId;
 
+    transient List<Chapter> chapters;
+
     public Book(String title){
-        setTitle(title);
+        setBookTitle(title);
     }
 
-    public String getTitle() {
-        return title;
+    public String getBookTitle() {
+        return bookTitle;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setBookTitle(String bookTitle) {
+        this.bookTitle = bookTitle;
     }
 
     public int getImageResId() {
@@ -31,5 +38,32 @@ public class Book implements Serializable {
 
     public void setImageResId(int imageResId) {
         this.imageResId = imageResId;
+    }
+
+    public String getProviderName() {
+        return providerName;
+    }
+
+    public void setProviderName(String providerName) {
+        this.providerName = providerName;
+    }
+
+    public String getAppDir() {
+        return appDir;
+    }
+
+    public void setAppDir(String appDir) {
+        this.appDir = appDir;
+    }
+
+    public List<Chapter> getChapters() {
+        if(chapters == null){
+            chapters = new LinkedList<>();
+        }
+        return chapters;
+    }
+
+    public void setChapters(List<Chapter> chapters) {
+        this.chapters = chapters;
     }
 }

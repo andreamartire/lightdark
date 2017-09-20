@@ -75,7 +75,7 @@ public class ChapterDeleteButton extends AppCompatImageButton {
                 final Chapter currentChapter = deleteButton.getChapter();
 
                 try{
-                    builder.setMessage("Are you sure to delete " + currentChapter.getTitle() + "?")
+                    builder.setMessage("Are you sure to delete " + currentChapter.getChapterTitle() + "?")
                             .setTitle("Delete File")
                             .setCancelable(true)
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {

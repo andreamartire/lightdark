@@ -46,8 +46,10 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
 
     public void updatePlayer(){
 
-        int currentDuration = mediaPlayer.getDuration();
+        int currentDuration = mediaPlayer.getCurrentPosition();
         currentChapter.setCurrentDuration(currentDuration);
+        int totalDuration = mediaPlayer.getDuration();
+        currentChapter.setTotalDuration(totalDuration);
 
         TextView totalDurationView = (TextView) currentContext.findViewById(R.id.playChapter_totalDuration);
         totalDurationView.setText(formatDuration(currentDuration));
@@ -94,7 +96,6 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         if(mediaPlayer.isPlaying()){
             mediaPlayer.pause();
             playPauseButton.setImageResource(R.drawable.ic_play_arrow_black_72dp);
-            deletePlayerState(currentContext);
         }else{
             mediaPlayer.start();
             playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
@@ -127,7 +128,7 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             currentContext.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    title.setText(currentChapter.getTitle());
+                    title.setText(currentChapter.getChapterTitle());
                 }
             });
 
@@ -178,24 +179,18 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
 
 
     public static void savePlayerState(Chapter currentChapter) throws IOException {
-        String metadataFilePath = currentChapter.getAppDir() + File.separator + METADATA + File.separator;
+        String metadataFilePath = currentChapter.getBook().getAppDir() + File.separator + METADATA + File.separator;
         MyFileUtils.mkDir(metadataFilePath);
 
         String playerStateFilePath = metadataFilePath + File.separator + PLAYER_STATE_FILE;
 
         MyFileUtils.deleteFileIfExists(playerStateFilePath);
 
-        Gson gson = new Gson();
-        String jsonStr = gson.toJson(currentChapter);
+        String jsonStr = new Gson().toJson(currentChapter);
 
         FileWriter fw = new FileWriter(playerStateFilePath);
         fw.write(jsonStr);
         fw.close();
-
-        MyFileUtils.listDirFiles(metadataFilePath);
-
-        Chapter loadedChapter = gson.fromJson(new FileReader(playerStateFilePath), Chapter.class);
-        System.out.println("Loaded json: " + loadedChapter);
     }
 
     public static Chapter getPlayerState(Context context){

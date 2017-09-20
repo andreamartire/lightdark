@@ -33,19 +33,17 @@ import newtech.audiolibrary.task.DownloadTask;
 public class ChapterShowList extends Activity {
 
     public static String CHAPTERS = "CHAPTERS";
-    public static String TITLE = "TITLE";
     public static String BOOK_IMAGE_ID = "BOOK_IMAGE_ID";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapters);
-
-        String title = (String) getIntent().getSerializableExtra(TITLE);
+;
         ArrayList<Chapter> chapters = (ArrayList<Chapter>) getIntent().getSerializableExtra(CHAPTERS);
 
         ArrayAdapter<Chapter> arrayAdapter = new ChapterAdapter(this.getBaseContext(), R.layout.single_chapter, chapters);
-        ListView chaptersListView = (ListView)findViewById(R.id.chapters_listview);
+        ListView chaptersListView = (ListView) findViewById(R.id.chapters_listview);
         chaptersListView.setAdapter(arrayAdapter);
 
         int imageResId = (Integer) getIntent().getSerializableExtra(BOOK_IMAGE_ID);

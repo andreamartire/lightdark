@@ -53,7 +53,7 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
                 convertView = vi.inflate(R.layout.single_chapter, null);
             }
             TextView chapterTitle = (TextView) convertView.findViewById(R.id.chapterTitle);
-            chapterTitle.setText(chapter.getTitle());
+            chapterTitle.setText(chapter.getChapterTitle());
 
             ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) convertView.findViewById(R.id.playButton);
             playStreamButton.setChapter(chapter);

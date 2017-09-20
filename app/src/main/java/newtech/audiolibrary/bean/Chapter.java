@@ -11,14 +11,14 @@ public class Chapter implements Serializable {
 
     public static String MP3_EXTENSION = ".mp3";
 
-    String appDir;
-    String providerName;
-    String bookTitle;
-    String title;
+    Book book;
+
+    String chapterTitle;
     String url;
 
     // used only for saving current playing chapter
     int currentDuration;
+    int totalDuration;
 
     public Chapter(){
 
@@ -32,20 +32,12 @@ public class Chapter implements Serializable {
         this.currentDuration = currentDuration;
     }
 
-    public String getProviderName() {
-        return providerName;
+    public int getTotalDuration() {
+        return totalDuration;
     }
 
-    public void setProviderName(String providerName) {
-        this.providerName = providerName;
-    }
-
-    public String getBookTitle() {
-        return bookTitle;
-    }
-
-    public void setBookTitle(String bookTitle) {
-        this.bookTitle = bookTitle;
+    public void setTotalDuration(int totalDuration) {
+        this.totalDuration = totalDuration;
     }
 
     public String getUrl() {
@@ -56,36 +48,36 @@ public class Chapter implements Serializable {
         this.url = url;
     }
 
-    public String getTitle() {
-        return title;
+    public String getChapterTitle() {
+        return chapterTitle;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getAppDir() {
-        return appDir;
-    }
-
-    public void setAppDir(String appDir) {
-        this.appDir = appDir;
+    public void setChapterTitle(String chapterTitle) {
+        this.chapterTitle = chapterTitle;
     }
 
     public String getBookDir() {
-        return getProviderDir() + File.separator + getBookTitle();
+        return getProviderDir() + File.separator + getBook().getBookTitle();
     }
 
     public String getFileName(){
-        return getTitle() + MP3_EXTENSION;
+        return getChapterTitle() + MP3_EXTENSION;
     }
 
     public String getProviderDir(){
-        return getAppDir() + File.separator + getProviderName();
+        return getBook().getAppDir() + File.separator + getBook().getProviderName();
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
     }
 
     public String getLocalFilePath() {
-        return getProviderDir() + File.separator + getBookTitle() + File.separator + getFileName();
+        return getProviderDir() + File.separator + getBook().getBookTitle() + File.separator + getFileName();
     }
 
     public Boolean existsLocalFile() {
