@@ -176,39 +176,41 @@ public class AudioBookShowList extends Activity {
         playingResumeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Chapter playingChapter = PlayThread.getPlayerState(me);
 
                 if(playingChapter != null){
-                    //manage tap on audiobook list
-                    Intent intent = new Intent(v.getContext(), ChapterShowList.class);
-
                     Book currentBook = playingChapter.getBook();
 
+                    //manage tap on audiobook list
+                    Intent intent = new Intent(v.getContext(), ChapterShowList.class);
                     //pass data thought intent to another activity
-                    /*
-                    intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) chaptersByTitle.get(currentBook.getBookTitle()));
-
+                    intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) currentBook.getChapters());
                     intent.putExtra(ChapterShowList.BOOK_IMAGE_ID, (Serializable) currentBook.getImageResId());
 
                     startActivity(intent);
-                    */
                 }
             }
         });
 
+        checkCurrentPlayingState();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        checkCurrentPlayingState();
+    }
+
+    private void checkCurrentPlayingState() {
         Chapter oldPlayerState = PlayThread.getPlayerState(this);
         if(oldPlayerState != null){
-            Toast.makeText(this, "Player was playing: " + oldPlayerState.getFileName() + " at duration: " + oldPlayerState.getCurrentDuration() + "/" + oldPlayerState.getTotalDuration(), Toast.LENGTH_LONG).show();
-
+            //Toast.makeText(this, "Player was playing: " + oldPlayerState.getFileName() + " at duration: " + oldPlayerState.getCurrentDuration() + "/" + oldPlayerState.getTotalDuration(), Toast.LENGTH_LONG).show();
             TextView playingBookTitle = (TextView) this.findViewById(R.id.currentPlayingBookTitle);
             playingBookTitle.setText(oldPlayerState.getBook().getBookTitle());
             TextView playingChapterTitle = (TextView) this.findViewById(R.id.currentPlayingChapterTitle);
             playingChapterTitle.setText(oldPlayerState.getFileName());
             TextView playingChapterPercentage = (TextView) this.findViewById(R.id.currentPlayingChapterPercentage);
             playingChapterPercentage.setText(oldPlayerState.getCurrentDuration()+"/"+oldPlayerState.getTotalDuration());
-
-            PlayThread.deletePlayerState(this);
         }
     }
 }
