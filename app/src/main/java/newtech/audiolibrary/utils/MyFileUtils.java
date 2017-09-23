@@ -59,4 +59,10 @@ public class MyFileUtils {
             }
         }
     }
+
+    public static void renameFile(String filePathTmp, String filePath) {
+        if(new File(filePathTmp).exists()){
+            new File(filePathTmp).renameTo(new File(filePath));
+        }
+    }
 }

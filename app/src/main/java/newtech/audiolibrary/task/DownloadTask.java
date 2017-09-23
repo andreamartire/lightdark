@@ -30,6 +30,7 @@ import newtech.audiolibrary.utils.MyFileUtils;
 // that way, you can easily modify the UI thread from here
 public class DownloadTask extends AsyncTask<String, Integer, String> {
 
+    private String _TMP = "_TMP";
     private int MAX_RETRY = 10;
 
     private Context context;
@@ -67,7 +68,11 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         bookDir = chapter.getBookDir();
         fileName = chapter.getFileName();
 
-        String filePath = bookDir + File.separator + fileName;
+        //tmp file
+        String filePathTmp = bookDir + File.separator + fileName + _TMP;
+
+        //delete if exists old tmp file
+        MyFileUtils.deleteFileIfExists(filePathTmp);
 
         while (!fileDownloaded && retryNum < MAX_RETRY){
             try {
@@ -93,11 +98,11 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
                 MyFileUtils.mkDir(providerDir);
                 MyFileUtils.mkDir(bookDir);
 
-                MyFileUtils.deleteFileIfExists(filePath);
-                MyFileUtils.touchFile(filePath);//create it. avoid exception no such file
+                MyFileUtils.deleteFileIfExists(filePathTmp);
+                MyFileUtils.touchFile(filePathTmp);//create it. avoid exception no such file
 
-                Log.d("MyApp","Saving file to: " + filePath);
-                output = new FileOutputStream(filePath);
+                Log.d("MyApp","Saving file to: " + filePathTmp);
+                output = new FileOutputStream(filePathTmp);
 
                 byte data[] = new byte[4096];
 
@@ -145,11 +150,13 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
                     retryNum++;
                 }else{
                     //delete file partially downloaded
-                    MyFileUtils.deleteFileIfExists(filePath);
+                    MyFileUtils.deleteFileIfExists(filePathTmp);
                 }
             }else{
                 //downloaded
                 exception = null;
+
+                MyFileUtils.renameFile(filePathTmp, bookDir + File.separator + fileName);
             }
         }
 
