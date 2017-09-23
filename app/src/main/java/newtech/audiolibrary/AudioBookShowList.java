@@ -36,6 +36,7 @@ import newtech.audiolibrary.adapters.BookAdapter;
 import newtech.audiolibrary.adapters.PlayThread;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
+import newtech.audiolibrary.stream.ChapterPlayStreamButton;
 import newtech.audiolibrary.utils.MyFileUtils;
 
 public class AudioBookShowList extends Activity {
@@ -181,13 +182,15 @@ public class AudioBookShowList extends Activity {
                 if(playingChapter != null){
                     Book currentBook = playingChapter.getBook();
 
+                    ChapterPlayStreamButton.startPlayer(me, playingChapter);
+                    /*
                     //manage tap on audiobook list
                     Intent intent = new Intent(v.getContext(), ChapterShowList.class);
                     //pass data thought intent to another activity
                     intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) currentBook.getChapters());
                     intent.putExtra(ChapterShowList.BOOK_IMAGE_ID, (Serializable) currentBook.getImageResId());
 
-                    startActivity(intent);
+                    startActivity(intent);*/
                 }
             }
         });

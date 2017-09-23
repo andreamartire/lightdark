@@ -44,15 +44,57 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         this.currentChapter = currentChapter;
     }
 
+    @Override
+    protected String doInBackground(String... params) {
+        //play local resource
+        String localFilePath = currentChapter.getLocalFilePath();
+        mediaPlayer = new MediaPlayer();
+        try {
+            Log.d("myApp", "file size: " + new File(localFilePath).getTotalSpace());
+            System.out.println("file size: " + new File(localFilePath).getTotalSpace());
+            mediaPlayer.setDataSource(localFilePath);
+
+            mediaPlayer.setLooping(false);
+            mediaPlayer.prepareAsync();
+            mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(MediaPlayer mp) {
+                    updatePlayer();
+
+                    //if resume was pressed
+                    if(currentChapter.getCurrentDuration() > 0){
+                        mediaPlayer.seekTo(currentChapter.getCurrentDuration());
+                    }
+
+                    mediaPlayer.start();
+                }
+            });
+
+            //init title label
+            final TextView title = (TextView) currentContext.findViewById(R.id.playChapter_title);
+            currentContext.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    title.setText(currentChapter.getChapterTitle());
+                }
+            });
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
     public void updatePlayer(){
 
-        int currentDuration = mediaPlayer.getCurrentPosition();
+        final int currentDuration = mediaPlayer.getCurrentPosition();
         currentChapter.setCurrentDuration(currentDuration);
         int totalDuration = mediaPlayer.getDuration();
         currentChapter.setTotalDuration(totalDuration);
 
         TextView totalDurationView = (TextView) currentContext.findViewById(R.id.playChapter_totalDuration);
-        totalDurationView.setText(formatDuration(currentDuration));
+        totalDurationView.setText(formatDuration(totalDuration));
 
         final TextView currentDurationView = (TextView) currentContext.findViewById(R.id.playChapter_currentDuration);
 
@@ -65,8 +107,12 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                     public void run() {
                         try {
                             if (mediaPlayer.isPlaying()) {
+
+                                int currentPos = mediaPlayer.getCurrentPosition();
+                                currentChapter.setCurrentDuration(currentPos);
+
                                 currentDurationView.postDelayed(this, 1000);
-                                currentDurationView.setText(formatDuration(mediaPlayer.getCurrentPosition()));
+                                currentDurationView.setText(formatDuration(currentPos));
                                 savePlayerState(currentChapter);
                             } else {
                                 currentDurationView.removeCallbacks(this);
@@ -79,8 +125,6 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                 });
             }
         });
-
-
     }
 
     public static String formatDuration(int duration) {
@@ -101,42 +145,6 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
             updatePlayer();
         }
-    }
-
-    @Override
-    protected String doInBackground(String... params) {
-        //play local resource
-        String localFilePath = currentChapter.getLocalFilePath();
-        mediaPlayer = new MediaPlayer();
-        try {
-            Log.d("myApp", "file size: " + new File(localFilePath).getTotalSpace());
-            System.out.println("file size: " + new File(localFilePath).getTotalSpace());
-            mediaPlayer.setDataSource(localFilePath);
-
-            mediaPlayer.setLooping(false);
-            mediaPlayer.prepareAsync();
-            mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    updatePlayer();
-                    mediaPlayer.start();
-                }
-            });
-
-            //init title label
-            final TextView title = (TextView) currentContext.findViewById(R.id.playChapter_title);
-            currentContext.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    title.setText(currentChapter.getChapterTitle());
-                }
-            });
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return null;
     }
 
     public void stop() {

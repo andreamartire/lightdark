@@ -62,24 +62,21 @@ public class ChapterPlayStreamButton extends AppCompatImageButton {
 
             @Override
             public void onClick (View v) {
-                //get the row the clicked button is in
-                LinearLayout linearLayout = (LinearLayout) v.getParent();
-
                 ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) v;
-
-                //manage tap on chapter's list
-                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
 
                 Chapter currentChapter = playStreamButton.getChapter();
 
-                //manage chapter play
-                Intent intent = new Intent(v.getContext(), ChapterPlayer.class);
-
-                //pass data thought intent to another activity
-                intent.putExtra(ChapterPlayer.CHAPTER, currentChapter);
-
-                currentContext.startActivity(intent);
+                startPlayer(currentContext, currentChapter);
             }
         });
+    }
+
+    public static void startPlayer(Context context, Chapter currentChapter){
+        Intent intent = new Intent(context, ChapterPlayer.class);
+
+        //pass data thought intent to another activity
+        intent.putExtra(ChapterPlayer.CHAPTER, currentChapter);
+
+        context.startActivity(intent);
     }
 }
