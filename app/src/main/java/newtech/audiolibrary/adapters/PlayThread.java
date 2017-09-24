@@ -59,12 +59,12 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
                 public void onPrepared(MediaPlayer mp) {
-                    updatePlayer();
-
                     //if resume was pressed
                     if(currentChapter.getCurrentDuration() > 0){
                         mediaPlayer.seekTo(currentChapter.getCurrentDuration());
                     }
+
+                    updatePlayer();
 
                     mediaPlayer.start();
                 }
