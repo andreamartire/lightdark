@@ -23,7 +23,7 @@ public class MyFileUtils {
 
     public static void mkDir(String dirPath){
         if(!new File(dirPath).exists()){
-            new File(dirPath).mkdir();
+            new File(dirPath).mkdirs();
         }
     }
 

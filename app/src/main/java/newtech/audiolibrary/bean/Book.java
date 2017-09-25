@@ -2,6 +2,7 @@ package newtech.audiolibrary.bean;
 
 import java.io.File;
 import java.io.Serializable;
+import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -15,6 +16,7 @@ public class Book implements Serializable {
     String appDir;
     String providerName;
     String bookTitle;
+    URL imageUrl;
 
     int imageResId;
 
@@ -22,6 +24,14 @@ public class Book implements Serializable {
 
     public Book(String title){
         setBookTitle(title);
+    }
+
+    public URL getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(URL imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getBookTitle() {

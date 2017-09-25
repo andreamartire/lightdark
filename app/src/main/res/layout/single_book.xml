@@ -8,7 +8,7 @@
         android:id="@+id/bookImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dip"/>
+        android:padding="1dip"/>
 
     <TextView
         android:id="@+id/bookTitleView"

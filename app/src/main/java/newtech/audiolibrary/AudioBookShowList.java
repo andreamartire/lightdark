@@ -25,6 +25,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Serializable;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -43,8 +44,9 @@ public class AudioBookShowList extends Activity {
 
     private static String audiobooks = "audiobooks";
     private static String contents = "contents";
-    private static String metadata = "metadata";
+    public static String metadata = "metadata";
     private static String provider = "provider";
+    private static String image = "image";
     private static String name = "name";
     private static String title = "title";
     private static String url = "url";
@@ -79,6 +81,7 @@ public class AudioBookShowList extends Activity {
                     //setting provider
                     String providerName = DEFAULT_PROVIDER;
                     String bookTitle = DEFAULT_BOOK;
+                    String imageUrl = null;
                     if(obj.get(metadata) != null && obj.get(metadata).getAsJsonArray().size() > 0){
                         JsonElement metadataObj = obj.get(metadata).getAsJsonArray().get(0);
                         if(metadataObj != null){
@@ -94,13 +97,18 @@ public class AudioBookShowList extends Activity {
                             if(bookTitleObj != null){
                                 bookTitle = bookTitleObj.getAsString();
                             }
+
+                            JsonElement imageObj = metadataObj.getAsJsonObject().get(AudioBookShowList.image);
+                            if(imageObj != null){
+                                imageUrl = imageObj.getAsString();
+                            }
                         }
                     }
 
                     if(obj.get(contents) != null && obj.get(contents).getAsJsonArray().size() > 0){
                         JsonElement firstContentElement = obj.get(contents).getAsJsonArray().get(0);
 
-                        // fallback management. if book have metadata without title, select first chapter
+                        // fallback management. if book have metadata without title, select first chapter title
                         if(DEFAULT_BOOK.equals(bookTitle) && firstContentElement != null){
                             bookTitle = firstContentElement.getAsJsonObject().get("title").getAsString();
                         }
@@ -108,9 +116,12 @@ public class AudioBookShowList extends Activity {
                         Book book = new Book(bookTitle);
                         book.setProviderName(providerName);
                         book.setAppDir(this.getBaseContext().getFilesDir().getAbsolutePath());
-                        //FIXME
+                        book.setImageUrl(imageUrl != null ? new URL(imageUrl) : null);
+
+                        //FIXME not good programming
                         book.setBookTitle(bookTitle != null ? bookTitle.replaceAll("/", "_") : DEFAULT_TITLE);
 
+                        //FIXME not good programming
                         String randomBook = "book" + (new Random().nextInt(Integer.MAX_VALUE)%9+1) +"_small";
                         book.setImageResId(this.getResources().getIdentifier(randomBook, "drawable", this.getPackageName()));
 
@@ -162,9 +173,7 @@ public class AudioBookShowList extends Activity {
                 Book book = (Book) adapterView.getItemAtPosition(i);
 
                 //pass data thought intent to another activity
-
                 intent.putExtra(ChapterShowList.BOOK_IMAGE_ID, (Serializable) book.getImageResId());
-
                 intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) book.getChapters());
 
                 startActivity(intent);
