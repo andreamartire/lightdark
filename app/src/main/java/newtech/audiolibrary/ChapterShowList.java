@@ -10,6 +10,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -25,6 +26,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import newtech.audiolibrary.adapters.ChapterAdapter;
+import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
 import newtech.audiolibrary.stream.ChapterDownloadButton;
 import newtech.audiolibrary.stream.ChapterPlayStreamButton;
@@ -32,26 +34,32 @@ import newtech.audiolibrary.task.DownloadTask;
 
 public class ChapterShowList extends Activity {
 
+    public static String BOOK = "BOOK";
     public static String CHAPTERS = "CHAPTERS";
-    public static String BOOK_IMAGE_ID = "BOOK_IMAGE_ID";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapters);
-;
+
+        Book book = (Book) getIntent().getSerializableExtra(BOOK);
+
         ArrayList<Chapter> chapters = (ArrayList<Chapter>) getIntent().getSerializableExtra(CHAPTERS);
 
         ArrayAdapter<Chapter> arrayAdapter = new ChapterAdapter(this.getBaseContext(), R.layout.single_chapter, chapters);
         ListView chaptersListView = (ListView) findViewById(R.id.chapters_listview);
         chaptersListView.setAdapter(arrayAdapter);
 
-        int imageResId = (Integer) getIntent().getSerializableExtra(BOOK_IMAGE_ID);
-        ImageView bookImage = (ImageView) findViewById(R.id.chapters_bookImageView);
-        bookImage.setImageResource(imageResId);
+        String localFileName = book.getLocalImageFilePath();
+        ImageView bookImageView = (ImageView) findViewById(R.id.chapters_bookImageView);
 
-/*        Bitmap bitmap = ((BitmapDrawable)bookImage.getDrawable()).getBitmap();
-        Bitmap bitmapResized = Bitmap.createScaledBitmap(bitmap, 300, 250, false);
-        bookImage.setImageDrawable(new BitmapDrawable(getResources(), bitmapResized));*/
+        Drawable bookImage = Drawable.createFromPath(localFileName);
+        if(bookImage == null){
+            //TODO default image not found
+        }else{
+            Bitmap bitmap = ((BitmapDrawable) bookImage).getBitmap();
+            bookImage = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, 1000, 600, true));
+            bookImageView.setImageDrawable(bookImage);
+        }
     }
 }

@@ -7,6 +7,7 @@ package newtech.audiolibrary;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,13 +23,17 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -116,14 +121,32 @@ public class AudioBookShowList extends Activity {
                         Book book = new Book(bookTitle);
                         book.setProviderName(providerName);
                         book.setAppDir(this.getBaseContext().getFilesDir().getAbsolutePath());
-                        book.setImageUrl(imageUrl != null ? new URL(imageUrl) : null);
+                        book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
 
                         //FIXME not good programming
                         book.setBookTitle(bookTitle != null ? bookTitle.replaceAll("/", "_") : DEFAULT_TITLE);
 
-                        //FIXME not good programming
-                        String randomBook = "book" + (new Random().nextInt(Integer.MAX_VALUE)%9+1) +"_small";
-                        book.setImageResId(this.getResources().getIdentifier(randomBook, "drawable", this.getPackageName()));
+                        if(new File(book.getLocalImageFileName()).exists()){
+                            //select local image
+                            Drawable image = Drawable.createFromPath(book.getLocalImageFileName());
+                            book.setLocalImageResource(image);
+                        }else{
+                            //select random image
+                            ArrayList<Integer> images = new ArrayList<>();
+                            images.add(R.drawable.book1_small);
+                            images.add(R.drawable.book2_small);
+                            images.add(R.drawable.book3_small);
+                            images.add(R.drawable.book4_small);
+                            images.add(R.drawable.book5_small);
+                            images.add(R.drawable.book6_small);
+                            images.add(R.drawable.book7_small);
+                            images.add(R.drawable.book8_small);
+                            images.add(R.drawable.book9_small);
+                            Collections.shuffle(images, new Random(System.nanoTime()));
+
+                            Drawable image = getResources().getDrawable(images.get(0));
+                            book.setLocalImageResource(image);
+                        }
 
                         //add book entry
                         bookList.add(book);
@@ -173,7 +196,7 @@ public class AudioBookShowList extends Activity {
                 Book book = (Book) adapterView.getItemAtPosition(i);
 
                 //pass data thought intent to another activity
-                intent.putExtra(ChapterShowList.BOOK_IMAGE_ID, (Serializable) book.getImageResId());
+                intent.putExtra(ChapterShowList.BOOK, (Serializable) book);
                 intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) book.getChapters());
 
                 startActivity(intent);
@@ -192,14 +215,6 @@ public class AudioBookShowList extends Activity {
                     Book currentBook = playingChapter.getBook();
 
                     ChapterPlayStreamButton.startPlayer(me, playingChapter);
-                    /*
-                    //manage tap on audiobook list
-                    Intent intent = new Intent(v.getContext(), ChapterShowList.class);
-                    //pass data thought intent to another activity
-                    intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) currentBook.getChapters());
-                    intent.putExtra(ChapterShowList.BOOK_IMAGE_ID, (Serializable) currentBook.getImageResId());
-
-                    startActivity(intent);*/
                 }
             }
         });

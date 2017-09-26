@@ -51,17 +51,16 @@ public class BookAdapter extends ArrayAdapter<Book> {
             bookTitle.setText(book.getBookTitle());
 
             ImageView imageView = (ImageView) convertView.findViewById(R.id.bookImageView);
-            if(book.getImageUrl() != null){
 
-                String imageFilePath = book.getImageUrl().getPath();
-                String imageFileName = imageFilePath.substring(imageFilePath.lastIndexOf('/') + 1);
-                String localImageFile = book.getAppDir() + File.separator + book.getBookTitle() + File.separator +
-                        AudioBookShowList.metadata + File.separator + imageFileName;
+            //default image
+            imageView.setImageDrawable(book.getLocalImageResource());
+
+            if(book.getRemoteImageUrl() != null){
 
                 //check if file name exists in book/metadata/
-                if(new File(localImageFile).exists()){
+                if(new File(book.getLocalImageFilePath()).exists()){
                     //select current image
-                    Drawable image = Drawable.createFromPath(localImageFile);
+                    Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
 
                     if(image != null){
                         Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
@@ -74,27 +73,16 @@ public class BookAdapter extends ArrayAdapter<Book> {
                     }
                 }else{
                     //download file out of main thread
-                    SimpleDownloadTask sdt = new SimpleDownloadTask(book.getImageUrl(), localImageFile);
+                    SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath());
                     sdt.execute();
 
                     //if downloaded
-                    if(new File(localImageFile).exists()){
-                        Drawable image = Drawable.createFromPath(localImageFile);
+                    if(new File(book.getLocalImageFilePath()).exists()){
+                        Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
 
                         //TODO resize image
-                    }else{
-                        //default image
-                        //FIXME
-                        Drawable image = context.getResources().getDrawable(book.getImageResId());
-                        imageView.setImageDrawable(image);
                     }
                 }
-            }
-            else{
-                //default image
-                //FIXME
-                Drawable image = context.getResources().getDrawable(book.getImageResId());
-                imageView.setImageDrawable(image);
             }
         }
 
