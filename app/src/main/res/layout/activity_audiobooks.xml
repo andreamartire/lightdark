@@ -3,6 +3,17 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:title="AudioLibreria">
+
+
+        </android.support.v7.widget.Toolbar>
+
         <LinearLayout
             android:id="@+id/currentPlayingInfo"
             android:layout_width="wrap_content"
@@ -11,29 +22,30 @@
 
                 <ImageView
                     android:id="@+id/currentPlayingBookImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center" />
 
                 <TextView
                     android:id="@+id/currentPlayingBookTitle"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/currentPlayingChapterTitle"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/currentPlayingChapterPercentage"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <Button
-                    android:id="@+id/currentPlayingResumeButton"
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Resume" />
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
 
         </LinearLayout>
 

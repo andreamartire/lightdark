@@ -7,12 +7,15 @@ package newtech.audiolibrary;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -205,8 +208,8 @@ public class AudioBookShowList extends Activity {
 
         final Context me = this;
 
-        Button playingResumeButton = (Button) this.findViewById(R.id.currentPlayingResumeButton);
-        playingResumeButton.setOnClickListener(new View.OnClickListener() {
+        ImageView playingBookImage = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
+        playingBookImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Chapter playingChapter = PlayThread.getPlayerState(me);
@@ -238,6 +241,23 @@ public class AudioBookShowList extends Activity {
             playingChapterTitle.setText(oldPlayerState.getFileName());
             TextView playingChapterPercentage = (TextView) this.findViewById(R.id.currentPlayingChapterPercentage);
             playingChapterPercentage.setText(oldPlayerState.getCurrentDuration()+"/"+oldPlayerState.getTotalDuration());
+
+            String localFileImage = oldPlayerState.getBook().getLocalImageFilePath();
+            if(new File(localFileImage).exists()){
+                //set file image
+                //select current image
+                Drawable image = Drawable.createFromPath(localFileImage);
+
+                if(image != null){
+                    Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
+                    image = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, 1000, 600, true));
+
+                    ImageView resumeBookImageView = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
+
+                    //select downloaded image
+                    resumeBookImageView.setImageDrawable(image);
+                }
+            }
         }
     }
 }
