@@ -36,6 +36,7 @@ public class ChapterShowList extends Activity {
 
     public static String BOOK = "BOOK";
     public static String CHAPTERS = "CHAPTERS";
+    public static String PLAYING_CHAPTER = "PLAYING_CHAPTER";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,12 @@ public class ChapterShowList extends Activity {
             Bitmap bitmap = ((BitmapDrawable) bookImage).getBitmap();
             bookImage = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, 1000, 600, true));
             bookImageView.setImageDrawable(bookImage);
+        }
+
+        Chapter playingChapter = (Chapter) getIntent().getSerializableExtra(PLAYING_CHAPTER);
+        if(playingChapter != null){
+            //resume old playing chapter
+            ChapterPlayStreamButton.startPlayer(this, playingChapter);
         }
     }
 }

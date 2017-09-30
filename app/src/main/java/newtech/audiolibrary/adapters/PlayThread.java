@@ -48,7 +48,17 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
     protected String doInBackground(String... params) {
         //play local resource
         String localFilePath = currentChapter.getLocalFilePath();
+
+        final ImageButton playPauseButton = (ImageButton) currentContext.findViewById(R.id.playPauseButton);
+
         mediaPlayer = new MediaPlayer();
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                playPauseButton.setImageResource(R.drawable.ic_play_arrow_black_72dp);
+            }
+        });
+
         try {
             Log.d("myApp", "file size: " + new File(localFilePath).getTotalSpace());
             System.out.println("file size: " + new File(localFilePath).getTotalSpace());

@@ -11,6 +11,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -19,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -63,11 +65,28 @@ public class AudioBookShowList extends Activity {
     private static String DEFAULT_TITLE = "default_title";
     private static String DEFAULT_BOOK = "default_book";
 
+    private static HashMap<String, Book> bookWithChapters = new HashMap<String, Book>();
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.main_menu, menu);
+//        return true;
+//    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audiobooks);
         ListView listView = (ListView)findViewById(R.id.audiobooks_listview);
+/*
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Main Page");
+        }
+        toolbar.setSubtitle("Test Subtitle");
+        toolbar.inflateMenu(R.menu.main_manu);*/
 
         ArrayList<Book> bookList = new ArrayList<>();
 
@@ -153,6 +172,7 @@ public class AudioBookShowList extends Activity {
 
                         //add book entry
                         bookList.add(book);
+                        bookWithChapters.put(book.getBookTitle(), book);
 
                         //setting chapters
                         Iterator it = obj.get(contents).getAsJsonArray().iterator();
@@ -217,7 +237,17 @@ public class AudioBookShowList extends Activity {
                 if(playingChapter != null){
                     Book currentBook = playingChapter.getBook();
 
-                    ChapterPlayStreamButton.startPlayer(me, playingChapter);
+                    //fetch chapters - not saved in player state
+                    currentBook = bookWithChapters.get(currentBook.getBookTitle());
+
+                    Intent intent = new Intent(me, ChapterShowList.class);
+
+                    //pass data thought intent to another activity
+                    intent.putExtra(ChapterShowList.BOOK, currentBook);
+                    intent.putExtra(ChapterShowList.CHAPTERS, currentBook.getChapters());
+                    intent.putExtra(ChapterShowList.PLAYING_CHAPTER, playingChapter);
+
+                    me.startActivity(intent);
                 }
             }
         });
