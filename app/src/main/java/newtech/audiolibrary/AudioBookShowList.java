@@ -5,6 +5,7 @@ package newtech.audiolibrary;
  */
 
 import android.app.Activity;
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -12,12 +13,15 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -67,26 +71,40 @@ public class AudioBookShowList extends Activity {
 
     private static HashMap<String, Book> bookWithChapters = new HashMap<String, Book>();
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.main_menu, menu);
-//        return true;
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+
+        SearchView searchView = (SearchView) menu.findItem(R.id.searchView);
+
+        searchView.setFocusable(true);
+        searchView.setIconified(false);
+        searchView.requestFocusFromTouch();
+        searchView.setSubmitButtonEnabled(true);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                System.out.println("Test query: " + query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                System.out.println("Test newText: " + newText);
+                return false;
+            }
+        });
+
+        return true;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audiobooks);
         ListView listView = (ListView)findViewById(R.id.audiobooks_listview);
-/*
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Main Page");
-        }
-        toolbar.setSubtitle("Test Subtitle");
-        toolbar.inflateMenu(R.menu.main_manu);*/
 
         ArrayList<Book> bookList = new ArrayList<>();
 
