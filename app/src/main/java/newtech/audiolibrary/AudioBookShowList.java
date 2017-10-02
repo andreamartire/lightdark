@@ -52,6 +52,7 @@ import newtech.audiolibrary.adapters.PlayThread;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
 import newtech.audiolibrary.stream.ChapterPlayStreamButton;
+import newtech.audiolibrary.task.SimpleDownloadTask;
 import newtech.audiolibrary.utils.MyFileUtils;
 
 public class AudioBookShowList extends Activity {
@@ -68,6 +69,10 @@ public class AudioBookShowList extends Activity {
     private static String DEFAULT_PROVIDER = "default_provider";
     private static String DEFAULT_TITLE = "default_title";
     private static String DEFAULT_BOOK = "default_book";
+
+    private static String CONFIG_FILE = "config.json";
+    private static String VERSION_URL = "https://raw.githubusercontent.com/andreamartire/lightdark/master/app/src/main/assets/version.json";
+    private static String CONFIG_URL = "https://raw.githubusercontent.com/andreamartire/lightdark/master/app/src/main/assets/config.json";
 
     private static HashMap<String, Book> bookWithChapters = new HashMap<String, Book>();
 
@@ -160,7 +165,7 @@ public class AudioBookShowList extends Activity {
 
                         Book book = new Book(bookTitle);
                         book.setProviderName(providerName);
-                        book.setAppDir(this.getBaseContext().getFilesDir().getAbsolutePath());
+                        book.setAppDir(getAppDir());
                         book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
 
                         //FIXME not good programming
@@ -271,6 +276,20 @@ public class AudioBookShowList extends Activity {
         });
 
         checkCurrentPlayingState();
+
+        checkConfigUpdate();
+    }
+
+    private void checkConfigUpdate() {
+        // copy from assets if not exists
+        if(!new File(getAppDir() + File.pathSeparator + CONFIG_FILE).exists()){
+            String assetsFilePath = getAppDir() + File.pathSeparator + "assets" + File.separator + CONFIG_FILE;
+            String destFilePath = getAppDir() + File.separator + CONFIG_FILE;
+            MyFileUtils.copy(new File(assetsFilePath), new File(destFilePath));
+        }
+
+        //check current version available online
+        //SimpleDownloadTask downloadTask = new SimpleDownloadTask(VERSION_URL, getAppDir() + File.pathSeparator + VERSION_FILE);
     }
 
     @Override
@@ -307,5 +326,9 @@ public class AudioBookShowList extends Activity {
                 }
             }
         }
+    }
+
+    public String getAppDir() {
+        return this.getBaseContext().getFilesDir().getAbsolutePath();
     }
 }
