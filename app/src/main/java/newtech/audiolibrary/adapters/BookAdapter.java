@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
 
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Book;
@@ -28,6 +29,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
     private Context context;
     private int resource;
     private ArrayList<Book> books;
+    private ArrayList<Book> booksBackup;
     private BookFilter filter;
 
     public BookAdapter(Context context, int resource, ArrayList<Book> books) {
@@ -93,8 +95,9 @@ public class BookAdapter extends ArrayAdapter<Book> {
     @Override
     public Filter getFilter()
     {
-        if(filter == null)
+        if(filter == null){
             filter = new BookFilter();
+        }
         return filter;
     }
 
@@ -112,6 +115,15 @@ public class BookAdapter extends ArrayAdapter<Book> {
                 ArrayList<Book> lItems = new ArrayList<Book>();
                 synchronized (this)
                 {
+                    //if is null execute backup
+                    if(booksBackup == null){
+                        booksBackup = (ArrayList<Book>) books.clone();
+                    }
+
+                    //restore from backup
+                    books = (ArrayList<Book>) booksBackup.clone();
+
+                    //copy from backup
                     lItems.addAll(books);
                 }
                 for(int i = 0, l = lItems.size(); i < l; i++)
@@ -127,8 +139,8 @@ public class BookAdapter extends ArrayAdapter<Book> {
             {
                 synchronized(this)
                 {
-                    result.values = books;
-                    result.count = books.size();
+                    result.values = booksBackup;
+                    result.count = booksBackup.size();
                 }
             }
             return result;
@@ -139,11 +151,13 @@ public class BookAdapter extends ArrayAdapter<Book> {
         protected void publishResults(CharSequence constraint, FilterResults results) {
             // NOTE: this function is *always* called from the UI thread.
             ArrayList<Book> filtered = (ArrayList<Book>) results.values;
-            notifyDataSetChanged();
+
             clear();
-            for(int i = 0, l = filtered.size(); i < l; i++)
+            for(int i = 0, l = filtered.size(); i < l; i++){
                 add(filtered.get(i));
-            notifyDataSetInvalidated();
+            }
+
+            notifyDataSetChanged();
         }
     }
 }
