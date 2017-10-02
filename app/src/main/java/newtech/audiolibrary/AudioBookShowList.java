@@ -5,26 +5,18 @@ package newtech.audiolibrary;
  */
 
 import android.app.Activity;
-import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -38,21 +30,15 @@ import java.io.InputStreamReader;
 import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 import newtech.audiolibrary.adapters.BookAdapter;
 import newtech.audiolibrary.adapters.PlayThread;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.stream.ChapterPlayStreamButton;
-import newtech.audiolibrary.utils.MyFileUtils;
 
 public class AudioBookShowList extends Activity {
 
@@ -69,41 +55,15 @@ public class AudioBookShowList extends Activity {
     private static String DEFAULT_TITLE = "default_title";
     private static String DEFAULT_BOOK = "default_book";
 
+    private BookAdapter bookAdapter;
+
     private static HashMap<String, Book> bookWithChapters = new HashMap<String, Book>();
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
-        SearchView searchView = (SearchView) menu.findItem(R.id.searchView);
-
-        searchView.setFocusable(true);
-        searchView.setIconified(false);
-        searchView.requestFocusFromTouch();
-        searchView.setSubmitButtonEnabled(true);
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                System.out.println("Test query: " + query);
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                System.out.println("Test newText: " + newText);
-                return false;
-            }
-        });
-
-        return true;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audiobooks);
+
         ListView listView = (ListView)findViewById(R.id.audiobooks_listview);
 
         ArrayList<Book> bookList = new ArrayList<>();
@@ -224,8 +184,8 @@ public class AudioBookShowList extends Activity {
             }
         }
 
-        BookAdapter arrayAdapter = new BookAdapter(this.getBaseContext(), R.layout.single_book, bookList);
-        listView.setAdapter(arrayAdapter);
+        bookAdapter = new BookAdapter(this.getBaseContext(), R.layout.single_book, bookList);
+        listView.setAdapter(bookAdapter);
 
         //init tap listener
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -241,6 +201,26 @@ public class AudioBookShowList extends Activity {
                 intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) book.getChapters());
 
                 startActivity(intent);
+            }
+        });
+
+        SearchView searchView = (SearchView) findViewById(R.id.searchView);
+        searchView.setFocusable(true);
+        searchView.setIconified(false);
+        searchView.setSubmitButtonEnabled(true);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                System.out.println("Test query: " + query);
+                bookAdapter.getFilter().filter(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                System.out.println("Test newText: " + newText);
+                bookAdapter.getFilter().filter(newText);
+                return false;
             }
         });
 
