@@ -21,7 +21,7 @@
                     style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
                     android:layout_gravity="left" />
 
-                <android.support.v7.widget.SearchView
+                <SearchView
                     android:id="@+id/searchView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
