@@ -8,13 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.File;
 import java.util.ArrayList;
 
-import newtech.audiolibrary.AudioBookShowList;
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.task.SimpleDownloadTask;
@@ -28,6 +28,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
     private Context context;
     private int resource;
     private ArrayList<Book> books;
+    private BookFilter filter;
 
     public BookAdapter(Context context, int resource, ArrayList<Book> books) {
         super(context, resource, books);
@@ -87,5 +88,62 @@ public class BookAdapter extends ArrayAdapter<Book> {
         }
 
         return convertView;
+    }
+
+    @Override
+    public Filter getFilter()
+    {
+        if(filter == null)
+            filter = new BookFilter();
+        return filter;
+    }
+
+    private class BookFilter extends Filter {
+
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            // NOTE: this function is *always* called from a background thread, and
+            // not the UI thread.
+            constraint = constraint.toString().toLowerCase();
+            FilterResults result = new FilterResults();
+            if(constraint != null && constraint.toString().length() > 0)
+            {
+                ArrayList<Book> filt = new ArrayList<Book>();
+                ArrayList<Book> lItems = new ArrayList<Book>();
+                synchronized (this)
+                {
+                    lItems.addAll(books);
+                }
+                for(int i = 0, l = lItems.size(); i < l; i++)
+                {
+                    Book m = lItems.get(i);
+                    if(m.getBookTitle().toLowerCase().contains(constraint))
+                        filt.add(m);
+                }
+                result.count = filt.size();
+                result.values = filt;
+            }
+            else
+            {
+                synchronized(this)
+                {
+                    result.values = books;
+                    result.count = books.size();
+                }
+            }
+            return result;
+        }
+
+        @SuppressWarnings("unchecked")
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            // NOTE: this function is *always* called from the UI thread.
+            ArrayList<Book> filtered = (ArrayList<Book>) results.values;
+            notifyDataSetChanged();
+            clear();
+            for(int i = 0, l = filtered.size(); i < l; i++)
+                add(filtered.get(i));
+            notifyDataSetInvalidated();
+        }
     }
 }
