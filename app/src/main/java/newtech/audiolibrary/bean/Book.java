@@ -50,9 +50,12 @@ public class Book implements Serializable {
     }
 
     public String getLocalImageFileName() {
-        String imageFilePath = getRemoteImageUrl().getPath();
-        String localImageFileName = imageFilePath.substring(imageFilePath.lastIndexOf('/') + 1);
-        return localImageFileName;
+        if(getRemoteImageUrl() != null){
+            String imageFilePath = getRemoteImageUrl().getPath();
+            String localImageFileName = imageFilePath.substring(imageFilePath.lastIndexOf('/') + 1);
+            return localImageFileName;
+        }
+        return null;
     }
 
     public String getLocalImageFilePath() {

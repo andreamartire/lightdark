@@ -29,6 +29,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Serializable;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,6 +41,8 @@ import newtech.audiolibrary.adapters.BookAdapter;
 import newtech.audiolibrary.adapters.PlayThread;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
+import newtech.audiolibrary.task.SimpleDownloadTask;
+import newtech.audiolibrary.utils.ImageUtils;
 import newtech.audiolibrary.utils.MyFileUtils;
 
 public class AudioBookShowList extends Activity {
@@ -129,33 +132,25 @@ public class AudioBookShowList extends Activity {
                         book.setProviderName(providerName);
                         book.setDescr(descBook);
                         book.setAppDir(this.getBaseContext().getFilesDir().getAbsolutePath());
-                        book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
-                        //TODO add author, description
+                        //select random image
+                        book.setLocalImageResource(ImageUtils.getRandomDefaultImage(this));
+
+                        //TODO add author
+                        try{
+                            book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
+
+                            if(new File(book.getLocalImageFileName()).exists()){
+                                //select local image
+                                Drawable image = Drawable.createFromPath(book.getLocalImageFileName());
+                                book.setLocalImageResource(image);
+                            }
+                        }
+                        catch (MalformedURLException e){
+                            e.printStackTrace();
+                        }
 
                         //FIXME not good programming
                         book.setBookTitle(bookTitle != null ? bookTitle.replaceAll("/", "_") : DEFAULT_TITLE);
-
-                        if(new File(book.getLocalImageFileName()).exists()){
-                            //select local image
-                            Drawable image = Drawable.createFromPath(book.getLocalImageFileName());
-                            book.setLocalImageResource(image);
-                        }else{
-                            //select random image
-                            ArrayList<Integer> images = new ArrayList<>();
-                            images.add(R.drawable.book1_small);
-                            images.add(R.drawable.book2_small);
-                            images.add(R.drawable.book3_small);
-                            images.add(R.drawable.book4_small);
-                            images.add(R.drawable.book5_small);
-                            images.add(R.drawable.book6_small);
-                            images.add(R.drawable.book7_small);
-                            images.add(R.drawable.book8_small);
-                            images.add(R.drawable.book9_small);
-                            Collections.shuffle(images, new Random(System.nanoTime()));
-
-                            Drawable image = getResources().getDrawable(images.get(0));
-                            book.setLocalImageResource(image);
-                        }
 
                         //add book entry
                         bookList.add(book);
@@ -214,7 +209,6 @@ public class AudioBookShowList extends Activity {
         });
 
         SearchView searchView = (SearchView) findViewById(R.id.searchView);
-        searchView.setFocusable(true);
         searchView.setIconified(false);
         searchView.setSubmitButtonEnabled(true);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -286,17 +280,24 @@ public class AudioBookShowList extends Activity {
                     //select current image
                     Drawable image = Drawable.createFromPath(localFileImage);
 
-                    if(image != null){
-                        Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
-                        image = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, 1000, 600, true));
+                    if(image == null){
+                        //get random default image
+                        image = ImageUtils.getRandomDefaultImage(this);
 
-                        ImageView resumeBookImageView = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
+                        Book book = oldPlayerState.getBook();
 
-                        //select downloaded image
-                        resumeBookImageView.setImageDrawable(image);
-                    }else{
-                        //TODO image not found
+                        //execute asynch download
+                        SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath());
+                        sdt.execute();
                     }
+
+                    Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
+                    image = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, 1000, 600, true));
+
+                    ImageView resumeBookImageView = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
+
+                    //select downloaded image
+                    resumeBookImageView.setImageDrawable(image);
                 }
             }
             else{

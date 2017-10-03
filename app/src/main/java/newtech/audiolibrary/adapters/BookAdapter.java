@@ -79,15 +79,17 @@ public class BookAdapter extends ArrayAdapter<Book> {
                             //FIXME manage
                         }
                     }else{
-                        //download file out of main thread
-                        SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath());
-                        sdt.execute();
+                        if(book.getRemoteImageUrl() != null){
+                            //download file out of main thread
+                            SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath());
+                            sdt.execute();
 
-                        //if downloaded
-                        if(new File(book.getLocalImageFilePath()).exists()){
-                            Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
+                            //if downloaded
+                            if(new File(book.getLocalImageFilePath()).exists()){
+                                Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
 
-                            //TODO resize image
+                                //TODO resize image
+                            }
                         }
                     }
                 }
