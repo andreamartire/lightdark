@@ -22,9 +22,10 @@
 
                 <SearchView
                     android:id="@+id/searchView"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"/>
+                    android:layout_gravity="right"
+                    android:layout_alignParentRight="true"/>
 
         </android.support.v7.widget.Toolbar>
 
