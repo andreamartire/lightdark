@@ -42,48 +42,53 @@ public class BookAdapter extends ArrayAdapter<Book> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        Book book = books.get(position);
+        if (convertView == null){
+            LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = vi.inflate(R.layout.single_book, null);
+        }
 
-        if (book != null){
-            if (convertView == null){
-                LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView = vi.inflate(R.layout.single_book, null);
-            }
+        if(position >= books.size()){
+            System.out.println("");
+        }else{
+            Book book = books.get(position);
 
-            TextView bookTitle = (TextView) convertView.findViewById(R.id.bookTitleView);
-            bookTitle.setText(book.getBookTitle());
+            if (book != null){
 
-            ImageView imageView = (ImageView) convertView.findViewById(R.id.bookImageView);
+                TextView bookTitle = (TextView) convertView.findViewById(R.id.bookTitleView);
+                bookTitle.setText(book.getBookTitle());
 
-            //default image
-            imageView.setImageDrawable(book.getLocalImageResource());
+                ImageView imageView = (ImageView) convertView.findViewById(R.id.bookImageView);
 
-            if(book.getRemoteImageUrl() != null){
+                //default image
+                imageView.setImageDrawable(book.getLocalImageResource());
 
-                //check if file name exists in book/metadata/
-                if(new File(book.getLocalImageFilePath()).exists()){
-                    //select current image
-                    Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
+                if(book.getRemoteImageUrl() != null){
 
-                    if(image != null){
-                        Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
-                        image = new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(bitmap, 500, 300, true));
-
-                        //select downloaded image
-                        imageView.setImageDrawable(image);
-                    }else{
-                        //FIXME manage
-                    }
-                }else{
-                    //download file out of main thread
-                    SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath());
-                    sdt.execute();
-
-                    //if downloaded
+                    //check if file name exists in book/metadata/
                     if(new File(book.getLocalImageFilePath()).exists()){
+                        //select current image
                         Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
 
-                        //TODO resize image
+                        if(image != null){
+                            Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
+                            image = new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(bitmap, 500, 300, true));
+
+                            //select downloaded image
+                            imageView.setImageDrawable(image);
+                        }else{
+                            //FIXME manage
+                        }
+                    }else{
+                        //download file out of main thread
+                        SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath());
+                        sdt.execute();
+
+                        //if downloaded
+                        if(new File(book.getLocalImageFilePath()).exists()){
+                            Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
+
+                            //TODO resize image
+                        }
                     }
                 }
             }
@@ -111,8 +116,8 @@ public class BookAdapter extends ArrayAdapter<Book> {
             FilterResults result = new FilterResults();
             if(constraint != null && constraint.toString().length() > 0)
             {
-                ArrayList<Book> filt = new ArrayList<Book>();
                 ArrayList<Book> lItems = new ArrayList<Book>();
+
                 synchronized (this)
                 {
                     //if is null execute backup
@@ -126,17 +131,25 @@ public class BookAdapter extends ArrayAdapter<Book> {
                     //copy from backup
                     lItems.addAll(books);
                 }
-                for(int i = 0, l = lItems.size(); i < l; i++)
-                {
+
+                ArrayList<Book> filteredBooks = new ArrayList<Book>();
+                for(int i = 0, l = lItems.size(); i < l; i++){
                     Book m = lItems.get(i);
-                    if(m.getBookTitle().toLowerCase().contains(constraint))
-                        filt.add(m);
+                    if(m.getBookTitle().toLowerCase().contains(constraint) || m.getDescr().toLowerCase().contains(constraint))
+                        filteredBooks.add(m);
                 }
-                result.count = filt.size();
-                result.values = filt;
+
+                //set as current dataset
+                books = filteredBooks;
+
+                result.count = filteredBooks.size();
+                result.values = filteredBooks;
             }
             else
             {
+                //set as current dataset
+                books = (ArrayList<Book>) booksBackup.clone();
+
                 synchronized(this)
                 {
                     result.values = booksBackup;

@@ -21,6 +21,7 @@ public class Book implements Serializable {
     String appDir;
     String providerName;
     String bookTitle;
+    String descr;
 
     URL remoteImageUrl;
 
@@ -38,6 +39,14 @@ public class Book implements Serializable {
 
     public void setRemoteImageUrl(URL remoteImageUrl) {
         this.remoteImageUrl = remoteImageUrl;
+    }
+
+    public String getDescr() {
+        return descr;
+    }
+
+    public void setDescr(String descr) {
+        this.descr = descr;
     }
 
     public String getLocalImageFileName() {

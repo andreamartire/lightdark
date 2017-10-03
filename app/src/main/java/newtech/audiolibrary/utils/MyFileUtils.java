@@ -83,4 +83,8 @@ public class MyFileUtils {
             e.printStackTrace();
         }
     }
+
+    public static boolean exists(String localFilePath) {
+        return new File(localFilePath).exists();
+    }
 }

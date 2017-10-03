@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -39,6 +40,7 @@ import newtech.audiolibrary.adapters.BookAdapter;
 import newtech.audiolibrary.adapters.PlayThread;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
+import newtech.audiolibrary.utils.MyFileUtils;
 
 public class AudioBookShowList extends Activity {
 
@@ -118,10 +120,17 @@ public class AudioBookShowList extends Activity {
                             bookTitle = firstContentElement.getAsJsonObject().get("title").getAsString();
                         }
 
+                        String descBook = "";
+                        if(firstContentElement.getAsJsonObject().get("desc") != null){
+                            descBook = firstContentElement.getAsJsonObject().get("desc").getAsString();
+                        }
+
                         Book book = new Book(bookTitle);
                         book.setProviderName(providerName);
+                        book.setDescr(descBook);
                         book.setAppDir(this.getBaseContext().getFilesDir().getAbsolutePath());
                         book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
+                        //TODO add author, description
 
                         //FIXME not good programming
                         book.setBookTitle(bookTitle != null ? bookTitle.replaceAll("/", "_") : DEFAULT_TITLE);
@@ -262,29 +271,37 @@ public class AudioBookShowList extends Activity {
     private void checkCurrentPlayingState() {
         Chapter oldPlayerState = PlayThread.getPlayerState(this);
         if(oldPlayerState != null){
-            //Toast.makeText(this, "Player was playing: " + oldPlayerState.getFileName() + " at duration: " + oldPlayerState.getCurrentDuration() + "/" + oldPlayerState.getTotalDuration(), Toast.LENGTH_LONG).show();
-            TextView playingBookTitle = (TextView) this.findViewById(R.id.currentPlayingBookTitle);
-            playingBookTitle.setText(oldPlayerState.getBook().getBookTitle());
-            TextView playingChapterTitle = (TextView) this.findViewById(R.id.currentPlayingChapterTitle);
-            playingChapterTitle.setText(oldPlayerState.getFileName());
-            TextView playingChapterPercentage = (TextView) this.findViewById(R.id.currentPlayingChapterPercentage);
-            playingChapterPercentage.setText(oldPlayerState.getCurrentDuration()+"/"+oldPlayerState.getTotalDuration());
+            if(MyFileUtils.exists(oldPlayerState.getLocalFilePath())){
+                //Toast.makeText(this, "Player was playing: " + oldPlayerState.getFileName() + " at duration: " + oldPlayerState.getCurrentDuration() + "/" + oldPlayerState.getTotalDuration(), Toast.LENGTH_LONG).show();
+                TextView playingBookTitle = (TextView) this.findViewById(R.id.currentPlayingBookTitle);
+                playingBookTitle.setText(oldPlayerState.getBook().getBookTitle());
+                TextView playingChapterTitle = (TextView) this.findViewById(R.id.currentPlayingChapterTitle);
+                playingChapterTitle.setText(oldPlayerState.getFileName());
+                TextView playingChapterPercentage = (TextView) this.findViewById(R.id.currentPlayingChapterPercentage);
+                playingChapterPercentage.setText(oldPlayerState.getCurrentDuration()+"/"+oldPlayerState.getTotalDuration());
 
-            String localFileImage = oldPlayerState.getBook().getLocalImageFilePath();
-            if(new File(localFileImage).exists()){
-                //set file image
-                //select current image
-                Drawable image = Drawable.createFromPath(localFileImage);
+                String localFileImage = oldPlayerState.getBook().getLocalImageFilePath();
+                if(new File(localFileImage).exists()){
+                    //set file image
+                    //select current image
+                    Drawable image = Drawable.createFromPath(localFileImage);
 
-                if(image != null){
-                    Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
-                    image = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, 1000, 600, true));
+                    if(image != null){
+                        Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
+                        image = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, 1000, 600, true));
 
-                    ImageView resumeBookImageView = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
+                        ImageView resumeBookImageView = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
 
-                    //select downloaded image
-                    resumeBookImageView.setImageDrawable(image);
+                        //select downloaded image
+                        resumeBookImageView.setImageDrawable(image);
+                    }else{
+                        //TODO image not found
+                    }
                 }
+            }
+            else{
+                //TODO comment
+                Toast.makeText(this, "Old playing chapter was deleted", Toast.LENGTH_LONG).show();
             }
         }
     }
