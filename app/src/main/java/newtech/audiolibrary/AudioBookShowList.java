@@ -302,8 +302,7 @@ public class AudioBookShowList extends Activity {
                 }
             }
             else{
-                //TODO comment
-                Toast.makeText(this, "Old playing chapter was deleted", Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, "Old playing chapter was deleted", Toast.LENGTH_LONG).show();
             }
         }
     }
