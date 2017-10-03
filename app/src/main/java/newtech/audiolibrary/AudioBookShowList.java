@@ -209,7 +209,6 @@ public class AudioBookShowList extends Activity {
         });
 
         SearchView searchView = (SearchView) findViewById(R.id.searchView);
-        searchView.setIconified(false);
         searchView.setSubmitButtonEnabled(true);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
