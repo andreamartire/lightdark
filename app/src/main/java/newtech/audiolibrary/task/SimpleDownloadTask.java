@@ -4,6 +4,9 @@ package newtech.audiolibrary.task;
  * Created by MartireAn on 24/09/2017.
  */
 
+import android.os.AsyncTask;
+import android.util.Log;
+
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -12,9 +15,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
-
-import android.os.AsyncTask;
-import android.util.Log;
 
 import newtech.audiolibrary.utils.MyFileUtils;
 

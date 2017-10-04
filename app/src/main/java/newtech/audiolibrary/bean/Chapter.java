@@ -2,6 +2,7 @@ package newtech.audiolibrary.bean;
 
 import java.io.File;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by MartireAn on 24/08/2017.
@@ -20,8 +21,19 @@ public class Chapter implements Serializable {
     int currentDuration;
     int totalDuration;
 
+    //not transient because nextChapter link doesn't create a loop
+    Chapter nextChapter;
+
     public Chapter(){
 
+    }
+
+    public Chapter getNextChapter() {
+        return nextChapter;
+    }
+
+    public void setNextChapter(Chapter nextChapter) {
+        this.nextChapter = nextChapter;
     }
 
     public int getCurrentDuration() {
@@ -84,5 +96,17 @@ public class Chapter implements Serializable {
         String localFilePath = getLocalFilePath();
         boolean exists = new File(localFilePath).exists();
         return exists;
+    }
+
+    public Chapter getMatchingChapter(ArrayList<Chapter> chapters) {
+        if(chapters != null){
+            for(Chapter linkedChapter : chapters){
+                if(this.getLocalFilePath().equals(linkedChapter.getLocalFilePath())){
+                    return linkedChapter;
+                }
+            }
+        }
+
+        return null;
     }
 }

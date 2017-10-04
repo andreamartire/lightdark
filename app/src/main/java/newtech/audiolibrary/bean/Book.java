@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 import newtech.audiolibrary.AudioBookShowList;
+import newtech.audiolibrary.utils.ConfigUtils;
 
 /**
  * Created by MartireAn on 18/09/2017.
@@ -59,9 +60,12 @@ public class Book implements Serializable {
     }
 
     public String getLocalImageFilePath() {
-        String localImageFilePath = getAppDir() + File.separator + getBookTitle() + File.separator +
-                AudioBookShowList.metadata + File.separator + getLocalImageFileName();
-        return localImageFilePath;
+        String localImageFileName = getLocalImageFileName();
+        if(localImageFileName != null){
+            return getAppDir() + File.separator + getBookTitle() + File.separator +
+                    ConfigUtils.metadata + File.separator + localImageFileName;
+        }
+        return null;
     }
 
     public String getBookTitle() {

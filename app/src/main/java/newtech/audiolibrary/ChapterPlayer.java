@@ -5,6 +5,8 @@ package newtech.audiolibrary;
  */
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -75,5 +77,14 @@ public class ChapterPlayer extends Activity {
         super.onBackPressed();
 
         playThread.stop();
+    }
+
+    public static void startPlayer(Context context, Chapter currentChapter){
+        Intent intent = new Intent(context, ChapterPlayer.class);
+
+        //pass data thought intent to another activity
+        intent.putExtra(ChapterPlayer.CHAPTER, currentChapter);
+
+        context.startActivity(intent);
     }
 }

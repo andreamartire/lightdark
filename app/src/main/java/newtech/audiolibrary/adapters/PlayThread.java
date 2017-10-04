@@ -22,6 +22,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import newtech.audiolibrary.AudioBookShowList;
+import newtech.audiolibrary.ChapterPlayer;
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Chapter;
 import newtech.audiolibrary.utils.MyFileUtils;
@@ -55,7 +57,18 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
+                //when complete play current chapter
                 playPauseButton.setImageResource(R.drawable.ic_play_arrow_black_72dp);
+
+                Chapter nextChapter = currentChapter.getNextChapter();
+
+                //auto play next chapter if exists
+                if(nextChapter != null && MyFileUtils.exists(nextChapter.getLocalFilePath())){
+                    //stop current activity
+                    currentContext.finish();
+                    //start another activity
+                    ChapterPlayer.startPlayer(currentContext.getApplicationContext(), nextChapter);
+                }
             }
         });
 
@@ -218,7 +231,10 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         Chapter loadedChapter = null;
         try{
             loadedChapter = new Gson().fromJson(new FileReader(playerStateFilePath), Chapter.class);
-            System.out.println("Loaded json: " + loadedChapter);
+            System.out.println("Loaded chapter: " + loadedChapter);
+
+            //TODO convert to linked chapter. avoid to spread this logic
+            //loadedChapter = loadedChapter.getMatchingChapter(((AudioBookShowList)context).);
         }catch (FileNotFoundException e){
             //nothing
         }

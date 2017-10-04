@@ -1,10 +1,8 @@
 package newtech.audiolibrary.stream;
 
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 import android.view.View;
@@ -13,14 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.apache.commons.io.FileUtils;
-
-import java.io.File;
-import java.io.IOException;
-
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.task.DownloadTask;
 import newtech.audiolibrary.utils.MyFileUtils;
 
 /**

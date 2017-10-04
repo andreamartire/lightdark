@@ -5,32 +5,20 @@ package newtech.audiolibrary;
  */
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 import newtech.audiolibrary.adapters.ChapterAdapter;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.stream.ChapterDownloadButton;
 import newtech.audiolibrary.stream.ChapterPlayStreamButton;
-import newtech.audiolibrary.task.DownloadTask;
 
 public class ChapterShowList extends Activity {
 
@@ -66,7 +54,7 @@ public class ChapterShowList extends Activity {
         Chapter playingChapter = (Chapter) getIntent().getSerializableExtra(PLAYING_CHAPTER);
         if(playingChapter != null){
             //resume old playing chapter
-            ChapterPlayStreamButton.startPlayer(this, playingChapter);
+            ChapterPlayer.startPlayer(this, playingChapter);
         }
     }
 }
