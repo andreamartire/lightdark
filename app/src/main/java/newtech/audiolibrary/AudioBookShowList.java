@@ -130,6 +130,9 @@ public class AudioBookShowList extends Activity {
     protected void onResume() {
         super.onResume();
         checkCurrentPlayingState();
+
+        final SearchView searchView = (SearchView) findViewById(R.id.searchView);
+        searchView.setQuery("", false);
     }
 
     private void checkCurrentPlayingState() {

@@ -38,6 +38,9 @@ public class ConfigUtils {
     public static String metadata = "metadata";
     private static String provider = "provider";
     private static String image = "image";
+    private static String other_images = "other_images";
+    private static String image_300 = "image_300";
+    private static String image_433 = "image_433";
     private static String name = "name";
     private static String title = "title";
     private static String url = "url";
@@ -72,7 +75,7 @@ public class ConfigUtils {
                     //setting provider
                     String providerName = DEFAULT_PROVIDER;
                     String bookTitle = DEFAULT_BOOK;
-                    String imageUrl = null;
+                    String imageUrl = null, image433Url = null, image300Url = null;
                     if(obj.get(metadata) != null && obj.get(metadata).getAsJsonArray().size() > 0){
                         JsonElement metadataObj = obj.get(metadata).getAsJsonArray().get(0);
                         if(metadataObj != null){
@@ -87,6 +90,18 @@ public class ConfigUtils {
                             JsonElement bookTitleObj = metadataObj.getAsJsonObject().get(title);
                             if(bookTitleObj != null){
                                 bookTitle = bookTitleObj.getAsString();
+                            }
+
+                            JsonElement otherImagesEl = metadataObj.getAsJsonObject().get(other_images);
+                            if(otherImagesEl != null){
+                                JsonElement image433El = otherImagesEl.getAsJsonObject().get(image_433);
+                                if(image433El != null){
+                                    image433Url = image433El.getAsString();
+                                }
+                                JsonElement image300El = otherImagesEl.getAsJsonObject().get(image_300);
+                                if(image300El != null){
+                                    image300Url = image300El.getAsString();
+                                }
                             }
 
                             JsonElement imageObj = metadataObj.getAsJsonObject().get(image);
@@ -118,7 +133,13 @@ public class ConfigUtils {
 
                         //TODO add author
                         try{
-                            book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
+                            if(ImageUtils.validateHTTP_URI(image433Url)){
+                                book.setRemoteImageUrl(image433Url != null ? new URL(image433Url) : null);
+                            }else if(ImageUtils.validateHTTP_URI(image300Url)){
+                                book.setRemoteImageUrl(image300Url != null ? new URL(image300Url) : null);
+                            }else {
+                                book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
+                            }
 
                             if(new File(book.getLocalImageFileName()).exists()){
                                 //select local image

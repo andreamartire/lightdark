@@ -3,6 +3,7 @@ package newtech.audiolibrary.utils;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
@@ -25,5 +26,15 @@ public class ImageUtils {
         Collections.shuffle(images, new Random(System.nanoTime()));
 
         return context.getResources().getDrawable(images.get(0));
+    }
+
+    public static boolean validateHTTP_URI(String uri) {
+        final URL url;
+        try {
+            url = new URL(uri);
+        } catch (Exception e1) {
+            return false;
+        }
+        return "http".equals(url.getProtocol());
     }
 }

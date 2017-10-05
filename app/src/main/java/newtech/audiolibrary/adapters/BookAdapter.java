@@ -149,6 +149,11 @@ public class BookAdapter extends ArrayAdapter<Book> {
             }
             else
             {
+                //if is null execute backup
+                if(booksBackup == null){
+                    booksBackup = (ArrayList<Book>) books.clone();
+                }
+
                 //set as current dataset
                 books = (ArrayList<Book>) booksBackup.clone();
 
