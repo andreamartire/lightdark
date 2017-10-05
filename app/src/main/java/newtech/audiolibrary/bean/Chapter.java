@@ -12,6 +12,7 @@ public class Chapter implements Serializable {
 
     public static String MP3_EXTENSION = ".mp3";
 
+    int chapterId;
     Book book;
 
     String chapterTitle;
@@ -26,6 +27,14 @@ public class Chapter implements Serializable {
 
     public Chapter(){
 
+    }
+
+    public int getChapterId() {
+        return chapterId;
+    }
+
+    public void setChapterId(int chapterId) {
+        this.chapterId = chapterId;
     }
 
     public Chapter getNextChapter() {
@@ -108,5 +117,13 @@ public class Chapter implements Serializable {
         }
 
         return null;
+    }
+
+    public int getPlayedPercentage(){
+        if(totalDuration > 0){
+            Double percentage = ((double)currentDuration)/totalDuration;
+            return (int) Math.round(percentage*100);
+        }
+        return 0;
     }
 }

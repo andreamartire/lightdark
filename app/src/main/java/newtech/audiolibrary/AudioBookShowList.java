@@ -18,21 +18,10 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.Serializable;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 
 import newtech.audiolibrary.adapters.BookAdapter;
 import newtech.audiolibrary.adapters.PlayThread;
@@ -47,22 +36,35 @@ public class AudioBookShowList extends Activity {
 
     private BookAdapter bookAdapter;
 
-    private static HashMap<String, Book> bookWithChapters = new HashMap<String, Book>();
+    public HashMap<String, Book> bookWithChapters = new HashMap<String, Book>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audiobooks);
 
-        ListView listView = (ListView)findViewById(R.id.audiobooks_listview);
-
         ArrayList<Book> bookList = new ArrayList<>();
-
         new ConfigUtils(this, bookWithChapters, "config.json", bookList).invoke();
 
+        final SearchView searchView = (SearchView) findViewById(R.id.searchView);
+        searchView.setSubmitButtonEnabled(true);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                bookAdapter.getFilter().filter(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                bookAdapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+
+        ListView listView = (ListView)findViewById(R.id.audiobooks_listview);
         bookAdapter = new BookAdapter(this.getBaseContext(), R.layout.single_book, bookList);
         listView.setAdapter(bookAdapter);
-
         //init tap listener
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
@@ -77,22 +79,9 @@ public class AudioBookShowList extends Activity {
                 intent.putExtra(ChapterShowList.CHAPTERS, (Serializable) book.getChapters());
 
                 startActivity(intent);
-            }
-        });
 
-        SearchView searchView = (SearchView) findViewById(R.id.searchView);
-        searchView.setSubmitButtonEnabled(true);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                bookAdapter.getFilter().filter(query);
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                bookAdapter.getFilter().filter(newText);
-                return false;
+                //TODO reset search view
+                searchView.clearFocus();
             }
         });
 
@@ -110,17 +99,17 @@ public class AudioBookShowList extends Activity {
                     //fetch chapters - not saved in player state
                     currentBook = bookWithChapters.get(currentBook.getBookTitle());
 
-                    //TODO need refactoring
-                    Chapter linkedChapter = playingChapter.getMatchingChapter(currentBook.getChapters());
-
                     Intent intent = new Intent(me, ChapterShowList.class);
 
                     //pass data thought intent to another activity
                     intent.putExtra(ChapterShowList.BOOK, currentBook);
                     intent.putExtra(ChapterShowList.CHAPTERS, currentBook.getChapters());
-                    intent.putExtra(ChapterShowList.PLAYING_CHAPTER, linkedChapter);
+                    intent.putExtra(ChapterShowList.PLAYING_CHAPTER, playingChapter);
 
                     me.startActivity(intent);
+
+                    //TODO reset search view
+                    searchView.clearFocus();
                 }
             }
         });
@@ -144,7 +133,7 @@ public class AudioBookShowList extends Activity {
                 TextView playingChapterTitle = (TextView) this.findViewById(R.id.currentPlayingChapterTitle);
                 playingChapterTitle.setText(oldPlayerState.getFileName());
                 TextView playingChapterPercentage = (TextView) this.findViewById(R.id.currentPlayingChapterPercentage);
-                playingChapterPercentage.setText(oldPlayerState.getCurrentDuration()+"/"+oldPlayerState.getTotalDuration());
+                playingChapterPercentage.setText(""+oldPlayerState.getBook().getBookPlayerPercentage(oldPlayerState));
 
                 String localImageFileName = oldPlayerState.getBook().getLocalImageFileName();
 

@@ -25,6 +25,7 @@ import java.util.concurrent.TimeUnit;
 import newtech.audiolibrary.AudioBookShowList;
 import newtech.audiolibrary.ChapterPlayer;
 import newtech.audiolibrary.R;
+import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
 import newtech.audiolibrary.utils.MyFileUtils;
 
@@ -229,17 +230,23 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         String playerStateFilePath = metadataFilePath + File.separator + PLAYER_STATE_FILE;
 
         Chapter loadedChapter = null;
+        Chapter linkedChapter = null;
         try{
             loadedChapter = new Gson().fromJson(new FileReader(playerStateFilePath), Chapter.class);
             System.out.println("Loaded chapter: " + loadedChapter);
 
-            //TODO convert to linked chapter. avoid to spread this logic
-            //loadedChapter = loadedChapter.getMatchingChapter(((AudioBookShowList)context).);
+            Book linkedBook = ((AudioBookShowList) context).bookWithChapters.get(loadedChapter.getBook().getBookTitle());
+            // convert to linked chapter. avoid to spread this logic
+            linkedChapter = loadedChapter.getMatchingChapter(linkedBook.getChapters());
+
+            linkedChapter.setCurrentDuration(loadedChapter.getCurrentDuration());
+            linkedChapter.setTotalDuration(loadedChapter.getTotalDuration());
+
         }catch (FileNotFoundException e){
             //nothing
         }
 
-        return loadedChapter;
+        return linkedChapter;
     }
 
     public static void deletePlayerState(Context context){

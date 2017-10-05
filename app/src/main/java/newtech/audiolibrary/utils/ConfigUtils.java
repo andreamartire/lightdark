@@ -139,6 +139,8 @@ public class ConfigUtils {
 
                         //setting chapters
                         Iterator it = obj.get(contents).getAsJsonArray().iterator();
+
+                        int chapterIndex = 1;
                         while (it.hasNext()){
                             JsonElement jsonChapter = (JsonElement) it.next();
 
@@ -150,6 +152,10 @@ public class ConfigUtils {
                                     chapter.setChapterTitle(chapterObj.get(title).getAsString().replaceAll("/", "_"));
                                     chapter.setUrl(chapterObj.get(url).getAsString());
                                     chapter.setBook(book);
+
+                                    //set chapter index
+                                    chapter.setChapterId(chapterIndex);
+                                    chapterIndex++;
 
                                     //set curr element as nextChapter in current last element
                                     Chapter lastChapter = null;

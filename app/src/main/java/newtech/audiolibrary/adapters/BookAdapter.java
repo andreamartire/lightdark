@@ -168,8 +168,11 @@ public class BookAdapter extends ArrayAdapter<Book> {
             ArrayList<Book> filtered = (ArrayList<Book>) results.values;
 
             clear();
-            for(int i = 0, l = filtered.size(); i < l; i++){
-                add(filtered.get(i));
+
+            if(filtered != null){
+                for(int i = 0, l = filtered.size(); i < l; i++){
+                    add(filtered.get(i));
+                }
             }
 
             notifyDataSetChanged();

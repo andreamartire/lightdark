@@ -27,7 +27,7 @@ public class Book implements Serializable {
     URL remoteImageUrl;
 
     // transient avoid loop in Gson conversion
-    transient ArrayList<Chapter> chapters;
+    transient ArrayList<Chapter> chapters = new ArrayList<Chapter>();
     transient Drawable localImageResource;
 
     public Book(String title){
@@ -109,5 +109,24 @@ public class Book implements Serializable {
 
     public void setChapters(ArrayList<Chapter> chapters) {
         this.chapters = chapters;
+    }
+
+    public double getBookPlayerPercentage(Chapter playingChapter){
+        int totChapDur = playingChapter.getTotalDuration();
+        int currChapDur = playingChapter.getCurrentDuration();
+
+        if(chapters != null){
+            int numChapters = chapters.size();
+
+            int chapterIndex = playingChapter.getChapterId();
+
+            int evalTotalBookDur = totChapDur*numChapters;
+            int evalPlayedBookDur = totChapDur*(chapterIndex-1) + currChapDur;
+
+            double globalPerc = (Math.round(((double)evalPlayedBookDur)/((double)evalTotalBookDur)*100));
+            return globalPerc;
+        }
+
+        return 0;
     }
 }
