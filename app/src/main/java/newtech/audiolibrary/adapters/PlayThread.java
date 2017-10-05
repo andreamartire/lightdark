@@ -236,6 +236,11 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             System.out.println("Loaded chapter: " + loadedChapter);
 
             Book linkedBook = ((AudioBookShowList) context).bookWithChapters.get(loadedChapter.getBook().getBookTitle());
+
+            if(linkedBook == null){
+                //is null when book title changes in config file
+                return null;
+            }
             // convert to linked chapter. avoid to spread this logic
             linkedChapter = loadedChapter.getMatchingChapter(linkedBook.getChapters());
 

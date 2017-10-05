@@ -365,7 +365,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Le metamorfosi",
+					"author": "Publio Ovidio Nasone"
                 }
             ]
         },
@@ -584,7 +586,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Uno nessuno e centomila",
+					"author": "Luigi Pirandello"
                 }
             ]
         },
@@ -753,7 +757,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Arancia meccanica",
+					"author": "Anthony Burgess"
                 }
             ]
         },
@@ -832,7 +838,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Nudi e crudi",
+					"author": "Alan Bennett"
                 }
             ]
         },
@@ -912,7 +920,6 @@
             "id": 4,
             "metadata": [
                 {
-                    "title" : "La sovrana lettrice",
                     "image": "http://www.rai.tv/dl/img/2017/04/105x791493285757124la_sovrana_lettrice_7.jpg",
                     "other_images": {
                         "image_300": "http://www.rai.tv/dl/img/2017/04/300x1691493285757124la_sovrana_lettrice_7.jpg",
@@ -922,7 +929,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title" : "La sovrana lettrice",
+					"author": "Alan Bennett"
                 }
             ]
         },
@@ -1121,7 +1130,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title" : "Il sistema periodico",
+					"author": "Primo Levi"
                 }
             ]
         },
@@ -1290,7 +1301,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title" : "Il monaco",
+					"author": "Matthew G. Lewis"
                 }
             ]
         },
@@ -1609,7 +1622,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title" : "Il nome della rosa",
+					"author": "Umberto Eco"
                 }
             ]
         },

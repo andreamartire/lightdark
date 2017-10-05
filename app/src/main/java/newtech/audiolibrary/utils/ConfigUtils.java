@@ -1,6 +1,8 @@
 package newtech.audiolibrary.utils;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
 import com.google.gson.JsonArray;
@@ -11,18 +13,13 @@ import com.google.gson.JsonParser;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Random;
 
-import newtech.audiolibrary.AudioBookShowList;
-import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
 
@@ -128,14 +125,18 @@ public class ConfigUtils {
                         book.setProviderName(providerName);
                         book.setDescr(descBook);
                         book.setAppDir(context.getFilesDir().getAbsolutePath());
+
                         //select random image
-                        book.setLocalImageResource(ImageUtils.getRandomDefaultImage(context));
+                        Drawable randomImage = ImageUtils.getRandomDefaultImage(context);
+                        Bitmap bitmap = ((BitmapDrawable) randomImage).getBitmap();
+                        randomImage = new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(bitmap, 500, 300, true));
+                        book.setLocalImageResource(randomImage);
 
                         //TODO add author
                         try{
-                            if(ImageUtils.validateHTTP_URI(image433Url)){
+                            if(ImageUtils.isValidUri(image433Url)){
                                 book.setRemoteImageUrl(image433Url != null ? new URL(image433Url) : null);
-                            }else if(ImageUtils.validateHTTP_URI(image300Url)){
+                            }else if(ImageUtils.isValidUri(image300Url)){
                                 book.setRemoteImageUrl(image300Url != null ? new URL(image300Url) : null);
                             }else {
                                 book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);

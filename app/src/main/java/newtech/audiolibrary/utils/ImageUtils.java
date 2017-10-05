@@ -28,7 +28,7 @@ public class ImageUtils {
         return context.getResources().getDrawable(images.get(0));
     }
 
-    public static boolean validateHTTP_URI(String uri) {
+    public static boolean isValidUri(String uri) {
         final URL url;
         try {
             url = new URL(uri);
