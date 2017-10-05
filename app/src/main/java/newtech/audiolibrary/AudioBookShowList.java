@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -47,23 +48,31 @@ public class AudioBookShowList extends Activity {
         new ConfigUtils(this, bookWithChapters, "config.json", bookList).invoke();
 
         final SearchView searchView = (SearchView) findViewById(R.id.searchView);
+        final LinearLayout currentPlayingInfo = (LinearLayout) findViewById(R.id.currentPlayingInfo);
+
         searchView.setSubmitButtonEnabled(true);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 bookAdapter.getFilter().filter(query);
+                currentPlayingInfo.setVisibility(View.GONE);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
                 bookAdapter.getFilter().filter(newText);
+                if(newText != null && newText.length() > 0){
+                    currentPlayingInfo.setVisibility(View.GONE);
+                }else{
+                    currentPlayingInfo.setVisibility(View.VISIBLE);
+                }
                 return false;
             }
         });
 
         ListView listView = (ListView)findViewById(R.id.audiobooks_listview);
-        bookAdapter = new BookAdapter(this.getBaseContext(), R.layout.single_book, bookList);
+        bookAdapter = new BookAdapter(getBaseContext(), R.layout.single_book, bookList);
         listView.setAdapter(bookAdapter);
         //init tap listener
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -87,7 +96,7 @@ public class AudioBookShowList extends Activity {
 
         final Context me = this;
 
-        ImageView playingBookImage = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
+        final ImageView playingBookImage = (ImageView) findViewById(R.id.currentPlayingBookImage);
         playingBookImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
