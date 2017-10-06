@@ -19,6 +19,7 @@ import newtech.audiolibrary.adapters.ChapterAdapter;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
 import newtech.audiolibrary.stream.ChapterPlayStreamButton;
+import newtech.audiolibrary.utils.ImageUtils;
 
 public class ChapterShowList extends Activity {
 
@@ -46,9 +47,7 @@ public class ChapterShowList extends Activity {
         if(bookImage == null){
             //TODO default image not found
         }else{
-            Bitmap bitmap = ((BitmapDrawable) bookImage).getBitmap();
-            bookImage = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, 1000, 600, true));
-            bookImageView.setImageDrawable(bookImage);
+            bookImageView.setImageDrawable(ImageUtils.scaleImage(this, bookImage, 1000, 600));
         }
 
         Chapter playingChapter = (Chapter) getIntent().getSerializableExtra(PLAYING_CHAPTER);

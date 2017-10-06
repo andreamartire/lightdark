@@ -4,8 +4,12 @@ package newtech.audiolibrary.task;
  * Created by MartireAn on 24/09/2017.
  */
 
+import android.app.Activity;
 import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
@@ -22,11 +26,15 @@ public class SimpleDownloadTask extends AsyncTask<String, Integer, String> {
 
     URL remoteFileURL;
     String localFilePath;
+    ArrayAdapter arrayAdapter;
+    Activity activity;
 
-    public SimpleDownloadTask(URL remoteFileURL, String localFilePath){
+    public SimpleDownloadTask(URL remoteFileURL, String localFilePath, ArrayAdapter arrayAdapter){
         super();
+        this.activity = activity;
         this.remoteFileURL = remoteFileURL;
         this.localFilePath = localFilePath;
+        this.arrayAdapter = arrayAdapter;
     }
 
     @Override
@@ -67,7 +75,16 @@ public class SimpleDownloadTask extends AsyncTask<String, Integer, String> {
             fos.write(baf.toByteArray());
             fos.close();
 
-        } catch (IOException e) {
+            if(arrayAdapter != null){
+                Handler mHandler = new Handler(Looper.getMainLooper());
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        arrayAdapter.notifyDataSetChanged();
+                    }
+                });
+            }
+        } catch (Throwable e) {
             e.printStackTrace();
         }
 

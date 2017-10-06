@@ -1,6 +1,8 @@
 package newtech.audiolibrary.utils;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
 import java.net.URL;
@@ -35,6 +37,11 @@ public class ImageUtils {
         } catch (Exception e1) {
             return false;
         }
-        return "http".equals(url.getProtocol());
+        return "http".equalsIgnoreCase(url.getProtocol()) || "https".equalsIgnoreCase(url.getProtocol());
+    }
+
+    public static Drawable scaleImage(Context context, Drawable image, int width, int length){
+        Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
+        return new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(bitmap, width, length, true));
     }
 }

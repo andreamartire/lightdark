@@ -1,5 +1,6 @@
 package newtech.audiolibrary.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -19,6 +20,7 @@ import java.util.Collection;
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.task.SimpleDownloadTask;
+import newtech.audiolibrary.utils.ImageUtils;
 
 /**
  * Created by MartireAn on 19/09/2017.
@@ -70,26 +72,21 @@ public class BookAdapter extends ArrayAdapter<Book> {
                         Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
 
                         if(image != null){
-                            Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
-                            image = new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(bitmap, 500, 300, true));
-
                             //select downloaded image
-                            imageView.setImageDrawable(image);
+                            imageView.setImageDrawable(ImageUtils.scaleImage(context, image, 500, 300));
                         }else{
                             //FIXME manage
                         }
                     }else{
-                        if(book.getRemoteImageUrl() != null){
-                            //download file out of main thread
-                            SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath());
-                            sdt.execute();
+                        //download file out of main thread
+                        SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), this);
+                        sdt.execute();
 
-                            //if downloaded
-                            if(new File(book.getLocalImageFilePath()).exists()){
-                                Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
+                        //if downloaded
+                        if(new File(book.getLocalImageFilePath()).exists()){
+                            Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
 
-                                //TODO resize image
-                            }
+                            //TODO resize image
                         }
                     }
                 }

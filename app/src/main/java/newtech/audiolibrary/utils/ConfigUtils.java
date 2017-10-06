@@ -128,9 +128,7 @@ public class ConfigUtils {
 
                         //select random image
                         Drawable randomImage = ImageUtils.getRandomDefaultImage(context);
-                        Bitmap bitmap = ((BitmapDrawable) randomImage).getBitmap();
-                        randomImage = new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(bitmap, 500, 300, true));
-                        book.setLocalImageResource(randomImage);
+                        book.setLocalImageResource(ImageUtils.scaleImage(context, randomImage, 500, 300));
 
                         //TODO add author
                         try{

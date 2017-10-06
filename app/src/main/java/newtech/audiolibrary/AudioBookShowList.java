@@ -7,8 +7,6 @@ package newtech.audiolibrary;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -166,23 +164,30 @@ public class AudioBookShowList extends Activity {
                             Book book = oldPlayerState.getBook();
 
                             //execute asynch download
-                            SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath());
+                            SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
                             sdt.execute();
                         }
+                    }else{
+                        Book book = oldPlayerState.getBook();
+
+                        //execute asynch download
+                        SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
+                        sdt.execute();
                     }
                 }
-
-                Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
-                image = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, 1000, 600, true));
 
                 ImageView resumeBookImageView = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
 
                 //select downloaded image
-                resumeBookImageView.setImageDrawable(image);
+                resumeBookImageView.setImageDrawable(ImageUtils.scaleImage(this, image, 1000, 600));
             }
             else{
                 //Toast.makeText(this, "Old playing chapter was deleted", Toast.LENGTH_LONG).show();
             }
+        }else{
+            // no book playing
+            View playingInfo = this.findViewById(R.id.currentPlayingInfo);
+            playingInfo.setVisibility(View.GONE);
         }
     }
 }
