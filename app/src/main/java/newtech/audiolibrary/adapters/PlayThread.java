@@ -9,6 +9,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -101,6 +102,13 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                 }
             });
 
+            currentContext.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    updatePlayer();
+                }
+            });
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -128,17 +136,20 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                 currentDurationView.post(new Runnable() {
                     public void run() {
                         try {
-                            if (mediaPlayer.isPlaying()) {
+                            int currentPos = mediaPlayer.getCurrentPosition();
 
-                                int currentPos = mediaPlayer.getCurrentPosition();
+                            if (mediaPlayer.isPlaying()) {
                                 currentChapter.setCurrentDuration(currentPos);
 
                                 currentDurationView.postDelayed(this, 1000);
                                 currentDurationView.setText(formatDuration(currentPos));
+
                                 savePlayerState(currentChapter);
                             } else {
                                 currentDurationView.removeCallbacks(this);
                             }
+                            updateSeekBar();
+
                         } catch (java.lang.IllegalStateException|java.io.IOException e){
                             //nothing
                             e.printStackTrace();
@@ -147,6 +158,14 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                 });
             }
         });
+    }
+
+    private void updateSeekBar() {
+        int currentPos = mediaPlayer.getCurrentPosition();
+        //update seek bar
+        int newPerc = currentPos*100/mediaPlayer.getDuration();
+        SeekBar seekBar = (SeekBar) currentContext.findViewById(R.id.seekBar);
+        seekBar.setProgress(newPerc);
     }
 
     public static String formatDuration(int duration) {

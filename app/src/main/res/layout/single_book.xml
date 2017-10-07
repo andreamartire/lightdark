@@ -10,12 +10,25 @@
         android:layout_height="wrap_content"
         android:padding="1dip"/>
 
-    <TextView
-        android:id="@+id/bookTitleView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:padding="10dip"
-        android:textSize="22dip"/>
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bookTitleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textSize="20dip"/>
+
+        <TextView
+            android:id="@+id/bookAuthorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textSize="14dip"/>
+
+    </LinearLayout>
 
 </LinearLayout>

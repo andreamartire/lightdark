@@ -16,7 +16,9 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.SearchView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import java.io.File;
@@ -144,8 +146,11 @@ public class AudioBookShowList extends Activity {
                 playingBookTitle.setText(oldPlayerState.getBook().getBookTitle());
                 TextView playingChapterTitle = (TextView) this.findViewById(R.id.currentPlayingChapterTitle);
                 playingChapterTitle.setText(oldPlayerState.getFileName());
-                TextView playingChapterPercentage = (TextView) this.findViewById(R.id.currentPlayingChapterPercentage);
-                playingChapterPercentage.setText(""+oldPlayerState.getBook().getBookPlayerPercentage(oldPlayerState));
+
+                double bookPercentage = oldPlayerState.getBook().getBookPlayerPercentage(oldPlayerState);
+                ProgressBar progressBar = (ProgressBar) this.findViewById(R.id.progressBar);
+                progressBar.setProgress((int) bookPercentage);
+                progressBar.setEnabled(false);
 
                 String localImageFileName = oldPlayerState.getBook().getLocalImageFileName();
 

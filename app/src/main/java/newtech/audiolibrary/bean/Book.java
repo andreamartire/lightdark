@@ -23,6 +23,7 @@ public class Book implements Serializable {
     String providerName;
     String bookTitle;
     String descr;
+    String author;
 
     URL remoteImageUrl;
 
@@ -66,6 +67,14 @@ public class Book implements Serializable {
                     ConfigUtils.metadata + File.separator + localImageFileName;
         }
         return null;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getBookTitle() {

@@ -3,6 +3,7 @@ package newtech.audiolibrary.adapters;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
@@ -59,6 +60,9 @@ public class BookAdapter extends ArrayAdapter<Book> {
                 TextView bookTitle = (TextView) convertView.findViewById(R.id.bookTitleView);
                 bookTitle.setText(book.getBookTitle());
 
+                TextView bookAuthor = (TextView) convertView.findViewById(R.id.bookAuthorView);
+                bookAuthor.setText(book.getAuthor());
+
                 ImageView imageView = (ImageView) convertView.findViewById(R.id.bookImageView);
 
                 //default image
@@ -72,6 +76,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
                         Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
 
                         if(image != null){
+                            //TODO size based on screen width
                             //select downloaded image
                             imageView.setImageDrawable(ImageUtils.scaleImage(context, image, 500, 300));
                         }else{

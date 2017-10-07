@@ -41,6 +41,7 @@ public class ConfigUtils {
     private static String name = "name";
     private static String title = "title";
     private static String url = "url";
+    private static String author = "author";
 
     private static String DEFAULT_PROVIDER = "default_provider";
     private static String DEFAULT_TITLE = "default_title";
@@ -73,6 +74,8 @@ public class ConfigUtils {
                     String providerName = DEFAULT_PROVIDER;
                     String bookTitle = DEFAULT_BOOK;
                     String imageUrl = null, image433Url = null, image300Url = null;
+                    String authorBook = "";
+
                     if(obj.get(metadata) != null && obj.get(metadata).getAsJsonArray().size() > 0){
                         JsonElement metadataObj = obj.get(metadata).getAsJsonArray().get(0);
                         if(metadataObj != null){
@@ -105,6 +108,10 @@ public class ConfigUtils {
                             if(imageObj != null){
                                 imageUrl = imageObj.getAsString();
                             }
+
+                            if(metadataObj.getAsJsonObject().get(author) != null){
+                                authorBook = metadataObj.getAsJsonObject().get(author).getAsString();
+                            }
                         }
                     }
 
@@ -124,6 +131,7 @@ public class ConfigUtils {
                         Book book = new Book(bookTitle);
                         book.setProviderName(providerName);
                         book.setDescr(descBook);
+                        book.setAuthor(authorBook);
                         book.setAppDir(context.getFilesDir().getAbsolutePath());
 
                         //select random image
