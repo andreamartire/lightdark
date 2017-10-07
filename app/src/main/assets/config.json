@@ -4168,7 +4168,8 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"TODO":"TODO"
                 }
             ]
         },
@@ -5923,6 +5924,56 @@
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=lJ9csECOlBseeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-48b72c88-4fb0-4c0a-93f9-58ee862b02b5.html"
+                },
+				{
+                    "contentId": "ContentSet-65b43123-9664-4d70-8f63-f66c1069f70a",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "Il violino di Rothschild",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=ssSlashKuSuAHVUAweeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-9b710c25-5e73-4051-8be0-5ddd934af317.html"
+                },
+                {
+                    "contentId": "ContentSet-65b43123-9664-4d70-8f63-f66c1069f70a",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 1,
+                    "title": "Grisha e il racconto del giardiniere capo",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=fuhEKzFWStgeeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-c1973562-b646-4308-9f66-d0f8eaa24986.html"
+                },
+                {
+                    "contentId": "ContentSet-65b43123-9664-4d70-8f63-f66c1069f70a",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 2,
+                    "title": "Il viaggiatore di prima classe",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=HpPpPluss80y4T2clAeeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a337d725-76e0-473a-b7c3-8359d5630069.html"
+                },
+                {
+                    "contentId": "ContentSet-65b43123-9664-4d70-8f63-f66c1069f70a",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 3,
+                    "title": "La scommessa",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=0gE4W7QgFssSlash4eeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-8e4ed025-5a01-452d-abee-c5469633840a.html"
+                },
+                {
+                    "contentId": "ContentSet-65b43123-9664-4d70-8f63-f66c1069f70a",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 4,
+                    "title": "Dusecka",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=XR6ZEiryegkeeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-60071ca2-b3c7-472b-9f84-808e1a5a72aa.html"
                 }
             ],
             "id": 35,
@@ -5939,7 +5990,7 @@
                         "site": "http://www.adaltavoce.rai.it/"
                     },
 					"TODO": "TODO",
-					"title": "Racconti Vari",
+					"title": "Racconti di Anton Cechov",
 					"author": "Anton Cechov"
                 }
             ]
@@ -5995,6 +6046,56 @@
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=AGKz7Nem8kQeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-66a74d4c-1842-42f3-9b85-35599a1a0c38.html"
+                },
+				{
+                    "contentId": "ContentSet-7ace2190-dae3-477e-a062-e3c69f5ee169",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "Rashomon",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vXAGCssSlash6SRLMeeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-7b359312-0fd1-4452-a142-fe8ad1486f83.html"
+                },
+                {
+                    "contentId": "ContentSet-7ace2190-dae3-477e-a062-e3c69f5ee169",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 1,
+                    "title": "Nel bosco",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=lLbpPpPlussbveGKzYeeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-8561a1a9-f4aa-48eb-8556-b09287347256.html"
+                },
+                {
+                    "contentId": "ContentSet-7ace2190-dae3-477e-a062-e3c69f5ee169",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 2,
+                    "title": "Il filo del ragno - Ges\u00f9 di Nanchino",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=dTTnHGVxSXAeeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d24b0a26-05be-44e4-aada-b947f808edc6.html"
+                },
+                {
+                    "contentId": "ContentSet-7ace2190-dae3-477e-a062-e3c69f5ee169",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 3,
+                    "title": "La principessa di Rokunomya",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=uFf2LYFXWXIeeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-b0a799fb-a895-47fa-b571-c9b9a66e2fa8.html"
+                },
+                {
+                    "contentId": "ContentSet-7ace2190-dae3-477e-a062-e3c69f5ee169",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 4,
+                    "title": "Il fazzoletto",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=S4ixssSlashpPpPlussx00bIeeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-05f887df-5659-4091-baed-5236cff6f5d6.html"
                 }
             ],
             "id": 36,
@@ -6011,7 +6112,7 @@
                         "site": "http://www.adaltavoce.rai.it/"
                     },
 					"TODO": "TODO",
-					"title": "Racconti Vari",
+					"title": "Racconti di Ryūnosuke Akutagawa",
 					"author": "Ryūnosuke Akutagawa"
                 }
             ]
@@ -7087,7 +7188,7 @@
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
                     },
-					"title": "Racconti",
+					"title": "Racconti 25 aprile",
 					"author": "Alberto Moravia, Mario Rigoni Stern"
                 }
             ]
@@ -7378,7 +7479,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "I 23 giorni della città di Alba",
+					"author": "Beppe Fenoglio"
                 }
             ]
         },
@@ -7407,7 +7510,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Ultimo viene il corvo",
+					"author": "Italo Calvino"
                 }
             ]
         },
@@ -7546,7 +7651,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il sentiero dei nidi di ragno",
+					"author": "Italo Calvino"
                 }
             ]
         },
@@ -7765,7 +7872,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "La Pelle",
+					"author": "Curzio Malaparte"
                 }
             ]
         },
@@ -8174,7 +8283,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Cent'anni di solitudine",
+					"author": "Gabriel Garcia Marquez"
                 }
             ]
         },
@@ -8185,7 +8296,7 @@
                     "desc": "Legge Valerio Aprea",
                     "format": "mp3",
                     "id": 0,
-                    "title": "Impataccato - Ad Alta Voce del 04/12/2014",
+                    "title": "Impataccato",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=RY6KCeN6zPAeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-49fd598b-af5d-42aa-823d-273353f0bd9f.html"
@@ -8195,10 +8306,60 @@
                     "desc": "Legge Valerio Aprea",
                     "format": "mp3",
                     "id": 1,
-                    "title": "Ladri in chiesa - Ad Alta Voce del 05/12/2014",
+                    "title": "Ladri in chiesa",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=rhMjMg4VYUYeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-e2bb038f-8e68-4b4e-ac10-5a927ca3528e.html"
+                },
+ 				{
+                    "contentId": "ContentSet-32e4192f-80a8-4315-86b7-d3cc4adde3ed",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "Sciupone - 02/08/2015",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=K64wWMM70GceeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-eaeb27f9-bd86-492b-9970-8de695339079.html"
+                },
+                {
+                    "contentId": "ContentSet-32e4192f-80a8-4315-86b7-d3cc4adde3ed",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 1,
+                    "title": "Romolo e Remo - 03/08/2010",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=dE5JSrpPpPlussTLzkeeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a0dad6a5-c9ee-48af-b38c-22fef45acd43.html"
+                },
+                {
+                    "contentId": "ContentSet-32e4192f-80a8-4315-86b7-d3cc4adde3ed",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 2,
+                    "title": "Ladri in chiesa - 04/08/2010",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=VcpBibwOTbweeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-46931f57-2d3d-496f-bc24-458e3a9b0670.html"
+                },
+                {
+                    "contentId": "ContentSet-32e4192f-80a8-4315-86b7-d3cc4adde3ed",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 3,
+                    "title": "Impataccato - 05/08/2010",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=OxBcwfKv8eIeeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-042bfb0f-ec12-42f8-b4a5-ea135333887f.html"
+                },
+                {
+                    "contentId": "ContentSet-32e4192f-80a8-4315-86b7-d3cc4adde3ed",
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 4,
+                    "title": "Il pensatore - 06/08/2010",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=v5jdNpHNexAeeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-edd94478-d410-413e-a120-d90c2a56b5ab.html"
                 }
             ],
             "id": 49,
@@ -8213,7 +8374,10 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"TODO": "TODO",
+					"title": "Racconti di Alberto Moravia",
+					"author": "Alberto Moravia"
                 }
             ]
         },
@@ -8412,7 +8576,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Addio alle armi",
+					"author": "Ernest Hemingway"
                 }
             ]
         },
@@ -8461,7 +8627,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "La Paura",
+					"author": "Federico De Roberto"
                 }
             ]
         },
@@ -8710,7 +8878,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Niente di nuovo sul fronte occidentale",
+					"author": "Erich Maria Remarque"
                 }
             ]
         },
@@ -8959,7 +9129,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Un anno sull'altipiano",
+					"author": "Emilio Lussu"
                 }
             ]
         },
@@ -9468,7 +9640,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "I Promessi Sposi",
+					"author": "Alessandro Manzoni"
                 }
             ]
         },
@@ -9687,7 +9861,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "All'ombra delle fanciulle in fiore",
+					"author": "Marcel Proust"
                 }
             ]
         },
@@ -9906,7 +10082,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il Grande Bob",
+					"author": "Georges Simenon"
                 }
             ]
         },
@@ -9966,7 +10144,7 @@
             "id": 57,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://www.teatrodellapergola.com/site/assets/2015/07/Vita-di-Galileo_012.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -9975,7 +10153,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Vita di Galileo",
+					"author": "Bertolt Brecht"
                 }
             ]
         },
@@ -10144,7 +10324,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Sorelle Materassi",
+					"author": "Aldo Palazzeschi"
                 }
             ]
         },
@@ -10404,7 +10586,7 @@
             "id": 59,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://www.shakespeareinitaly.it/img/frankenstein.jpeg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -10413,7 +10595,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Frankenstein",
+					"author": "Mary Shelley"
                 }
             ]
         },
@@ -10523,7 +10707,7 @@
             "id": 60,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://www.arvaliastoria.it/public/000035.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -10532,7 +10716,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "La torta in cielo",
+					"author": "Gianni Rodari"
                 }
             ]
         },
@@ -10771,7 +10957,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "La Peste",
+					"author": "Albert Camus"
                 }
             ]
         },
@@ -10890,7 +11078,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Fosca",
+					"author": "Ugo Tarchetti"
                 }
             ]
         },
@@ -10959,7 +11149,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "16 ottobre 1943. Otto ebrei",
+					"author": "Giacomo Debenedetti"
                 }
             ]
         },
@@ -11059,7 +11251,7 @@
             "id": 64,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://www.telegraph.co.uk/content/dam/Travel/Destinations/Africa/Morocco/Marrakech/Marrakech-overview-main%20square-xlarge.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -11068,7 +11260,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Le voci di Marrakech",
+					"author": "Elias Canetti"
                 }
             ]
         },
@@ -11247,7 +11441,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Decamerone",
+					"author": "Giovanni Boccaccio"
                 }
             ]
         },
@@ -11626,7 +11822,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il Conte di Montecristo",
+					"author": "Alexandre Dumas"
                 }
             ]
         },
@@ -11895,7 +12093,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "La signora Dalloway",
+					"author": "Virginia Woolf"
                 }
             ]
         },
@@ -12014,7 +12214,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Agostino",
+					"author": "Alberto Moravia"
                 }
             ]
         },
@@ -12213,7 +12415,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il Soccombente",
+					"author": "Thomas Bernhard"
                 }
             ]
         },
@@ -12382,7 +12586,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Caro Michele",
+					"author": "Natalia Ginzburg"
                 }
             ]
         },
@@ -12601,7 +12807,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il Piacere",
+					"author": "Gabriele D'Annunzio"
                 }
             ]
         },
@@ -12820,7 +13028,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Un amore di Swann",
+					"author": "Marcel Proust"
                 }
             ]
         },
@@ -13039,7 +13249,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "I vecchi e i giovani",
+					"author": "Luigi Pirandello"
                 }
             ]
         },
@@ -13258,7 +13470,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Festa Mobile",
+					"author": "Ernest Hemingway"
                 }
             ]
         },
@@ -13517,7 +13731,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Dracula",
+					"author": "Bram Stoker"
                 }
             ]
         },
@@ -13786,7 +14002,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Ferito a morte",
+					"author": "Raffaele La Capria"
                 }
             ]
         },
@@ -13895,7 +14113,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Riflessi in un occhio d'oro",
+					"author": "Carson McCullers"
                 }
             ]
         },
@@ -13954,7 +14174,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "La scoperta del Bambino",
+					"author": "Maria Montessori"
                 }
             ]
         },
@@ -14223,7 +14445,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Revolutionary road",
+					"author": "Richard Yates"
                 }
             ]
         },
@@ -14442,7 +14666,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "La Tregua",
+					"author": "Primo Levi"
                 }
             ]
         },
@@ -14561,7 +14787,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Flush. Una biografia",
+					"author": "Virginia Woolf"
                 }
             ]
         },
@@ -14780,7 +15008,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Grandi Speranze",
+					"author": "Charles Dickens"
                 }
             ]
         },
@@ -14999,7 +15229,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Ragazzi di vita",
+					"author": "Pier Paolo Pasolini"
                 }
             ]
         },
@@ -15108,7 +15340,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Cattivo Natale",
+					"author": ""
                 }
             ]
         },
@@ -15227,7 +15461,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Racconti di Elsa Morante",
+					"author": "Elsa Morante"
                 }
             ]
         },
@@ -15346,7 +15582,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Doppio Sogno",
+					"author": "Arthur Schnitzler"
                 }
             ]
         },
@@ -15565,7 +15803,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Memorie del sottosuolo",
+					"author": "Fëdor Dostoevskij"
                 }
             ]
         },
@@ -15774,7 +16014,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il grande Gatsby",
+					"author": "Francis Scott Fitzgerald"
                 }
             ]
         },
@@ -15993,7 +16235,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il Gattopardo",
+					"author": "Giuseppe Tomasi di Lampedusa"
                 }
             ]
         },
@@ -16153,7 +16397,7 @@
             "id": 90,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://www.familyandmedia.eu/wp-content/uploads/2017/01/pinocchio-970x545.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -16162,7 +16406,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Le avventure di Pinocchio",
+					"author": "Carlo Collodi"
                 }
             ]
         },
@@ -16381,7 +16627,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il cardillo addolorato",
+					"author": "Anna Maria Ortese"
                 }
             ]
         },
@@ -16500,7 +16748,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il diavolo in corpo",
+					"author": "Raymond Radiguet"
                 }
             ]
         },
@@ -16659,7 +16909,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Le Tigri di Mompracem",
+					"author": "Emilio Salgari"
                 }
             ]
         },
@@ -16868,7 +17120,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "I mille da Genova a Capua",
+					"author": "Giuseppe Bandi"
                 }
             ]
         },
@@ -16977,7 +17231,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Da Quarto al Volturno",
+					"author": "Giuseppe Cesare Abba"
                 }
             ]
         },
@@ -17146,7 +17402,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "La linea d'ombra",
+					"author": "Joseph Conrad"
                 }
             ]
         },
@@ -17415,7 +17673,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Nemici, una storia d'amore",
+					"author": "Isaac Bashevis Singer"
                 }
             ]
         },
@@ -17624,7 +17884,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "L'imperatore di Portugallia",
+					"author": "Selma Lagerlöf"
                 }
             ]
         },
@@ -17893,7 +18155,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Tempo di uccidere",
+					"author": "Ennio Flaiano"
                 }
             ]
         },
@@ -17962,7 +18226,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "I racconti di Lev Tolstoj",
+					"author": "Lev Tolstoj"
                 }
             ]
         },
@@ -18381,7 +18647,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "La vergine nel giardino",
+					"author": "Antonia Susan Byatt"
                 }
             ]
         },
@@ -18440,7 +18708,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Piccoli racconti di misoginia",
+					"author": "Patricia Highsmith"
                 }
             ]
         },
@@ -18509,7 +18779,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il visconte dimezzato",
+					"author": "Italo Calvino"
                 }
             ]
         },
@@ -18578,7 +18850,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Racconti di Italo Calvino",
+					"author": "Italo Calvino"
                 }
             ]
         },
@@ -18627,7 +18901,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "I racconti di Grace Paley",
+					"author": "Grace Paley"
                 }
             ]
         },
@@ -18696,145 +18972,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
-                }
-            ]
-        },
-        {
-            "contents": [
-                {
-                    "contentId": "ContentSet-7ace2190-dae3-477e-a062-e3c69f5ee169",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 0,
-                    "title": "Rashomon",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vXAGCssSlash6SRLMeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-7b359312-0fd1-4452-a142-fe8ad1486f83.html"
-                },
-                {
-                    "contentId": "ContentSet-7ace2190-dae3-477e-a062-e3c69f5ee169",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 1,
-                    "title": "Nel bosco",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=lLbpPpPlussbveGKzYeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-8561a1a9-f4aa-48eb-8556-b09287347256.html"
-                },
-                {
-                    "contentId": "ContentSet-7ace2190-dae3-477e-a062-e3c69f5ee169",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 2,
-                    "title": "Il filo del ragno - Ges\u00f9 di Nanchino",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=dTTnHGVxSXAeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d24b0a26-05be-44e4-aada-b947f808edc6.html"
-                },
-                {
-                    "contentId": "ContentSet-7ace2190-dae3-477e-a062-e3c69f5ee169",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 3,
-                    "title": "La principessa di Rokunomya",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=uFf2LYFXWXIeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-b0a799fb-a895-47fa-b571-c9b9a66e2fa8.html"
-                },
-                {
-                    "contentId": "ContentSet-7ace2190-dae3-477e-a062-e3c69f5ee169",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 4,
-                    "title": "Il fazzoletto",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=S4ixssSlashpPpPlussx00bIeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-05f887df-5659-4091-baed-5236cff6f5d6.html"
-                }
-            ],
-            "id": 107,
-            "metadata": [
-                {
-                    "image": "",
-                    "other_images": {
-                        "image": "",
-                        "image": ""
                     },
-                    "provider": {
-                        "image": "",
-                        "name": "Ad Alta Voce",
-                        "site": "http://www.adaltavoce.rai.it/"
-                    }
-                }
-            ]
-        },
-        {
-            "contents": [
-                {
-                    "contentId": "ContentSet-65b43123-9664-4d70-8f63-f66c1069f70a",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 0,
-                    "title": "Il violino di Rothschild",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=ssSlashKuSuAHVUAweeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-9b710c25-5e73-4051-8be0-5ddd934af317.html"
-                },
-                {
-                    "contentId": "ContentSet-65b43123-9664-4d70-8f63-f66c1069f70a",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 1,
-                    "title": "Grisha e il racconto del giardiniere capo",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=fuhEKzFWStgeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-c1973562-b646-4308-9f66-d0f8eaa24986.html"
-                },
-                {
-                    "contentId": "ContentSet-65b43123-9664-4d70-8f63-f66c1069f70a",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 2,
-                    "title": "Il viaggiatore di prima classe",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=HpPpPluss80y4T2clAeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a337d725-76e0-473a-b7c3-8359d5630069.html"
-                },
-                {
-                    "contentId": "ContentSet-65b43123-9664-4d70-8f63-f66c1069f70a",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 3,
-                    "title": "La scommessa",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=0gE4W7QgFssSlash4eeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-8e4ed025-5a01-452d-abee-c5469633840a.html"
-                },
-                {
-                    "contentId": "ContentSet-65b43123-9664-4d70-8f63-f66c1069f70a",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 4,
-                    "title": "Dusecka",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=XR6ZEiryegkeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-60071ca2-b3c7-472b-9f84-808e1a5a72aa.html"
-                }
-            ],
-            "id": 108,
-            "metadata": [
-                {
-                    "image": "",
-                    "other_images": {
-                        "image": "",
-                        "image": ""
-                    },
-                    "provider": {
-                        "image": "",
-                        "name": "Ad Alta Voce",
-                        "site": "http://www.adaltavoce.rai.it/"
-                    }
+					"title": "Grande fiume dai due cuori",
+					"author": "Ernest Hemingway"
                 }
             ]
         },
@@ -18903,76 +19043,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
-                }
-            ]
-        },
-        {
-            "contents": [
-                {
-                    "contentId": "ContentSet-32e4192f-80a8-4315-86b7-d3cc4adde3ed",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 0,
-                    "title": "Sciupone - 02/08/2015",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=K64wWMM70GceeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-eaeb27f9-bd86-492b-9970-8de695339079.html"
-                },
-                {
-                    "contentId": "ContentSet-32e4192f-80a8-4315-86b7-d3cc4adde3ed",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 1,
-                    "title": "Romolo e Remo - 03/08/2010",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=dE5JSrpPpPlussTLzkeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a0dad6a5-c9ee-48af-b38c-22fef45acd43.html"
-                },
-                {
-                    "contentId": "ContentSet-32e4192f-80a8-4315-86b7-d3cc4adde3ed",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 2,
-                    "title": "Ladri in chiesa - 04/08/2010",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=VcpBibwOTbweeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-46931f57-2d3d-496f-bc24-458e3a9b0670.html"
-                },
-                {
-                    "contentId": "ContentSet-32e4192f-80a8-4315-86b7-d3cc4adde3ed",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 3,
-                    "title": "Impataccato - 05/08/2010",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=OxBcwfKv8eIeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-042bfb0f-ec12-42f8-b4a5-ea135333887f.html"
-                },
-                {
-                    "contentId": "ContentSet-32e4192f-80a8-4315-86b7-d3cc4adde3ed",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 4,
-                    "title": "Il pensatore - 06/08/2010",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=v5jdNpHNexAeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-edd94478-d410-413e-a120-d90c2a56b5ab.html"
-                }
-            ],
-            "id": 110,
-            "metadata": [
-                {
-                    "image": "",
-                    "other_images": {
-                        "image": "",
-                        "image": ""
                     },
-                    "provider": {
-                        "image": "",
-                        "name": "Ad Alta Voce",
-                        "site": "http://www.adaltavoce.rai.it/"
-                    }
+					"title": "Racconti di Raymond Carver",
+					"author": "Raymond Clevie Carver"
                 }
             ]
         },
@@ -19041,7 +19114,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Racconti di Jack London",
+					"author": "Jack London"
                 }
             ]
         },
@@ -19110,7 +19185,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Racconti di Katherine Mansfield",
+					"author": "Katherine Mansfield"
                 }
             ]
         },
@@ -19179,7 +19256,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Racconti di Franz Kafka",
+					"author": "Franz Kafka"
                 }
             ]
         },
@@ -19248,7 +19327,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Racconti di Luigi Pirandello",
+					"author": "Luigi Pirandello"
                 }
             ]
         },
@@ -19567,7 +19648,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Martin Eden",
+					"author": "Jack London"
                 }
             ]
         },
@@ -19786,7 +19869,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Metello",
+					"author": "Vasco Pratolini"
                 }
             ]
         },
@@ -20055,7 +20140,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "L'agente segreto",
+					"author": "Joseph Conrad"
                 }
             ]
         },
@@ -20174,7 +20261,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il deserto della Libia",
+					"author": "Mario Tobino"
                 }
             ]
         },
@@ -20393,7 +20482,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Ho servito il re d'Inghilterra",
+					"author": "Bohumil Hrabal"
                 }
             ]
         },
@@ -20562,7 +20653,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il mago di Oz",
+					"author": "Lyman Frank Baum"
                 }
             ]
         },
