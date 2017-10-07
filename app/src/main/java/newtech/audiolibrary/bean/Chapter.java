@@ -22,11 +22,19 @@ public class Chapter implements Serializable {
     int currentDuration;
     int totalDuration;
 
-    //not transient because nextChapter link doesn't create a loop
-    Chapter nextChapter;
+    transient Chapter nextChapter;
+    transient Chapter previousChapter;
 
     public Chapter(){
 
+    }
+
+    public Chapter getPreviousChapter() {
+        return previousChapter;
+    }
+
+    public void setPreviousChapter(Chapter previousChapter) {
+        this.previousChapter = previousChapter;
     }
 
     public int getChapterId() {

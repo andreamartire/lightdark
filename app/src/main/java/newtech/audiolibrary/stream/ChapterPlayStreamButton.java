@@ -66,8 +66,6 @@ public class ChapterPlayStreamButton extends AppCompatImageButton {
 
                 Chapter currentChapter = playStreamButton.getChapter();
 
-                //TODO get linked chapter
-
                 ChapterPlayer.startPlayer(currentContext, currentChapter);
             }
         });

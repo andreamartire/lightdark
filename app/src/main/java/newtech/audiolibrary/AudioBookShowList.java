@@ -185,7 +185,7 @@ public class AudioBookShowList extends Activity {
                 //Toast.makeText(this, "Old playing chapter was deleted", Toast.LENGTH_LONG).show();
             }
         }else{
-            // no book playing
+            // TODO no book playing
             View playingInfo = this.findViewById(R.id.currentPlayingInfo);
             playingInfo.setVisibility(View.GONE);
         }

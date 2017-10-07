@@ -27,11 +27,9 @@ public class SimpleDownloadTask extends AsyncTask<String, Integer, String> {
     URL remoteFileURL;
     String localFilePath;
     ArrayAdapter arrayAdapter;
-    Activity activity;
 
     public SimpleDownloadTask(URL remoteFileURL, String localFilePath, ArrayAdapter arrayAdapter){
         super();
-        this.activity = activity;
         this.remoteFileURL = remoteFileURL;
         this.localFilePath = localFilePath;
         this.arrayAdapter = arrayAdapter;

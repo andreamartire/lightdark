@@ -89,8 +89,6 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                     }
 
                     updatePlayer();
-
-                    mediaPlayer.start();
                 }
             });
 
@@ -186,9 +184,12 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         int currPos = mediaPlayer.getCurrentPosition();
         // + 10 sec
         int newPos = currPos + seconds*1000;
-        if(newPos > mediaPlayer.getDuration()){
+
+        int duration = mediaPlayer.getDuration();
+
+        if(newPos > duration){
             // last second
-            newPos = mediaPlayer.getDuration() - 1000;
+            newPos = duration - 1000;
         }else if(newPos < 0){
             // reset to start
             newPos = 0;
@@ -196,12 +197,13 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
 
         boolean wasPlaying = mediaPlayer.isPlaying();
 
-        mediaPlayer.pause();
-        mediaPlayer.seekTo(newPos);
-        updatePlayer();
-
         if(wasPlaying){
+            mediaPlayer.pause();
+            mediaPlayer.seekTo(newPos);
+            updatePlayer();
             mediaPlayer.start();
+        }else{
+            //TODO
         }
     }
 

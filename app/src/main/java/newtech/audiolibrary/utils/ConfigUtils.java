@@ -160,6 +160,8 @@ public class ConfigUtils {
                         //setting chapters
                         Iterator it = obj.get(contents).getAsJsonArray().iterator();
 
+                        Chapter previousChapter = null;
+
                         int chapterIndex = 1;
                         while (it.hasNext()){
                             JsonElement jsonChapter = (JsonElement) it.next();
@@ -172,6 +174,7 @@ public class ConfigUtils {
                                     chapter.setChapterTitle(chapterObj.get(title).getAsString().replaceAll("/", "_"));
                                     chapter.setUrl(chapterObj.get(url).getAsString());
                                     chapter.setBook(book);
+                                    chapter.setPreviousChapter(previousChapter);
 
                                     //set chapter index
                                     chapter.setChapterId(chapterIndex);
@@ -185,6 +188,8 @@ public class ConfigUtils {
                                     }
                                     //add current element to chapters
                                     book.getChapters().add(chapter);
+
+                                    previousChapter = chapter;
                                 }
                             }
                         }

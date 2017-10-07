@@ -70,6 +70,6 @@
             android:id="@+id/playPauseButton"
             android:layout_width="match_parent"
             android:layout_height="235dp"
-            android:src="@drawable/ic_pause_black_72dp" />
+            android:src="@drawable/ic_play_arrow_black_72dp" />
 
 </LinearLayout>
