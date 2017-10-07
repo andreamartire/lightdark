@@ -1803,7 +1803,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Diario di Anna Frank",
+					"author": "Anna Frank"
                 }
             ]
         },
@@ -2022,7 +2024,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Jane Eyre",
+					"author": "Charlotte Bronte"
                 }
             ]
         },
@@ -2091,7 +2095,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Una bistecca",
+					"author": "Jack London"
                 }
             ]
         },
@@ -2210,7 +2216,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il popolo dell'abisso",
+					"author": "Jack London"
                 }
             ]
         },
@@ -2379,7 +2387,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Conversazione in Sicilia",
+					"author": "Elio Vittorini"
                 }
             ]
         },
@@ -2598,7 +2608,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Una vita violenta",
+					"author": "Pier Paolo Pasolini"
                 }
             ]
         },
@@ -2817,7 +2829,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Con tanta di quell'acqua a due passi da casa",
+					"author": "Raymond Carver"
                 }
             ]
         },
@@ -2936,7 +2950,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Le voci della sera",
+					"author": "Natalia Ginzburg"
                 }
             ]
         },
@@ -3055,7 +3071,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Le piccole virtù",
+					"author": "Natalia Ginzburg"
                 }
             ]
         },
@@ -3124,7 +3142,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Valentino",
+					"author": "Natalia Ginzburg"
                 }
             ]
         },
@@ -3343,7 +3363,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Lessio famigliare",
+					"author": "Natalia Ginzburg"
                 }
             ]
         },
@@ -3472,7 +3494,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "I miei premi",
+					"author": "Thomas Bernhard"
                 }
             ]
         },
@@ -3651,7 +3675,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il libro della giungla",
+					"author": "Rudyard Kipling"
                 }
             ]
         },
@@ -3880,7 +3906,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Althenopis",
+					"author": "Fabrizia Ramondino"
                 }
             ]
         },
@@ -4109,7 +4137,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "La ragazza di Bube",
+					"author": "Carlo Cassola"
                 }
             ]
         },
@@ -4257,7 +4287,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Gli occhiali d'oro",
+					"author": "Giorgio Bassani"
                 }
             ]
         },
@@ -4326,7 +4358,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Lidia Mantovani",
+					"author": "Giorgio Bassani"
                 }
             ]
         },
@@ -4386,7 +4420,7 @@
             "id": 26,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://www.feltrinellieditore.it/media/copertina/quarta/13/9788858852613_quarta.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -4395,7 +4429,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Gli ultimi anni di Clelia Trotti",
+					"author": "Giorgio Bassani"
                 }
             ]
         },
@@ -4464,7 +4500,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Una notte del '43",
+					"author": "Giorgio Bassani"
                 }
             ]
         },
@@ -4783,7 +4821,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il giorno del giudizio",
+					"author": "Salvatore Satta"
                 }
             ]
         },
@@ -5012,236 +5052,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
-                }
-            ]
-        },
-        {
-            "contents": [
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Il nano della regina, che aveva la pi\u00f9 piccola statura che mai si fosse vista in quel paese, quando ebbe trovato un uomo tanto pi\u00f9 piccino di lui divent\u00f2 insolentissimo, e non faceva altro che offendermi e tormentarmi..",
-                    "format": "mp3",
-                    "id": 0,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce",
-                    "url": "",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-ce2c8083-9f31-4b75-a861-969084281eb6.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 1,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 21/12/2015",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=X7nxXTT085IeeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-136e31c8-9236-47ca-a24f-469cab5fbc0a.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 2,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 22/12/2015",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=z2NGowfjt2MeeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-c234321d-e3ce-4a0e-9a9a-5024e22af3ef.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 3,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 23/12/2015",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=cV1D90KiKMseeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-4318462e-54b2-4b61-bc95-60aaad13ce6c.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 4,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 24/12/2015",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=tbJefsNdxbgeeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-781d02d8-ab33-4764-8232-6eeb0468dd9d.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 5,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 25/12/2015",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=GtlXCQtaxGMeeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-192d9add-398e-44b7-bf31-b40cb53607df.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 6,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 28/12/2015",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=0wOR2WAlhdceeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-0c1759d4-c9c0-42cd-9c6a-e4464fab3976.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 7,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 29/12/2015",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=t2H835BNkx4eeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-008280ca-8585-405e-9965-1138f21be6be.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 8,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 30/12/2015",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=iceXNuKmpPpPlusshMeeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-2a415206-3f2b-4a49-8273-223ed4da1b07.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 9,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 31/12/2015",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=kF9ZXrnMeAseeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-cda84938-c287-4c06-9566-25d91a9b192e.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 10,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 01/01/2016",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=zYCAF5YTYYoeeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-1fe435fd-1cf1-4acb-82f6-f734d4ecaa11.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 11,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 04/01/2016",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=TW2OuunRhxMeeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-32662fc2-e21d-4b22-8288-99cf112a81bf.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 12,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 05/01/2016",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=VGLfHqw9MogeeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-833ff82e-c160-4ee6-b1b0-e6c1613c0c8e.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 13,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 06/01/2016",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=r1jrVuPwLS4eeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-bc0bdcbc-8846-454c-88ee-a2e874fcaa66.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 14,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 07/01/2016",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=GhbOuYHCP58eeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-af79df44-9637-4eef-b602-700beaafa6c5.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 15,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 08/01/2016",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=c8EHEpnYWmIeeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-9f3b209c-82b1-43f4-bb97-ee606ff63d8d.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 16,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 11/01/2016",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=nQRUaSknqZUeeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-8232caa0-42d8-480c-86b5-f6fa3e9d405c.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 17,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 12/01/2016",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=FppPpPlussgh4oIUiYeeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-1a6a8e24-d5e6-43f3-8b95-ba8d89d93d11.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 18,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 13/01/2016",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=8IhZQZLYa24eeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d6d07cbd-e671-427a-82a9-a6c0bfe2bbc9.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 19,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 14/01/2016",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=AgGM2e6XPJceeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-60d000d1-9bb5-429f-a71f-54947430b24c.html"
-                },
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
-                    "format": "mp3",
-                    "id": 20,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce del 15/01/2016",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=LXSKxcssSlashZBKweeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-3198f6f3-e6a6-4daa-bc84-9360dd1f71fc.html"
-                }
-            ],
-            "id": 30,
-            "metadata": [
-                {
-                    "image": "http://www.rai.tv/dl/img/2015/12/105x791450691739785I_viaggi_di_Gulliver_20.jpg",
-                    "other_images": {
-                        "image_300": "http://www.rai.tv/dl/img/2015/12/300x1691450691739785I_viaggi_di_Gulliver_20.jpg",
-                        "image_433": "http://www.rai.tv/dl/img/2015/12/433x3251450691739785I_viaggi_di_Gulliver_20.jpg"
                     },
-                    "provider": {
-                        "image": "",
-                        "name": "Ad Alta Voce",
-                        "site": "http://www.adaltavoce.rai.it/"
-                    }
+					"title": "I viaggi di Gulliver",
+					"author": "Jonathan Swift"
                 }
             ]
         },
@@ -5510,7 +5323,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il Buio oltre la siepe",
+					"author": "Harper Lee"
                 }
             ]
         },
@@ -5719,7 +5534,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Fame",
+					"author": "Knut Hamsun"
                 }
             ]
         },
@@ -5788,7 +5605,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "L'anello",
+					"author": "Karen Blixen"
                 }
             ]
         },
@@ -6057,7 +5876,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Cristo si è fermato ad Eboli",
+					"author": "Carlo Levi"
                 }
             ]
         },
@@ -6116,7 +5937,10 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"TODO": "TODO",
+					"title": "Racconti Vari",
+					"author": "Anton Cechov"
                 }
             ]
         },
@@ -6185,7 +6009,10 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"TODO": "TODO",
+					"title": "Racconti Vari",
+					"author": "Ryūnosuke Akutagawa"
                 }
             ]
         },
@@ -6354,7 +6181,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Una questione privata",
+					"author": "Beppe Fenoglio"
                 }
             ]
         },
@@ -6623,7 +6452,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il giardino dei Finzi Contini",
+					"author": "Giorgio Bassani"
                 }
             ]
         },
@@ -6708,16 +6539,6 @@
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=safJZjWR1RoeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-3f9ac86e-223f-4ea4-8ac1-6be1695d91ff.html"
-                },
-                {
-                    "contentId": "ContentSet-cb38ffc4-ee0a-4b77-84a1-9a8f9912b593",
-                    "desc": "In occasione del 150\u00b0 anniversario dalla pubblicazione del capolavoro di Lewis Carroll, ne riproponiamo la lettura di Aldo Busi",
-                    "format": "mp3",
-                    "id": 8,
-                    "title": "Alice nel paese delle meraviglie",
-                    "url": "",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d1a1931e-d2b5-4176-b27a-c7cc1675da80.html"
                 }
             ],
             "id": 39,
@@ -6732,7 +6553,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Alice nel paese delle meraviglie",
+					"author": "Lewis Carroll"
                 }
             ]
         },
@@ -6951,7 +6774,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Amatissima",
+					"author": "Toni Morrison"
                 }
             ]
         },
@@ -7220,7 +7045,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Oblomov",
+					"author": "Ivan Aleksandrovič Gončarov"
                 }
             ]
         },
@@ -7231,7 +7058,7 @@
                     "desc": "Legge Valerio Binasco",
                     "format": "mp3",
                     "id": 0,
-                    "title": "Spia per scommessa - Ad Alta Voce del 24/04/2015",
+                    "title": "Spia per scommessa di Alberto Moravia",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=toaFU1Z0pj8eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-3bafdd44-d44e-4afe-b65b-801478b16641.html"
@@ -7241,7 +7068,7 @@
                     "desc": "Legge Valerio Binasco",
                     "format": "mp3",
                     "id": 1,
-                    "title": "Chiss\u00e0 dov'ero quel 25 aprile - Ad Alta Voce del 24/04/2015",
+                    "title": "Chiss\u00e0 dov'ero quel 25 aprile di Mario Rigoni Stern",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=41ssSlashOrUqwjb0eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-625e5bc3-0a9a-4e0b-9fc6-120a25d70ca7.html"
@@ -7259,7 +7086,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Racconti",
+					"author": "Alberto Moravia, Mario Rigoni Stern"
                 }
             ]
         },
@@ -7508,7 +7337,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "I piccoli maestri",
+					"author": "Luigi Meneghello"
                 }
             ]
         },
