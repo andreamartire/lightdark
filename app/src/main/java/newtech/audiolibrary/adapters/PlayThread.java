@@ -261,4 +261,13 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         String playerStateFilePath = metadataFilePath + File.separator + PLAYER_STATE_FILE;
         MyFileUtils.deleteFileIfExists(playerStateFilePath);
     }
+
+    public void seekToPercentage(int progressChanged) {
+        int totalDuration = currentChapter.getTotalDuration();
+        int newCurrentDuration = totalDuration*progressChanged/100;
+        mediaPlayer.pause();
+        mediaPlayer.seekTo(newCurrentDuration);
+        updatePlayer();
+        mediaPlayer.start();
+    }
 }

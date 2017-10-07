@@ -7,8 +7,10 @@ package newtech.audiolibrary;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -178,8 +180,11 @@ public class AudioBookShowList extends Activity {
 
                 ImageView resumeBookImageView = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
 
+                Point size = new Point();
+                getWindowManager().getDefaultDisplay().getSize(size);
+
                 //select downloaded image
-                resumeBookImageView.setImageDrawable(ImageUtils.scaleImage(this, image, 1000, 600));
+                resumeBookImageView.setImageDrawable(ImageUtils.scaleImage(this, image, size.x, (int) size.x*3/5));
             }
             else{
                 //Toast.makeText(this, "Old playing chapter was deleted", Toast.LENGTH_LONG).show();

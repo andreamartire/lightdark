@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -69,7 +70,10 @@ public class ChapterShowList extends Activity {
         if(bookImage == null){
             //TODO default image not found
         }else{
-            bookImageView.setImageDrawable(ImageUtils.scaleImage(this, bookImage, 1000, 600));
+            Point size = new Point();
+            getWindowManager().getDefaultDisplay().getSize(size);
+
+            bookImageView.setImageDrawable(ImageUtils.scaleImage(this, bookImage, size.x, (int) size.x*3/5));
         }
 
         Chapter playingChapter = (Chapter) getIntent().getSerializableExtra(PLAYING_CHAPTER);

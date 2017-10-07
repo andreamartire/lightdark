@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.SeekBar;
+import android.widget.Toast;
 
 import newtech.audiolibrary.adapters.PlayThread;
 import newtech.audiolibrary.bean.Chapter;
@@ -28,6 +30,23 @@ public class ChapterPlayer extends Activity {
         Chapter currentChapter = (Chapter) getIntent().getSerializableExtra(CHAPTER);
 
         playThread = new PlayThread(this, currentChapter);
+
+        SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar);
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            int progressChanged = 0;
+
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
+                progressChanged = progress;
+            }
+
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                playThread.seekToPercentage(progressChanged);
+            }
+        });
 
         ImageButton playPauseButton = (ImageButton) findViewById(R.id.playPauseButton);
         playPauseButton.setOnClickListener(new View.OnClickListener(){
