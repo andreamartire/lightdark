@@ -10162,177 +10162,6 @@
         {
             "contents": [
                 {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 0,
-                    "title": "Sorelle Materassi - Lettura I",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=tjssSlashhJVEUJLweeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-dba69ef3-3ddb-4755-a860-6b5a66140217.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 1,
-                    "title": "Sorelle Materassi - Lettura II",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=J9YwiPpQMmkeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-282d4676-1957-4932-a9a1-1e480f19e064.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 2,
-                    "title": "Sorelle Materassi - Lettura III",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=bAbcGF0FtIseeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-414bcc22-7e6f-463e-9d16-99b369504d5e.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 3,
-                    "title": "Sorelle Materassi - Lettura IV",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=fffNhpRCBuseeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-1357bb1e-df56-4eb6-a563-05820758d6ef.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 4,
-                    "title": "Sorelle Materassi - Lettura V",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=5mCUPaxapPpPlusskYeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-f66335dd-8626-4ec2-bc97-78b97054e509.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 5,
-                    "title": "Sorelle Materassi - Lettura VI",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=YLDUQ7yZedAeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-61ebe7bd-ed6f-4698-9770-e1eb87034f16.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 6,
-                    "title": "Sorelle Materassi - Lettura VII",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=SfdNHjnPKl8eeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-7475b7b4-49ee-4d56-8f87-a584db098883.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 7,
-                    "title": "Sorelle Materassi - Lettura VIII",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=NU05GLOKjm0eeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-eb6cc672-9f23-4942-9705-77f5fe106ef4.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 8,
-                    "title": "Sorelle Materassi - Lettura IX",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=bKxpPpPlussP9YVVpYeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-8a71d805-7b87-4e3c-a0da-abc1b0c3c189.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 9,
-                    "title": "Sorelle Materassi - Lettura X",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=In3MxP1uP6ceeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-2d9d9e46-7e85-4b3b-9eab-4d6348304006.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 10,
-                    "title": "Sorelle Materassi - Lettura XI",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=pLwxnvp9ksceeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-2cd236a0-13ed-4063-833d-a1e2265580c5.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 11,
-                    "title": "Sorelle Materassi - Lettura XII",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=2U4n4UJ5XqgeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-090b7f72-b519-49bb-8227-bf7e3d117b9d.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 12,
-                    "title": "Sorelle Materassi - Lettura XIII",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=EL6MjgFDDFAeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-fb2b45b0-a48f-4897-b763-9f9b1fcc67bd.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 13,
-                    "title": "Sorelle Materassi - Lettura XIV",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=PaY0EKcmEBkeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-e1124c7a-5251-48c5-81d7-89356dcb3fb2.html"
-                },
-                {
-                    "contentId": "ContentSet-4b8a49b2-0523-4927-8ee2-b4436c4864ee",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 14,
-                    "title": "Sorelle Materassi - Lettura XV",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=oP4HAacUGCoeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-aec79320-490c-4df9-ab2c-eb47b2389958.html"
-                }
-            ],
-            "id": 58,
-            "metadata": [
-                {
-                    "image": "",
-                    "other_images": {
-                        "image": "",
-                        "image": ""
-                    },
-                    "provider": {
-                        "image": "",
-                        "name": "Ad Alta Voce",
-                        "site": "http://www.adaltavoce.rai.it/"
-                    },
-					"title": "Sorelle Materassi",
-					"author": "Aldo Palazzeschi"
-                }
-            ]
-        },
-        {
-            "contents": [
-                {
                     "contentId": "ContentSet-4e48dff4-bc28-40c5-99cf-74e4a478691a",
                     "desc": "",
                     "format": "mp3",
@@ -20765,7 +20594,7 @@
             "id": 121,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://www.microracconti.it/wp-content/uploads/2015/08/Il-cavaliere-inesistente.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -20774,7 +20603,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il cavaliere inesistente",
+					"author": "Italo Calvino"
                 }
             ]
         },
@@ -21214,7 +21045,7 @@
             "id": 122,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "https://leorugens.files.wordpress.com/2014/03/dumas.jpg?w=620",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -21223,7 +21054,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Vent'anni dopo",
+					"author": "Alexandre Dumas"
                 }
             ]
         },
@@ -21483,7 +21316,7 @@
             "id": 123,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://www.napoliflash24.it/wp-content/uploads/2015/09/procida-750x328.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -21492,7 +21325,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "L'isola di Arturo",
+					"author": "Elsa Morante"
                 }
             ]
         },
@@ -21752,7 +21587,7 @@
             "id": 124,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://www.mondofutbol.com/wp-content/uploads/2015/07/Passaggio-in-India.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -21761,7 +21596,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "L'isola di Arturo",
+					"author": "Edward Morgan Forster"
                 }
             ]
         },
@@ -21971,7 +21808,7 @@
             "id": 125,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://www.teatrodellapergola.com/site/assets/2016/06/Sorelle-Materassi_04.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -21980,7 +21817,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Sorelle Materassi",
+					"author": "Aldo Palazzeschi"
                 }
             ]
         },
@@ -22210,7 +22049,7 @@
             "id": 126,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "https://3.bp.blogspot.com/-tfosAKWfVX0/VLLcs-AnJLI/AAAAAAAAADA/I_T5AOm21AM/w1200-h630-p-k-no-nu/senilit%C3%A0.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -22219,7 +22058,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Senilità",
+					"author": "Italo Svevo"
                 }
             ]
         },
@@ -22468,7 +22309,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Fiesta (Il sole sorgerà ancora)",
+					"author": "Ernest Hemingway"
                 }
             ]
         },
@@ -22698,7 +22541,7 @@
             "id": 128,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "https://cc-media-foxit.fichub.com/image/fox-it-mondofox/2c6de7d6-e3f6-4b45-a7c5-fbb13c909bb8/20-000-leagues-under-the-sea-maxw-654.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -22707,7 +22550,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Ventimila leghe sotto i mari",
+					"author": "Jules Verne"
                 }
             ]
         },
@@ -22867,7 +22712,7 @@
             "id": 129,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://losbuffo.com/wp-content/uploads/2016/10/image-4-610x350.jpeg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -22876,7 +22721,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Diceria dell'untore",
+					"author": "Gesualdo Bufalino"
                 }
             ]
         },
@@ -23036,7 +22883,7 @@
             "id": 130,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "https://noiritaliano.files.wordpress.com/2012/06/il-giorno-della-civetta-trailer-title.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -23045,7 +22892,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il giorno della civetta",
+					"author": "Leonardo Sciascia"
                 }
             ]
         },
@@ -23455,7 +23304,7 @@
             "id": 131,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://www.lacooltura.com/wp-content/uploads/2015/03/Kaukasus-660x330.png",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -23464,7 +23313,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "La luna e i falò",
+					"author": "Cesare Pavese"
                 }
             ]
         },
@@ -23524,7 +23375,7 @@
             "id": 132,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "https://i.ytimg.com/vi/VPjBH-OXCK8/hqdefault.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -23533,266 +23384,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
-                }
-            ]
-        },
-        {
-            "contents": [
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 0,
-                    "title": "Il giardino dei Finzi Contini - Lettura I",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=b4fwqZ7pPpPluss2r0eeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-c09748d7-0fcf-4277-93f8-68f90af1b874.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 1,
-                    "title": "Il giardino dei Finzi Contini - Lettura II",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=Vu4jtJssSlash3e5MeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-5136dc43-16e7-41e6-aa9f-995ae9cae282.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 2,
-                    "title": "Il giardino dei Finzi Contini - Lettura III",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=T3ENAIpwlt4eeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-f7bd96c2-5bcb-40d4-8bf5-b5105b13bab6.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 3,
-                    "title": "Il giardino dei Finzi Contini - Lettura IV",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=ihUFQLAb2i0eeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-1314a2d3-5cee-4b1e-ad4c-d3dda2aaf858.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 4,
-                    "title": "Il giardino dei Finzi Contini - Lettura V",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=RfvcjXTZVo4eeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d3a4ee67-b9d9-420e-900a-5da3d00cdf65.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 5,
-                    "title": "Il giardino dei Finzi Contini - Lettura VI",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=ohLHsw8VmeAeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-fb4c977b-a763-4e2e-833d-daf3f8adfac2.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 6,
-                    "title": "Il giardino dei Finzi Contini - Lettura VII",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=mH2IX0kZYpPpPlussUeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-71d3e458-cafb-45d0-a754-aa9e80398291.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 7,
-                    "title": "Il giardino dei Finzi Contini - Lettura VIII",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=sbt0nDC2RKIeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-7131706f-6d1f-439d-a942-42f6c23469d4.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 8,
-                    "title": "Il giardino dei Finzi Contini - Lettura IX",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=clG5UYlPfHEeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d2287aed-0d76-492d-aa23-9fbcbe2eb823.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 9,
-                    "title": "Il giardino dei Finzi Contini - Lettura X",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=ssSlashgLvXmS47nkeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a43fd5cc-aebd-4ba3-ad42-ee62faa41839.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 10,
-                    "title": "Il giardino dei Finzi Contini - Lettura XI",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=kNambEvAb7IeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d4c47453-e96c-4474-94ab-e3a376bd99f4.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 11,
-                    "title": "Il giardino dei Finzi Contini - Lettura XII",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=IUaX1ti1ubceeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-33106851-aa9b-4aa2-8b60-be37f1f1da80.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 12,
-                    "title": "Il giardino dei Finzi Contini - Lettura XIII",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=DgQUz1NYRssSlashQeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-9ed57fc9-dad8-403a-91df-0e84c90e95ad.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 13,
-                    "title": "Il giardino dei Finzi Contini - Lettura XIV",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=Miy98k4pPpPlussik0eeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-beaedfe2-4f21-4a70-a0f4-f2e8cadcb554.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 14,
-                    "title": "Il giardino dei Finzi Contini - Lettura XV",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=wssSlashWpv3RprxMeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-ecee6d35-dbbe-40a3-a1af-a20f6fc6aad1.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 15,
-                    "title": "Il giardino dei Finzi Contini - Lettura XVI",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=UpPpPlussoDGM0e30keeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-f2da819e-e4ce-4762-9a82-7fbf6f21351a.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 16,
-                    "title": "Il giardino dei Finzi Contini - Lettura XVII",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=noAoACbbSrAeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-b0363593-3eac-4323-bbe5-fbc4e3540b62.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 17,
-                    "title": "Il giardino dei Finzi Contini - Lettura XVIII",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=Y7iZfFqy0MUeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-afaf68df-4b64-4fa5-945a-475f533f4729.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 18,
-                    "title": "Il giardino dei Finzi Contini - Lettura XIX",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=nWssSlashnt3lMNDweeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-bfaf37ac-8046-4d49-9fcb-a4b3bee0dc28.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 19,
-                    "title": "Il giardino dei Finzi Contini - Lettura XX",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=QbRnnrWuPJ4eeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a686cea3-ec4f-4c17-9aa8-1434899c47fd.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 20,
-                    "title": "Il giardino dei Finzi Contini - Lettura XXI",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=SKpPpPlussK18055Z0eeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-6122a605-c774-47c3-9a5c-a656c7ffe668.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 21,
-                    "title": "Il giardino dei Finzi Contini - Lettura XXII",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=pPpPlussXYqZpPpPlussqFeAYeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-5b27a7f3-f1c3-4ec7-8a8c-0b49ca778e2e.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 22,
-                    "title": "Il giardino dei Finzi Contini - Lettura XXIII",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=3e2hso7o50MeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d0fd3f3b-1ea2-4bea-a04d-bf4bebf7f84b.html"
-                },
-                {
-                    "contentId": "ContentSet-4f5325de-58cc-44e9-88c3-27cc05b7cf09",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 23,
-                    "title": "Il giardino dei Finzi Contini - Lettura XXIV",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=0pPpPlussrnGB6PbvEeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-213c29af-69df-41ba-ab8e-c89721428841.html"
-                }
-            ],
-            "id": 133,
-            "metadata": [
-                {
-                    "image": "",
-                    "other_images": {
-                        "image": "",
-                        "image": ""
                     },
-                    "provider": {
-                        "image": "",
-                        "name": "Ad Alta Voce",
-                        "site": "http://www.adaltavoce.rai.it/"
-                    }
+					"title": "Una storia semplice",
+					"author": "Leonardo Sciascia"
                 }
             ]
         },
@@ -24012,7 +23606,7 @@
             "id": 134,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Manhattan_Skyline_night.jpg/800px-Manhattan_Skyline_night.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -24021,7 +23615,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Tre camere a Manhattan",
+					"author": "Georges Simenon"
                 }
             ]
         },
@@ -24241,7 +23837,7 @@
             "id": 135,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "https://upload.wikimedia.org/wikipedia/it/1/10/Bellantonio-1960-Mastroianni.png",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -24250,7 +23846,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Il bell'Antonio",
+					"author": "Vitaliano Brancati"
                 }
             ]
         },
@@ -24480,7 +24078,7 @@
             "id": 136,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "http://italoamericano.com/sites/default/files/styles/crop_show/public/media/main/cappello.png?itok=nekpAs9q",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -24489,7 +24087,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Camera con vista",
+					"author": "Edward Morgan Forster"
                 }
             ]
         },
@@ -24719,7 +24319,7 @@
             "id": 137,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "https://upload.wikimedia.org/wikipedia/it/e/e8/Vitaagra-Tognazzi.png",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -24728,7 +24328,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "La vita agra",
+					"author": "Luciano Bianciardi"
                 }
             ]
         },
@@ -24948,7 +24550,7 @@
             "id": 138,
             "metadata": [
                 {
-                    "image": "",
+                    "image": "https://static.rogerebert.com/uploads/review/primary_image/reviews/bel-ami-2012/hero_EB20120620REVIEWS120629995AR.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -24957,7 +24559,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"title": "Bel Ami",
+					"author": "Guy de Maupassant"
                 }
             ]
         },
