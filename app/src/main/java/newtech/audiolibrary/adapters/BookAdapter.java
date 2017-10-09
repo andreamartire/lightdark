@@ -63,6 +63,9 @@ public class BookAdapter extends ArrayAdapter<Book> {
                 TextView bookAuthor = (TextView) convertView.findViewById(R.id.bookAuthorView);
                 bookAuthor.setText(book.getAuthor());
 
+                TextView bookProvider = (TextView) convertView.findViewById(R.id.providerView);
+                bookProvider.setText(book.getProviderName());
+
                 ImageView imageView = (ImageView) convertView.findViewById(R.id.bookImageView);
 
                 //default image

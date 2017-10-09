@@ -76,8 +76,8 @@ public class ConfigUtils {
                     String imageUrl = null, image433Url = null, image300Url = null;
                     String authorBook = "";
 
-                    if(obj.get(metadata) != null && obj.get(metadata).getAsJsonArray().size() > 0){
-                        JsonElement metadataObj = obj.get(metadata).getAsJsonArray().get(0);
+                    if(obj.get(metadata) != null){
+                        JsonElement metadataObj = obj.get(metadata).getAsJsonObject();
                         if(metadataObj != null){
                             JsonElement providerObj = metadataObj.getAsJsonObject().get(provider);
                             if(providerObj != null){
