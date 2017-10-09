@@ -60,7 +60,7 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 //when complete play current chapter
-                playPauseButton.setImageResource(R.drawable.ic_play_arrow_black_72dp);
+                playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
 
                 Chapter nextChapter = currentChapter.getNextChapter();
 
@@ -89,6 +89,8 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                         mediaPlayer.seekTo(currentChapter.getCurrentDuration());
                     }
 
+                    mediaPlayer.start();
+
                     updatePlayer();
                 }
             });
@@ -99,13 +101,6 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                 @Override
                 public void run() {
                     title.setText(currentChapter.getChapterTitle());
-                }
-            });
-
-            currentContext.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    updatePlayer();
                 }
             });
 
@@ -136,11 +131,12 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                 currentDurationView.post(new Runnable() {
                     public void run() {
                         try {
+                            updateSeekBar();
+
                             int currentPos = mediaPlayer.getCurrentPosition();
+                            currentChapter.setCurrentDuration(currentPos);
 
                             if (mediaPlayer.isPlaying()) {
-                                currentChapter.setCurrentDuration(currentPos);
-
                                 currentDurationView.postDelayed(this, 1000);
                                 currentDurationView.setText(formatDuration(currentPos));
 
@@ -148,8 +144,6 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                             } else {
                                 currentDurationView.removeCallbacks(this);
                             }
-                            updateSeekBar();
-
                         } catch (java.lang.IllegalStateException|java.io.IOException e){
                             //nothing
                             e.printStackTrace();
