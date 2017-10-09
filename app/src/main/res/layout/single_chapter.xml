@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="horizontal" >
 
@@ -19,7 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
         android:src="@drawable/ic_play_arrow_black_72dp"
-        android:theme="@style/Widget.AppCompat.Button" />
+        android:theme="@style/Widget.AppCompat.Button"
+        android:layout_gravity="right"/>
 
     <newtech.audiolibrary.stream.ChapterDownloadButton
         android:id="@+id/downloadButton"
@@ -27,7 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
         android:src="@drawable/ic_file_download_black_72dp"
-        android:theme="@style/Widget.AppCompat.Button" />
+        android:theme="@style/Widget.AppCompat.Button"
+        android:gravity="right"/>
 
     <newtech.audiolibrary.stream.ChapterDeleteButton
         android:id="@+id/deleteButton"
@@ -36,6 +38,7 @@
         android:layout_weight="0.2"
         android:src="@drawable/ic_delete_black_72dp"
         android:theme="@style/Widget.AppCompat.Button"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:layout_gravity="right"/>
 
 </LinearLayout>
