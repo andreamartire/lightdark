@@ -155,7 +155,7 @@ for i in range(len(listContentId)):
 				'site' : 'http://www.adaltavoce.rai.it/',
 				'image' : ''
 			}
-		},
+		}
 
 		audiobooks.append(book)
 	
