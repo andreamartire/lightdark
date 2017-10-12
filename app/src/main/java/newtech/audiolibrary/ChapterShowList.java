@@ -26,6 +26,7 @@ import newtech.audiolibrary.adapters.ChapterAdapter;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
 import newtech.audiolibrary.stream.ChapterPlayStreamButton;
+import newtech.audiolibrary.utils.ConfigUtils;
 import newtech.audiolibrary.utils.ImageUtils;
 
 public class ChapterShowList extends Activity {
@@ -77,6 +78,7 @@ public class ChapterShowList extends Activity {
         }
 
         Chapter playingChapter = (Chapter) getIntent().getSerializableExtra(PLAYING_CHAPTER);
+
         if(playingChapter != null){
             //resume old playing chapter
             ChapterPlayer.startPlayer(this, playingChapter);

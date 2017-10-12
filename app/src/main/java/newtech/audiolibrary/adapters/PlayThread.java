@@ -28,6 +28,7 @@ import newtech.audiolibrary.ChapterPlayer;
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
+import newtech.audiolibrary.utils.ConfigUtils;
 import newtech.audiolibrary.utils.MyFileUtils;
 
 /**
@@ -63,6 +64,7 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                 playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
 
                 Chapter nextChapter = currentChapter.getNextChapter();
+                nextChapter.setCurrentDuration(0);
 
                 //auto play next chapter if exists
                 if(nextChapter != null && MyFileUtils.exists(nextChapter.getLocalFilePath())){
@@ -250,7 +252,7 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             loadedChapter = new Gson().fromJson(new FileReader(playerStateFilePath), Chapter.class);
             System.out.println("Loaded chapter: " + loadedChapter);
 
-            Book linkedBook = ((AudioBookShowList) context).bookWithChapters.get(loadedChapter.getBook().getBookTitle());
+            Book linkedBook = ConfigUtils.bookWithChapters.get(loadedChapter.getBook().getBookTitle());
 
             if(linkedBook == null){
                 //is null when book title changes in config file

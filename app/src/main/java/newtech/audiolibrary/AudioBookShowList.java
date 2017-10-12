@@ -39,15 +39,12 @@ public class AudioBookShowList extends Activity {
 
     private BookAdapter bookAdapter;
 
-    public HashMap<String, Book> bookWithChapters = new HashMap<String, Book>();
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audiobooks);
 
-        ArrayList<Book> bookList = new ArrayList<>();
-        new ConfigUtils(this, bookWithChapters, "config.json", bookList).invoke();
+        ConfigUtils.invoke(this, "config.json");
 
         final SearchView searchView = (SearchView) findViewById(R.id.searchView);
         final LinearLayout currentPlayingInfo = (LinearLayout) findViewById(R.id.currentPlayingInfo);
@@ -74,7 +71,7 @@ public class AudioBookShowList extends Activity {
         });
 
         ListView listView = (ListView)findViewById(R.id.audiobooks_listview);
-        bookAdapter = new BookAdapter(getBaseContext(), R.layout.single_book, bookList);
+        bookAdapter = new BookAdapter(getBaseContext(), R.layout.single_book, ConfigUtils.bookList);
         listView.setAdapter(bookAdapter);
         //init tap listener
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -108,7 +105,7 @@ public class AudioBookShowList extends Activity {
                     Book currentBook = playingChapter.getBook();
 
                     //fetch chapters - not saved in player state
-                    currentBook = bookWithChapters.get(currentBook.getBookTitle());
+                    currentBook = ConfigUtils.bookWithChapters.get(currentBook.getBookTitle());
 
                     Intent intent = new Intent(me, ChapterShowList.class);
 

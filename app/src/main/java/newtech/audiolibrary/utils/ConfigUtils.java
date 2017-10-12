@@ -1,8 +1,5 @@
 package newtech.audiolibrary.utils;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
 import com.google.gson.JsonArray;
@@ -20,17 +17,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import newtech.audiolibrary.AudioBookShowList;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
 
-public class ConfigUtils {
+public final class ConfigUtils {
 
-    private Context context;
-    private ArrayList<Book> bookList;
-    private String configFile;
-    private HashMap<String, Book> bookWithChapters;
+    public static ArrayList<Book> bookList = new ArrayList<Book>();
+    public static HashMap<String, Book> bookWithChapters = new HashMap<String, Book>();
 
-    private static String audiobooks = "audiobooks";
+    public static String audiobooks = "audiobooks";
     private static String contents = "contents";
     public static String metadata = "metadata";
     private static String provider = "provider";
@@ -47,17 +43,12 @@ public class ConfigUtils {
     private static String DEFAULT_TITLE = "default_title";
     private static String DEFAULT_BOOK = "default_book";
 
-    public ConfigUtils(Context context, HashMap<String, Book> bookWithChapters, String configFile, ArrayList<Book> bookList) {
-        this.context = context;
-        this.bookWithChapters = bookWithChapters;
-        this.bookList = bookList;
-        this.configFile = configFile;
-    }
 
-    public void invoke() {
+    public static void invoke(AudioBookShowList audioBookShowList, String configFile) {
+
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new InputStreamReader(context.getAssets().open(configFile)));
+            reader = new BufferedReader(new InputStreamReader(audioBookShowList.getAssets().open(configFile)));
 
             String message = org.apache.commons.io.IOUtils.toString(reader);
 
@@ -132,11 +123,11 @@ public class ConfigUtils {
                         book.setProviderName(providerName);
                         book.setDescr(descBook);
                         book.setAuthor(authorBook);
-                        book.setAppDir(context.getFilesDir().getAbsolutePath());
+                        book.setAppDir(audioBookShowList.getFilesDir().getAbsolutePath());
 
                         //select random image
-                        Drawable randomImage = ImageUtils.getRandomDefaultImage(context);
-                        book.setLocalImageResource(ImageUtils.scaleImage(context, randomImage, 500, 300));
+                        Drawable randomImage = ImageUtils.getRandomDefaultImage(audioBookShowList);
+                        book.setLocalImageResource(ImageUtils.scaleImage(audioBookShowList, randomImage, 500, 300));
 
                         //TODO add author
                         try{
