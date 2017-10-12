@@ -12422,6 +12422,7 @@
                     "id": 15,
                     "title": "Diario di Anna Frank | Ad Alta Voce del 28/01/2017",
                     "url": "",
+					"TODO":"TODO",
                     "webLinkLookup": false,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-2ce72673-0918-4ede-a7c0-8a762c0b7855.html"
                 }
@@ -13386,6 +13387,7 @@
                     "id": 14,
                     "title": "Conservazione | Ad Alta Voce del 23/09/2016",
                     "url": "",
+					"TODO": "TODO",
                     "webLinkLookup": false,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-167eb74d-b159-44fb-978c-27bf85700d5f.html"
                 },
@@ -13988,16 +13990,6 @@
                     "contentId": "ContentSet-3c09808c-cf90-43a8-8914-79a5401042b7",
                     "desc": "Elia Schilton legge \"I miei premi\" di  Thomas Bernhard",
                     "format": "mp3",
-                    "id": 0,
-                    "title": "I miei premi",
-                    "url": "",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-f6215e85-433e-4806-89d4-677e649a4901.html"
-                },
-                {
-                    "contentId": "ContentSet-3c09808c-cf90-43a8-8914-79a5401042b7",
-                    "desc": "Elia Schilton legge \"I miei premi\" di  Thomas Bernhard",
-                    "format": "mp3",
                     "id": 1,
                     "title": "I miei premi | Ad Alta Voce del 20/06/2016",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=XjgLkqpVHS0eeqqEEqual",
@@ -14113,16 +14105,6 @@
         },
         {
             "contents": [
-                {
-                    "contentId": "ContentSet-c85d54af-b28f-4d11-ae21-15e327a39f49",
-                    "desc": "Giuseppe Cederna legge il romanzo di Rudyard Kipling",
-                    "format": "mp3",
-                    "id": 0,
-                    "title": "Il libro della giungla",
-                    "url": "",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-3fbb41e1-f8de-43de-92f2-fc11b16548c1.html"
-                },
                 {
                     "contentId": "ContentSet-c85d54af-b28f-4d11-ae21-15e327a39f49",
                     "desc": "Giuseppe Cederna legge il romanzo di Rudyard Kipling",
@@ -14292,16 +14274,6 @@
         },
         {
             "contents": [
-                {
-                    "contentId": "ContentSet-408eb0cf-fdd3-45e8-a7dc-3bdeed15ce6b",
-                    "desc": "Arturo Cirillo legge \"Althenopis\" di Fabrizia Ramondino",
-                    "format": "mp3",
-                    "id": 0,
-                    "title": "Althenopis | Ad Alta Voce",
-                    "url": "",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-3045174d-1fdf-4a37-8217-859fcec8e740.html"
-                },
                 {
                     "contentId": "ContentSet-408eb0cf-fdd3-45e8-a7dc-3bdeed15ce6b",
                     "desc": "Arturo Cirillo legge \"Althenopis\" di Fabrizia Ramondino",
@@ -14521,16 +14493,6 @@
         },
         {
             "contents": [
-                {
-                    "contentId": "ContentSet-c7cb6fbb-f3d4-472a-bcfd-49e75a03c8b5",
-                    "desc": "Alessandro Benvenuti legge \"La ragazza di Bube\" di Carlo Cassola",
-                    "format": "mp3",
-                    "id": 0,
-                    "title": "La ragazza di Bube",
-                    "url": "",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-b0dfab33-c24f-447a-bd66-68771bc40dbd.html"
-                },
                 {
                     "contentId": "ContentSet-c7cb6fbb-f3d4-472a-bcfd-49e75a03c8b5",
                     "desc": "Alessandro Benvenuti legge \"La ragazza di Bube\" di Carlo Cassola",
@@ -15423,16 +15385,6 @@
         },
         {
             "contents": [
-                {
-                    "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
-                    "desc": "Il nano della regina, che aveva la pi\u00f9 piccola statura che mai si fosse vista in quel paese, quando ebbe trovato un uomo tanto pi\u00f9 piccino di lui divent\u00f2 insolentissimo, e non faceva altro che offendermi e tormentarmi..",
-                    "format": "mp3",
-                    "id": 0,
-                    "title": "I viaggi di Gulliver - Ad Alta Voce",
-                    "url": "",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-ce2c8083-9f31-4b75-a861-969084281eb6.html"
-                },
                 {
                     "contentId": "ContentSet-5a38e7d1-4782-48bb-abfc-61073284b6f0",
                     "desc": "Chiara Guidi legge \"I viaggi di Gulliver\" di Jonathan Swift",
@@ -19184,16 +19136,6 @@
         },
         {
             "contents": [
-                {
-                    "contentId": "ContentSet-931f3fd4-23ea-4fdc-bb44-8635f9652ad0",
-                    "desc": "Dal 31 luglio \"Ad Alta Voce\" propone il famoso romanzo di Erich Maria Remarque \"Niente di nuovo sul fronte occidentale\" letto da Elia Shilton. \n \nPubblicato nel 1929 e basato sulle vicende autobiografiche dell'autore, Niente di nuovo sul fronte occidentale fu uno dei primi best-seller del Novecento. Gli orrori del conflitto 1914-18 sono raccontati attraverso le vicende di un gruppo di studenti tedeschi che dai banchi di scuola si trovano catapultati al fronte. Hanno tutti diciannove anni e sono convinti di vivere una bella avventura. Nella presa di coscienza dell'umanit\u00e0 del nemico e dell'assurdit\u00e0 del sacrificio di una generazione, il romanzo si propone come un drammatico messaggio di pace e un'appassionata requisitoria contro le spaventose conseguenze della guerra. Nel 1930 il film tratto dal romanzo (All'ovest niente di nuovo, regia di Lewis Mileston)e vinse il Premio Oscar.",
-                    "format": "mp3",
-                    "id": 0,
-                    "title": "Niente di nuovo sul fronte occidentale",
-                    "url": "",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-095451b8-0def-4df1-9838-cd26adca688b.html"
-                },
                 {
                     "contentId": "ContentSet-931f3fd4-23ea-4fdc-bb44-8635f9652ad0",
                     "desc": "Legge Elia Schilton",
@@ -40103,7 +40045,7 @@
             ],
             "id": 160,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.studiarapido.it/wp-content/uploads/2016/03/werther.jpeg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -40112,7 +40054,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "I dolori del giovane Werther",
+                    "author": "Johann Wolfgang Goethe"
                 }
         },
         {
@@ -40340,7 +40284,7 @@
             ],
             "id": 161,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.treccani.it/export/sites/default/immagini/pem/2015_Il_ritorno_del_Maestro.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -40349,7 +40293,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Il Maestro e Margherita",
+                    "author": "Michail Bulgakov"
                 }
         },
         {
@@ -40797,7 +40743,7 @@
             ],
             "id": 162,
             "metadata": {
-                    "image": "",
+                    "image": "https://www.skuola.net/news_foto/2016/rosso-nero.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -40806,7 +40752,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Il rosso e il nero",
+                    "author": "Stendhal "
                 }
         },
         {
@@ -41024,7 +40972,7 @@
             ],
             "id": 163,
             "metadata": {
-                    "image": "",
+                    "image": "https://www.liberopensiero.eu/wp-content/uploads/2014/12/Dorian-Gray.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -41033,7 +40981,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Il ritratto di Dorian Gray",
+                    "author": "Oscar Wilde"
                 }
         },
         {
@@ -41261,7 +41211,7 @@
             ],
             "id": 164,
             "metadata": {
-                    "image": "",
+                    "image": "https://3.bp.blogspot.com/-64tPNxCROpU/V-Z-T8DJq0I/AAAAAAAAMdE/3DdF723RQpslkpQk9oKat2skaWP2lRc8QCLcB/w1200-h630-p-k-no-nu/9788807900242_quarta.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -41270,7 +41220,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "L'educazione sentimentale",
+                    "author": "Gustave Flaubert"
                 }
         },
         {
@@ -41388,7 +41340,7 @@
             ],
             "id": 165,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.artribune.com/wp-content/uploads/2012/07/Il-Giro-di-Vite-433.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -41397,7 +41349,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Giro di vite",
+                    "author": "Henry James"
                 }
         },
         {
@@ -41765,7 +41719,7 @@
             ],
             "id": 166,
             "metadata": {
-                    "image": "",
+                    "image": "http://images.mentalfloss.com/sites/default/files/pinocchio_primary.jpg?resize=1100x740",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -41774,7 +41728,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Pinocchio",
+                    "author": "Carlo Collodi"
                 }
         },
         {
@@ -42002,7 +41958,7 @@
             ],
             "id": 167,
             "metadata": {
-                    "image": "",
+                    "image": "http://ftv01.stbm.it/imgbank/GALLERYXL/R201701/gli_indifferenti_02.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -42011,7 +41967,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Gli indifferenti",
+                    "author": "Alberto Moravia"
                 }
         },
         {
@@ -42072,6 +42030,7 @@
                     "format": "mp3",
                     "id": 5,
                     "title": "Il richiamo della foresta | Ad alta voce del 07/02/2005",
+					"TODO": "TODO",
                     "url": "",
                     "webLinkLookup": false,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-bb38ac5e-b7bc-407a-8774-07a53d736936.html"
@@ -42092,6 +42051,7 @@
                     "format": "mp3",
                     "id": 7,
                     "title": "Il richiamo della foresta | Ad alta voce del 09/02/2005",
+					"TODO": "TODO",
                     "url": "",
                     "webLinkLookup": false,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-c360e7bf-f7e3-414a-aacb-bfbce505d6b1.html"
@@ -42128,7 +42088,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Il richiamo della foresta",
+                    "author": "Jack London"
                 }
         },
         {
@@ -42366,7 +42328,7 @@
             ],
             "id": 169,
             "metadata": {
-                    "image": "",
+                    "image": "https://nicomichelleblog.files.wordpress.com/2015/10/madame-bovary-mb1074-copy_rgb.jpg?w=748",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -42375,7 +42337,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Madame Bovary",
+                    "author": "Gustave Flaubert"
                 }
         },
         {
@@ -42603,7 +42567,7 @@
             ],
             "id": 170,
             "metadata": {
-                    "image": "",
+                    "image": "http://gioit.h-cdn.co/assets/16/35/980x490/landscape-1472635197-13.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -42612,23 +42576,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
-                }
-        },
-        {
-            "contents": [],
-            "id": 171,
-            "metadata": {
-                    "image": "",
-                    "other_images": {
-                        "image": "",
-                        "image": ""
                     },
-                    "provider": {
-                        "image": "",
-                        "name": "Ad Alta Voce",
-                        "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    "title": "Orgoglio e pregiudizio",
+                    "author": "Jane Austen"
                 }
         }
     ],
