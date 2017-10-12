@@ -35404,7 +35404,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Le Memorie di Barry Lyndon",
+                    "author": "William Makepeace Thackeray"
                 }
         },
         {
@@ -35612,7 +35614,7 @@
             ],
             "id": 140,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.compartosanita.it/wp-content/uploads/2017/01/CANNE-AL-VENTO.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -35621,7 +35623,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Canne al vento",
+                    "author": "Grazia Deledda"
                 }
         },
         {
@@ -35859,7 +35863,7 @@
             ],
             "id": 141,
             "metadata": {
-                    "image": "",
+                    "image": "https://i2.wp.com/www.asiagotrekking.it/public/ATG201_2.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -35868,7 +35872,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Un anno sull'Altipiano",
+                    "author": "Emilio Lussu"
                 }
         },
         {
@@ -36096,7 +36102,7 @@
             ],
             "id": 142,
             "metadata": {
-                    "image": "",
+                    "image": "https://www.skuola.net/news_foto/2016/barone-rampante-calvino.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -36105,7 +36111,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Il barone rampante",
+                    "author": "Italo Calvino"
                 }
         },
         {
@@ -36213,7 +36221,7 @@
             ],
             "id": 143,
             "metadata": {
-                    "image": "",
+                    "image": "http://torino.repubblica.it/images/2011/03/02/135127074-4b45912e-5abb-4c95-a425-9ee034b0b6ff.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -36222,7 +36230,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Amore e ginnastica",
+                    "author": "Edmondo De Amicis"
                 }
         },
         {
@@ -36430,7 +36440,7 @@
             ],
             "id": 144,
             "metadata": {
-                    "image": "",
+                    "image": "https://upload.wikimedia.org/wikipedia/it/b/bd/Gianburrasca001.gif",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -36439,7 +36449,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Il giornalino di Giamburrasca",
+                    "author": "Vamba (Luigi Bertelli)"
                 }
         },
         {
@@ -36466,7 +36478,8 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+					"TODO":"TODO"
                 }
         },
         {
@@ -36654,7 +36667,7 @@
             ],
             "id": 146,
             "metadata": {
-                    "image": "",
+                    "image": "https://docsandlin.files.wordpress.com/2015/10/maxresdefault.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -36663,7 +36676,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Il fu Mattia Pascal",
+                    "author": "Luigi Pirandello"
                 }
         },
         {
@@ -36871,7 +36886,7 @@
             ],
             "id": 147,
             "metadata": {
-                    "image": "",
+                    "image": "http://cultura.biografieonline.it/wp-content/uploads/2013/11/avventure-di-Tom-Sawyer.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -36880,7 +36895,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Le avventure di Tom Sawyer",
+                    "author": "Mark Twain"
                 }
         },
         {
@@ -37108,7 +37125,7 @@
             ],
             "id": 148,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.pausacaffeblog.it/wp/wp-content/uploads/2009/05/Emma-Woodhouse-jane-austen.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -37117,7 +37134,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Emma",
+                    "author": "Jane Austen"
                 }
         },
         {
@@ -37335,7 +37354,7 @@
             ],
             "id": 149,
             "metadata": {
-                    "image": "",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Dicksee-The_Mirror-1896.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -37344,7 +37363,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Il piacere",
+                    "author": "Gabriele D'Annunzio"
                 }
         },
         {
@@ -37582,7 +37603,7 @@
             ],
             "id": 150,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.frammentidipace.it/wp-content/uploads/2017/08/We-live-again-di-Fredric-March-Anna-Sten-1280x640.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -37591,7 +37612,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Resurrezione",
+                    "author": "Lev Tolstoj"
                 }
         },
         {
@@ -37718,7 +37741,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Con gli occhi chiusi",
+                    "author": "Federigo Tozzi"
                 }
         },
         {
@@ -38276,7 +38301,7 @@
             ],
             "id": 152,
             "metadata": {
-                    "image": "",
+                    "image": "http://3.citynews-avellinotoday.stgy.ovh/~media/original-hi/134888025155/the_three_musketeers-3.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -38285,7 +38310,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "I tre moschettieri",
+                    "author": "Alexandre Dumas"
                 }
         },
         {
@@ -38493,7 +38520,7 @@
             ],
             "id": 153,
             "metadata": {
-                    "image": "",
+                    "image": "https://blog.execohr.it/images/Un-uomo-di-fumo.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -38502,7 +38529,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Il codice di Perelà",
+                    "author": "Aldo Palazzeschi"
                 }
         },
         {
@@ -38740,7 +38769,7 @@
             ],
             "id": 154,
             "metadata": {
-                    "image": "",
+                    "image": "https://i.ytimg.com/vi/X-6FaHlhBBI/hqdefault.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -38749,7 +38778,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Tre uomini in barca",
+                    "author": "Jerome K. Jerome"
                 }
         },
         {
@@ -38967,7 +38998,7 @@
             ],
             "id": 155,
             "metadata": {
-                    "image": "",
+                    "image": "http://sabrinamezzaqui.it/Opere/img/2010/Il_giuoco_delle_perle_di_vetro/1.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -38976,7 +39007,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Il giuoco delle perle di vetro",
+                    "author": "Hermann Hesse"
                 }
         },
         {
@@ -39204,7 +39237,7 @@
             ],
             "id": 156,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.fiction.mediaset.it/bin/5.$plit/C_46_articolo_466_upiImmaginebig.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -39213,7 +39246,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "I ragazzi della via Pal",
+                    "author": "Hermann Hesse"
                 }
         },
         {
@@ -39421,7 +39456,7 @@
             ],
             "id": 157,
             "metadata": {
-                    "image": "",
+                    "image": "https://images.divisare.com/images/dpr_1.0,f_auto,q_auto,w_800/dphuowtaydejqhpxz8yn/bianco-valente-il-mare-non-bagna-napoli.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -39430,7 +39465,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Il mare non bagna Napoli",
+                    "author": "Anna Maria Ortese"
                 }
         },
         {
@@ -39658,7 +39695,7 @@
             ],
             "id": 158,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.abcvox.info/wp-content/uploads/2017/01/se-questo-e-un-uomo.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -39667,7 +39704,9 @@
                         "image": "https://www.classicipodcast.it/assets/img/pod/1291.png",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Se questo è un uomo",
+                    "author": "Primo Levi"
                 }
         },
         {
@@ -39895,7 +39934,7 @@
             ],
             "id": 159,
             "metadata": {
-                    "image": "",
+                    "image": "https://i.ytimg.com/vi/uT3YR3SxzdA/hqdefault.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -39904,7 +39943,9 @@
                         "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
-                    }
+                    },
+                    "title": "Opinioni di un clown",
+                    "author": "Heinrich Böll"
                 }
         },
         {
