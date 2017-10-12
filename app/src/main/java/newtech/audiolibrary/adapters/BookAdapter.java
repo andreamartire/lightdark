@@ -63,6 +63,9 @@ public class BookAdapter extends ArrayAdapter<Book> {
                 TextView bookAuthor = (TextView) convertView.findViewById(R.id.bookAuthorView);
                 bookAuthor.setText(book.getAuthor());
 
+                TextView bookProvider = (TextView) convertView.findViewById(R.id.providerView);
+                bookProvider.setText(book.getProviderName());
+
                 ImageView imageView = (ImageView) convertView.findViewById(R.id.bookImageView);
 
                 //default image
@@ -139,7 +142,9 @@ public class BookAdapter extends ArrayAdapter<Book> {
                 ArrayList<Book> filteredBooks = new ArrayList<Book>();
                 for(int i = 0, l = lItems.size(); i < l; i++){
                     Book m = lItems.get(i);
-                    if(m.getBookTitle().toLowerCase().contains(constraint) || m.getDescr().toLowerCase().contains(constraint))
+                    if(m.getBookTitle().toLowerCase().contains(constraint)
+                            || m.getDescr().toLowerCase().contains(constraint)
+                            || m.getAuthor().toLowerCase().contains(constraint))
                         filteredBooks.add(m);
                 }
 
