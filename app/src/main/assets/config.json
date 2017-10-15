@@ -766,7 +766,7 @@
             ],
             "metadata": {
                 "author": "Giulio Cesare Croce",
-                "image": "",
+                "image": "http://www.informarezzo.com/files/bertoldo_567636604.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -903,7 +903,7 @@
             ],
             "metadata": {
                 "author": "Giulio Mazzarino",
-                "image": "",
+                "image": "https://i1.wp.com/www.lavocedellisola.it/wp-content/uploads/2017/08/maz1.jpg?resize=620%2C350",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -956,7 +956,7 @@
             ],
             "metadata": {
                 "author": "Maksim Gor'kij (alias Aleksej Maksimovi\u010d Pe\u0161kov)",
-                "image": "",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2015/04/il_burlone_gorkij.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -1016,7 +1016,7 @@
             ],
             "metadata": {
                 "author": "Charles Dickens",
-                "image": "",
+                "image": "http://lacapannadelsilenzio.it/wp-content/uploads/2014/12/canto-di-natale-2.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -1356,7 +1356,7 @@
             ],
             "metadata": {
                 "author": "Harriet Beecher Stowe",
-                "image": "",
+                "image": "http://www.cinemecum.it/newsite/images/stories/O/ollagianni/hollywoodcolored/uncletom2.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -1679,7 +1679,7 @@
             ],
             "metadata": {
                 "author": "Stendhal (alias Marie-Henri Beyle)",
-                "image": "",
+                "image": "http://www.lanostratv.it/wp-content/gallery/lacert/la-certosa-di-parma-1.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -1696,11 +1696,12 @@
             "contents": [],
             "metadata": {
                 "author": "Lev Nikolaevi\u010d Tolstoj",
-                "image": "",
+                "image": "https://cloudia.hnonline.sk/r750xn/05fe74d9c1001e1e76f9c6aa86aa83d8.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
                 },
+				"TODO":"TODO",
                 "provider": {
                     "image": "",
                     "name": "Liber Liber",
@@ -1984,7 +1985,7 @@
             ],
             "metadata": {
                 "author": "Italo Svevo (alias Ettore Schmitz)",
-                "image": "",
+                "image": "http://bmliterature.altervista.org/blog/wp-content/uploads/2016/05/fumo.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -1999,6 +2000,7 @@
         },
         {
             "contents": [],
+			"TODO":"TODO",
             "metadata": {
                 "author": "Matilde Serao",
                 "image": "",
@@ -2208,7 +2210,7 @@
             ],
             "metadata": {
                 "author": "Edmondo De Amicis",
-                "image": "",
+                "image": "https://static.fanpage.it/wp-content/uploads/2016/10/cuore-300x225.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -2317,7 +2319,7 @@
             ],
             "metadata": {
                 "author": "Guido Gozzano",
-                "image": "",
+                "image": "https://1.bp.blogspot.com/-1NkazrGbEk8/V24115dEu8I/AAAAAAAAWAQ/N16O_w0rwTcNhOsdMJ1sdbx5h50t5RxdwCLcB/w1200-h630-p-k-no-nu/Elfi%2Bed%2Baltre%2Bcreature%2Bmagiche%2Bdella%2Bforesta.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -2790,7 +2792,7 @@
             ],
             "metadata": {
                 "author": "Charles Dickens",
-                "image": "",
+                "image": "http://www.pausacaffeblog.it/wp/wp-content/uploads/2012/02/049496f622c3da11a7b3baa27b63c796p.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -3676,7 +3678,7 @@
             ],
             "metadata": {
                 "author": "Giovanni Boccaccio",
-                "image": "",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Waterhouse_decameron.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -3925,7 +3927,7 @@
             ],
             "metadata": {
                 "author": "Dante Alighieri",
-                "image": "",
+                "image": "http://teatrocaramella.it/wp-content/uploads/2017/03/DANTE.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -4587,7 +4589,7 @@
             ],
             "metadata": {
                 "author": "Johann Wolfgang von Goethe",
-                "image": "",
+                "image": "http://media-cdn.sueddeutsche.de/image/sz.1.1012605/940x528?v=1355774466000",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -4710,7 +4712,7 @@
             ],
             "metadata": {
                 "author": "Erasmus Roterodamus (Erasmo da Rotterdam)",
-                "image": "",
+                "image": "http://dialoghiconpietroautier.myblog.it/media/00/00/1125271879.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -4770,7 +4772,7 @@
             ],
             "metadata": {
                 "author": "Domenico Ciampoli",
-                "image": "",
+                "image": "https://acquesacre.it/images/racconti/Listener-2.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -4886,7 +4888,7 @@
             ],
             "metadata": {
                 "author": "Giovanni della Casa",
-                "image": "",
+                "image": "http://www.scudit.net/mdgalateo_file/sordispaghetti.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -5163,7 +5165,7 @@
             ],
             "metadata": {
                 "author": "Giornale per i bambini",
-                "image": "",
+                "image": "http://www.letteraturadimenticata.it/images/Giornale%20p%20Bambini%20Anno%20IV%20n%204%2024%20gen%201884.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -5454,7 +5456,7 @@
             ],
             "metadata": {
                 "author": "Charlotte Bront\u00eb",
-                "image": "",
+                "image": "https://image.slidesharecdn.com/janeeyrebycharlottebronte-130706110429-phpapp02/95/jane-eyre-by-charlotte-bronte-1-638.jpg?cb=1373108724",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -5619,7 +5621,7 @@
             ],
             "metadata": {
                 "author": "Marco Polo",
-                "image": "",
+                "image": "http://www.etraduzioni.it/static/images/articole/1659/sulle%20orme%20di%20marco%20polo.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -5805,7 +5807,7 @@
             ],
             "metadata": {
                 "author": "Mille e una notte",
-                "image": "",
+                "image": "http://arabpress.eu/wp-content/uploads/2015/04/Mille-e-una-notte-ev.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -6005,7 +6007,7 @@
             ],
             "metadata": {
                 "author": "Ferdinando Paolieri",
-                "image": "",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2016/10/alinovi_bagnone_in_lunigiana.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -6121,7 +6123,7 @@
             ],
             "metadata": {
                 "author": "Emilio Salgari",
-                "image": "",
+                "image": "http://2.bp.blogspot.com/-B-CgoLfOAKg/Uc_-g80SeyI/AAAAAAAAGHM/oBlP14QfNbA/s960/1010175_547321585314831_1078059093_n.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -6251,7 +6253,7 @@
             ],
             "metadata": {
                 "author": "Ferdinando Paolieri",
-                "image": "",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2015/04/novelle_selvagge.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -6423,7 +6425,7 @@
             ],
             "metadata": {
                 "author": "Ferdinando Paolieri",
-                "image": "",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2015/04/novelle_toscane.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -6777,7 +6779,7 @@
             ],
             "metadata": {
                 "author": "Ludovico Ariosto",
-                "image": "",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Piero_di_Cosimo_-_Liberazione_di_Andromeda_-_Google_Art_Project.jpg/1200px-Piero_di_Cosimo_-_Liberazione_di_Andromeda_-_Google_Art_Project.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -6844,7 +6846,7 @@
             ],
             "metadata": {
                 "author": "James Matthew Barrie",
-                "image": "",
+                "image": "http://i54.tinypic.com/n47i94.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
