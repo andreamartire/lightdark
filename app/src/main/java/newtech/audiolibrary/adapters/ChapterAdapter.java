@@ -1,29 +1,19 @@
 package newtech.audiolibrary.adapters;
 
-import android.app.AlertDialog;
-import android.content.ClipData;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.graphics.drawable.Icon;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.stream.ChapterDeleteButton;
-import newtech.audiolibrary.stream.ChapterDownloadButton;
-import newtech.audiolibrary.stream.ChapterPlayStreamButton;
+import newtech.audiolibrary.buttons.ChapterDeleteButton;
+import newtech.audiolibrary.buttons.ChapterDownloadButton;
+import newtech.audiolibrary.buttons.ChapterPlayStreamButton;
 
 /**
  * Created by MartireAn on 27/08/2017.

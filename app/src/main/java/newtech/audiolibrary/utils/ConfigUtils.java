@@ -129,7 +129,6 @@ public final class ConfigUtils {
                         Drawable randomImage = ImageUtils.getRandomDefaultImage(audioBookShowList);
                         book.setLocalImageResource(ImageUtils.scaleImage(audioBookShowList, randomImage, 500, 300));
 
-                        //TODO add author
                         try{
                             if(ImageUtils.isValidUri(image433Url)){
                                 book.setRemoteImageUrl(image433Url != null ? new URL(image433Url) : null);
@@ -154,7 +153,7 @@ public final class ConfigUtils {
 
                         //add book entry
                         bookList.add(book);
-                        bookWithChapters.put(book.getBookTitle(), book);
+                        bookWithChapters.put(book.getBookDir(), book);
 
                         //setting chapters
                         Iterator it = obj.get(contents).getAsJsonArray().iterator();

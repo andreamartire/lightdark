@@ -6,27 +6,18 @@ package newtech.audiolibrary;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.Point;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 import newtech.audiolibrary.adapters.ChapterAdapter;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.stream.ChapterPlayStreamButton;
-import newtech.audiolibrary.utils.ConfigUtils;
 import newtech.audiolibrary.utils.ImageUtils;
 
 public class ChapterShowList extends Activity {

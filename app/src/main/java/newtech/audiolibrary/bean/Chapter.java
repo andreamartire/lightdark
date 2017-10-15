@@ -90,7 +90,7 @@ public class Chapter implements Serializable {
     }
 
     public String getFileName(){
-        return getChapterTitle() + MP3_EXTENSION;
+        return getChapterTitle().replaceAll(":", "") + MP3_EXTENSION;
     }
 
     public String getProviderDir(){

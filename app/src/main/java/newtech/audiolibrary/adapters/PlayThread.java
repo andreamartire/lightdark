@@ -252,7 +252,7 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             loadedChapter = new Gson().fromJson(new FileReader(playerStateFilePath), Chapter.class);
             System.out.println("Loaded chapter: " + loadedChapter);
 
-            Book linkedBook = ConfigUtils.bookWithChapters.get(loadedChapter.getBook().getBookTitle());
+            Book linkedBook = ConfigUtils.bookWithChapters.get(loadedChapter.getBook().getBookDir());
 
             if(linkedBook == null){
                 //is null when book title changes in config file

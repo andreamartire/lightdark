@@ -13,7 +13,7 @@
         android:text=""
         android:textSize="22dip" />
 
-    <newtech.audiolibrary.stream.ChapterPlayStreamButton
+    <newtech.audiolibrary.buttons.ChapterPlayStreamButton
         android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         android:theme="@style/Widget.AppCompat.Button"
         android:layout_gravity="right"/>
 
-    <newtech.audiolibrary.stream.ChapterDownloadButton
+    <newtech.audiolibrary.buttons.ChapterDownloadButton
         android:id="@+id/downloadButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
         android:theme="@style/Widget.AppCompat.Button"
         android:gravity="right"/>
 
-    <newtech.audiolibrary.stream.ChapterDeleteButton
+    <newtech.audiolibrary.buttons.ChapterDeleteButton
         android:id="@+id/deleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

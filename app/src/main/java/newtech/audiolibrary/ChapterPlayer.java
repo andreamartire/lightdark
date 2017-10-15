@@ -31,7 +31,7 @@ public class ChapterPlayer extends Activity {
 
         Chapter currentChapter = (Chapter) getIntent().getSerializableExtra(CHAPTER);
 
-        Book linkedBook = ConfigUtils.bookWithChapters.get(currentChapter.getBook().getBookTitle());
+        Book linkedBook = ConfigUtils.bookWithChapters.get(currentChapter.getBook().getBookDir());
         // convert to linked chapter. avoid to spread this logic
         currentChapter = currentChapter.getMatchingChapter(linkedBook.getChapters());
 

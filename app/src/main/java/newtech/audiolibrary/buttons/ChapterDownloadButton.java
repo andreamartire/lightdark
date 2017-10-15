@@ -1,4 +1,4 @@
-package newtech.audiolibrary.stream;
+package newtech.audiolibrary.buttons;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;

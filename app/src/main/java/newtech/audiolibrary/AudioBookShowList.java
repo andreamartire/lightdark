@@ -105,7 +105,7 @@ public class AudioBookShowList extends Activity {
                     Book currentBook = playingChapter.getBook();
 
                     //fetch chapters - not saved in player state
-                    currentBook = ConfigUtils.bookWithChapters.get(currentBook.getBookTitle());
+                    currentBook = ConfigUtils.bookWithChapters.get(currentBook.getBookDir());
 
                     Intent intent = new Intent(me, ChapterShowList.class);
 
@@ -148,6 +148,7 @@ public class AudioBookShowList extends Activity {
                 ProgressBar progressBar = (ProgressBar) this.findViewById(R.id.progressBar);
                 progressBar.setProgress((int) bookPercentage);
                 progressBar.setEnabled(false);
+                progressBar.setVisibility(View.VISIBLE);
 
                 String localImageFileName = oldPlayerState.getBook().getLocalImageFileName();
 
