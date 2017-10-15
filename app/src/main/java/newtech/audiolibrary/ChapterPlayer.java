@@ -7,9 +7,12 @@ package newtech.audiolibrary;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
@@ -17,6 +20,7 @@ import newtech.audiolibrary.adapters.PlayThread;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
 import newtech.audiolibrary.utils.ConfigUtils;
+import newtech.audiolibrary.utils.ImageUtils;
 
 public class ChapterPlayer extends Activity {
 
@@ -30,6 +34,13 @@ public class ChapterPlayer extends Activity {
         setContentView(R.layout.activity_play_chapter);
 
         Chapter currentChapter = (Chapter) getIntent().getSerializableExtra(CHAPTER);
+
+        ImageView bookImage = (ImageView) findViewById(R.id.bookImage);
+        Drawable bookImageDr = Drawable.createFromPath(currentChapter.getBook().getLocalImageFilePath());
+
+        Point size = new Point();
+        getWindowManager().getDefaultDisplay().getSize(size);
+        bookImage.setImageDrawable(ImageUtils.scaleImage(this, bookImageDr, size.x, (int) size.x*3/5));
 
         Book linkedBook = ConfigUtils.bookWithChapters.get(currentChapter.getBook().getBookDir());
         // convert to linked chapter. avoid to spread this logic

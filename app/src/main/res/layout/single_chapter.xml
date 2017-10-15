@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:orientation="horizontal" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
 
     <TextView
         android:id="@+id/chapterTitle"
@@ -11,34 +12,40 @@
         android:layout_weight="0.6"
         android:padding="10dip"
         android:text=""
-        android:textSize="22dip" />
+        android:textSize="22dip"
+        android:layout_alignParentLeft="true" />
 
-    <newtech.audiolibrary.buttons.ChapterPlayStreamButton
-        android:id="@+id/playButton"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0.2"
-        android:src="@drawable/ic_play_arrow_black_72dp"
-        android:theme="@style/Widget.AppCompat.Button"
-        android:layout_gravity="right"/>
+        android:layout_alignParentRight="true">
 
-    <newtech.audiolibrary.buttons.ChapterDownloadButton
-        android:id="@+id/downloadButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.2"
-        android:src="@drawable/ic_file_download_black_72dp"
-        android:theme="@style/Widget.AppCompat.Button"
-        android:gravity="right"/>
+        <newtech.audiolibrary.buttons.ChapterPlayStreamButton
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_play_arrow_black_72dp"
+            android:theme="@style/Widget.AppCompat.Button" />
 
-    <newtech.audiolibrary.buttons.ChapterDeleteButton
-        android:id="@+id/deleteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.2"
-        android:src="@drawable/ic_delete_black_72dp"
-        android:theme="@style/Widget.AppCompat.Button"
-        android:visibility="gone"
-        android:layout_gravity="right"/>
+        <newtech.audiolibrary.buttons.ChapterDownloadButton
+            android:id="@+id/downloadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_file_download_black_72dp"
+            android:theme="@style/Widget.AppCompat.Button" />
 
-</LinearLayout>
+        <newtech.audiolibrary.buttons.ChapterDeleteButton
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_delete_black_72dp"
+            android:theme="@style/Widget.AppCompat.Button"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

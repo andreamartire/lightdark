@@ -4,42 +4,65 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/playChapter_title"
-            android:layout_width="match_parent"
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight=".20"
-            android:textAlignment="center"
-            android:textSize="30sp" />
+            android:layout_gravity="center">
 
-        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/playChapter_currentDuration"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight=".20"
-            android:textAlignment="center"
-            android:textSize="30sp" />
+                <ImageView
+                    android:id="@+id/bookImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:alpha="0.8"/>
 
-        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/playChapter_totalDuration"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight=".20"
-            android:textAlignment="center"
-            android:textSize="30sp" />
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:max="100"
-            android:progress="0"
-            android:progressDrawable="@drawable/progressbar"
-            android:secondaryProgress="0" />
+                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/playChapter_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight=".20"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:textColor="@color/colorWhite"/>
+
+                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/playChapter_currentDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight=".20"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/playChapter_totalDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight=".20"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:textColor="@color/colorWhite" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progressbar"
+                        android:secondaryProgress="0" />
+            </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

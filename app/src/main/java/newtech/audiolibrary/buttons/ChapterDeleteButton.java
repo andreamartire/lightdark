@@ -1,12 +1,16 @@
 package newtech.audiolibrary.buttons;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.view.ContextThemeWrapper;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -58,32 +62,37 @@ public class ChapterDeleteButton extends AppCompatImageButton {
                 final LinearLayout linearLayout = (LinearLayout)v.getParent();
 
                 ChapterDeleteButton deleteButton = (ChapterDeleteButton) v;
-
-                //manage tap on chapter's list
-                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-
-                TextView title = (TextView) linearLayout.findViewById(R.id.chapterTitle);
-
                 final Chapter currentChapter = deleteButton.getChapter();
 
-                try{
-                    builder.setMessage("Are you sure to delete " + currentChapter.getChapterTitle() + "?")
-                            .setTitle("Delete File")
-                            .setCancelable(true)
-                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int whichButton) {
-                                    MyFileUtils.deleteFileIfExists(currentChapter.getLocalFilePath());
+                final Dialog dialog = new Dialog(v.getContext(),R.style.CustomDialogTheme);
+                dialog.getWindow();
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.confirm_delete);
+                dialog.setCancelable(false);
 
-                                    //force repaint chapter list view
-                                    ListView chapterListView = (ListView) linearLayout.getRootView().findViewById(R.id.chapters_listview);
-                                    final ArrayAdapter adapter = ((ArrayAdapter) chapterListView.getAdapter());
-                                    adapter.notifyDataSetChanged();
-                                }})
-                            .setNegativeButton(android.R.string.no, null).show();
-                }catch (Throwable t){
-                    t.printStackTrace();
-                }
+                Button confirmBtn = (Button) dialog.findViewById(R.id.confirmDeleteBtn);
+                Button cancelBtn = (Button) dialog.findViewById(R.id.cancelDeleteBtn);
 
+                confirmBtn.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View arg0) {
+                        dialog.dismiss();
+                        MyFileUtils.deleteFileIfExists(currentChapter.getLocalFilePath());
+
+                        //force repaint chapter list view
+                        ListView chapterListView = (ListView) linearLayout.getRootView().findViewById(R.id.chapters_listview);
+                        final ArrayAdapter adapter = ((ArrayAdapter) chapterListView.getAdapter());
+                        adapter.notifyDataSetChanged();
+                    }
+                });
+
+                cancelBtn.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View arg0) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
             }
         });
     }

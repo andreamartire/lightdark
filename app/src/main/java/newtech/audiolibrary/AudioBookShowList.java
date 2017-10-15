@@ -88,7 +88,7 @@ public class AudioBookShowList extends Activity {
 
                 startActivity(intent);
 
-                //TODO reset search view
+                //TODO reset focus
                 searchView.clearFocus();
             }
         });

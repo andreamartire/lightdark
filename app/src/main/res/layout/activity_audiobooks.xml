@@ -54,7 +54,8 @@
                             android:layout_gravity="center"
                             android:layout_marginLeft="30dp"
                             android:layout_marginTop="30dp"
-                            android:src="@drawable/ic_play_arrow_black_72dp" />
+                            android:src="@drawable/ic_play_arrow_black_72dp"
+                            android:visibility="gone"/>
                 </RelativeLayout>
 
                 <TextView

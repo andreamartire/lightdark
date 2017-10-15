@@ -7,7 +7,9 @@ import android.content.DialogInterface;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.Window;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import newtech.audiolibrary.R;
@@ -54,20 +56,12 @@ public class ChapterDownloadButton extends AppCompatImageButton {
             @Override
             public void onClick(View v) {
                 //get the row the clicked button is in
-                LinearLayout linearLayout = (LinearLayout)v.getParent();
-
                 ChapterDownloadButton downloadButton = (ChapterDownloadButton) v;
 
                 //manage tap on chapter's list
-                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-
-                TextView title = (TextView) linearLayout.findViewById(R.id.chapterTitle);
+                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext(),R.style.CustomDialogTheme);
 
                 Chapter currentChapter = downloadButton.getChapter();
-
-                builder.setMessage(currentChapter.getUrl())
-                        .setTitle("Download " + currentChapter.getChapterTitle())
-                        .setCancelable(true);
 
                 try {
                     //execute download
@@ -77,14 +71,10 @@ public class ChapterDownloadButton extends AppCompatImageButton {
                     mProgressDialog.setIndeterminate(true);
                     mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
                     mProgressDialog.setCancelable(true);
-                    mProgressDialog.setMessage(currentChapter.getUrl());
-                    mProgressDialog.setTitle("Download " + currentChapter.getChapterTitle());
+                    mProgressDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
                     // execute this when the downloader must be fired
                     final DownloadTask downloadTask = new DownloadTask(currentContext, mProgressDialog, currentChapter, v);
-
-                    String bookDir = currentChapter.getBook().getBookTitle();
-                    String fileName = currentChapter.getFileName();
 
                     downloadTask.execute();
 
