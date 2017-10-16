@@ -9510,7 +9510,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 0,
-                    "title": "Tao Te Ching: copertina",
+                    "title": "Copertina",
                     "url": "https://www.liberliber.it/mediateca/audiolibri/l/lao_tzu/tao_te_ching/mp3/lao_tzu_tao_te_c_sil_01_coper.mp3"
                 },
                 {
@@ -9524,21 +9524,21 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 2,
-                    "title": "Tao Te Ching: capitoli 21-41",
+                    "title": "Capitoli 21-41",
                     "url": "https://www.liberliber.it/mediateca/audiolibri/l/lao_tzu/tao_te_ching/mp3/lao_tzu_tao_te_c_sil_03_21-41.mp3"
                 },
                 {
                     "desc": "",
                     "format": "mp3",
                     "id": 3,
-                    "title": "Tao Te Ching: capitoli 42-61",
+                    "title": "Capitoli 42-61",
                     "url": "https://www.liberliber.it/mediateca/audiolibri/l/lao_tzu/tao_te_ching/mp3/lao_tzu_tao_te_c_sil_04_42-61.mp3"
                 },
                 {
                     "desc": "",
                     "format": "mp3",
                     "id": 4,
-                    "title": "Tao Te Ching: capitoli 62-81",
+                    "title": "Capitoli 62-81",
                     "url": "https://www.liberliber.it/mediateca/audiolibri/l/lao_tzu/tao_te_ching/mp3/lao_tzu_tao_te_c_sil_05_62-81.mp3"
                 }
             ],
@@ -14711,34 +14711,6 @@
                     },
 					"title": "La ragazza di Bube",
 					"author": "Carlo Cassola"
-                }
-        },
-        {
-            "contents": [
-                {
-                    "contentId": "ContentSet-f5414893-5833-4115-a596-fa4ccf9b613c",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 0,
-                    "title": "Ad alta voce del 09/03/2016",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=hUgE6fSHeR4eeqqEEqual",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d52c20b5-d501-40f4-9b88-83bad791f24c.html"
-                }
-            ],
-            "id": 23,
-            "metadata": {
-                    "image": "",
-                    "other_images": {
-                        "image": "",
-                        "image": ""
-                    },
-                    "provider": {
-                        "image": "",
-                        "name": "Ad Alta Voce",
-                        "site": "http://www.adaltavoce.rai.it/"
-                    },
-					"TODO":"TODO"
                 }
         },
         {
