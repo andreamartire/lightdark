@@ -164,6 +164,7 @@
                     "image_300": "",
                     "image_433": ""
                 },
+				"TODO": "TODO",
                 "provider": {
                     "image": "",
                     "name": "Liber Liber",
@@ -1999,7 +2000,8 @@
             }
         },
         {
-            "contents": [],
+            "contents": [
+			],
 			"TODO":"TODO",
             "metadata": {
                 "author": "Matilde Serao",
@@ -9515,7 +9517,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 1,
-                    "title": "Tao Te Ching: capitoli 1-20",
+                    "title": "Capitoli 1-20",
                     "url": "https://www.liberliber.it/mediateca/audiolibri/l/lao_tzu/tao_te_ching/mp3/lao_tzu_tao_te_c_sil_02_01-20.mp3"
                 },
                 {
@@ -21750,7 +21752,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 0,
-                    "title": "Il Conte di Montecristo - Lettura I",
+                    "title": "Lettura I",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=kEoyTMmnvq4eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d4d539bc-8beb-40e6-85fb-9efe159f8d7b.html"
@@ -21760,7 +21762,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 1,
-                    "title": "Il Conte di Montecristo - Lettura II",
+                    "title": "Lettura II",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=NG04V3vnLJoeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-1b5a7d6f-3100-4327-9e8c-56d066a3c9f3.html"
@@ -21770,7 +21772,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 2,
-                    "title": "Il Conte di Montecristo - Lettura III",
+                    "title": "Lettura III",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=uqIssSlashGeCs59seeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-4967e99e-b856-4264-b134-a5a3ec4e3ee0.html"
@@ -21780,7 +21782,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 3,
-                    "title": "Il Conte di Montecristo - Lettura IV",
+                    "title": "Lettura IV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=c5UEAWgMgzkeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-844cfde4-997f-41e8-9305-d828095d2173.html"
@@ -21790,7 +21792,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 4,
-                    "title": "Il Conte di Montecristo - Lettura V",
+                    "title": "Lettura V",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=bBQkVVgYoS8eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-43fb5090-92eb-4069-b36f-57ad8b14a27e.html"
@@ -21800,7 +21802,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 5,
-                    "title": "Il Conte di Montecristo - Lettura VI",
+                    "title": "Lettura VI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=HPossSlashoWxD3q8eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-3bedf549-bb6e-4bbd-8358-6971020bc99b.html"
@@ -21810,7 +21812,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 6,
-                    "title": "Il Conte di Montecristo - Lettura VII",
+                    "title": "Lettura VII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=xGssSlashMUrCR97QeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-bd29dd5e-0e02-43b0-8232-84730d7d53fb.html"
@@ -21820,7 +21822,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 7,
-                    "title": "Il Conte di Montecristo - Lettura VIII",
+                    "title": "Lettura VIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=ecS0LkwhRV8eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-39b11fa8-2429-4b88-9b5c-d46f1620420c.html"
@@ -21830,17 +21832,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 8,
-                    "title": "Il Conte di Montecristo - Lettura X",
-                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=CEUffou6TssSlashEeeqqEEqual",
-                    "webLinkLookup": true,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-34235014-b6c1-4125-879b-568a5cd2b4d4.html"
-                },
-                {
-                    "contentId": "ContentSet-172932fc-0874-4bb4-a5f8-0c6daf67386e",
-                    "desc": "",
-                    "format": "mp3",
-                    "id": 9,
-                    "title": "Il Conte di Montecristo - Lettura IX",
+                    "title": "Lettura IX",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=EBJ9cJKljxYeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-3d93667c-68f6-4ef6-9139-6caff3372f91.html"
@@ -21849,8 +21841,18 @@
                     "contentId": "ContentSet-172932fc-0874-4bb4-a5f8-0c6daf67386e",
                     "desc": "",
                     "format": "mp3",
+                    "id": 9,
+                    "title": "Lettura X",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=CEUffou6TssSlashEeeqqEEqual",
+                    "webLinkLookup": true,
+                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-34235014-b6c1-4125-879b-568a5cd2b4d4.html"
+                },
+                {
+                    "contentId": "ContentSet-172932fc-0874-4bb4-a5f8-0c6daf67386e",
+                    "desc": "",
+                    "format": "mp3",
                     "id": 10,
-                    "title": "Il Conte di Montecristo - Lettura XI",
+                    "title": "Lettura XI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=k3vN6SSkJUceeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-0adddf7a-bbb0-4add-8b5a-163fb195854d.html"
@@ -21860,7 +21862,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 11,
-                    "title": "Il Conte di Montecristo - Lettura XII",
+                    "title": "Lettura XII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=tv0lmF0HeyQeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-8dec1c73-c2ce-439b-bda0-1e05b26e8e86.html"
@@ -21870,7 +21872,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 12,
-                    "title": "Il Conte di Montecristo - Lettura XIII",
+                    "title": "Lettura XIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=aLOU9swXXqYeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-6a9cc55c-22af-4518-89bf-04cf785c9637.html"
@@ -21880,7 +21882,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 13,
-                    "title": "Il Conte di Montecristo - Lettura XIV",
+                    "title": "Lettura XIV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=fnvli7SeZKkeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-315a98b0-cbac-4985-8461-934c6d9603be.html"
@@ -21890,7 +21892,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 14,
-                    "title": "Il Conte di Montecristo - Lettura XV",
+                    "title": "Lettura XV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=qpPpPlussHhyCpPpPlussC0TUeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-4cc89f88-993f-491b-9c9d-87311c24e70b.html"
@@ -21900,7 +21902,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 15,
-                    "title": "Il Conte di Montecristo - Lettura XVI",
+                    "title": "Lettura XVI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=J7Y2IXnaSdgeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-36ec7209-a81d-4946-97fd-88d7ade3000f.html"
@@ -21910,7 +21912,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 16,
-                    "title": "Il Conte di Montecristo - Lettura XVII",
+                    "title": "Lettura XVII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=amKYcGtnybYeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-69fa3196-295a-465f-a77a-7ec2f9e0337a.html"
@@ -21920,7 +21922,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 17,
-                    "title": "Il Conte di Montecristo - Lettura XVIII",
+                    "title": "Lettura XVIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=mQM8HdLkdmQeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-143f064d-76e7-4d29-ab89-c5ba1ec50019.html"
@@ -21930,7 +21932,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 18,
-                    "title": "Il Conte di Montecristo - Lettura XIX",
+                    "title": "Lettura XIX",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=JLTErheA5EweeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-edff0862-1466-4694-9a32-63d6eb06d445.html"
@@ -21940,7 +21942,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 19,
-                    "title": "Il Conte di Montecristo - Lettura XX",
+                    "title": "Lettura XX",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=X0mriDITfFkeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-3b556620-d935-44e3-a9e6-c6d8870adf38.html"
@@ -21950,7 +21952,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 20,
-                    "title": "Il Conte di Montecristo - Lettura XXI",
+                    "title": "Lettura XXI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=LlYdcLffGy8eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-2bddd6d2-15a5-4faf-bec6-94297ebd9f1a.html"
@@ -21960,7 +21962,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 21,
-                    "title": "Il Conte di Montecristo - Lettura XXII",
+                    "title": "Lettura XXII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=tQCPFtWpsqkeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-53eda3c5-333e-414a-b34d-f29e3bcb1118.html"
@@ -21970,7 +21972,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 22,
-                    "title": "Il Conte di Montecristo - Lettura XXIII",
+                    "title": "Lettura XXIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=CGxRerqooUMeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-68c4e252-e992-461e-b86e-b1c2f1514104.html"
@@ -21980,7 +21982,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 23,
-                    "title": "Il Conte di Montecristo - Lettura XXIV",
+                    "title": "Lettura XXIV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=wTKqf8BS6RkeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-778f0dac-2697-42db-a0b4-f9470585cd67.html"
@@ -21990,7 +21992,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 24,
-                    "title": "Il Conte di Montecristo - Lettura XXV",
+                    "title": "Lettura XXV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=hHniajlX1bgeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-669079c7-7769-42b8-835a-0f6a879a61dd.html"
@@ -22000,7 +22002,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 25,
-                    "title": "Il Conte di Montecristo - Lettura XXVI",
+                    "title": "Lettura XXVI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=wT1m9pPpPlussasbyoeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-7057b088-bc76-4079-a9ef-94881c0cef01.html"
@@ -22010,7 +22012,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 26,
-                    "title": "Il Conte di Montecristo - Lettura XXVII",
+                    "title": "Lettura XXVII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=A8QvK0Q3pPpPlussK8eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-cb929fd1-b53f-448c-8a06-1389ae0d53a0.html"
@@ -22020,7 +22022,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 27,
-                    "title": "Il Conte di Montecristo - Lettura XXVIII",
+                    "title": "Lettura XXVIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=m1ITKhV6b90eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-cef32c82-96c9-40a8-af36-6d8aabcd88db.html"
@@ -22030,7 +22032,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 28,
-                    "title": "Il Conte di Montecristo - Lettura XXIX",
+                    "title": "Lettura XXIX",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=Fy8qsQOywRceeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-9392fe1b-bdab-48f9-ad7c-1d73266e0a35.html"
@@ -22040,7 +22042,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 29,
-                    "title": "Il Conte di Montecristo - Lettura XXX",
+                    "title": "Lettura XXX",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=Ij5sY3HtIRMeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-af446a9e-081f-410a-9def-7245642126be.html"
@@ -22050,7 +22052,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 30,
-                    "title": "Il Conte di Montecristo - Lettura XXXI",
+                    "title": "Lettura XXXI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=FwAsG6XLCBkeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-4f4cb156-da65-4d76-9f03-ba2907dd020e.html"
@@ -22060,7 +22062,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 31,
-                    "title": "Il Conte di Montecristo - Lettura XXXII",
+                    "title": "Lettura XXXII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=B3dCELyhGw4eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-ac32962f-bdb0-432a-a775-0819234f93af.html"
@@ -22070,7 +22072,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 32,
-                    "title": "Il Conte di Montecristo - Lettura XXXIII",
+                    "title": "Lettura XXXIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=JRpPpPlussUgLFjxrseeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-938a5d34-fbe9-4a8f-b46e-c6bde3f9038c.html"
@@ -22080,7 +22082,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 33,
-                    "title": "Il Conte di Montecristo - Lettura XXXIV",
+                    "title": "Lettura XXXIV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=YHSafjMk9gEeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-2c871e6f-fb75-4e01-85e3-f52181fab7de.html"
@@ -22090,7 +22092,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 34,
-                    "title": "Il Conte di Montecristo - Lettura XXXV",
+                    "title": "Lettura XXXV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=XqbwssSlashH0VMy8eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-0894658e-287d-450e-9aa5-b82f4e109e85.html"
@@ -22100,7 +22102,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 35,
-                    "title": "Il Conte di Montecristo - Lettura XXXVI",
+                    "title": "Lettura XXXVI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=hDvyayLgmkUeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-23c0f86c-188b-4c1a-92b1-f1b97efadcf1.html"
@@ -22108,7 +22110,7 @@
             ],
             "id": 66,
             "metadata": {
-                    "image": "http://www.rai.tv/dl/img/2013/07/105x791374487949967Montecristo_640.jpg",
+                    "image": "http://images2.fanpop.com/image/photos/12000000/The-Count-of-Monte-Cristo-the-count-of-monte-cristo-12009678-900-600.jpg",
                     "other_images": {
                         "image_300": "http://www.rai.tv/dl/img/2013/07/300x1691374487949967Montecristo_640.jpg",
                         "image_433": "http://www.rai.tv/dl/img/2013/07/433x3251374487949967Montecristo_640.jpg"

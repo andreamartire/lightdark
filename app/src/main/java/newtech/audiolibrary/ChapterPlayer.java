@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import java.io.File;
+
 import newtech.audiolibrary.adapters.PlayThread;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
@@ -34,17 +36,15 @@ public class ChapterPlayer extends Activity {
         setContentView(R.layout.activity_play_chapter);
 
         Chapter currentChapter = (Chapter) getIntent().getSerializableExtra(CHAPTER);
-
-        ImageView bookImage = (ImageView) findViewById(R.id.bookImage);
-        Drawable bookImageDr = Drawable.createFromPath(currentChapter.getBook().getLocalImageFilePath());
-
-        Point size = new Point();
-        getWindowManager().getDefaultDisplay().getSize(size);
-        bookImage.setImageDrawable(ImageUtils.scaleImage(this, bookImageDr, size.x, (int) size.x*3/5));
-
         Book linkedBook = ConfigUtils.bookWithChapters.get(currentChapter.getBook().getBookDir());
         // convert to linked chapter. avoid to spread this logic
         currentChapter = currentChapter.getMatchingChapter(linkedBook.getChapters());
+
+        ImageView bookImage = (ImageView) findViewById(R.id.bookImage);
+
+        Point size = new Point();
+        getWindowManager().getDefaultDisplay().getSize(size);
+        bookImage.setImageDrawable(ImageUtils.scaleImage(this, currentChapter.getBook().getLocalImageResource(), size.x, (int) size.x*3/5));
 
         playThread = new PlayThread(this, currentChapter);
 

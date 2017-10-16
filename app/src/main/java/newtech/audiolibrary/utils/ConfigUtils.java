@@ -138,9 +138,9 @@ public final class ConfigUtils {
                                 book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
                             }
 
-                            if(new File(book.getLocalImageFileName()).exists()){
+                            if(new File(book.getLocalImageFilePath()).exists()){
                                 //select local image
-                                Drawable image = Drawable.createFromPath(book.getLocalImageFileName());
+                                Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
                                 book.setLocalImageResource(image);
                             }
                         }
