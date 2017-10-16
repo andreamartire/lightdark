@@ -261,8 +261,10 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             // convert to linked chapter. avoid to spread this logic
             linkedChapter = loadedChapter.getMatchingChapter(linkedBook.getChapters());
 
-            linkedChapter.setCurrentDuration(loadedChapter.getCurrentDuration());
-            linkedChapter.setTotalDuration(loadedChapter.getTotalDuration());
+            if(linkedChapter != null){
+                linkedChapter.setCurrentDuration(loadedChapter.getCurrentDuration());
+                linkedChapter.setTotalDuration(loadedChapter.getTotalDuration());
+            }
 
         }catch (FileNotFoundException e){
             //nothing
