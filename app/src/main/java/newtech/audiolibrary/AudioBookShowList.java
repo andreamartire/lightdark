@@ -12,6 +12,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -45,6 +46,13 @@ public class AudioBookShowList extends Activity {
         setContentView(R.layout.activity_audiobooks);
 
         ConfigUtils.invoke(this, "config.json");
+
+        /*String fileContent = "";
+        try {
+            fileContent = MyFileUtils.getStringFromFile("/src/main/res/values/config.json");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
 
         final SearchView searchView = (SearchView) findViewById(R.id.searchView);
         final LinearLayout currentPlayingInfo = (LinearLayout) findViewById(R.id.currentPlayingInfo);
@@ -115,14 +123,15 @@ public class AudioBookShowList extends Activity {
                     intent.putExtra(ChapterShowList.PLAYING_CHAPTER, playingChapter);
 
                     me.startActivity(intent);
-
-                    //TODO reset search view
-                    searchView.clearFocus();
                 }
             }
         });
 
         checkCurrentPlayingState();
+    }
+
+    private void checkConfigUpdate() {
+        //TODO
     }
 
     @Override
@@ -131,6 +140,7 @@ public class AudioBookShowList extends Activity {
         checkCurrentPlayingState();
 
         final SearchView searchView = (SearchView) findViewById(R.id.searchView);
+        searchView.setFocusable(false);
         searchView.setQuery("", false);
     }
 
