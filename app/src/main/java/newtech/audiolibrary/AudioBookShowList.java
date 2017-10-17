@@ -161,9 +161,7 @@ public class AudioBookShowList extends Activity {
                 progressBar.setVisibility(View.VISIBLE);
 
                 String localImageFileName = oldPlayerState.getBook().getLocalImageFileName();
-
-                //get random default image
-                Drawable image = ImageUtils.getRandomDefaultImage(this);
+                Drawable image = oldPlayerState.getBook().getLocalImageResource();
 
                 if(localImageFileName != null){
                     String localFileImage = oldPlayerState.getBook().getLocalImageFilePath();

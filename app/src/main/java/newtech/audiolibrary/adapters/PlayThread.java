@@ -98,11 +98,13 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             });
 
             //init title label
-            final TextView title = (TextView) currentContext.findViewById(R.id.playChapter_title);
+            final TextView bookTitle = (TextView) currentContext.findViewById(R.id.playBook_title);
+            final TextView chapterTitle = (TextView) currentContext.findViewById(R.id.playChapter_title);
             currentContext.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    title.setText(currentChapter.getChapterTitle());
+                    bookTitle.setText(currentChapter.getBook().getBookTitle());
+                    chapterTitle.setText(currentChapter.getChapterTitle());
                 }
             });
 

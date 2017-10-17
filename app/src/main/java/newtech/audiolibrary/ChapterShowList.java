@@ -13,11 +13,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import newtech.audiolibrary.adapters.ChapterAdapter;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
+import newtech.audiolibrary.utils.ConfigUtils;
 import newtech.audiolibrary.utils.ImageUtils;
 
 public class ChapterShowList extends Activity {
@@ -31,9 +33,9 @@ public class ChapterShowList extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapters);
 
-        final Context currentContext = this;
-
         Book book = (Book) getIntent().getSerializableExtra(BOOK);
+        // convert to linked book
+        book = ConfigUtils.bookWithChapters.get(book.getBookDir());
 
         ArrayList<Chapter> chapters = (ArrayList<Chapter>) getIntent().getSerializableExtra(CHAPTERS);
 
@@ -55,13 +57,16 @@ public class ChapterShowList extends Activity {
             }
         });*/
 
-        String localFileName = book.getLocalImageFilePath();
+        Drawable bookImage = book.getLocalImageResource();
+        String localFilePath = book.getLocalImageFilePath();
+
+        if(localFilePath != null && new File(localFilePath).exists()){
+            bookImage = Drawable.createFromPath(localFilePath);
+        }
+
         ImageView bookImageView = (ImageView) findViewById(R.id.chapters_bookImageView);
 
-        Drawable bookImage = Drawable.createFromPath(localFileName);
-        if(bookImage == null){
-            //TODO default image not found
-        }else{
+        if(bookImage != null){
             Point size = new Point();
             getWindowManager().getDefaultDisplay().getSize(size);
 
