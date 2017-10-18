@@ -2,19 +2,14 @@ package newtech.audiolibrary.adapters;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.drawable.Icon;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-
-import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,7 +18,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import newtech.audiolibrary.AudioBookShowList;
 import newtech.audiolibrary.ChapterPlayer;
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Book;
@@ -61,7 +55,7 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 //when complete play current chapter
-                playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
+                playPauseButton.setImageResource(R.drawable.ic_pause_black_24dp);
 
                 Chapter nextChapter = currentChapter.getNextChapter();
                 nextChapter.setCurrentDuration(0);
