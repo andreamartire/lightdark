@@ -1,5 +1,6 @@
 package newtech.audiolibrary.utils;
 
+import android.app.Activity;
 import android.graphics.drawable.Drawable;
 
 import com.google.gson.JsonArray;
@@ -18,6 +19,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 import newtech.audiolibrary.AudioBookShowList;
+import newtech.audiolibrary.SplashActivity;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
 
@@ -44,11 +46,11 @@ public final class ConfigUtils {
     private static String DEFAULT_BOOK = "default_book";
 
 
-    public static void invoke(AudioBookShowList audioBookShowList, String configFile) {
+    public static void invoke(Activity activity, String configFile) {
 
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new InputStreamReader(audioBookShowList.getAssets().open(configFile)));
+            reader = new BufferedReader(new InputStreamReader(activity.getAssets().open(configFile)));
 
             String message = org.apache.commons.io.IOUtils.toString(reader);
 
@@ -123,11 +125,11 @@ public final class ConfigUtils {
                         book.setProviderName(providerName);
                         book.setDescr(descBook);
                         book.setAuthor(authorBook);
-                        book.setAppDir(audioBookShowList.getFilesDir().getAbsolutePath());
+                        book.setAppDir(activity.getFilesDir().getAbsolutePath());
 
                         //select random image
-                        Drawable randomImage = ImageUtils.getRandomDefaultImage(audioBookShowList);
-                        book.setLocalImageResource(ImageUtils.scaleImage(audioBookShowList, randomImage, 500, 300));
+                        Drawable randomImage = ImageUtils.getRandomDefaultImage(activity);
+                        book.setLocalImageResource(ImageUtils.scaleImage(activity, randomImage, 500, 300));
 
                         try{
                             if(ImageUtils.isValidUri(image433Url)){

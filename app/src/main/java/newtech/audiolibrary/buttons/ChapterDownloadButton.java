@@ -59,7 +59,7 @@ public class ChapterDownloadButton extends AppCompatImageButton {
                 ChapterDownloadButton downloadButton = (ChapterDownloadButton) v;
 
                 //manage tap on chapter's list
-                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext(),R.style.CustomDialogTheme);
+                //AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext(),R.style.CustomDialogTheme);
 
                 Chapter currentChapter = downloadButton.getChapter();
 

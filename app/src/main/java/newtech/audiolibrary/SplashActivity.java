@@ -7,15 +7,13 @@ import android.os.Bundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import newtech.audiolibrary.utils.ConfigUtils;
+
 /**
  * Created by andrea on 18/10/17.
  */
 
-public class SplashActivity extends Activity
-{
-    private static final long DELAY = 3000;
-    private boolean scheduled = false;
-    private Timer splashTimer;
+public class SplashActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -23,25 +21,24 @@ public class SplashActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
 
-        splashTimer = new Timer();
-        splashTimer.schedule(new TimerTask()
-        {
+        final Activity me = this;
+        new Thread(new Runnable() {
             @Override
-            public void run()
-            {
+            public void run() {
+                ConfigUtils.invoke(me, "config.json");
                 SplashActivity.this.finish();
-                startActivity(new Intent(SplashActivity.this, AudioBookShowList.class));
+
+                Intent intent = new Intent(SplashActivity.this, AudioBookShowList.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivityForResult(intent, 0);
+                overridePendingTransition(0,0);
             }
-        }, DELAY);
-        scheduled = true;
+        }).start();
     }
 
     @Override
     protected void onDestroy()
     {
         super.onDestroy();
-        if (scheduled)
-            splashTimer.cancel();
-        splashTimer.purge();
     }
 }

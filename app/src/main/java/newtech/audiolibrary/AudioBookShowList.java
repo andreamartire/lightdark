@@ -45,8 +45,6 @@ public class AudioBookShowList extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audiobooks);
 
-        ConfigUtils.invoke(this, "config.json");
-
         /*String fileContent = "";
         try {
             fileContent = MyFileUtils.getStringFromFile("/src/main/res/values/config.json");

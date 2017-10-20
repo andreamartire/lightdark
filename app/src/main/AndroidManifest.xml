@@ -16,7 +16,7 @@
         android:screenOrientation="portrait" >
 
         <activity
-            android:name=".AudioBookShowList"
+            android:name=".SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
@@ -25,6 +25,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".AudioBookShowList"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
