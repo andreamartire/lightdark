@@ -956,7 +956,7 @@
                 }
             ],
             "metadata": {
-                "author": "Maksim Gor'kij (alias Aleksej Maksimovi\u010d Pe\u0161kov)",
+                "author": "Maksim Gor'kij (Aleksej Maksimovi\u010d Pe\u0161kov)",
                 "image": "https://www.liberliber.it/online/wp-content/uploads/2015/04/il_burlone_gorkij.jpg",
                 "other_images": {
                     "image_300": "",
@@ -1679,7 +1679,7 @@
                 }
             ],
             "metadata": {
-                "author": "Stendhal (alias Marie-Henri Beyle)",
+                "author": "Stendhal (Marie-Henri Beyle)",
                 "image": "http://www.lanostratv.it/wp-content/gallery/lacert/la-certosa-di-parma-1.jpg",
                 "other_images": {
                     "image_300": "",
@@ -1985,7 +1985,7 @@
                 }
             ],
             "metadata": {
-                "author": "Italo Svevo (alias Ettore Schmitz)",
+                "author": "Italo Svevo (Ettore Schmitz)",
                 "image": "http://bmliterature.altervista.org/blog/wp-content/uploads/2016/05/fumo.jpg",
                 "other_images": {
                     "image_300": "",
@@ -7289,7 +7289,7 @@
                 }
             ],
             "metadata": {
-                "author": "Carlo Collodi (alias Carlo Lorenzini)",
+                "author": "Carlo Collodi (Carlo Lorenzini)",
                 "image": "https://img.buzzfeed.com/buzzfeed-static/static/2017-04/18/11/enhanced/buzzfeed-prod-fastlane-03/enhanced-7698-1492530217-4.png?downsize=715:*&output-format=auto&output-quality=auto",
                 "other_images": {
                     "image_300": "",
@@ -11828,7 +11828,7 @@
                 }
             ],
             "metadata": {
-                "author": "Emma (alias Emilia Ferretti Viola)",
+                "author": "Emma (Emilia Ferretti Viola)",
                 "image": "http://alessandria.bookrepublic.it/api/books/9788898925070/cover",
                 "other_images": {
                     "image_300": "",
@@ -14312,17 +14312,6 @@
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=hRGokRt4tIQeeqqEEqual",
                     "webLinkLookup": false,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d4051f6e-8a8f-4309-8d04-d9e83ca8366c.html"
-                },
-                {
-                    "contentId": "ContentSet-5fa395d5-d2b0-45e9-973c-4d3b300f29f0",
-                    "desc": "Daria Deflorian legge il \"Diario di Anna Frank\"",
-                    "format": "mp3",
-                    "id": 15,
-                    "title": "Ad Alta Voce del 28/01/2017",
-                    "url": "",
-					"TODO":"TODO",
-                    "webLinkLookup": false,
-                    "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-2ce72673-0918-4ede-a7c0-8a762c0b7855.html"
                 }
             ],
             "id": 8,
@@ -15284,8 +15273,7 @@
                     "format": "mp3",
                     "id": 14,
                     "title": "Conservazione",
-                    "url": "",
-					"TODO": "TODO",
+                    "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=OtfYz6bHU50eeqqEEqual",
                     "webLinkLookup": false,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-167eb74d-b159-44fb-978c-27bf85700d5f.html"
                 },
@@ -26304,7 +26292,7 @@
             ],
             "id": 78,
             "metadata": {
-                    "image": "",
+                    "image": "http://piattaformainfanzia.org/wp-content/uploads/2014/09/montessori.jpeg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -26573,7 +26561,7 @@
             ],
             "id": 79,
             "metadata": {
-                    "image": "",
+                    "image": "http://images5.fanpop.com/image/photos/31300000/Revolutionary-Road-revolutionary-road-31305450-1680-945.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -26594,7 +26582,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 0,
-                    "title": "La tregua - Lettura I",
+                    "title": "Lettura I",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=KvfAMMdT0aIeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-6d9811a3-470b-414f-88ec-ffab95da7186.html"
@@ -26604,7 +26592,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 1,
-                    "title": "La tregua - Lettura II",
+                    "title": "Lettura II",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=wdVrfHjwdkgeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-45e31988-58ae-4e15-a901-0d77ad6817bc.html"
@@ -26614,7 +26602,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 2,
-                    "title": "La tregua - Lettura III",
+                    "title": "Lettura III",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=up0Q6mRkqM0eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-40f365ce-ab5a-42af-b950-ece50d3aeab8.html"
@@ -26624,7 +26612,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 3,
-                    "title": "La tregua - Lettura IV",
+                    "title": "Lettura IV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=ssSlashIC49AssSlashR6tEeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-122fecd0-7c10-4026-92c5-ea491ea304b2.html"
@@ -26634,7 +26622,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 4,
-                    "title": "La tregua - Lettura V",
+                    "title": "Lettura V",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=3rXEy6Bg8tAeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-b605cec0-e7dc-4149-a085-24a8ab9d2e87.html"
@@ -26644,7 +26632,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 5,
-                    "title": "La tregua - Lettura VI",
+                    "title": "Lettura VI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=u4mfnkfr2xceeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-b8207f7b-3a33-4f51-81f2-b516e0b44254.html"
@@ -26654,7 +26642,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 6,
-                    "title": "La tregua - Lettura VII",
+                    "title": "Lettura VII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=9XL1Y48Ex3seeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-917110e3-bf31-4044-abe4-d476b972c520.html"
@@ -26664,7 +26652,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 7,
-                    "title": "La tregua - Lettura VIII",
+                    "title": "Lettura VIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=FMypijeAqB4eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-5c2863f4-5e22-45ed-9b18-db1f54b37afa.html"
@@ -26674,7 +26662,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 8,
-                    "title": "La tregua - Lettura IX",
+                    "title": "Lettura IX",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=YwcOyzPssSlashZfweeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d229a127-915c-44b7-8321-3adc0c3b079b.html"
@@ -26684,7 +26672,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 9,
-                    "title": "La tregua - Lettura X",
+                    "title": "Lettura X",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=kbMXzy6xirEeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-603249c5-8b42-4439-aae4-ca9d809e500c.html"
@@ -26694,7 +26682,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 10,
-                    "title": "La tregua - Lettura XI",
+                    "title": "Lettura XI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=YAYpPpPlussipmWWSAeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-aad06560-77df-4b05-b024-2450c5e14435.html"
@@ -26704,7 +26692,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 11,
-                    "title": "La tregua - Lettura XII",
+                    "title": "Lettura XII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=teBx8qNJ2hseeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a24f51c3-68e8-4200-95e7-b7eaf6ea4996.html"
@@ -26714,7 +26702,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 12,
-                    "title": "La tregua - Lettura XIII",
+                    "title": "Lettura XIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=REVFosKR26AeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-3a0c3f0f-9f37-4cbc-816c-b4a86209db62.html"
@@ -26724,7 +26712,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 13,
-                    "title": "La tregua - Lettura XIV",
+                    "title": "Lettura XIV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=jgkXsEQjQvseeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-99491c89-4613-4e02-8228-0ea9fd6f3080.html"
@@ -26734,7 +26722,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 14,
-                    "title": "La tregua - Lettura XV",
+                    "title": "Lettura XV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=TrFacJbjbx0eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a7f12d9b-aed0-4374-bfef-4b622c12d098.html"
@@ -26744,7 +26732,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 15,
-                    "title": "La tregua - Lettura XVI",
+                    "title": "Lettura XVI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=Bvvibe5JPDUeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a0405915-9123-428f-9b1d-1776bc8f268a.html"
@@ -26754,7 +26742,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 16,
-                    "title": "La tregua - Lettura XVII",
+                    "title": "Lettura XVII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=e2Fn3PY9UwseeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-333ad288-f8b9-4df0-8ceb-d690152c97cc.html"
@@ -26764,7 +26752,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 17,
-                    "title": "La tregua - Lettura XVIII",
+                    "title": "Lettura XVIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=AUcmwvxnsNkeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-8499ff70-97b6-4ce2-9e43-ae90ed27b66d.html"
@@ -26774,7 +26762,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 18,
-                    "title": "La tregua - Lettura XIX",
+                    "title": "Lettura XIX",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=QVssSlashWHdsBKEAeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-94212a75-87eb-40e3-a3e8-481dfdd03b23.html"
@@ -26784,7 +26772,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 19,
-                    "title": "La tregua - Lettura XX",
+                    "title": "Lettura XX",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=2UHVNaifpPpPlusstYeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-64ef8808-746b-404c-b0a5-531f902de550.html"
@@ -26792,7 +26780,7 @@
             ],
             "id": 80,
             "metadata": {
-                    "image": "",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Cartina_La_tregua_-_Primo_Levi.gif",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -26911,7 +26899,7 @@
             ],
             "id": 81,
             "metadata": {
-                    "image": "",
+                    "image": "https://blog-cdn.dogbuddy.com/wp-content/uploads/2017/01/camo-cocker-1.png",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -27130,7 +27118,7 @@
             ],
             "id": 82,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.laeffe.tv/images/1_programmi/2015/grandi_speranze/grandi_speranze_12.jpg/C_1000x760.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -27349,7 +27337,7 @@
             ],
             "id": 83,
             "metadata": {
-                    "image": "",
+                    "image": "https://pbs.twimg.com/media/CFmeGjhWIAAfefA.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -27458,7 +27446,7 @@
             ],
             "id": 84,
             "metadata": {
-                    "image": "",
+                    "image": "http://i.telegraph.co.uk/multimedia/archive/02747/BADSANTA_2747800b.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -27577,7 +27565,7 @@
             ],
             "id": 85,
             "metadata": {
-                    "image": "",
+                    "image": "https://upload.wikimedia.org/wikipedia/it/d/d9/Elsa_Morante%2C_Bernardo_Bertolucci%2C_Adriana_Asti%2C_Pier_Paolo_Pasolini.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -27696,7 +27684,7 @@
             ],
             "id": 86,
             "metadata": {
-                    "image": "",
+                    "image": "http://4.bp.blogspot.com/-1H94sH6Su8U/ULTbtc7tbZI/AAAAAAAAAJI/Op0jFfA084A/s1600/thumb.png",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -27915,7 +27903,7 @@
             ],
             "id": 87,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.doppiozero.com/sites/default/files/styles/nodo767x/public/07.santiago_caruso.jpg?itok=Bu2ajzgu",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -28124,7 +28112,7 @@
             ],
             "id": 88,
             "metadata": {
-                    "image": "",
+                    "image": "http://media.cineblog.it/e/e64/Il-grande-Gatsby-la-colonna-sonora-del-film-di-Baz-Luhrmann.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -28343,7 +28331,7 @@
             ],
             "id": 89,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.repstatic.it/content/localirep/img/rep-palermo/2016/01/07/211953290-d328bab2-6d99-46f7-b393-4ea3fd9d9c9c.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -28731,7 +28719,7 @@
             ],
             "id": 91,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.zibaldoni.it/wp-content/uploads/2015/01/CARRETTA-ORtese-670x448.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -28850,7 +28838,7 @@
             ],
             "id": 92,
             "metadata": {
-                    "image": "",
+                    "image": "https://images-na.ssl-images-amazon.com/images/I/91Gq1Ad4hXL._SL1500_.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -29009,7 +28997,7 @@
             ],
             "id": 93,
             "metadata": {
-                    "image": "",
+                    "image": "https://1.bp.blogspot.com/-lvRSiFuR6hs/WXXRoR9XKTI/AAAAAAAAJUY/XfVUczhqajIJXpA5onO_paYy3r_1OiPvwCLcBGAs/s1600/Sandokan.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -29218,7 +29206,7 @@
             ],
             "id": 94,
             "metadata": {
-                    "image": "",
+                    "image": "http://mult-kor.hu/image/article/main/.630x1260/47844.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -29327,7 +29315,7 @@
             ],
             "id": 95,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.pavonerisorse.it/scuole_circolo/cosa_studiamo/italia/IMMAGINI/Partenza_da_Quarto.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -29496,7 +29484,7 @@
             ],
             "id": 96,
             "metadata": {
-                    "image": "",
+                    "image": "http://media.booksblog.it/L/Lal/Lalineadombra.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -29765,7 +29753,7 @@
             ],
             "id": 97,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.lospettacolo.it/xml/schede/img/238018_originale_bg.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -29974,7 +29962,7 @@
             ],
             "id": 98,
             "metadata": {
-                    "image": "",
+                    "image": "https://ilmestieredileggereblog.files.wordpress.com/2017/05/varmland-svezia.jpg?w=616",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -30243,7 +30231,7 @@
             ],
             "id": 99,
             "metadata": {
-                    "image": "",
+                    "image": "https://i0.wp.com/film-book.com/wp-content/uploads/2016/02/nicolas-cage-tempo-di-uccidere-01-600x350.jpg?resize=600%2C350",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -30312,7 +30300,7 @@
             ],
             "id": 100,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.chessgames.com/portraits/leotolstoy.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -30731,7 +30719,7 @@
             ],
             "id": 101,
             "metadata": {
-                    "image": "http://www.rai.tv/dl/images/105x791288359959205bonaiuto_105.jpg",
+                    "image": "http://www.carnetdevoyage.it/wp-content/uploads/2016/03/Sentiero-dingresso-alla-casa-di-Monet-Giverny-1024x768.jpg",
                     "other_images": {
                         "image": "",
                         "image_433": "http://www.rai.tv/dl/images/433x3251288359959205bonaiuto_105.jpg"
@@ -30790,7 +30778,7 @@
             ],
             "id": 102,
             "metadata": {
-                    "image": "",
+                    "image": "http://img.ilfoglio.it/resizer/-1/-1/true/redazione/articoli/2015/08/14/131803/misogino.jpg--.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -30859,7 +30847,7 @@
             ],
             "id": 103,
             "metadata": {
-                    "image": "",
+                    "image": "https://i2.wp.com/www.105group.net/wp-content/uploads/2017/03/Luzzati.jpg?fit=566%2C362",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -30928,7 +30916,7 @@
             ],
             "id": 104,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.lindiceonline.com/wp-content/uploads/2016/05/calvino.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -30977,7 +30965,7 @@
             ],
             "id": 105,
             "metadata": {
-                    "image": "",
+                    "image": "https://cdn-images-1.medium.com/max/600/0*orHD1uCyrPbA7gEo.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -31046,7 +31034,7 @@
             ],
             "id": 106,
             "metadata": {
-                    "image": "",
+                    "image": "http://cdn.gelestatic.it/kataweb/ilmiolibro/2017/02/Hemingway_ok-650x320.png",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -31056,7 +31044,7 @@
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
                     },
-					"title": "Grande fiume dai due cuori",
+					"title": "Racconti di Ernest Hemingway",
 					"author": "Ernest Hemingway"
                 }
         },
@@ -31115,7 +31103,7 @@
             ],
             "id": 109,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.illibraio.it/wp-content/uploads/2016/10/Raymond-Carver.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
