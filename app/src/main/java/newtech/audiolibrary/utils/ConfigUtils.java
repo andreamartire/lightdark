@@ -142,6 +142,7 @@ public final class ConfigUtils {
 
                             if(new File(book.getLocalImageFilePath()).exists()){
                                 //select local image
+                                
                                 //Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
                                 //book.setLocalImageResource(image);
                             }
