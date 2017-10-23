@@ -19,21 +19,21 @@
 
         <TextView
             android:id="@+id/bookTitleView"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="1dip"
             android:textSize="20dip"/>
 
         <TextView
             android:id="@+id/bookAuthorView"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="italic"
             android:textSize="14dip"/>
 
         <TextView
             android:id="@+id/providerView"
-            android:layout_width = "fill_parent"
+            android:layout_width = "wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="italic"
             android:textSize="12dip"/>
