@@ -70,6 +70,8 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         bookDir = chapter.getBookDir();
         fileName = chapter.getFileName();
 
+        chapter.setDownloading(true);
+
         //tmp file
         String filePathTmp = bookDir + File.separator + fileName + _TMP;
 
@@ -166,6 +168,8 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
                 MyFileUtils.renameFile(filePathTmp, bookDir + File.separator + fileName);
             }
         }
+
+        chapter.setDownloading(false);
 
         String errorMessage = exception != null ? exception.getMessage() : "";
 

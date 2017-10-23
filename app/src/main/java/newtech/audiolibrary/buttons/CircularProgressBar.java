@@ -26,7 +26,7 @@ import newtech.audiolibrary.R;
 public class CircularProgressBar extends ProgressBar{
     private static final String TAG = "CircularProgressBar";
 
-    private static final int STROKE_WIDTH = 50;
+    private static final int STROKE_WIDTH = 20;
 
     private String mTitle = "";
     private String mSubTitle = "";

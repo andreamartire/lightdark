@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -54,17 +55,17 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
             ChapterDeleteButton deleteButton = (ChapterDeleteButton) convertView.findViewById(R.id.deleteButton);
             deleteButton.setChapter(chapter);
 
-            if(chapter.existsLocalFile()){
-                playStreamButton.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-                playStreamButton.setVisibility(View.VISIBLE);
-                downloadButton.setVisibility(View.GONE);
-                deleteButton.setVisibility(View.VISIBLE);
-            } else {
-                //TODO
-                //playStreamButton.setImageResource(R.drawable.ic_subscriptions_black_72dp);
-                playStreamButton.setVisibility(View.GONE);
-                downloadButton.setVisibility(View.VISIBLE);
-                deleteButton.setVisibility(View.GONE);
+            if(!chapter.isDownloading()){
+                if(chapter.existsLocalFile()){
+                    playStreamButton.setImageResource(R.drawable.ic_play_arrow_black_24dp);
+                    playStreamButton.setVisibility(View.VISIBLE);
+                    downloadButton.setVisibility(View.GONE);
+                    deleteButton.setVisibility(View.VISIBLE);
+                } else {
+                    playStreamButton.setVisibility(View.GONE);
+                    downloadButton.setVisibility(View.VISIBLE);
+                    deleteButton.setVisibility(View.GONE);
+                }
             }
         }
 

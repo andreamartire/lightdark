@@ -22,6 +22,8 @@ import android.widget.SearchView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.MobileAds;
+
 import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -45,12 +47,7 @@ public class AudioBookShowList extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audiobooks);
 
-        /*String fileContent = "";
-        try {
-            fileContent = MyFileUtils.getStringFromFile("/src/main/res/values/config.json");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
+        MobileAds.initialize(this, "ca-app-pub-1872225169177247~3010272652");
 
         final SearchView searchView = (SearchView) findViewById(R.id.searchView);
         final LinearLayout currentPlayingInfo = (LinearLayout) findViewById(R.id.currentPlayingInfo);
