@@ -5,24 +5,24 @@
     android:layout_height="fill_parent"
     android:weightSum="1">
 
-    <TextView
-        android:id="@+id/chapterTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.8"
-        android:padding="10dip"
-        android:text=""
-        android:textSize="22dip"
-        android:layout_alignParentLeft="true" />
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true">
 
+        <TextView
+            android:id="@+id/chapterTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:padding="10dip"
+            android:text=""
+            android:textSize="22dip"
+            android:layout_alignParentLeft="true" />
+
         <newtech.audiolibrary.buttons.ChapterPlayStreamButton
             android:id="@+id/playButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.1"
             android:src="@drawable/ic_play_arrow_black_24dp"
@@ -30,7 +30,7 @@
 
         <newtech.audiolibrary.buttons.ChapterDownloadButton
             android:id="@+id/downloadButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.1"
             android:src="@drawable/ic_file_download_black_24dp"
@@ -38,7 +38,7 @@
 
         <newtech.audiolibrary.buttons.ChapterDeleteButton
             android:id="@+id/deleteButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.1"
             android:src="@drawable/ic_delete_black_24dp"
