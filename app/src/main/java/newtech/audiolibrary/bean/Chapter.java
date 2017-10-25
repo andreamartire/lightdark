@@ -25,8 +25,18 @@ public class Chapter implements Serializable {
     transient Chapter nextChapter;
     transient Chapter previousChapter;
 
+    boolean isDownloading = false;
+
     public Chapter(){
 
+    }
+
+    public boolean isDownloading() {
+        return isDownloading;
+    }
+
+    public void setDownloading(boolean downloading) {
+        isDownloading = downloading;
     }
 
     public Chapter getPreviousChapter() {

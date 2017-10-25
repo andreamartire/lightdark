@@ -36,7 +36,15 @@
             android:src="@drawable/ic_file_download_black_24dp"
             android:theme="@style/Widget.AppCompat.Button" />
 
-        <newtech.audiolibrary.buttons.ChapterDeleteButton
+
+        <newtech.audiolibrary.buttons.CircularProgressBar
+                android:id="@+id/downloadProgress"
+                style="@style/Widget.ProgressBar.Holo.CircularProgressBar"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:visibility="gone"/>
+
+		<newtech.audiolibrary.buttons.ChapterDeleteButton
             android:id="@+id/deleteButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

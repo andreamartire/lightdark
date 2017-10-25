@@ -1,5 +1,6 @@
 package newtech.audiolibrary.buttons;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -7,8 +8,10 @@ import android.content.DialogInterface;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -58,6 +61,20 @@ public class ChapterDownloadButton extends AppCompatImageButton {
                 //get the row the clicked button is in
                 ChapterDownloadButton downloadButton = (ChapterDownloadButton) v;
 
+                ProgressBar downloadProgress = null;
+
+                ViewGroup row = (ViewGroup) v.getParent();
+                for (int itemPos = 0; itemPos < row.getChildCount(); itemPos++) {
+                    View view = row.getChildAt(itemPos);
+                    if (view instanceof ProgressBar) {
+                        downloadProgress = (ProgressBar) view; //Found it!
+                        downloadProgress.setVisibility(VISIBLE);
+                        downloadProgress.setProgress(0);
+                        downloadButton.setVisibility(GONE);
+                        break;
+                    }
+                }
+
                 //manage tap on chapter's list
                 //AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext(),R.style.CustomDialogTheme);
 
@@ -66,24 +83,10 @@ public class ChapterDownloadButton extends AppCompatImageButton {
                 try {
                     //execute download
 
-                    // instantiate it within the onCreate method
-                    ProgressDialog mProgressDialog = new ProgressDialog(currentContext);
-                    mProgressDialog.setIndeterminate(true);
-                    mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-                    mProgressDialog.setCancelable(true);
-                    mProgressDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
                     // execute this when the downloader must be fired
-                    final DownloadTask downloadTask = new DownloadTask(currentContext, mProgressDialog, currentChapter, v);
+                    final DownloadTask downloadTask = new DownloadTask(currentContext, downloadProgress, currentChapter, v);
 
                     downloadTask.execute();
-
-                    mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                        @Override
-                        public void onCancel(DialogInterface dialog) {
-                            downloadTask.cancel(true);
-                        }
-                    });
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

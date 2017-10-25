@@ -1,5 +1,6 @@
 package newtech.audiolibrary.task;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import java.io.File;
@@ -35,14 +37,14 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
 
     private Context context;
     private PowerManager.WakeLock mWakeLock;
-    private ProgressDialog mProgressDialog;
+    private ProgressBar progressBar;
     private View view;
 
     private Chapter chapter;
 
-    public DownloadTask(Context context, ProgressDialog mProgressDialog, Chapter chapter, View view) {
+    public DownloadTask(Context context, ProgressBar progressBar, Chapter chapter, View view) {
         this.context = context;
-        this.mProgressDialog = mProgressDialog;
+        this.progressBar = progressBar;
         this.chapter = chapter;
         this.view = view;
     }
@@ -67,6 +69,8 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         providerDir = chapter.getProviderDir();
         bookDir = chapter.getBookDir();
         fileName = chapter.getFileName();
+
+        chapter.setDownloading(true);
 
         //tmp file
         String filePathTmp = bookDir + File.separator + fileName + _TMP;
@@ -123,7 +127,12 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
                     output.write(data, 0, count);
                 }
 
-                mProgressDialog.dismiss();
+                progressBar.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressBar.setVisibility(View.GONE);
+                    }
+                });
 
             } catch (Exception e) {
                 exception = e;
@@ -160,6 +169,8 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
             }
         }
 
+        chapter.setDownloading(false);
+
         String errorMessage = exception != null ? exception.getMessage() : "";
 
         return fileDownloaded ? null : errorMessage;
@@ -174,16 +185,13 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
                 getClass().getName());
         mWakeLock.acquire();
-        mProgressDialog.show();
     }
 
     @Override
     protected void onProgressUpdate(Integer... progress) {
         super.onProgressUpdate(progress);
         // if we get here, length is known, now set indeterminate to false
-        mProgressDialog.setIndeterminate(false);
-        mProgressDialog.setMax(100);
-        mProgressDialog.setProgress(progress[0]);
+        progressBar.setProgress(progress[0]);
 
         Log.d("MyApp","Progress: " + progress[0]);
     }
@@ -191,7 +199,14 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
     @Override
     protected void onPostExecute(String result) {
         mWakeLock.release();
-        mProgressDialog.dismiss();
+
+        progressBar.post(new Runnable() {
+            @Override
+            public void run() {
+                progressBar.setVisibility(View.GONE);
+            }
+        });
+
         if (result != null){
             Toast.makeText(context, "Download error: " + result, Toast.LENGTH_LONG).show();
         }
