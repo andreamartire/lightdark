@@ -36,7 +36,6 @@
             android:src="@drawable/ic_file_download_black_24dp"
             android:theme="@style/Widget.AppCompat.Button" />
 
-
         <newtech.audiolibrary.buttons.CircularProgressBar
                 android:id="@+id/downloadProgress"
                 style="@style/Widget.ProgressBar.Holo.CircularProgressBar"
