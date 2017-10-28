@@ -125,10 +125,6 @@ public class AudioBookShowList extends Activity {
         checkCurrentPlayingState();
     }
 
-    private void checkConfigUpdate() {
-        //TODO
-    }
-
     @Override
     protected void onResume() {
         super.onResume();

@@ -13,7 +13,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -21,8 +23,10 @@ import java.io.File;
 import newtech.audiolibrary.adapters.PlayThread;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.bean.Chapter;
+import newtech.audiolibrary.task.SimpleDownloadTask;
 import newtech.audiolibrary.utils.ConfigUtils;
 import newtech.audiolibrary.utils.ImageUtils;
+import newtech.audiolibrary.utils.MyFileUtils;
 
 public class ChapterPlayer extends Activity {
 
