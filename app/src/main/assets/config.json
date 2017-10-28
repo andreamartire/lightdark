@@ -23987,10 +23987,10 @@
             ],
             "id": 10,
             "metadata": {
-                    "image": "http://www.rai.tv/dl/img/2016/11/105x791480433945030piero_baldini_5_640x360_copia.jpg",
+                    "image": "http://www.rai.it/dl/img/2016/11/1480434253527piero_baldini_640x360_copia.jpg",
                     "other_images": {
-                        "image_300": "http://www.rai.tv/dl/img/2016/11/300x1691480433945030piero_baldini_5_640x360_copia.jpg",
-                        "image_433": "http://www.rai.tv/dl/img/2016/11/433x3251480433945030piero_baldini_5_640x360_copia.jpg"
+                        "image_300": "",
+                        "image_433": ""
                     },
                     "provider": {
                         "image": "",
@@ -40121,10 +40121,10 @@
             ],
             "id": 101,
             "metadata": {
-                    "image": "http://www.carnetdevoyage.it/wp-content/uploads/2016/03/Sentiero-dingresso-alla-casa-di-Monet-Giverny-1024x768.jpg",
+                    "image": "https://maxpull-tlu7l6lqiu.stackpathdns.com/wp-content/uploads/2014/03/perennial-garden.jpg",
                     "other_images": {
                         "image": "",
-                        "image_433": "http://www.rai.tv/dl/images/433x3251288359959205bonaiuto_105.jpg"
+                        "image_433": ""
                     },
                     "provider": {
                         "image": "",
@@ -40574,7 +40574,7 @@
             ],
             "id": 111,
             "metadata": {
-                    "image": "",
+                    "image": "https://www.skuola.net/news_foto/2016/zanna-bianca.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -40643,7 +40643,7 @@
             ],
             "id": 112,
             "metadata": {
-                    "image": "",
+                    "image": "https://www.panorama.it/wp-content/uploads/2014/07/Katherine-Mansfield-5-motivi-per-leggere-tutti-i-racconti.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -40712,7 +40712,7 @@
             ],
             "id": 113,
             "metadata": {
-                    "image": "",
+                    "image": "https://www.rodoni.ch/KAFKA/meta_fnl_01.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -41100,7 +41100,7 @@
             ],
             "id": 115,
             "metadata": {
-                    "image": "",
+                    "image": "https://insiemearaimondo.files.wordpress.com/2013/02/20130210-135704.jpg?w=558",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -41319,7 +41319,7 @@
             ],
             "id": 116,
             "metadata": {
-                    "image": "",
+                    "image": "https://upload.wikimedia.org/wikipedia/it/thumb/9/9b/Metello.png/280px-Metello.png",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -41588,7 +41588,7 @@
             ],
             "id": 117,
             "metadata": {
-                    "image": "",
+                    "image": "http://media.breitbart.com/media/2015/10/dn_dr_no_foto_sean_connery_james_bond_les_ambassadeurs_morland_cigarette_AA_01_01a.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -41707,7 +41707,7 @@
             ],
             "id": 118,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.solotravel.it/wp-content/uploads/2008/12/libia.bmp",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -41926,7 +41926,7 @@
             ],
             "id": 119,
             "metadata": {
-                    "image": "",
+                    "image": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/xJ7sWO58ptpIrnUTRRTesu3YbC.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -42095,7 +42095,7 @@
             ],
             "id": 120,
             "metadata": {
-                    "image": "",
+                    "image": "https://images.vanityfair.it/gallery/59288/Mid/42b15122-4558-4b61-9628-7d7fae84eb36.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -43908,7 +43908,7 @@
             ],
             "id": 127,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.lacooltura.com/wp-content/uploads/2015/07/hemingway54.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -46597,7 +46597,7 @@
             ],
             "id": 139,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.gushmag.it/wp-content/uploads/2014/12/barry-lyndon-1975-14-g3.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -48934,7 +48934,7 @@
             ],
             "id": 151,
             "metadata": {
-                    "image": "",
+                    "image": "http://www.lacooltura.com/wp-content/uploads/2015/08/Copertina-660x330.jpg",
                     "other_images": {
                         "image": "",
                         "image": ""
@@ -53000,7 +53000,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 0,
-                    "title": "Gli indifferenti - Lettura 1",
+                    "title": "Lettura 1",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=OiHisq0YgZoeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-c7512cea-a3bb-4e78-b69e-16507038435f.html"
@@ -53010,7 +53010,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 1,
-                    "title": "Gli indifferenti - Lettura 2",
+                    "title": "Lettura 2",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=nXzRBfeP9yoeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-0b2e10f5-7ad3-4345-bb10-1df33bc12e40.html"
@@ -53020,7 +53020,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 2,
-                    "title": "Gli indifferenti - Lettura 3",
+                    "title": "Lettura 3",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=cT3k3B5bHoYeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-2d18a028-4e13-4b49-ab2e-9ffc9a004ae5.html"
@@ -53030,7 +53030,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 3,
-                    "title": "Gli indifferenti - Lettura 4",
+                    "title": "Lettura 4",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=qRa0KFjQhrweeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-9e261c2f-399d-46b2-b559-14b3f3b90600.html"
@@ -53040,7 +53040,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 4,
-                    "title": "Gli indifferenti - Lettura 5",
+                    "title": "Lettura 5",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=nNgjBz14No8eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-02b8c306-1ef5-4e92-824b-6ddda3d829bd.html"
@@ -53050,7 +53050,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 5,
-                    "title": "Gli indifferenti - Lettura 6",
+                    "title": "Lettura 6",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=0X0BRx0A0Q4eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-4c9c3233-d500-49d5-950b-0782f45dc4b3.html"
@@ -53060,7 +53060,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 6,
-                    "title": "Gli indifferenti - Lettura 7",
+                    "title": "Lettura 7",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=spPpPlussXxLOZ33IQeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-b4d7371c-011a-4b93-90a0-fb7e470d1918.html"
@@ -53070,7 +53070,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 7,
-                    "title": "Gli indifferenti - Lettura 8",
+                    "title": "Lettura 8",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=gfssjRpPpPlussd95seeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-2978ad46-f950-42c9-b042-3c5fc6ac454b.html"
@@ -53080,7 +53080,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 8,
-                    "title": "Gli indifferenti - Lettura 9",
+                    "title": "Lettura 9",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=qah0JSkwPb4eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-d3641cdb-a36e-4610-b483-83e39d887df1.html"
@@ -53090,7 +53090,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 9,
-                    "title": "Gli indifferenti - Lettura 10",
+                    "title": "Lettura 10",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=GK0DwRFRLpPpPlussAeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a1e6afbf-d08a-48be-b334-77bcc442bd76.html"
@@ -53100,7 +53100,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 10,
-                    "title": "Gli indifferenti - Lettura 11",
+                    "title": "Lettura 11",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=jDy4g0sC7vEeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-ace1c230-875f-45ff-8099-1c6ec5e8af07.html"
@@ -53110,7 +53110,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 11,
-                    "title": "Gli indifferenti - Lettura 12",
+                    "title": "Lettura 12",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=7YmNKRWJVDgeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-0cd41c8c-f1b8-41c8-80ba-b5412cbe93b8.html"
@@ -53120,7 +53120,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 12,
-                    "title": "Gli indifferenti - Lettura 13",
+                    "title": "Lettura 13",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=2t5wRDDsc1YeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-3c88be64-0dd0-48b2-adcc-b72886f812e4.html"
@@ -53130,7 +53130,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 13,
-                    "title": "Gli indifferenti - Lettura 14",
+                    "title": "Lettura 14",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=wP9kDR0pPpPlussoUQeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-ddf08837-5005-46c8-8719-c5bc4f4d4d0a.html"
@@ -53140,7 +53140,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 14,
-                    "title": "Gli indifferenti - Lettura 15",
+                    "title": "Lettura 15",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=N4grXkz8seUeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-8e3b7cfc-92fb-48d9-8fb5-f9322b9d6f9e.html"
@@ -53150,7 +53150,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 15,
-                    "title": "Gli indifferenti - Lettura 16",
+                    "title": "Lettura 16",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=QjpwFcw1rFQeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-e5cdfbe4-ce2e-4826-8533-0e45fe5a6d91.html"
@@ -53160,7 +53160,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 16,
-                    "title": "Gli indifferenti - Lettura 17",
+                    "title": "Lettura 17",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=95QsssSlashOHt94keeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-18f9ab77-10b2-4e68-930e-59c1d8971a06.html"
@@ -53170,7 +53170,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 17,
-                    "title": "Gli indifferenti - Lettura 18",
+                    "title": "Lettura 18",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=41EQAS0mHmweeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-1d4575ee-48b5-40df-bb8b-fda2b424c088.html"
@@ -53180,7 +53180,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 18,
-                    "title": "Gli indifferenti - Lettura 19",
+                    "title": "Lettura 19",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=zseIzcfl1KQeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-7c442781-f9df-4031-83a9-02008075989c.html"
@@ -53190,7 +53190,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 19,
-                    "title": "Gli indifferenti - Lettura 20",
+                    "title": "Lettura 20",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=SH3UfSumQPEeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-faee7da9-bd4c-4e71-8106-01a5f9236eef.html"
@@ -53200,7 +53200,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 20,
-                    "title": "Gli indifferenti - Lettura 21",
+                    "title": "Lettura 21",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=aRcwLQlmz18eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-b2d58388-f0c0-4434-ac70-d23d5580af08.html"
@@ -53210,7 +53210,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 21,
-                    "title": "Gli indifferenti - Lettura 22",
+                    "title": "Lettura 22",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=SWJCshYPCA8eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-6c911928-c270-4a18-b14f-f10b50a1c124.html"
@@ -53239,7 +53239,7 @@
                     "desc": "Francesco Siciliano legge \"Il richiamo della foresta\" di Jack London. Traduzione di Gianni Celati",
                     "format": "mp3",
                     "id": 0,
-                    "title": "Il richiamo della foresta | Ad alta voce del 31/01/2005",
+                    "title": "Ad alta voce del 31/01/2005",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=pPpPlussL1k9cj7DpPpPlussseeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-81796f05-9444-465e-9b18-97597bc297b1.html"
@@ -53249,7 +53249,7 @@
                     "desc": "Francesco Siciliano legge \"Il richiamo della foresta\" di Jack London. Traduzione di Gianni Celati",
                     "format": "mp3",
                     "id": 1,
-                    "title": "Il richiamo della foresta | Ad alta voce del 01/02/2005",
+                    "title": "Ad alta voce del 01/02/2005",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=QBjvDGs3qZ0eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-ab033978-320b-43df-8d64-4afe43e59b2a.html"
@@ -53259,7 +53259,7 @@
                     "desc": "Francesco Siciliano legge \"Il richiamo della foresta\" di Jack London. Traduzione di Gianni Celati",
                     "format": "mp3",
                     "id": 2,
-                    "title": "Il richiamo della foresta | Ad alta voce del 02/02/2005",
+                    "title": "Ad alta voce del 02/02/2005",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=brwdzx858JkeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-87b5ff7c-e4d7-444a-85ce-16a49870cc3e.html"
@@ -53269,7 +53269,7 @@
                     "desc": "Francesco Siciliano legge \"Il richiamo della foresta\" di Jack London. Traduzione di Gianni Celati",
                     "format": "mp3",
                     "id": 3,
-                    "title": "Il richiamo della foresta | Ad alta voce del 03/02/2005",
+                    "title": "Ad alta voce del 03/02/2005",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=tTCpPpPlussssSlashFVs9OoeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a2097f05-8b19-447e-a8b3-8e67a1a9a061.html"
@@ -53279,7 +53279,7 @@
                     "desc": "Francesco Siciliano legge \"Il richiamo della foresta\" di Jack London. Traduzione di Gianni Celati",
                     "format": "mp3",
                     "id": 4,
-                    "title": "Il richiamo della foresta | Ad alta voce del 04/02/2005",
+                    "title": "Ad alta voce del 04/02/2005",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=9pPpPlussrU4ssSlashokxK4eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a136760a-3333-46ce-b3b6-c9f6aff756f3.html"
@@ -53289,7 +53289,7 @@
                     "desc": "Francesco Siciliano legge \"Il richiamo della foresta\" di Jack London. Traduzione di Gianni Celati",
                     "format": "mp3",
                     "id": 5,
-                    "title": "Il richiamo della foresta | Ad alta voce del 07/02/2005",
+                    "title": "Ad alta voce del 07/02/2005",
 					"TODO": "TODO",
                     "url": "",
                     "webLinkLookup": false,
@@ -53300,7 +53300,7 @@
                     "desc": "Francesco Siciliano legge \"Il richiamo della foresta\" di Jack London. Traduzione di Gianni Celati",
                     "format": "mp3",
                     "id": 6,
-                    "title": "Il richiamo della foresta | Ad alta voce del 08/02/2005",
+                    "title": "Ad alta voce del 08/02/2005",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=01BKcjqw1wUeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-699323be-52ae-47e8-9ee9-befa84cf362f.html"
@@ -53310,7 +53310,7 @@
                     "desc": "Francesco Siciliano legge \"Il richiamo della foresta\" di Jack London. Traduzione di Gianni Celati",
                     "format": "mp3",
                     "id": 7,
-                    "title": "Il richiamo della foresta | Ad alta voce del 09/02/2005",
+                    "title": "Ad alta voce del 09/02/2005",
 					"TODO": "TODO",
                     "url": "",
                     "webLinkLookup": false,
@@ -53321,7 +53321,7 @@
                     "desc": "Francesco Siciliano legge \"Il richiamo della foresta\" di Jack London. Traduzione di Gianni Celati",
                     "format": "mp3",
                     "id": 8,
-                    "title": "Il richiamo della foresta | Ad alta voce del 10/02/2005",
+                    "title": "Ad alta voce del 10/02/2005",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=8WLrc0625EYeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-c570d103-4306-4dc7-a386-799c76c26bd5.html"
@@ -53331,7 +53331,7 @@
                     "desc": "Francesco Siciliano legge \"Il richiamo della foresta\" di Jack London. Traduzione di Gianni Celati",
                     "format": "mp3",
                     "id": 9,
-                    "title": "Il richiamo della foresta | Ad alta voce del 11/02/2005",
+                    "title": "Ad alta voce del 11/02/2005",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=WvV3vTV0jssSlashQeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-931486f9-89bc-4c67-98de-e2f11799fd3a.html"
@@ -53360,7 +53360,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 0,
-                    "title": "Madame Bovary - Lettura I",
+                    "title": "Lettura I",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=dbEMYbH0FUgeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-7a930151-61f1-43aa-9dff-62d20a926488.html"
@@ -53370,7 +53370,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 1,
-                    "title": "Madame Bovary - Lettura II",
+                    "title": "Lettura II",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=RTEtUQRapPpPluss1weeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-a2440c4b-f15d-4ab6-a65a-b91959525e88.html"
@@ -53380,7 +53380,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 2,
-                    "title": "Madame Bovary - Lettura III",
+                    "title": "Lettura III",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=vf5RqDZZipPpPlussAeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-fddfbc13-dece-45c7-b061-48d10c3786a7.html"
@@ -53390,7 +53390,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 3,
-                    "title": "Madame Bovary - Lettura IV",
+                    "title": "Lettura IV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=TlupPpPlussLnXEYtUeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-690fbdb8-3da1-48bc-825a-04848da79d96.html"
@@ -53400,7 +53400,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 4,
-                    "title": "Madame Bovary - Lettura V",
+                    "title": "Lettura V",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=mdPFbr4icfceeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-84e283bd-3afa-4ace-ba9d-65bea6054f1f.html"
@@ -53410,7 +53410,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 5,
-                    "title": "Madame Bovary - Lettura VI",
+                    "title": "Lettura VI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=pJjenQRWhhseeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-9dc30900-9e37-4654-8024-60e6ae290162.html"
@@ -53420,7 +53420,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 6,
-                    "title": "Madame Bovary - Lettura VII",
+                    "title": "Lettura VII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=nptYDL7Ml7EeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-9c509126-5bb1-4766-8316-34388887f4d1.html"
@@ -53430,7 +53430,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 7,
-                    "title": "Madame Bovary - Lettura VIII",
+                    "title": "Lettura VIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=Yb2pPpPlusscDnYmzYeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-36b248ea-e437-43c8-ae95-5b83116d40a9.html"
@@ -53440,7 +53440,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 8,
-                    "title": "Madame Bovary - Lettura IX",
+                    "title": "Lettura IX",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=ZbwmqufkJRIeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-f1c87bd0-7358-4814-b8b5-8841f58d2cb8.html"
@@ -53450,7 +53450,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 9,
-                    "title": "Madame Bovary - Lettura X",
+                    "title": "Lettura X",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=OmPXF4N8KVgeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-43f52f7a-1292-4ece-aa32-9c691a306e75.html"
@@ -53460,7 +53460,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 10,
-                    "title": "Madame Bovary - Lettura XI",
+                    "title": "Lettura XI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=n6AhG6XXw38eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-5f3429c8-df72-45ea-a6a6-ae4a29b9c49d.html"
@@ -53470,7 +53470,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 11,
-                    "title": "Madame Bovary - Lettura XII",
+                    "title": "Lettura XII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=waRSdzoTx2YeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-9052e062-cde4-49a3-961f-a096286e9749.html"
@@ -53480,7 +53480,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 12,
-                    "title": "Madame Bovary - Lettura XIII",
+                    "title": "Lettura XIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=PKGrx0pPpPluss2EpEeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-6bcb0851-b9f3-4227-97b5-c8c681cb0676.html"
@@ -53490,7 +53490,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 13,
-                    "title": "Madame Bovary - Lettura XIV",
+                    "title": "Lettura XIV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=hB89PR5JIp8eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-2092b89d-6db0-40ca-b0ca-be33176eeecc.html"
@@ -53500,7 +53500,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 14,
-                    "title": "Madame Bovary - Lettura XV",
+                    "title": "Lettura XV",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=2J6p7kK4otYeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-ef9ce07f-d1a8-44a9-aba0-195a27a1ee2a.html"
@@ -53510,7 +53510,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 15,
-                    "title": "Madame Bovary - Lettura XVI",
+                    "title": "Lettura XVI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=uElGZJcsNFAeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-e98cb59e-a5d4-4219-8490-06a18af95984.html"
@@ -53520,7 +53520,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 16,
-                    "title": "Madame Bovary - Lettura XVII",
+                    "title": "Lettura XVII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=N1lK933ogyEeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-dbde64b8-1d62-4d49-9384-7acaec8df70f.html"
@@ -53530,7 +53530,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 17,
-                    "title": "Madame Bovary - Lettura XVIII",
+                    "title": "Lettura XVIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=WunBR2YbuFIeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-b7d395c2-11ea-4670-8ad8-31a722aadd0b.html"
@@ -53540,7 +53540,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 18,
-                    "title": "Madame Bovary - Lettura XIX",
+                    "title": "Lettura XIX",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=drf4cXK76EQeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-79271c51-c755-425e-8239-1957a726ae6b.html"
@@ -53550,7 +53550,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 19,
-                    "title": "Madame Bovary - Lettura XX",
+                    "title": "Lettura XX",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=GIQTpFYvW94eeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-adc8bf38-e0fc-4708-8a0b-29bc6ea277bc.html"
@@ -53560,7 +53560,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 20,
-                    "title": "Madame Bovary - Lettura XXI",
+                    "title": "Lettura XXI",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=a4O9CkluFUQeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-9dadec61-0eee-4173-9ecb-80ac9b505392.html"
@@ -53570,7 +53570,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 21,
-                    "title": "Madame Bovary - Lettura XXII",
+                    "title": "Lettura XXII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=3p44axuXpboeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-b66910ac-207e-4c98-ae89-34f096ab8d5e.html"
@@ -53580,7 +53580,7 @@
                     "desc": "",
                     "format": "mp3",
                     "id": 22,
-                    "title": "Madame Bovary - Lettura XXIII",
+                    "title": "Lettura XXIII",
                     "url": "http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=s4qmZkgcjuUeeqqEEqual",
                     "webLinkLookup": true,
                     "weblink": "http://www.rai.tv/dl/portaleRadio/media/ContentItem-3afcc4f8-382f-4ebc-8da9-fb07b7826f01.html"

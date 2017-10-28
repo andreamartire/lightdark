@@ -1,10 +1,6 @@
 package newtech.audiolibrary.adapters;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Point;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,11 +12,12 @@ import android.widget.TextView;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.concurrent.Callable;
 
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.task.SimpleDownloadTask;
+import newtech.audiolibrary.utils.ConfigUtils;
 import newtech.audiolibrary.utils.ImageUtils;
 
 /**
@@ -53,7 +50,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
         if(position >= books.size()){
             System.out.println("");
         }else{
-            Book book = books.get(position);
+            final Book book = books.get(position);
 
             if (book != null){
 
@@ -86,8 +83,21 @@ public class BookAdapter extends ArrayAdapter<Book> {
                             //FIXME manage
                         }
                     }else{
+                        final BookAdapter arrayAdapter = this;
                         //download file out of main thread
-                        SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), this);
+                        SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), new Callable<Integer>() {
+                            @Override
+                            public Integer call() throws Exception {
+                            arrayAdapter.notifyDataSetChanged();
+                            if(new File(book.getLocalImageFilePath()).exists()){
+                                //select local image
+
+                                Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
+                                book.setLocalImageResource(image);
+                            }
+                            return 0;
+                            }
+                        });
                         sdt.execute();
 
                         //if downloaded

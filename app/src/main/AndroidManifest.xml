@@ -13,7 +13,8 @@
         android:roundIcon="@drawable/audiobooks"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:screenOrientation="portrait">
+        android:screenOrientation="portrait"
+        android:largeHeap="true">
 
         <!-- This meta-data tag is required to use Google Play Services. -->
         <meta-data

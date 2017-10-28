@@ -48,7 +48,11 @@ public class ChapterPlayer extends Activity {
 
         Point size = new Point();
         getWindowManager().getDefaultDisplay().getSize(size);
-        bookImage.setImageDrawable(ImageUtils.scaleImage(this, currentChapter.getBook().getLocalImageResource(), size.x, (int) size.x*3/5));
+
+        if(currentChapter.getBook().getLocalImageFilePath() != null && new File(currentChapter.getBook().getLocalImageFilePath()).exists()){
+            Drawable drableBookImage = Drawable.createFromPath(currentChapter.getBook().getLocalImageFilePath());
+            bookImage.setImageDrawable(ImageUtils.scaleImage(this, drableBookImage, size.x, (int) size.x*3/5));
+        }
 
         playThread = new PlayThread(this, currentChapter);
 

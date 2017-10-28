@@ -140,12 +140,13 @@ public final class ConfigUtils {
                                 book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
                             }
 
-                            if(new File(book.getLocalImageFilePath()).exists()){
+                            //disabled avoid out of memory
+                            /*if(new File(book.getLocalImageFilePath()).exists()){
                                 //select local image
 
                                 Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
                                 book.setLocalImageResource(image);
-                            }
+                            }*/
                         }
                         catch (MalformedURLException e){
                             e.printStackTrace();

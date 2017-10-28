@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -140,6 +141,12 @@ public class AudioBookShowList extends Activity {
         if(oldPlayerState != null){
             if(MyFileUtils.exists(oldPlayerState.getLocalFilePath())){
                 //Toast.makeText(this, "Player was playing: " + oldPlayerState.getFileName() + " at duration: " + oldPlayerState.getCurrentDuration() + "/" + oldPlayerState.getTotalDuration(), Toast.LENGTH_LONG).show();
+                LinearLayout currPlayingInfo = (LinearLayout) this.findViewById(R.id.currentPlayingInfo);
+                currPlayingInfo.setVisibility(View.VISIBLE);
+
+                RelativeLayout currPlayingInfoRelative = (RelativeLayout) this.findViewById(R.id.currentPlayingInfoRelative);
+                currPlayingInfoRelative.setVisibility(View.VISIBLE);
+
                 TextView playingBookTitle = (TextView) this.findViewById(R.id.currentPlayingBookTitle);
                 playingBookTitle.setText(oldPlayerState.getBook().getBookTitle());
                 playingBookTitle.setVisibility(View.VISIBLE);
@@ -186,6 +193,7 @@ public class AudioBookShowList extends Activity {
 
                 //select downloaded image
                 resumeBookImageView.setImageDrawable(ImageUtils.scaleImage(this, image, size.x, (int) size.x*3/5));
+                resumeBookImageView.setVisibility(View.VISIBLE);
             }
             else{
                 //Toast.makeText(this, "Old playing chapter was deleted", Toast.LENGTH_LONG).show();
