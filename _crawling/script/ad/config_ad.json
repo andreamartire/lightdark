@@ -1,0 +1,23 @@
+{
+    "audiobooks": [
+        {
+            "contents": [],
+            "metadata": {
+                "author": "AA_VV",
+                "image": "",
+                "other_images": {
+                    "image_300": "",
+                    "image_433": ""
+                },
+                "provider": {
+                    "image": "",
+                    "name": "Adov",
+                    "site": "http://www.audioteca-adov.it"
+                },
+                "title": ""
+            }
+        }
+    ],
+    "config": {},
+    "version": 0
+}
