@@ -142,8 +142,7 @@ public class AudioBookShowList extends Activity {
                 //Toast.makeText(this, "Player was playing: " + oldPlayerState.getFileName() + " at duration: " + oldPlayerState.getCurrentDuration() + "/" + oldPlayerState.getTotalDuration(), Toast.LENGTH_LONG).show();
                 TextView playingBookTitle = (TextView) this.findViewById(R.id.currentPlayingBookTitle);
                 playingBookTitle.setText(oldPlayerState.getBook().getBookTitle());
-                TextView playingChapterTitle = (TextView) this.findViewById(R.id.currentPlayingChapterTitle);
-                playingChapterTitle.setText(oldPlayerState.getFileName());
+                playingBookTitle.setVisibility(View.VISIBLE);
 
                 double bookPercentage = oldPlayerState.getBook().getBookPlayerPercentage(oldPlayerState);
                 ProgressBar progressBar = (ProgressBar) this.findViewById(R.id.progressBar);

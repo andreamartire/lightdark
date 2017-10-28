@@ -70,8 +70,6 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         bookDir = chapter.getBookDir();
         fileName = chapter.getFileName();
 
-        chapter.setDownloading(true);
-
         //tmp file
         String filePathTmp = bookDir + File.separator + fileName + _TMP;
 

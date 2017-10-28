@@ -58,38 +58,40 @@ public class ChapterDownloadButton extends AppCompatImageButton {
 
             @Override
             public void onClick(View v) {
-                //get the row the clicked button is in
-                ChapterDownloadButton downloadButton = (ChapterDownloadButton) v;
+            //get the row the clicked button is in
+            ChapterDownloadButton downloadButton = (ChapterDownloadButton) v;
 
-                ProgressBar downloadProgress = null;
+            ProgressBar downloadProgress = null;
 
-                ViewGroup row = (ViewGroup) v.getParent();
-                for (int itemPos = 0; itemPos < row.getChildCount(); itemPos++) {
-                    View view = row.getChildAt(itemPos);
-                    if (view instanceof ProgressBar) {
-                        downloadProgress = (ProgressBar) view; //Found it!
-                        downloadProgress.setVisibility(VISIBLE);
-                        downloadProgress.setProgress(0);
-                        downloadButton.setVisibility(GONE);
-                        break;
-                    }
+            ViewGroup row = (ViewGroup) v.getParent();
+            for (int itemPos = 0; itemPos < row.getChildCount(); itemPos++) {
+                View view = row.getChildAt(itemPos);
+                if (view instanceof ProgressBar) {
+                    downloadProgress = (ProgressBar) view; //Found it!
+                    downloadProgress.setVisibility(VISIBLE);
+                    downloadProgress.setProgress(0);
+                    downloadButton.setVisibility(GONE);
+                    break;
                 }
+            }
 
-                //manage tap on chapter's list
-                //AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext(),R.style.CustomDialogTheme);
+            //manage tap on chapter's list
+            //AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext(),R.style.CustomDialogTheme);
 
-                Chapter currentChapter = downloadButton.getChapter();
+            Chapter currentChapter = downloadButton.getChapter();
 
-                try {
-                    //execute download
+            try {
+                //execute download
 
-                    // execute this when the downloader must be fired
-                    final DownloadTask downloadTask = new DownloadTask(currentContext, downloadProgress, currentChapter, v);
+                currentChapter.setDownloading(true);
 
-                    downloadTask.execute();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                // execute this when the downloader must be fired
+                final DownloadTask downloadTask = new DownloadTask(currentContext, downloadProgress, currentChapter, v);
+
+                downloadTask.execute();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             }
         });
     }

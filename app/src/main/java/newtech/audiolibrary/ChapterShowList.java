@@ -6,6 +6,7 @@ package newtech.audiolibrary;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -73,7 +74,27 @@ public class ChapterShowList extends Activity {
             bookImage = Drawable.createFromPath(localFilePath);
         }
 
+        final Context me = this;
+
         ImageView bookImageView = (ImageView) findViewById(R.id.chapterListCurrentPlayingBookImage);
+        bookImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Chapter playingChapter = PlayThread.getPlayerState(me);
+
+            if(playingChapter != null && playingChapter.getBook().getBookTitle().equals(book.getBookTitle())){
+                Book currentBook = playingChapter.getBook();
+
+                //fetch chapters - not saved in player state
+                currentBook = ConfigUtils.bookWithChapters.get(currentBook.getBookDir());
+
+                playingChapter = playingChapter.getMatchingChapter(currentBook.getChapters());
+
+                //resume old playing chapter
+                ChapterPlayer.startPlayer(me, playingChapter);
+            }
+            }
+        });
 
         if(bookImage != null){
             Point size = new Point();

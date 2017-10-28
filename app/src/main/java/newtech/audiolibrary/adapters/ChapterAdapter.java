@@ -66,6 +66,10 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
                     downloadButton.setVisibility(View.VISIBLE);
                     deleteButton.setVisibility(View.GONE);
                 }
+            }else{
+                playStreamButton.setVisibility(View.GONE);
+                downloadButton.setVisibility(View.GONE);
+                deleteButton.setVisibility(View.GONE);
             }
         }
 

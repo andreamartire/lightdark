@@ -5,98 +5,94 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true" >
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:minHeight="?attr/actionBarSize"
-            android:layout_width="match_parent"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary">
+            android:text="AudioLibreria"
+            android:textColor="@android:color/white"
+            android:layout_gravity="left" />
 
-                <TextView
-                    android:id="@+id/toolbar_title"
-                    android:layout_width="wrap_content"
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/currentPlayingInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/currentPlayingBookImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0.8"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20pt"
+                android:layout_marginBottom="20pt">
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/currentPlayingBookTitle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="AudioLibreria"
-                    android:textColor="@android:color/white"
-                    android:layout_gravity="left" />
+                    android:layout_gravity="center"
+                    android:layout_weight=".20"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+        </RelativeLayout>
 
-                <SearchView
-                    android:id="@+id/searchView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_alignParentRight="true"/>
-
-        </android.support.v7.widget.Toolbar>
-
-        <LinearLayout
-            android:id="@+id/currentPlayingInfo"
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:progress="0"
+            android:progressDrawable="@drawable/progressbar"
+            android:max="100"
+            android:visibility="gone" />
 
-                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center">
+    </LinearLayout>
 
-                        <ImageView
-                            android:id="@+id/currentPlayingBookImage"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:alpha="0.8"/>
+   <!-- <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1872225169177247/8234679175">
+    </com.google.android.gms.ads.AdView>-->
 
-                        <ImageView
-                            android:id="@+id/imagePlayIcon"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="30dp"
-                            android:src="@drawable/ic_play_arrow_black_24dp"
-                            android:visibility="gone"/>
-                </RelativeLayout>
-
-                <TextView
-                    android:id="@+id/currentPlayingBookTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/currentPlayingChapterTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone" />
-
-                <ProgressBar
-                    android:id="@+id/progressBar"
-                    style="@android:style/Widget.ProgressBar.Horizontal"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:progress="0"
-                    android:progressDrawable="@drawable/progressbar"
-                    android:max="100"
-                    android:visibility="gone" />
-
-
-        </LinearLayout>
-
-        <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-1872225169177247/8234679175">
-        </com.google.android.gms.ads.AdView>
-
-        <ListView
-            android:id="@+id/audiobooks_listview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+    <ListView
+        android:id="@+id/audiobooks_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
