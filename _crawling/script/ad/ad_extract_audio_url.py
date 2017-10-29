@@ -1,11 +1,16 @@
 #!/usr/bin/python3.5
 
-import urllib.request
 import re
 import requests
 import json
 import time
 import traceback
+
+headers = {
+    'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+}
+
+cookies = dict(PHPSESSID="nk0frnjcjcl4e9g7t7ksnfjkl3")
 
 print ('Start')
 
@@ -39,13 +44,11 @@ for i in range(len(rows)):
 		
 		print(link)
 
-		opener = urllib.URLopener()
-		agent.addheader(name, value)
-		opener.addheader('PHPSESSID','qpm7ll5l204hjj5c1gjg3al3u2')
-
 		#wp = urllib.request.urlopen(link)
-		wp = opener.open(link)		
-		author_str = str(wp.read())
+		author_str = str(requests.get(link, headers = headers, cookies = cookies).text)
+		#author_str = str(wp.read())
+
+		#print (author_str)
 		
 		booksHtml = str(author_str).split("<ul>")
 
@@ -55,7 +58,7 @@ for i in range(len(rows)):
 			singleBook = str(booksHtml[i]).split("<li style='background-color:#1165ad;")
 
 			for i in range(len(singleBook)):
-				print ("singleBook: " + singleBook[i] + "\n");
+				#print ("singleBook: " + singleBook[i] + "\n");
 
 				#<span class="toggle" >BARNUM_DUE_ALTRE_CRONACHE_DAL_GRANDE_SHOW</span>
 				titleReg = re.compile(".*<span class=\"toggle\" >(.*?)</span>")
@@ -65,10 +68,12 @@ for i in range(len(rows)):
 					title = titleReg.match(singleBook[i]).group(1)
 				
 				#<a href="/download_file.php?file=LIBRI/LETTERA B/BARICCO ALESSANDRO/BARNUM_CORNACHE_DAL_GRANDE_SHOW/01_PARTE.mp3" style='color:#ffffff;'
-				chaptLinkReg = re.compile(".*<a href=\"/download_file.php?file=LIBRI/(.*?mp3)\" style")
+				chaptLinkReg = re.compile(".*<a href=\"(/download_file.php\?file=LIBRI/.*/(.*?)\.mp3)\" style")
+
+				#/download_file.php?file=
 
 				chapterId = 0
-				bookRows = singleBook[i].split("<a href=")
+				bookRows = singleBook[i].split("\n")
 				for i in range(len(bookRows)):
 					print ("BOOK ROW: " + bookRows[i] + "\n");
 					#<a href="/download_file.php?file=LIBRI/LETTERA B/BARICCO ALESSANDRO/BARNUM_CORNACHE_DAL_GRANDE_SHOW/01_PARTE.mp3" style='color:#ffffff;'
@@ -80,9 +85,9 @@ for i in range(len(rows)):
 
 						chapter = {}
 						chapter['id'] = chapterId
-						chapter['title'] = chapTitle
+						chapter['title'] = chapTitle.replace('_', ' ').title()
 						chapter['desc'] = ''
-						chapter['url'] = url
+						chapter['url'] = 'http://www.audioteca-adov.it' + url
 						chapter['format'] = 'mp3'
 
 						chapterId = chapterId + 1
@@ -104,8 +109,8 @@ for i in range(len(rows)):
 						'site' : 'http://www.audioteca-adov.it',
 						'image' : ''
 					},
-					'title': title,
-					'author': author
+					'title': title.replace('_', ' ').title(),
+					'author': author.replace('_', ' ').title()
 				}
 		
 				print ('Book: ' + str(book))
@@ -121,9 +126,7 @@ for i in range(len(rows)):
 				out_file.write(json.dumps(data, sort_keys=True, indent=4))
 				out_file.close()
 
-				dads
-	
-	#time.sleep(10)
+		time.sleep(10)
 
 #json_data = json.dumps(data)
 
