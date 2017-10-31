@@ -64,7 +64,27 @@ public class ChapterDeleteButton extends AppCompatImageButton {
                 ChapterDeleteButton deleteButton = (ChapterDeleteButton) v;
                 final Chapter currentChapter = deleteButton.getChapter();
 
-                final Dialog dialog = new Dialog(v.getContext(),R.style.CustomDialogTheme);
+                /*AlertDialog.Builder builder = new AlertDialog.Builder(currentContext);
+                builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                        MyFileUtils.deleteFileIfExists(currentChapter.getLocalFilePath());
+
+                        //force repaint chapter list view
+                        ListView chapterListView = (ListView) linearLayout.getRootView().findViewById(R.id.chapters_listview);
+                        final ArrayAdapter adapter = ((ArrayAdapter) chapterListView.getAdapter());
+                        adapter.notifyDataSetChanged();
+                    }
+                });
+                builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+                */final Dialog dialog = new Dialog(v.getContext(),R.style.CustomDialogTheme);
                 dialog.getWindow();
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.confirm_delete);

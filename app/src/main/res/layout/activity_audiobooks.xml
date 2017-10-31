@@ -12,6 +12,15 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary">
 
+        <ImageButton
+            android:src="@drawable/ic_info_outline_black_24dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right"
+            android:background="?selectableItemBackground"
+            android:padding="5dp"
+            android:id="@+id/infoButton" />
+
         <TextView
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
@@ -83,7 +92,7 @@
 
     </LinearLayout>
 
-   <!-- <com.google.android.gms.ads.AdView
+   <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
         android:layout_width="wrap_content"
@@ -92,7 +101,7 @@
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
         ads:adUnitId="ca-app-pub-1872225169177247/8234679175">
-    </com.google.android.gms.ads.AdView>-->
+    </com.google.android.gms.ads.AdView>
 
     <ListView
         android:id="@+id/audiobooks_listview"

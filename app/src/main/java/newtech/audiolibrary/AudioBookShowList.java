@@ -5,15 +5,18 @@ package newtech.audiolibrary;
  */
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Display;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -22,6 +25,7 @@ import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.MobileAds;
 
@@ -49,6 +53,22 @@ public class AudioBookShowList extends Activity {
         setContentView(R.layout.activity_audiobooks);
 
         MobileAds.initialize(this, "ca-app-pub-1872225169177247~3010272652");
+
+        final Context me = this;
+
+        ImageButton infoButton = (ImageButton) findViewById(R.id.infoButton);
+        infoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(me, "Tutti i contenuti audio e le immagini sono liberamente accessibili in rete e scaricati direttamente dai siti web dei rispettivi possessori dei diritti. Nessun contenuto è ospitato su server dell'applicazione", Toast.LENGTH_LONG).show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(me);
+                builder.setMessage(R.string.info_message)
+                        .setTitle(R.string.info_title);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
 
         final SearchView searchView = (SearchView) findViewById(R.id.searchView);
         final LinearLayout currentPlayingInfo = (LinearLayout) findViewById(R.id.currentPlayingInfo);
@@ -96,8 +116,6 @@ public class AudioBookShowList extends Activity {
                 searchView.clearFocus();
             }
         });
-
-        final Context me = this;
 
         final ImageView playingBookImage = (ImageView) findViewById(R.id.currentPlayingBookImage);
         playingBookImage.setOnClickListener(new View.OnClickListener() {
