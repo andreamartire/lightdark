@@ -23536,7 +23536,7 @@
                         "image_433": "http://www.rai.tv/dl/img/2017/01/433x3251485771244243il_nome_della_rosa_30.jpg"
                     },
                     "provider": {
-                        "image": "TODO",
+                        "image": "",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
                     },
@@ -24281,7 +24281,7 @@
                         "image_433": "http://www.rai.tv/dl/img/2016/10/433x3251477485847243conversazioni-15.jpg"
                     },
                     "provider": {
-                        "image": "",
+                        "image": "TODO",
                         "name": "Ad Alta Voce",
                         "site": "http://www.adaltavoce.rai.it/"
                     },
