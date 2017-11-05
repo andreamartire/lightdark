@@ -24,8 +24,7 @@ wallet = {
 	'MLN': { 'num': 0, 'price': 0 },
 	'ZEC': { 'num': 0, 'price': 0 },
 	'DOGE': { 'num': 0, 'price': 0 },
-	'USDT': { 'num': 0, 'price': 0 },
-	'USD': { 'num': 0, 'price': 0 }
+	'USDT': { 'num': 0, 'price': 0 }
 }
 
 headers = {
@@ -78,8 +77,8 @@ doge = {}
 usdt = {}
 usd = {}
 
-fee = 0.26
-bound = 0.009
+fee = 0.0026
+bound = 1
 
 def updateMktData():
 	previousCoins = coins
@@ -136,79 +135,6 @@ def updateMktData():
 				coin["7d"] = cLastWeekChange
 
 		if('name' in coin):
-
-			if(coin["name"] == "BTC"):
-				global btc
-				btc = coin
-
-			if(coin["name"] == "ETH"):
-				global eth
-				eth = coin
-
-			if(coin["name"] == "BCH"):#Bch market name
-				global bch
-				bch = coin
-	
-			if(coin["name"] == "XRP"):
-				global xrp
-				xrp = coin
-
-			if(coin["name"] == "LTC"):
-				global ltc
-				ltc = coin
-
-			if(coin["name"] == "EOS"):
-				global eos
-				eos = coin
-		
-			if(coin["name"] == "GNO"):
-				global gno
-				gno = coin
-
-			if(coin["name"] == "BCH"):
-				global bch
-				bch = coin
-
-			if(coin["name"] == "DASH"):
-				global dash
-				dash = coin
-			
-			if(coin["name"] == "XMR"):
-				global xmr
-				xmr = coin
-
-			if(coin["name"] == "XLM"):
-				global xlm
-				xlm = coin
-			
-			if(coin["name"] == "ETC"):
-				global etc
-				etc = coin
-			
-			if(coin["name"] == "REP"):
-				global rep
-				rep = coin
-			
-			if(coin["name"] == "ICN"):
-				global icn
-				icn = coin
-			
-			if(coin["name"] == "MLN"):
-				global mln
-				mln = coin
-		
-			if(coin["name"] == "ZEC"):
-				global zec
-				zec = coin
-
-			if(coin["name"] == "DOGE"):#xdg 
-				global doge
-				doge = coin
-
-			if(coin["name"] == "USDT"):
-				global usdt
-				usdt = coin
-
 			global coins
 			coins[coin["name"]] = coin
 
@@ -229,24 +155,8 @@ def updateMktData():
 
 	#print(json.dumps(coins, sort_keys=True, indent=4))
 	print "===== MARKET ===="
-	print str(btc)
-	print str(eth)
-	print str(xrp)
-	print str(ltc)
-	print str(gno)
-	print str(eos)
-	print str(bch)
-	print str(dash)
-	print str(xmr)
-	print str(xlm)
-	print str(etc)
-	print str(rep)
-	print str(icn)
-	print str(mln)
-	print str(zec)
-	print str(doge)
-	print str(usdt)
-	print str(usd)
+	for key in wallet.keys():
+		print str(coins[key])
 	print "================="
 
 def change(wallet, coins, oldVal, newVal):
@@ -261,7 +171,7 @@ def change(wallet, coins, oldVal, newVal):
 
 	startVal = old["num"]*oldCoinMkt["price"] 
 	#print ("startVal " + str(startVal))
-	valAfterFee = startVal - (startVal*fee/100)#fee
+	valAfterFee = startVal - (startVal*fee)#fee
 	#print ("valAfterFee " + str(valAfterFee))
 	valConverted = valAfterFee/newCoinMkt["price"]
 	#print ("valConverted " + str(valConverted))
@@ -270,51 +180,15 @@ def change(wallet, coins, oldVal, newVal):
 	wallet[newVal]["num"] = valConverted
 
 def getWalletVal(wallet):
-
 	tot = 0
-	tot += btc["price"]*wallet["BTC"]["num"]
-	tot += eth["price"]*wallet["ETH"]["num"]
-	tot += xrp["price"]*wallet["XRP"]["num"]
-	tot += ltc["price"]*wallet["LTC"]["num"]
-	tot += gno["price"]*wallet["GNO"]["num"]
-	tot += eos["price"]*wallet["EOS"]["num"]
-	tot += bch["price"]*wallet["BCH"]["num"]
-	tot += dash["price"]*wallet["DASH"]["num"]
-	tot += xmr["price"]*wallet["XMR"]["num"]
-	tot += xlm["price"]*wallet["XLM"]["num"]
-	tot += etc["price"]*wallet["ETC"]["num"]
-	tot += rep["price"]*wallet["REP"]["num"]
-	tot += icn["price"]*wallet["ICN"]["num"]
-	tot += mln["price"]*wallet["MLN"]["num"]
-	tot += zec["price"]*wallet["ZEC"]["num"]
-	tot += doge["price"]*wallet["DOGE"]["num"]
-	tot += usdt["price"]*wallet["USDT"]["num"]
-	tot += usdt["price"]*wallet["USD"]["num"]
-	
+	for key in wallet.keys():
+		tot += coins[key]["price"]*wallet[key]["num"]	
 	return tot
 
 def getLastChangeWalletVal(wallet):
-
 	tot = 0
-	tot += wallet["BTC"]["price"]*wallet["BTC"]["num"]
-	tot += wallet["ETH"]["price"]*wallet["ETH"]["num"]
-	tot += wallet["XRP"]["price"]*wallet["XRP"]["num"]
-	tot += wallet["LTC"]["price"]*wallet["LTC"]["num"]
-	tot += wallet["GNO"]["price"]*wallet["GNO"]["num"]
-	tot += wallet["EOS"]["price"]*wallet["EOS"]["num"]
-	tot += wallet["BCH"]["price"]*wallet["BCH"]["num"]
-	tot += wallet["DASH"]["price"]*wallet["DASH"]["num"]
-	tot += wallet["XMR"]["price"]*wallet["XMR"]["num"]
-	tot += wallet["XLM"]["price"]*wallet["XLM"]["num"]
-	tot += wallet["ETC"]["price"]*wallet["ETC"]["num"]
-	tot += wallet["REP"]["price"]*wallet["REP"]["num"]
-	tot += wallet["ICN"]["price"]*wallet["ICN"]["num"]
-	tot += wallet["MLN"]["price"]*wallet["MLN"]["num"]
-	tot += wallet["ZEC"]["price"]*wallet["ZEC"]["num"]
-	tot += wallet["DOGE"]["price"]*wallet["DOGE"]["num"]
-	tot += wallet["USDT"]["price"]*wallet["USDT"]["num"]
-	tot += wallet["USD"]["price"]*wallet["USD"]["num"]
-	
+	for key in wallet.keys():
+		tot += wallet[key]["price"]*wallet[key]["num"]	
 	return tot
 
 def showWalletLine(wallet, key):
@@ -323,47 +197,16 @@ def showWalletLine(wallet, key):
 
 def showWallet(wallet):
 	print ("================ WALLET ================")
-	showWalletLine(wallet, "ETH")
-	showWalletLine(wallet, "BTC")
-	showWalletLine(wallet, "XRP")
-	showWalletLine(wallet, "LTC")
-	showWalletLine(wallet, "GNO")
-	showWalletLine(wallet, "EOS")
-	showWalletLine(wallet, "BCH")
-	showWalletLine(wallet, "DASH")
-	showWalletLine(wallet, "XMR")
-	showWalletLine(wallet, "XLM")
-	showWalletLine(wallet, "ETC")
-	showWalletLine(wallet, "REP")
-	showWalletLine(wallet, "ICN")
-	showWalletLine(wallet, "MLN")
-	showWalletLine(wallet, "ZEC")
-	showWalletLine(wallet, "DOGE")
-	showWalletLine(wallet, "USDT")
-	showWalletLine(wallet, "USD")
-	
-	print ("====== LAST CHANGE VAL: " + str(getLastChangeWalletVal(wallet)) + " ======")
-	print ("========== CURR TOT: " + str(getWalletVal(wallet)) + " ==========")
+	for key in wallet.keys():
+		showWalletLine(wallet, key)
+
+	lastW = getLastChangeWalletVal(wallet)
+	currW = getWalletVal(wallet)
+	print ("====== LAST CHANGE VAL: " + str(lastW) + " ======")
+	print ("========== CURR TOT: " + str(currW) + " ==========")
+	print ("========== " + str("{0:.2f}".format((currW-lastW))) + "$ (" + str("{0:.3f}".format((currW-lastW)/lastW)) + "%) ==========")
 
 def engine(wallet):
-	btcVal = wallet["BTC"]
-	ethVal = wallet["ETH"]
-	xrpVal = wallet["XRP"]
-	ltcVal = wallet["LTC"]
-	gnoVal = wallet["GNO"]
-	eosVal = wallet["EOS"]
-	bchVal = wallet["BCH"]
-	dashVal = wallet["DASH"]
-	xmrVal = wallet["XMR"]
-	xlmVal = wallet["XLM"]
-	etcVal = wallet["ETC"]
-	repVal = wallet["REP"]
-	icnVal = wallet["ICN"]
-	mlnVal = wallet["MLN"]
-	zecVal = wallet["ZEC"]
-	dogeVal = wallet["DOGE"]
-	usdtVal = wallet["USDT"]
-	usdVal = wallet["USD"]
 
 	actions = [];
 
@@ -371,160 +214,160 @@ def engine(wallet):
 	currVal = getWalletVal(wallet)
 
 	if(currVal <= lastChangeVal + currVal*fee):
-		print ("NB. IF CHANGE LOSING VALUE")
-		#no action
+		print ("NB. IF CHANGE LOSE VALUE. Future Value: " +str(currVal - currVal*fee))
+	#no action
 		return []
 	
 	#btc strategy
-	if(btcVal > 0):
-		if(eth["1h"]>=bound):
+	if(wallet["BTC"]["num"] > 0):
+		if(coins["ETH"]["1h"]>=bound):
 			#nochange. default strategy
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "ETH", "gain": eth["1h"]})
-		if(xrp["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "ETH", "gain": coins["ETH"]["1h"]})
+		if(coins["XRP"]["1h"]>=bound):
 			#buy xrp with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "XRP", "gain": xrp["1h"]})
-		if(ltc["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "XRP", "gain": coins["XRP"]["1h"]})
+		if(coins["LTC"]["1h"]>=bound):
 			#buy ltc with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "LTC", "gain": ltc["1h"]})
-		if(gno["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "LTC", "gain": coins["LTC"]["1h"]})
+		if(coins["GNO"]["1h"]>=bound):
 			#buy gno with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "GNO", "gain": gno["1h"]})
-		if(eos["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "GNO", "gain": coins["GNO"]["1h"]})
+		if(coins["EOS"]["1h"]>=bound):
 			#buy eos with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "EOS", "gain": eos["1h"]})
-		if(bch["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "EOS", "gain": coins["EOS"]["1h"]})
+		if(coins["BCH"]["1h"]>=bound):
 			#buy bch with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "BCH", "gain": bch["1h"]})
-		if(dash["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "BCH", "gain": coins["BCH"]["1h"]})
+		if(coins["DASH"]["1h"]>=bound):
 			#buy dash with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "DASH", "gain": dash["1h"]})
-		if(xmr["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "DASH", "gain": coins["DASH"]["1h"]})
+		if(coins["XMR"]["1h"]>=bound):
 			#buy xmr with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "XMR", "gain": xmr["1h"]})
-		if(xlm["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "XMR", "gain": coins["XMR"]["1h"]})
+		if(coins["XLM"]["1h"]>=bound):
 			#buy xlm with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "XLM", "gain": xlm["1h"]})
-		if(etc["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "XLM", "gain": coins["XLM"]["1h"]})
+		if(coins["ETC"]["1h"]>=bound):
 			#buy etc with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "ETC", "gain": etc["1h"]})
-		if(rep["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "ETC", "gain": coins["ETC"]["1h"]})
+		if(coins["REP"]["1h"]>=bound):
 			#buy rep with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "REP", "gain": rep["1h"]})
-		if(icn["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "REP", "gain": coins["REP"]["1h"]})
+		if(coins["ICN"]["1h"]>=bound):
 			#buy dash with icn
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "ICN", "gain": icn["1h"]})
-		if(mln["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "ICN", "gain": coins["ICN"]["1h"]})
+		if(coins["MLN"]["1h"]>=bound):
 			#buy mln with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "MLN", "gain": mln["1h"]})
-		if(zec["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "MLN", "gain": coins["MLN"]["1h"]})
+		if(coins["ZEC"]["1h"]>=bound):
 			#buy zec with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "ZEC", "gain": zec["1h"]})
-		if(doge["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "ZEC", "gain": coins["ZEC"]["1h"]})
+		if(coins["DOGE"]["1h"]>=bound):
 			#buy doge with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "DOGE", "gain": doge["1h"]})
-		if(usdt["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "DOGE", "gain": coins["DOGE"]["1h"]})
+		if(coins["USDT"]["1h"]>=bound):
 			#buy usdt with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "USDT", "gain": usdt["1h"]})
+			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "USDT", "gain": coins["USDT"]["1h"]})
 
 	#eth strategy
-	if(ethVal > 0 and eth["1h"]<0):
-		if(btc["1h"]>=bound):
+	if(wallet["ETH"]["num"] > 0 and coins["ETH"]["1h"]<0):
+		if(coins["BTC"]["1h"]>=bound):
 			#buy btc with eth
-			actions.append({"type": "CHANGE", "old_coin": "ETH", "new_coin": "BTC", "gain": btc["1h"]})
-		if(gno["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "ETH", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
+		if(coins["GNO"]["1h"]>=bound):
 			#buy gno with eth
-			actions.append({"type": "CHANGE", "old_coin": "ETH", "new_coin": "GNO", "gain": gno["1h"]})
-		if(eos["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "ETH", "new_coin": "GNO", "gain": coins["GNO"]["1h"]})
+		if(coins["EOS"]["1h"]>=bound):
 			#buy eos with eth
-			actions.append({"type": "CHANGE", "old_coin": "ETH", "new_coin": "EOS", "gain": eos["1h"]})
+			actions.append({"type": "CHANGE", "old_coin": "ETH", "new_coin": "EOS", "gain": coins["EOS"]["1h"]})
 
 	#xrp strategy
-	if(xrpVal > 0 and xrp["1h"]<0):
+	if(wallet["XRP"]["num"] > 0 and coins["XRP"]["1h"]<0):
 		#buy btc with xrp
-		actions.append({"type": "CHANGE", "old_coin": "XRP", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "XRP", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 
 	#ltc strategy
-	if(ltcVal > 0 and ltc["1h"]<0):
+	if(wallet["LTC"]["num"] > 0 and coins["LTC"]["1h"]<0):
 		#buy btc with ltc
-		actions.append({"type": "CHANGE", "old_coin": "LTC", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "LTC", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 
 	#eos strategy
-	if(eosVal > 0 and eos["1h"]<0):
-		if(btc["1h"]>=bound):
+	if(wallet["EOS"]["num"] > 0 and coins["EOS"]["1h"]<0):
+		if(coins["BTC"]["1h"]>=bound):
 			#buy btc with btc
-			actions.append({"type": "CHANGE", "old_coin": "EOS", "new_coin": "BTC", "gain": btc["1h"]})
-		elif(eth["1h"]>=bound):
+			actions.append({"type": "CHANGE", "old_coin": "EOS", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
+		elif(coins["ETH"]["1h"]>=bound):
 			#buy eth with eth
-			actions.append({"type": "CHANGE", "old_coin": "EOS", "new_coin": "ETH", "gain": eos["1h"]})
+			actions.append({"type": "CHANGE", "old_coin": "EOS", "new_coin": "ETH", "gain": coins["ETC"]["1h"]})
 	
 	#gno strategy
-	if(gnoVal > 0 and gno["1h"]<0):
+	if(wallet["GNO"]["num"] > 0 and coins["GNO"]["1h"]<0):
 		if(btc["1h"]>=bound):
 			#buy btc with btc
-			actions.append({"type": "CHANGE", "old_coin": "GNO", "new_coin": "BTC", "gain": btc["1h"]})
+			actions.append({"type": "CHANGE", "old_coin": "GNO", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 		elif(eth["1h"]>=bound):
 			#buy eth with eth
-			actions.append({"type": "CHANGE", "old_coin": "GNO", "new_coin": "ETH", "gain": eth["1h"]})
+			actions.append({"type": "CHANGE", "old_coin": "GNO", "new_coin": "ETH", "gain": coins["ETH"]["1h"]})
 	
 	#bch strategy
-	if(bchVal > 0 and bch["1h"]<0):
+	if(wallet["BCH"]["num"] > 0 and coins["BCH"]["1h"]<0):
 		#buy btc with bch
-		actions.append({"type": "CHANGE", "old_coin": "BCH", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "BCH", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 
 	#dash strategy
-	if(dashVal > 0 and dash["1h"]<0):
+	if(wallet["DASH"]["num"] > 0 and coins["DASH"]["1h"]<0):
 		#buy btc with ltc
-		actions.append({"type": "CHANGE", "old_coin": "DASH", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "DASH", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 	
 	#xmr strategy
-	if(xmrVal > 0 and xmr["1h"]<0):
+	if(wallet["XMR"]["num"] > 0 and coins["XMR"]["1h"]<0):
 		#buy btc with xlm
-		actions.append({"type": "CHANGE", "old_coin": "XMR", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "XMR", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 	
 	#xlm strategy
-	if(xmrVal > 0 and xlm["1h"]<0):
+	if(wallet["XLM"]["num"] > 0 and coins["XLM"]["1h"]<0):
 		#buy btc with xlm
-		actions.append({"type": "CHANGE", "old_coin": "XLM", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "XLM", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 
 	#etc strategy
-	if(etcVal > 0 and etc["1h"]<0):
+	if(wallet["ETC"]["num"] > 0 and coins["ETC"]["1h"]<0):
 		#buy btc with xlm
-		actions.append({"type": "CHANGE", "old_coin": "ETC", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "ETC", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 
 	#rep strategy
-	if(repVal > 0 and rep["1h"]<0):
+	if(wallet["REP"]["num"] > 0 and coins["REP"]["1h"]<0):
 		#buy btc with rep
-		actions.append({"type": "CHANGE", "old_coin": "REP", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "REP", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 
 	#icn strategy
-	if(icnVal > 0 and icn["1h"]<0):
+	if(wallet["ICN"]["num"] > 0 and coins["ICN"]["1h"]<0):
 		#buy btc with icn
-		actions.append({"type": "CHANGE", "old_coin": "ICN", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "ICN", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 	
 	#mln strategy
-	if(mlnVal > 0 and mln["1h"]<0):
+	if(wallet["MLN"]["num"] > 0 and coins["MLN"]["1h"]<0):
 		#buy btc with mln
-		actions.append({"type": "CHANGE", "old_coin": "MLN", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "MLN", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 
 	#zec strategy
-	if(zecVal > 0 and zec["1h"]<0):
+	if(wallet["ZEC"]["num"] > 0 and coins["ZEC"]["1h"]<0):
 		#buy btc with zec
-		actions.append({"type": "CHANGE", "old_coin": "ZEC", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "ZEC", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 
 	#doge strategy
-	if(dogeVal > 0 and doge["1h"]<0):
+	if(wallet["DOGE"]["num"] > 0 and coins["DOGE"]["1h"]<0):
 		#buy btc with doge
-		actions.append({"type": "CHANGE", "old_coin": "DOGE", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "DOGE", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 	
 	#usdt strategy
-	if(usdtVal > 0 and usdt["1h"]<0):
+	if(wallet["USDT"]["num"] > 0 and coins["USDT"]["1h"]<0):
 		#buy btc with zec
-		actions.append({"type": "CHANGE", "old_coin": "USDT", "new_coin": "BTC", "gain": btc["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "USDT", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
 
 	maxGain = 0
 	bestAction = None
 	for action in actions:
-		print ("Candidate: " + str(action))
+		#print ("Candidate: " + str(action))
 		if(action["gain"] > maxGain):
 			maxGain = action["gain"]
 			bestAction = action
@@ -548,7 +391,7 @@ while(True):
 
 	if(len(actions)>0):
 		for action in actions:
-			if(action["type"] == "CHANGE"):
+			if(False and action["type"] == "CHANGE"):#TODO
 				change(wallet, coins, action["old_coin"], action["new_coin"])
 	
 	lastWalletVal = getWalletVal(wallet)
