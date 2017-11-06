@@ -6,10 +6,11 @@ import json
 import time
 import traceback
 import datetime
+import krakenex
 
 wallet = {
-	'BTC': { 'num': 0.00002, 'price': 7527.6 },
-	'ETH': { 'num': 0.10902, 'price': 295.31 },
+	'BTC': { 'num': 0, 'price': 0 },
+	'ETH': { 'num': 0, 'price': 302.44 },
 	'XRP': { 'num': 0, 'price': 0 },
 	'LTC': { 'num': 0, 'price': 0 },
 	'GNO': { 'num': 0, 'price': 0 },
@@ -18,14 +19,30 @@ wallet = {
 	'DASH': { 'num': 0, 'price': 0 },
 	'XMR': { 'num': 0, 'price': 0 },
 	'XLM': { 'num': 0, 'price': 0 },
-	'ETC': { 'num': 0.36, 'price': 13.88 },
+	'ETC': { 'num': 0, 'price': 0 },
 	'REP': { 'num': 0, 'price': 0 },
 	'ICN': { 'num': 0, 'price': 0 },
-	'MLN': { 'num': 0, 'price': 0 },
+	'MLN': { 'num': 0, 'price': 56.38 },
 	'ZEC': { 'num': 0, 'price': 0 },
 	'DOGE': { 'num': 0, 'price': 0 },
 	'USDT': { 'num': 0, 'price': 0 }
 }
+
+coinMap = {"XXBT": "BTC", "XETH": "ETH", "XETC": "ETC", "XMLN": "MLN"}
+
+k = krakenex.API()
+k.load_key('kraken.key')
+balance = k.query_private('Balance')["result"]
+
+#print (balance)
+
+for key in balance:
+	if(key in coinMap.keys()):
+		p = wallet[coinMap[key]]["price"]
+		wallet[coinMap[key]] = { 'num': float(balance[key]), 'price': p }
+	else:
+		p = wallet[key]["price"]
+		wallet[key] = { 'num': float(balance[key]), 'price': p }
 
 headers = {
     'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
@@ -59,28 +76,11 @@ regLastWeekChange = re.compile(".*?<td class=\"no-wrap percent-7d .*?>(&gt; )?(.
 previousCoins = {}
 coins = {}
 
-btc = {}
-eth = {}
-xrp = {}
-ltc = {}
-gno = {}
-eos = {}
-bch = {}
-dash = {}
-xmr = {}
-etc = {}
-rep = {}
-icn = {}
-mln = {}
-zec = {}
-doge = {}
-usdt = {}
-usd = {}
-
-fee = 0.0026
+fee = 0.26
 bound = 1
 
 def updateMktData():
+	global coins
 	previousCoins = coins
 	coins = {}
 
@@ -135,7 +135,6 @@ def updateMktData():
 				coin["7d"] = cLastWeekChange
 
 		if('name' in coin):
-			global coins
 			coins[coin["name"]] = coin
 
 			#print("--------------------------------------")
@@ -154,10 +153,11 @@ def updateMktData():
 
 
 	#print(json.dumps(coins, sort_keys=True, indent=4))
-	print "===== MARKET ===="
+	print ("======================================= MARKET ======================================")
 	for key in wallet.keys():
-		print str(coins[key])
-	print "================="
+		#print (key)
+		print (str(coins[key]))
+	print ("=====================================================================================")
 
 def change(wallet, coins, oldVal, newVal):
 	print ("CHANGE "+oldVal+" to "+newVal)
@@ -171,7 +171,7 @@ def change(wallet, coins, oldVal, newVal):
 
 	startVal = old["num"]*oldCoinMkt["price"] 
 	#print ("startVal " + str(startVal))
-	valAfterFee = startVal - (startVal*fee)#fee
+	valAfterFee = startVal - (startVal*fee/100)#fee
 	#print ("valAfterFee " + str(valAfterFee))
 	valConverted = valAfterFee/newCoinMkt["price"]
 	#print ("valConverted " + str(valConverted))
@@ -192,19 +192,19 @@ def getLastChangeWalletVal(wallet):
 	return tot
 
 def showWalletLine(wallet, key):
-	if(wallet[key]["num"] <> 0):
-		print (key + ": " + str(wallet[key]["num"]) + "\tV:" +str(coins[key]["price"]*wallet[key]["num"]) + "\tM:" +str(coins[key]["price"]))
+	if(wallet[key]["num"] != 0):
+		print (key + ": " + str("{0:.10f}".format(wallet[key]["num"])) + "\tV:" +str("{0:.5f}".format(coins[key]["price"]*wallet[key]["num"])) + "\tM:" +str(coins[key]["price"]) + "\t(Old " + str(wallet[key]["price"]) + ")")
 
 def showWallet(wallet):
-	print ("================ WALLET ================")
+	print ("================================ WALLET ================================")
 	for key in wallet.keys():
 		showWalletLine(wallet, key)
 
 	lastW = getLastChangeWalletVal(wallet)
 	currW = getWalletVal(wallet)
-	print ("====== LAST CHANGE VAL: " + str(lastW) + " ======")
-	print ("========== CURR TOT: " + str(currW) + " ==========")
-	print ("========== " + str("{0:.2f}".format((currW-lastW))) + "$ (" + str("{0:.3f}".format((currW-lastW)/lastW)) + "%) ==========")
+	print ("LAST CHANGE VAL: " + str(lastW))
+	print ("CURRENT VALUE:   " + str(currW))
+	print ("========================== " + str("{0:.2f}".format((currW-lastW))) + "$ (" + str("{0:.3f}".format(((currW-lastW)/lastW)*100)) + "%) ==========================")
 
 def engine(wallet):
 
@@ -212,11 +212,17 @@ def engine(wallet):
 
 	lastChangeVal = getLastChangeWalletVal(wallet)
 	currVal = getWalletVal(wallet)
+	
+	currFee = currVal*fee/100
 
-	if(currVal <= lastChangeVal + currVal*fee):
-		print ("NB. IF CHANGE LOSE VALUE. Future Value: " +str(currVal - currVal*fee))
-	#no action
-		return []
+	print ("IF CHANGE -> CurrValue: " + str(currVal) + " FutureValue: " +str(currVal - currFee) + " (Fee: " + str(currFee) + ")")
+	if(currVal - currFee <= lastChangeVal):
+		print ("NB. IF CHANGE LOSE VALUE. ")
+	else:
+		print ("NB. IF CHANGE GAIN. ")
+	
+	#TODO no action
+	return []
 	
 	#btc strategy
 	if(wallet["BTC"]["num"] > 0):
@@ -380,7 +386,7 @@ lastWalletVal = 0
 
 while(True):
 	print ("--------------------------------------------------------------------------------------------------")
-	print datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+	print (datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
 	updateMktData()
 
 	showWallet(wallet)
