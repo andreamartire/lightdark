@@ -155,6 +155,7 @@ public class ChapterShowList extends Activity {
                             SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
                             sdt.execute();
                         }
+
                     }else{
                         Book book = oldPlayerState.getBook();
 

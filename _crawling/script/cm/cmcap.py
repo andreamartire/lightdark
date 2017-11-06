@@ -9,7 +9,7 @@ import datetime
 import krakenex
 
 wallet = {
-	'BTC': { 'num': 0, 'price': 0 },
+	'XBT': { 'num': 0, 'price': 0 },
 	'ETH': { 'num': 0, 'price': 302.44 },
 	'XRP': { 'num': 0, 'price': 0 },
 	'LTC': { 'num': 0, 'price': 0 },
@@ -24,11 +24,10 @@ wallet = {
 	'ICN': { 'num': 0, 'price': 0 },
 	'MLN': { 'num': 0, 'price': 56.38 },
 	'ZEC': { 'num': 0, 'price': 0 },
-	'DOGE': { 'num': 0, 'price': 0 },
-	'USDT': { 'num': 0, 'price': 0 }
+	'XDG': { 'num': 0, 'price': 0 }
 }
 
-coinMap = {"XXBT": "BTC", "XETH": "ETH", "XETC": "ETC", "XMLN": "MLN"}
+coinMap = {"XXBT": "XBT", "XETH": "ETH", "XETC": "ETC", "XMLN": "MLN"}
 
 k = krakenex.API()
 k.load_key('kraken.key')
@@ -36,6 +35,7 @@ balance = k.query_private('Balance')["result"]
 
 #print (balance)
 
+wallet = {}
 for key in balance:
 	if(key in coinMap.keys()):
 		p = wallet[coinMap[key]]["price"]
@@ -78,8 +78,78 @@ coins = {}
 
 fee = 0.26
 bound = 1
+secInterval = 1
+secIntervalStr = str(secInterval) + "s"
 
-def updateMktData():
+def updateKrakenData():
+	#https://api.kraken.com/0/public/Ticker?pair=XXBTZUSD,XETHXXBT,XETCXXBT,XMLNXXBT,GNOXBT,EOSXBT,BCHXBT,LTCXBT,XRPXBT,DASHXBT,XMRXBT,XLMXBT,REPXBT,ICNXBT,ZECXBT,XDGXBT
+	krakenUrl = "https://api.kraken.com/0/public/Ticker?pair=XXBTZUSD,XETHXXBT,XETCXXBT,XMLNXXBT,GNOXBT,EOSXBT,BCHXBT,LTCXBT,XRPXBT,DASHXBT,XMRXBT,XLMXBT,REPXBT,ICNXBT,ZECXBT,XDGXBT"
+	global coins
+	previousCoins = coins
+	coins = {}
+
+	result = json.loads(str(requests.get(krakenUrl, headers = headers).text))["result"]
+
+	#print (result)
+
+	ticker = []
+	for key in result.keys():
+		#print (key)
+		#print (result[key]["c"][0])
+		
+		if(key == "DASHXBT"):
+			key1 = "DASH"
+			key2 = "XBT"
+		elif(len(key) == 6):
+			key1 = key[0:3]
+			key2 = key[3:6]
+		elif(len(key) == 8):
+			key1 = key[1:4]
+			key2 = key[5:8]
+		#print ("key1: " + key1 + " - key2: " + key2)
+
+		ticker.append({ "coin1" : key1, "coin2": key2, "price": float(result[key]["c"][0]) })
+
+		if(key == "XXBTZUSD"):
+			usdPrice = float(result[key]["c"][0])
+
+	#print ("USD PRICE: "+str(usdPrice))
+	for tick in ticker:
+		if(tick["coin2"] == "XBT"):
+			#print (tick)
+			tick["price"] = tick["price"]*usdPrice
+			#print (tick)
+
+		coin = {}
+		coin["name"] = tick["coin1"]
+		coin["price"] = tick["price"]
+		coins[coin["name"]] = coin
+
+	if(len(previousCoins.keys()) > 0):
+		for key in previousCoins.keys():
+			#print ("-- key "+key)
+			oldCoin = previousCoins[key]
+			newCoin = coins[key]	
+
+			#print ("Old Price "+str(oldCoin["price"]))
+			#print ("New Price "+str(newCoin["price"]))
+			delta = (newCoin["price"] - oldCoin["price"])/oldCoin["price"]
+
+			if(secIntervalStr in oldCoin):
+				newCoin[secIntervalStr] = oldCoin[secIntervalStr]
+
+			if(delta != 0):
+				newCoin[secIntervalStr] = "{0:.5f}".format(delta)
+				
+			#print ("% var "+str(delta))
+
+	print ("======================================= MARKET ======================================")
+	for key in sorted(wallet.keys()):
+		#print (key)
+		print (str(coins[key]))
+	print ("=====================================================================================")
+
+def updateCoinMarketData():
 	global coins
 	previousCoins = coins
 	coins = {}
@@ -154,7 +224,7 @@ def updateMktData():
 
 	#print(json.dumps(coins, sort_keys=True, indent=4))
 	print ("======================================= MARKET ======================================")
-	for key in wallet.keys():
+	for key in sorted(wallet.keys()):
 		#print (key)
 		print (str(coins[key]))
 	print ("=====================================================================================")
@@ -384,10 +454,9 @@ def engine(wallet):
 
 lastWalletVal = 0
 
-while(True):
-	print ("--------------------------------------------------------------------------------------------------")
-	print (datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
-	updateMktData()
+while(True):	
+	#updateCoinMarketData()
+	updateKrakenData()
 
 	showWallet(wallet)
 
@@ -404,7 +473,11 @@ while(True):
 
 	showWallet(wallet)
 
-	time.sleep(60*5)# 5 min
+	print (datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
+	print ("--------------------------------------------------------------------------------------------------")
+
+	time.sleep(secInterval)# 5 sec
+	
 
 
 
