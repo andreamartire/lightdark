@@ -9,84 +9,56 @@ import datetime
 import krakenex
 
 wallet = {
-	'XBT': { 'num': 0, 'price': 0 },
-	'ETH': { 'num': 0, 'price': 302.44 },
-	'XRP': { 'num': 0, 'price': 0 },
-	'LTC': { 'num': 0, 'price': 0 },
-	'GNO': { 'num': 0, 'price': 0 },
-	'EOS': { 'num': 0, 'price': 0 },
-	'BCH': { 'num': 0, 'price': 0 },
-	'DASH': { 'num': 0, 'price': 0 },
-	'XMR': { 'num': 0, 'price': 0 },
-	'XLM': { 'num': 0, 'price': 0 },
-	'ETC': { 'num': 0, 'price': 0 },
-	'REP': { 'num': 0, 'price': 0 },
-	'ICN': { 'num': 0, 'price': 0 },
-	'MLN': { 'num': 0, 'price': 56.38 },
-	'ZEC': { 'num': 0, 'price': 0 },
-	'XDG': { 'num': 0, 'price': 0 }
+	"XBT": { "price": 7102 }
 }
 
-coinMap = {"XXBT": "XBT", "XETH": "ETH", "XETC": "ETC", "XMLN": "MLN"}
-
-k = krakenex.API()
-k.load_key('kraken.key')
-balance = k.query_private('Balance')["result"]
-
-#print (balance)
-
-wallet = {}
-for key in balance:
-	if(key in coinMap.keys()):
-		p = wallet[coinMap[key]]["price"]
-		wallet[coinMap[key]] = { 'num': float(balance[key]), 'price': p }
-	else:
-		p = wallet[key]["price"]
-		wallet[key] = { 'num': float(balance[key]), 'price': p }
-
-headers = {
-    'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+marketHighPrev = {
+	"XBT": { "price": 7250 },
+	"ETH": { "price": 305 },
+	"EOS": { "price": 1.1 },
+	"GNO": { "price": 62 },
+	"MLN": { "price": 57 }
 }
-
-#print ('Start')
-
-link = "https://coinmarketcap.com/all/views/all/"
-
-#<span class="currency-symbol"><a href="/currencies/infchain/">INF</a></span>
-#<span class="currency-symbol"><a href="/currencies/bitcoin/">BTC</a></span>
-regCoinName = re.compile(".*?<span class=\"currency-symbol\">.*?>(.*?)</a></span>")
-
-#<a class="currency-name-container" href="/currencies/bitcoin/">Bitcoin</a>
-regCoinDesc = re.compile(".*?<a class=\"currency-name-container\".*?>(.*?)</a>")
-
-#<a href="/currencies/infchain/#markets" class="price" data-usd="0.00726931" data-btc="1.05737e-06" >$0.007269</a>
-regCoinPrice = re.compile(".*? class=\"price\" .*?>\$(.*?)</a>")
-
-#<td class="no-wrap percent-1h  positive_change  text-right" data-usd="0.32" data-btc="0.82" >0.32%</td>
-regLastHourChange = re.compile(".*?<td class=\"no-wrap percent-1h .*?>(&gt; )?(.*?)%</td>")
-
-#<td class="no-wrap percent-24h  positive_change  text-right" data-usd="2.33" data-btc="5.11" >=2.33%</td>
-regLastDayChange = re.compile(".*?<td class=\"no-wrap percent-24h .*?>(&gt; )?(.*?)%</td>")
-
-#<td class="no-wrap percent-7d  negative_change text-right" data-usd="-26.69" data-btc="-41.32" >-26.69%</td>
-regLastWeekChange = re.compile(".*?<td class=\"no-wrap percent-7d .*?>(&gt; )?(.*?)%</td>")
-
-#print ("size: " + str(len(rows)))
 
 previousCoins = {}
 coins = {}
 
 fee = 0.26
 bound = 1
-secInterval = 1
+
+secInterval = 300
 secIntervalStr = str(secInterval) + "s"
 
+def refreshWallet():
+	coinMap = {"XXBT": "XBT", "XETH": "ETH", "XETC": "ETC", "XMLN": "MLN"}
+
+	k = krakenex.API()
+	k.load_key('kraken.key')
+	balance = k.query_private('Balance')["result"]
+
+	for key in balance:
+		if(key in coinMap.keys()):
+			remappedKey = coinMap[key]
+			if(remappedKey not in wallet):
+				wallet[remappedKey] = { 'num': 0, 'price': 0 }
+			p = wallet[remappedKey]["price"]
+			wallet[remappedKey] = { 'num': float(balance[key]), 'price': p }
+		else:
+			if(key not in wallet):
+				wallet[key] = { 'num': 0, 'price': 0 }
+			p = wallet[key]["price"]
+			wallet[key] = { 'num': float(balance[key]), 'price': p }
+			
 def updateKrakenData():
 	#https://api.kraken.com/0/public/Ticker?pair=XXBTZUSD,XETHXXBT,XETCXXBT,XMLNXXBT,GNOXBT,EOSXBT,BCHXBT,LTCXBT,XRPXBT,DASHXBT,XMRXBT,XLMXBT,REPXBT,ICNXBT,ZECXBT,XDGXBT
 	krakenUrl = "https://api.kraken.com/0/public/Ticker?pair=XXBTZUSD,XETHXXBT,XETCXXBT,XMLNXXBT,GNOXBT,EOSXBT,BCHXBT,LTCXBT,XRPXBT,DASHXBT,XMRXBT,XLMXBT,REPXBT,ICNXBT,ZECXBT,XDGXBT"
 	global coins
 	previousCoins = coins
 	coins = {}
+
+	headers = {
+		'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+	}
 
 	result = json.loads(str(requests.get(krakenUrl, headers = headers).text))["result"]
 
@@ -154,7 +126,33 @@ def updateCoinMarketData():
 	previousCoins = coins
 	coins = {}
 
+	headers = {
+		'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+	}
 	sourceMainPage = str(requests.get(link, headers = headers).text)
+
+	link = "https://coinmarketcap.com/all/views/all/"
+
+	#<span class="currency-symbol"><a href="/currencies/infchain/">INF</a></span>
+	#<span class="currency-symbol"><a href="/currencies/bitcoin/">BTC</a></span>
+	regCoinName = re.compile(".*?<span class=\"currency-symbol\">.*?>(.*?)</a></span>")
+
+	#<a class="currency-name-container" href="/currencies/bitcoin/">Bitcoin</a>
+	regCoinDesc = re.compile(".*?<a class=\"currency-name-container\".*?>(.*?)</a>")
+
+	#<a href="/currencies/infchain/#markets" class="price" data-usd="0.00726931" data-btc="1.05737e-06" >$0.007269</a>
+	regCoinPrice = re.compile(".*? class=\"price\" .*?>\$(.*?)</a>")
+
+	#<td class="no-wrap percent-1h  positive_change  text-right" data-usd="0.32" data-btc="0.82" >0.32%</td>
+	regLastHourChange = re.compile(".*?<td class=\"no-wrap percent-1h .*?>(&gt; )?(.*?)%</td>")
+
+	#<td class="no-wrap percent-24h  positive_change  text-right" data-usd="2.33" data-btc="5.11" >=2.33%</td>
+	regLastDayChange = re.compile(".*?<td class=\"no-wrap percent-24h .*?>(&gt; )?(.*?)%</td>")
+
+	#<td class="no-wrap percent-7d  negative_change text-right" data-usd="-26.69" data-btc="-41.32" >-26.69%</td>
+	regLastWeekChange = re.compile(".*?<td class=\"no-wrap percent-7d .*?>(&gt; )?(.*?)%</td>")
+
+	#print ("size: " + str(len(rows)))
 
 	rows = str(sourceMainPage).split("<tbody>")
 	rows = str(rows[1]).split("</tbody>")
@@ -266,7 +264,7 @@ def showWalletLine(wallet, key):
 		print (key + ": " + str("{0:.10f}".format(wallet[key]["num"])) + "\tV:" +str("{0:.5f}".format(coins[key]["price"]*wallet[key]["num"])) + "\tM:" +str(coins[key]["price"]) + "\t(Old " + str(wallet[key]["price"]) + ")")
 
 def showWallet(wallet):
-	print ("================================ WALLET ================================")
+	print ("="*30+" WALLET "+"="*30)
 	for key in wallet.keys():
 		showWalletLine(wallet, key)
 
@@ -274,7 +272,10 @@ def showWallet(wallet):
 	currW = getWalletVal(wallet)
 	print ("LAST CHANGE VAL: " + str(lastW))
 	print ("CURRENT VALUE:   " + str(currW))
-	print ("========================== " + str("{0:.2f}".format((currW-lastW))) + "$ (" + str("{0:.3f}".format(((currW-lastW)/lastW)*100)) + "%) ==========================")
+	
+	diff = currW-lastW
+	if(lastW != 0):
+		print ("="*28 + str("{0:.2f}".format(diff)) + "$ (" + str("{0:.3f}".format((diff/lastW)*100)) + "%) "+"="*28)
 
 def engine(wallet):
 
@@ -291,154 +292,16 @@ def engine(wallet):
 	else:
 		print ("NB. IF CHANGE GAIN. ")
 	
-	#TODO no action
-	return []
-	
-	#btc strategy
-	if(wallet["BTC"]["num"] > 0):
-		if(coins["ETH"]["1h"]>=bound):
-			#nochange. default strategy
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "ETH", "gain": coins["ETH"]["1h"]})
-		if(coins["XRP"]["1h"]>=bound):
-			#buy xrp with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "XRP", "gain": coins["XRP"]["1h"]})
-		if(coins["LTC"]["1h"]>=bound):
-			#buy ltc with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "LTC", "gain": coins["LTC"]["1h"]})
-		if(coins["GNO"]["1h"]>=bound):
-			#buy gno with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "GNO", "gain": coins["GNO"]["1h"]})
-		if(coins["EOS"]["1h"]>=bound):
-			#buy eos with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "EOS", "gain": coins["EOS"]["1h"]})
-		if(coins["BCH"]["1h"]>=bound):
-			#buy bch with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "BCH", "gain": coins["BCH"]["1h"]})
-		if(coins["DASH"]["1h"]>=bound):
-			#buy dash with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "DASH", "gain": coins["DASH"]["1h"]})
-		if(coins["XMR"]["1h"]>=bound):
-			#buy xmr with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "XMR", "gain": coins["XMR"]["1h"]})
-		if(coins["XLM"]["1h"]>=bound):
-			#buy xlm with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "XLM", "gain": coins["XLM"]["1h"]})
-		if(coins["ETC"]["1h"]>=bound):
-			#buy etc with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "ETC", "gain": coins["ETC"]["1h"]})
-		if(coins["REP"]["1h"]>=bound):
-			#buy rep with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "REP", "gain": coins["REP"]["1h"]})
-		if(coins["ICN"]["1h"]>=bound):
-			#buy dash with icn
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "ICN", "gain": coins["ICN"]["1h"]})
-		if(coins["MLN"]["1h"]>=bound):
-			#buy mln with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "MLN", "gain": coins["MLN"]["1h"]})
-		if(coins["ZEC"]["1h"]>=bound):
-			#buy zec with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "ZEC", "gain": coins["ZEC"]["1h"]})
-		if(coins["DOGE"]["1h"]>=bound):
-			#buy doge with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "DOGE", "gain": coins["DOGE"]["1h"]})
-		if(coins["USDT"]["1h"]>=bound):
-			#buy usdt with btc
-			actions.append({"type": "CHANGE", "old_coin": "BTC", "new_coin": "USDT", "gain": coins["USDT"]["1h"]})
-
-	#eth strategy
-	if(wallet["ETH"]["num"] > 0 and coins["ETH"]["1h"]<0):
-		if(coins["BTC"]["1h"]>=bound):
-			#buy btc with eth
-			actions.append({"type": "CHANGE", "old_coin": "ETH", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-		if(coins["GNO"]["1h"]>=bound):
-			#buy gno with eth
-			actions.append({"type": "CHANGE", "old_coin": "ETH", "new_coin": "GNO", "gain": coins["GNO"]["1h"]})
-		if(coins["EOS"]["1h"]>=bound):
-			#buy eos with eth
-			actions.append({"type": "CHANGE", "old_coin": "ETH", "new_coin": "EOS", "gain": coins["EOS"]["1h"]})
-
-	#xrp strategy
-	if(wallet["XRP"]["num"] > 0 and coins["XRP"]["1h"]<0):
-		#buy btc with xrp
-		actions.append({"type": "CHANGE", "old_coin": "XRP", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-
-	#ltc strategy
-	if(wallet["LTC"]["num"] > 0 and coins["LTC"]["1h"]<0):
-		#buy btc with ltc
-		actions.append({"type": "CHANGE", "old_coin": "LTC", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-
-	#eos strategy
-	if(wallet["EOS"]["num"] > 0 and coins["EOS"]["1h"]<0):
-		if(coins["BTC"]["1h"]>=bound):
-			#buy btc with btc
-			actions.append({"type": "CHANGE", "old_coin": "EOS", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-		elif(coins["ETH"]["1h"]>=bound):
-			#buy eth with eth
-			actions.append({"type": "CHANGE", "old_coin": "EOS", "new_coin": "ETH", "gain": coins["ETC"]["1h"]})
-	
-	#gno strategy
-	if(wallet["GNO"]["num"] > 0 and coins["GNO"]["1h"]<0):
-		if(btc["1h"]>=bound):
-			#buy btc with btc
-			actions.append({"type": "CHANGE", "old_coin": "GNO", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-		elif(eth["1h"]>=bound):
-			#buy eth with eth
-			actions.append({"type": "CHANGE", "old_coin": "GNO", "new_coin": "ETH", "gain": coins["ETH"]["1h"]})
-	
-	#bch strategy
-	if(wallet["BCH"]["num"] > 0 and coins["BCH"]["1h"]<0):
-		#buy btc with bch
-		actions.append({"type": "CHANGE", "old_coin": "BCH", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-
-	#dash strategy
-	if(wallet["DASH"]["num"] > 0 and coins["DASH"]["1h"]<0):
-		#buy btc with ltc
-		actions.append({"type": "CHANGE", "old_coin": "DASH", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-	
-	#xmr strategy
-	if(wallet["XMR"]["num"] > 0 and coins["XMR"]["1h"]<0):
-		#buy btc with xlm
-		actions.append({"type": "CHANGE", "old_coin": "XMR", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-	
-	#xlm strategy
-	if(wallet["XLM"]["num"] > 0 and coins["XLM"]["1h"]<0):
-		#buy btc with xlm
-		actions.append({"type": "CHANGE", "old_coin": "XLM", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-
-	#etc strategy
-	if(wallet["ETC"]["num"] > 0 and coins["ETC"]["1h"]<0):
-		#buy btc with xlm
-		actions.append({"type": "CHANGE", "old_coin": "ETC", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-
-	#rep strategy
-	if(wallet["REP"]["num"] > 0 and coins["REP"]["1h"]<0):
-		#buy btc with rep
-		actions.append({"type": "CHANGE", "old_coin": "REP", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-
-	#icn strategy
-	if(wallet["ICN"]["num"] > 0 and coins["ICN"]["1h"]<0):
-		#buy btc with icn
-		actions.append({"type": "CHANGE", "old_coin": "ICN", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-	
-	#mln strategy
-	if(wallet["MLN"]["num"] > 0 and coins["MLN"]["1h"]<0):
-		#buy btc with mln
-		actions.append({"type": "CHANGE", "old_coin": "MLN", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-
-	#zec strategy
-	if(wallet["ZEC"]["num"] > 0 and coins["ZEC"]["1h"]<0):
+	#update prev margin gaini
+	for key in marketHighPrev:
+		marketHighPrev[key]["gain"] = marketHighPrev[key]["price"] - coins[key]["price"]
+	print (marketHighPrev)
+		
+	#btc prev margin strategy
+	gain = marketHighPrev["XBT"]["price"] - wallet["XBT"]["price"]
+	if(gain  > 1):
 		#buy btc with zec
-		actions.append({"type": "CHANGE", "old_coin": "ZEC", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-
-	#doge strategy
-	if(wallet["DOGE"]["num"] > 0 and coins["DOGE"]["1h"]<0):
-		#buy btc with doge
-		actions.append({"type": "CHANGE", "old_coin": "DOGE", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
-	
-	#usdt strategy
-	if(wallet["USDT"]["num"] > 0 and coins["USDT"]["1h"]<0):
-		#buy btc with zec
-		actions.append({"type": "CHANGE", "old_coin": "USDT", "new_coin": "BTC", "gain": coins["BTC"]["1h"]})
+		actions.append({"type": "CHANGE", "old_coin": "USDT", "new_coin": "BTC", "gain": gain})
 
 	maxGain = 0
 	bestAction = None
@@ -453,6 +316,8 @@ def engine(wallet):
 	return [bestAction]
 
 lastWalletVal = 0
+
+refreshWallet()
 
 while(True):	
 	#updateCoinMarketData()
