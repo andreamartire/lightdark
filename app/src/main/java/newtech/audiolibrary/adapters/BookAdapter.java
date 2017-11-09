@@ -1,10 +1,14 @@
 package newtech.audiolibrary.adapters;
 
+import android.app.Activity;
 import android.content.Context;
+import android.graphics.Point;
 import android.graphics.drawable.Drawable;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.ImageView;
@@ -70,17 +74,21 @@ public class BookAdapter extends ArrayAdapter<Book> {
 
                 if(book.getRemoteImageUrl() != null){
 
+                    final Point size = new Point();
+                    WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+                    wm.getDefaultDisplay().getSize(size);
+
+                    final int xSize = size.x*45/100;
+                    final int hSize = xSize*3/5;
+
                     //check if file name exists in book/metadata/
                     if(new File(book.getLocalImageFilePath()).exists()){
                         //select current image
                         Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
 
                         if(image != null){
-                            //TODO size based on screen width
                             //select downloaded image
-                            imageView.setImageDrawable(ImageUtils.scaleImage(context, image, 500, 300));
-                        }else{
-                            //FIXME manage
+                            imageView.setImageDrawable(ImageUtils.scaleImage(context, image, xSize, hSize));
                         }
                     }else{
                         final BookAdapter arrayAdapter = this;
@@ -93,7 +101,8 @@ public class BookAdapter extends ArrayAdapter<Book> {
                                 //select local image
 
                                 Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
-                                book.setLocalImageResource(image);
+                                //size based on screen width
+                                book.setLocalImageResource(ImageUtils.scaleImage(context, image, xSize, hSize));
                             }
                             return 0;
                             }
@@ -103,8 +112,6 @@ public class BookAdapter extends ArrayAdapter<Book> {
                         //if downloaded
                         if(new File(book.getLocalImageFilePath()).exists()){
                             Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
-
-                            //TODO resize image
                         }
                     }
                 }
