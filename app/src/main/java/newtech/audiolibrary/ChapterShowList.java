@@ -18,6 +18,9 @@ import android.widget.ProgressBar;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.io.File;
 import java.util.ArrayList;
 
@@ -42,6 +45,10 @@ public class ChapterShowList extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapters);
+
+        AdView mAdView = (AdView) findViewById(R.id.adViewChapters);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         book = (Book) getIntent().getSerializableExtra(BOOK);
         // convert to linked book

@@ -18,6 +18,9 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.io.File;
 
 import newtech.audiolibrary.adapters.PlayThread;
@@ -38,6 +41,10 @@ public class ChapterPlayer extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_chapter);
+
+        AdView mAdView = (AdView) findViewById(R.id.adViewPlayer);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         Chapter currentChapter = (Chapter) getIntent().getSerializableExtra(CHAPTER);
         Book linkedBook = ConfigUtils.bookWithChapters.get(currentChapter.getBook().getBookDir());

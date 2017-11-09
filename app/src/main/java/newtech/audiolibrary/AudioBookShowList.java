@@ -27,6 +27,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
 import java.io.File;
@@ -53,6 +55,10 @@ public class AudioBookShowList extends Activity {
         setContentView(R.layout.activity_audiobooks);
 
         MobileAds.initialize(this, "ca-app-pub-1872225169177247~3010272652");
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         final Context me = this;
 

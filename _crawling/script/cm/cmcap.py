@@ -9,59 +9,43 @@ import datetime
 import krakenex
 import random
 
-wallet = {
-	"XBT": { "price": 7102 },
-	"ETH": { "price": 302.05 },
-	'EOS': { 'price': 0.9787939200000001 },
-	'ETC': { 'price': 14.3995644 },
-	'GNO': { 'price': 62.18816400000001 },
-	'MLN': { 'price': 56.193775200000005 }
-}
+eurToUsd = 1.15905
 
-marketHighPrev = {
-	"XBT": { "price": 7250 },
-	"ETH": { "price": 305 },
-	"EOS": { "price": 1.02 },
-	"ETC": { "price": 14.1 },
-	"GNO": { "price": 62 },
-	"MLN": { "price": 56 }
-}
-
-marketLowPrev = {
-	"XBT": { "price": 7100 },
-	"ETH": { "price": 295 },
-	"EOS": { "price": 0.96 },
-	"ETC": { "price": 14.3 },
-	"GNO": { "price": 60 },
-	"MLN": { "price": 52 }
+wallet = { 
+	"USD": { "num": 0, "price": 1 },
+	'EUR': { "num": 0, 'price': eurToUsd }
 }
 
 previousCoins = {}
 coins = {}
 
 fee = 0.26
-earnBound = 1
+earnBound = 0.75
 
 secInterval = 300
 secIntervalStr = str(secInterval) + "s"
 
 def refreshWallet():
-	coinMap = {"XXBT": "XBT", "XETH": "ETH", "XETC": "ETC", "XMLN": "MLN"}
+	coinMap = {"XXBT": "XBT", "XETH": "ETH", "XETC": "ETC", "XMLN": "MLN", "ZEUR": "EUR", "ZUSD": "USD"}
 
 	k = krakenex.API()
 	k.load_key('kraken.key')
-	balance = k.query_private('Balance')["result"]
+	output = k.query_private('Balance')
+	print ("Output: " + str(output))
+	balance = output["result"]
 
 	for key in balance:
+		p = 0
+		remappedKey = ""
 		if(key in coinMap.keys()):
 			remappedKey = coinMap[key]
 			if(remappedKey not in wallet):
-				wallet[remappedKey] = { 'num': 0, 'price': 0 }
+				wallet[remappedKey] = { 'num': 0, 'price': coins[remappedKey]["price"] }
 			p = wallet[remappedKey]["price"]
 			wallet[remappedKey] = { 'num': float(balance[key]), 'price': p }
 		else:
 			if(key not in wallet):
-				wallet[key] = { 'num': 0, 'price': 0 }
+				wallet[key] = { 'num': 0, 'price': coins[key]["price"] }
 			p = wallet[key]["price"]
 			wallet[key] = { 'num': float(balance[key]), 'price': p }
 			
@@ -85,6 +69,8 @@ def updateKrakenData():
 		#print (key)
 		#print (result[key]["c"][0])
 		
+		key1 = ""
+		key2 = ""
 		if(key == "DASHXBT"):
 			key1 = "DASH"
 			key2 = "XBT"
@@ -113,6 +99,16 @@ def updateKrakenData():
 		coin["price"] = tick["price"]
 		coins[coin["name"]] = coin
 
+	usdCoin = {}
+	usdCoin["name"] = "USD"
+	usdCoin["price"] = 1
+	coins["USD"] = usdCoin
+	
+	eurCoin = {}
+	eurCoin["name"] = "EUR"
+	eurCoin["price"] = eurToUsd
+	coins["EUR"] = eurCoin
+	
 	if(len(previousCoins.keys()) > 0):
 		for key in previousCoins.keys():
 			#print ("-- key "+key)
@@ -130,12 +126,6 @@ def updateKrakenData():
 				newCoin[secIntervalStr] = "{0:.5f}".format(delta)
 				
 			#print ("% var "+str(delta))
-
-	print ("======================================= MARKET ======================================")
-	for key in sorted(wallet.keys()):
-		#print (key)
-		print (str(coins[key]))
-	print ("=====================================================================================")
 
 def updateCoinMarketDataDISABLED():
 	global coins
@@ -221,8 +211,16 @@ def updateCoinMarketDataDISABLED():
 		if('name' in coin):
 			coins[coin["name"]] = coin
 
-			#print("--------------------------------------")
-
+	usdCoin = {}
+	usdCoin["name"] = "USD"
+	usdCoin["price"] = 1
+	coins["USD"] = usdCoin
+	
+	eurCoin = {}
+	eurCoin["name"] = "EUR"
+	eurCoin["price"] = eurToUsd
+	coins["EUR"] = eurCoin
+		
 	if(len(previousCoins.keys()) > 0):
 		for key in previousCoins.keys():
 			#print ("-- key "+key)
@@ -235,7 +233,7 @@ def updateCoinMarketDataDISABLED():
 			coins[key]["5m"] = delta		
 			#print ("% var "+str(delta))
 
-
+def showMarket():
 	#print(json.dumps(coins, sort_keys=True, indent=4))
 	print ("======================================= MARKET ======================================")
 	for key in sorted(wallet.keys()):
@@ -261,12 +259,13 @@ def change(wallet, coins, oldVal, newVal):
 	#print ("valConverted " + str(valConverted))
 	
 	wallet[oldVal]["num"] = 0
-	wallet[newVal]["num"] = valConverted
+	wallet[newVal]["num"] = wallet[newVal]["num"] + valConverted
 	
 	#refresh wallet buy price
 	for walletCoin in wallet:
 		wallet[walletCoin]["price"] = coins[walletCoin]["price"]
-
+	#print (wallet)
+	
 def getWalletVal(wallet):
 	tot = 0
 	for key in wallet.keys():
@@ -280,8 +279,8 @@ def getLastChangeWalletVal(wallet):
 	return tot
 
 def showWalletLine(wallet, key):
-	if(wallet[key]["num"] != 0):
-		print (key + ": " + str("{0:.10f}".format(wallet[key]["num"])) + "\tV:" +str("{0:.5f}".format(coins[key]["price"]*wallet[key]["num"])) + "\tM:" +str(coins[key]["price"]) + "\t(Old " + str(wallet[key]["price"]) + ")")
+	#if(wallet[key]["num"] != 0):
+	print (key + ": " + str("{0:.10f}".format(wallet[key]["num"])) + "\tV:" +str("{0:.5f}".format(coins[key]["price"]*wallet[key]["num"])) + "\tM:" +str(coins[key]["price"]) + "\t(Old " + str(wallet[key]["price"]) + ")")
 
 def showWallet(wallet):
 	print ("="*30+" WALLET "+"="*30)
@@ -305,70 +304,73 @@ def engine(wallet):
 	currVal = getWalletVal(wallet)
 	
 	currFee = currVal*fee/100
-	maxGain = 0
-	bestAction = None
+		
+	#if gain > 0.5 % 
+		#if xbt eth etc xmr dash < 0
+			#change to usd
+		#else
+			#change to max 15m lose
+	
+	transitions = {
+		'BCH': ['EUR', 'USD', 'XBT'],
+		'DASH': ['EUR', 'USD', 'XBT'],
+		'EOS': ['ETH', 'XBT'],
+		'GNO': ['ETH', 'XBT'],
+		'USDT': ['USD'],
+		'ETC': ['EUR', 'USD', 'XBT'],
+		'ETH': ['EUR', 'USD', 'XBT'],
+		'LTC': ['EUR', 'USD', 'XBT'],
+		'MLN': ['ETH', 'XBT'],
+		'REP': ['ETH', 'USD', 'XBT'],
+		'XBT': ['EUR', 'USD', 'BCH', 'DASH', 'EOS', 'GNO', 'ETC', 'ETH', 'LTC', 'MLN', 'REP', 'XLM', 'XMR'],
+		'XLM': ['XBT'],
+		'XMR': ['EUR', 'XBT']
+	}
 	
 	print ("IF CHANGE -> CurrValue: " + str(currVal) + " FutureValue: " +str(currVal - currFee) + " (Fee: " + str(currFee) + ")")
 	if(currVal - currFee <= lastChangeVal + lastChangeVal*earnBound/100):
 		print ("NB. IF CHANGE LOSE VALUE. ")
+		#return []
 	else:
 		print ("NB. IF CHANGE GAIN. ")
+				
+	maxLose = 99
+	bestAction = None
 	
-		#update prev margin gain
-		for key in marketHighPrev:
-			marketHighPrev[key]["gain"] = ((marketHighPrev[key]["price"] - wallet[key]["price"])/wallet[key]["price"])*100
-			for walletCoin in wallet:
-				if(wallet[walletCoin]["num"] > 0 and walletCoin != key):
-					#generate action
-					actions.append({"type": "CHANGE", "old_coin": walletCoin, "new_coin": key, "gain": marketHighPrev[key]["gain"]})
-		#print (marketHighPrev)
-		
-		for action in actions:
-			#print ("Candidate: " + str(action))
-			if(action["gain"] > maxGain):
-				maxGain = action["gain"]
-				bestAction = action
-
+	for walletCoin in wallet:
+		print (wallet[walletCoin])
+		if(wallet[walletCoin]["num"] > 0):
+			print ("wallet coin " + walletCoin)
+			maxLose = coins[walletCoin][secIntervalStr]
+			for currTransition in transitions[walletCoin]:	
+				print ("curr t " + currTransition)
+				if(coins[currTransition][secIntervalStr] < maxLose):
+					actions.append({"type": "CHANGE", "old_coin": walletCoin, "new_coin": currTransition, "lose": coins[currTransition][secIntervalStr]})
+		return actions
+	
+	for action in actions:
+		#print ("Candidate: " + str(action))
+		if(action["lose"] < maxLose):
+			maxLose = action["lose"]
+			bestAction = action	
+			
 	if(bestAction is None):
 		return []
 	return [bestAction]
-
-def randomMarketData():
-	global coins
-	if("XBT" not in coins):
-		coins["XBT"] = { "price": 7100 }
-	if("ETH" not in coins):
-		coins["ETH"] = { "price": 295 }
-	if("EOS" not in coins):
-		coins["EOS"] = { "price": 0.96 }
-	if("ETC" not in coins):
-		coins["ETC"] = { "price": 14.3 }
-	if("GNO" not in coins):
-		coins["GNO"] = { "price": 60 }
-	if("MLN" not in coins):
-		coins["MLN"] = { "price": 52 }
-
-	for coin in coins:
-		coins[coin]["price"] = coins[coin]["price"] + random.uniform(-1, 1)
-	
-	print ("======================================= MARKET ======================================")
-	for key in sorted(wallet.keys()):
-		#print (key)
-		print (str(coins[key]))
-	print ("=====================================================================================")
 		
 lastWalletVal = 0
 
+updateKrakenData()
 refreshWallet()
+showMarket()
 
 while(True):	
-	#updateCoinMarketData()
-	updateKrakenData()
-	#randomMarketData()
 	
 	showWallet(wallet)
 
 	actions = engine(wallet)
+	
+	showWallet(wallet)
 
 	print ("ACTIONS: " + str(actions))
 
@@ -384,7 +386,13 @@ while(True):
 	print (datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
 	print ("--------------------------------------------------------------------------------------------------")
 
-	time.sleep(secInterval)# 5 sec
+	time.sleep(secInterval)
+	
+	#updateCoinMarketData()
+	updateKrakenData()
+	#randomMarketData()
+	
+	showMarket()
 	
 
 

@@ -88,6 +88,17 @@
             android:max="100"
             android:visibility="gone" />
 
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adViewChapters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-1872225169177247/9670067238">
+        </com.google.android.gms.ads.AdView>
+
         <ListView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/chapters_listview"
             android:layout_width="wrap_content"
