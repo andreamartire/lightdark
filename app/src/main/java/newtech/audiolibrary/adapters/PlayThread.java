@@ -116,38 +116,38 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         int totalDuration = mediaPlayer.getDuration();
         currentChapter.setTotalDuration(totalDuration);
 
-        TextView totalDurationView = (TextView) currentContext.findViewById(R.id.playChapter_totalDuration);
-        totalDurationView.setText(formatDuration(totalDuration));
+        final String totalDurationStr = formatDuration(totalDuration);
 
         final TextView currentDurationView = (TextView) currentContext.findViewById(R.id.playChapter_currentDuration);
+        currentDurationView.setText("00:00 - " +totalDurationStr);
 
         currentContext.runOnUiThread(new Runnable() {
             @Override
             public void run() {
 
-                currentDurationView.setText(formatDuration(mediaPlayer.getCurrentPosition()));
-                currentDurationView.post(new Runnable() {
-                    public void run() {
-                        try {
-                            updateSeekBar();
+            currentDurationView.setText(formatDuration(mediaPlayer.getCurrentPosition()));
+            currentDurationView.post(new Runnable() {
+                public void run() {
+                try {
+                    updateSeekBar();
 
-                            int currentPos = mediaPlayer.getCurrentPosition();
-                            currentChapter.setCurrentDuration(currentPos);
+                    int currentPos = mediaPlayer.getCurrentPosition();
+                    currentChapter.setCurrentDuration(currentPos);
 
-                            if (mediaPlayer.isPlaying()) {
-                                currentDurationView.postDelayed(this, 1000);
-                                currentDurationView.setText(formatDuration(currentPos));
+                    if (mediaPlayer.isPlaying()) {
+                        currentDurationView.postDelayed(this, 1000);
+                        currentDurationView.setText(formatDuration(currentPos) + " - " +totalDurationStr);
 
-                                savePlayerState(currentChapter);
-                            } else {
-                                currentDurationView.removeCallbacks(this);
-                            }
-                        } catch (java.lang.IllegalStateException|java.io.IOException e){
-                            //nothing
-                            e.printStackTrace();
-                        }
+                        savePlayerState(currentChapter);
+                    } else {
+                        currentDurationView.removeCallbacks(this);
                     }
-                });
+                } catch (java.lang.IllegalStateException|java.io.IOException e){
+                    //nothing
+                    e.printStackTrace();
+                }
+                }
+            });
             }
         });
     }
@@ -161,11 +161,19 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
     }
 
     public static String formatDuration(int duration) {
-        return String.format("%d min, %d sec",
-                TimeUnit.MILLISECONDS.toMinutes(duration),
-                TimeUnit.MILLISECONDS.toSeconds(duration) -
-                        TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(duration))
-        );
+        long minutes = TimeUnit.MILLISECONDS.toMinutes(duration);
+        long seconds = TimeUnit.MILLISECONDS.toSeconds(duration) -
+                TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(duration));
+
+        String strMinutes = String.valueOf(minutes);
+        String strSeconds = String.valueOf(seconds);
+        if(minutes<10){
+            strMinutes = "0"+minutes;
+        }
+        if(seconds<10){
+            strSeconds = "0"+seconds;
+        }
+        return strMinutes+":"+strSeconds;
     }
 
     public void toggle() {

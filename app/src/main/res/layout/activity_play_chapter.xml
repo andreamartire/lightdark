@@ -9,40 +9,46 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center">
 
-                <ImageView
-                    android:id="@+id/bookImage"
-                    android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/bookImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0.8"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20pt"
+                android:layout_marginBottom="20pt">
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/playBook_title"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:alpha="0.8"/>
+                    android:layout_weight=".20"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorWhite"/>
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/playChapter_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".20"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorWhite"/>
 
                 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:tools="http://schemas.android.com/tools"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20pt"
-                    android:layout_marginBottom="20pt">
-
-                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:id="@+id/playBook_title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight=".20"
-                        android:textAlignment="center"
-                        android:textSize="30sp"
-                        android:textColor="@color/colorWhite"/>
-
-                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:id="@+id/playChapter_title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight=".20"
-                        android:textAlignment="center"
-                        android:textSize="30sp"
-                        android:textColor="@color/colorWhite"/>
+                    android:layout_height="wrap_content">
 
                     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
                         android:id="@+id/playChapter_currentDuration"
@@ -54,16 +60,7 @@
                         android:textSize="30sp"
                         android:textColor="@color/colorWhite" />
 
-                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:id="@+id/playChapter_totalDuration"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight=".20"
-                        android:textAlignment="center"
-                        android:textSize="30sp"
-                        android:textColor="@color/colorWhite" />
-
+                </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
 
