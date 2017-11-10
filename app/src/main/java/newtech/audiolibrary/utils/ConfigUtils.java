@@ -129,7 +129,11 @@ public final class ConfigUtils {
 
                         //select random image
                         Drawable randomImage = ImageUtils.getRandomDefaultImage(activity);
-                        book.setLocalImageResource(ImageUtils.scaleImage(activity, randomImage, 500, 300));
+
+                        Integer realWidth = ImageUtils.getRealWidthSize(activity.getWindowManager());
+                        int customWidth = realWidth*45/100;
+                        int customHeight = customWidth*3/5;
+                        book.setLocalImageResource(ImageUtils.scaleImage(activity, randomImage, customWidth, customHeight));
 
                         try{
                             if(ImageUtils.isValidUri(image433Url)){

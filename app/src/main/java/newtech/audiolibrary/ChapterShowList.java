@@ -6,8 +6,6 @@ package newtech.audiolibrary;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -74,6 +71,8 @@ public class ChapterShowList extends Activity {
             }
         });*/
 
+        Integer realWidth = ImageUtils.getRealWidthSize(getWindowManager());
+
         Drawable bookImage = book.getLocalImageResource();
         String localFilePath = book.getLocalImageFilePath();
 
@@ -104,10 +103,7 @@ public class ChapterShowList extends Activity {
         });
 
         if(bookImage != null){
-            Point size = new Point();
-            getWindowManager().getDefaultDisplay().getSize(size);
-
-            bookImageView.setImageDrawable(ImageUtils.scaleImage(this, bookImage, size.x, (int) size.x*3/5));
+            bookImageView.setImageDrawable(ImageUtils.scaleImage(this, bookImage, realWidth, (int) realWidth*3/5));
         }
 
         Chapter playingChapter = (Chapter) getIntent().getSerializableExtra(PLAYING_CHAPTER);
@@ -175,11 +171,10 @@ public class ChapterShowList extends Activity {
                 ImageView resumeBookImageView = (ImageView) this.findViewById(R.id.chapterListCurrentPlayingBookImage);
                 resumeBookImageView.setAlpha(0.8f);
 
-                Point size = new Point();
-                getWindowManager().getDefaultDisplay().getSize(size);
+                Integer realWidth = ImageUtils.getRealWidthSize(getWindowManager());
 
                 //select downloaded image
-                resumeBookImageView.setImageDrawable(ImageUtils.scaleImage(this, image, size.x, (int) size.x*3/5));
+                resumeBookImageView.setImageDrawable(ImageUtils.scaleImage(this, image, realWidth, (int) realWidth*3/5));
             }
             else{
                 //Toast.makeText(this, "Old playing chapter was deleted", Toast.LENGTH_LONG).show();

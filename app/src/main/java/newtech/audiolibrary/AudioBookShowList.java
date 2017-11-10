@@ -8,13 +8,9 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Display;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -23,9 +19,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
-import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -33,8 +27,6 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.io.File;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 import newtech.audiolibrary.adapters.BookAdapter;
 import newtech.audiolibrary.adapters.PlayThread;
@@ -212,11 +204,10 @@ public class AudioBookShowList extends Activity {
 
                 ImageView resumeBookImageView = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
 
-                Point size = new Point();
-                getWindowManager().getDefaultDisplay().getSize(size);
+                Integer realWidth = ImageUtils.getRealWidthSize(getWindowManager());
 
                 //select downloaded image
-                resumeBookImageView.setImageDrawable(ImageUtils.scaleImage(this, image, size.x, (int) size.x*3/5));
+                resumeBookImageView.setImageDrawable(ImageUtils.scaleImage(this, image, realWidth*(45/100), (int) realWidth*(45/100)*(3/5)));
                 resumeBookImageView.setVisibility(View.VISIBLE);
             }
             else{

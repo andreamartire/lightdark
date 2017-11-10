@@ -1,10 +1,7 @@
 package newtech.audiolibrary.adapters;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Point;
 import android.graphics.drawable.Drawable;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +18,6 @@ import java.util.concurrent.Callable;
 import newtech.audiolibrary.R;
 import newtech.audiolibrary.bean.Book;
 import newtech.audiolibrary.task.SimpleDownloadTask;
-import newtech.audiolibrary.utils.ConfigUtils;
 import newtech.audiolibrary.utils.ImageUtils;
 
 /**
@@ -74,11 +70,11 @@ public class BookAdapter extends ArrayAdapter<Book> {
 
                 if(book.getRemoteImageUrl() != null){
 
-                    final Point size = new Point();
                     WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-                    wm.getDefaultDisplay().getSize(size);
 
-                    final int xSize = size.x*45/100;
+                    Integer realWidth = ImageUtils.getRealWidthSize(wm);
+
+                    final int xSize = realWidth*45/100;
                     final int hSize = xSize*3/5;
 
                     //check if file name exists in book/metadata/
