@@ -205,9 +205,11 @@ public class AudioBookShowList extends Activity {
                 ImageView resumeBookImageView = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
 
                 Integer realWidth = ImageUtils.getRealWidthSize(getWindowManager());
+                int customWidth = realWidth;
+                int customHeight = customWidth*3/5;
 
                 //select downloaded image
-                resumeBookImageView.setImageDrawable(ImageUtils.scaleImage(this, image, realWidth*(45/100), (int) realWidth*(45/100)*(3/5)));
+                resumeBookImageView.setImageDrawable(ImageUtils.scaleImage(this, image, customWidth, customHeight));
                 resumeBookImageView.setVisibility(View.VISIBLE);
             }
             else{
