@@ -1,7 +1,5 @@
-package newtech.audiolibrary.task;
+package techbrain.libroparlante.task;
 
-import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.PowerManager;
@@ -21,8 +19,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import newtech.audiolibrary.R;
-import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.utils.MyFileUtils;
+import techbrain.libroparlante.bean.Chapter;
+import techbrain.libroparlante.utils.MyFileUtils;
 
 /**
  * Created by andrea on 17/05/17.

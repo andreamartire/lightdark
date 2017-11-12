@@ -20,7 +20,7 @@
             android:textSize="22dip"
             android:layout_alignParentLeft="true" />
 
-        <newtech.audiolibrary.buttons.ChapterPlayStreamButton
+        <techbrain.libroparlante.buttons.ChapterPlayStreamButton
             android:id="@+id/playButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
             android:src="@drawable/ic_play_arrow_black_24dp"
             android:theme="@style/Widget.AppCompat.Button" />
 
-        <newtech.audiolibrary.buttons.ChapterDeleteButton
+        <techbrain.libroparlante.buttons.ChapterDeleteButton
             android:id="@+id/deleteButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             android:theme="@style/Widget.AppCompat.Button"
             android:visibility="gone" />
 
-        <newtech.audiolibrary.buttons.ChapterDownloadButton
+        <techbrain.libroparlante.buttons.ChapterDownloadButton
             android:id="@+id/downloadButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             android:src="@drawable/ic_file_download_black_24dp"
             android:theme="@style/Widget.AppCompat.Button" />
 
-        <newtech.audiolibrary.buttons.CircularProgressBar
+        <techbrain.libroparlante.buttons.CircularProgressBar
                 android:id="@+id/downloadProgress"
                 style="@style/Widget.ProgressBar.Holo.CircularProgressBar"
                 android:layout_width="30dip"

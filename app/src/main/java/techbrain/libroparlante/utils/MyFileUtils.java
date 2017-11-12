@@ -1,27 +1,13 @@
-package newtech.audiolibrary.utils;
-
-import android.content.Context;
-import android.provider.MediaStore;
-
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-
-import org.apache.commons.io.FileUtils;
+package techbrain.libroparlante.utils;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.channels.FileChannel;
-import java.nio.charset.Charset;
-
-import newtech.audiolibrary.bean.Chapter;
 
 /**
  * Created by MartireAn on 31/08/2017.

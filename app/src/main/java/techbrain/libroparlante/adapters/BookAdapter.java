@@ -1,4 +1,4 @@
-package newtech.audiolibrary.adapters;
+package techbrain.libroparlante.adapters;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -16,9 +16,9 @@ import java.util.ArrayList;
 import java.util.concurrent.Callable;
 
 import newtech.audiolibrary.R;
-import newtech.audiolibrary.bean.Book;
-import newtech.audiolibrary.task.SimpleDownloadTask;
-import newtech.audiolibrary.utils.ImageUtils;
+import techbrain.libroparlante.bean.Book;
+import techbrain.libroparlante.task.SimpleDownloadTask;
+import techbrain.libroparlante.utils.ImageUtils;
 
 /**
  * Created by MartireAn on 19/09/2017.

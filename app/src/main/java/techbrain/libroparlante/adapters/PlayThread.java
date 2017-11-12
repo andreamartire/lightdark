@@ -1,4 +1,4 @@
-package newtech.audiolibrary.adapters;
+package techbrain.libroparlante.adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -18,12 +18,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import newtech.audiolibrary.ChapterPlayer;
+import techbrain.libroparlante.ChapterPlayer;
 import newtech.audiolibrary.R;
-import newtech.audiolibrary.bean.Book;
-import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.utils.ConfigUtils;
-import newtech.audiolibrary.utils.MyFileUtils;
+import techbrain.libroparlante.bean.Book;
+import techbrain.libroparlante.bean.Chapter;
+import techbrain.libroparlante.utils.ConfigUtils;
+import techbrain.libroparlante.utils.MyFileUtils;
 
 /**
  * Created by MartireAn on 10/09/2017.

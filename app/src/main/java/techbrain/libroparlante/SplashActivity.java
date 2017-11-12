@@ -1,13 +1,11 @@
-package newtech.audiolibrary;
+package techbrain.libroparlante;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-import newtech.audiolibrary.utils.ConfigUtils;
+import newtech.audiolibrary.R;
+import techbrain.libroparlante.utils.ConfigUtils;
 
 /**
  * Created by andrea on 18/10/17.

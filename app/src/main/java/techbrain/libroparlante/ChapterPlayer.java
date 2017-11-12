@@ -1,4 +1,4 @@
-package newtech.audiolibrary;
+package techbrain.libroparlante;
 
 /**
  * Created by andrea on 06/09/17.
@@ -13,23 +13,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.SeekBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import java.io.File;
 
-import newtech.audiolibrary.adapters.PlayThread;
-import newtech.audiolibrary.bean.Book;
-import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.task.SimpleDownloadTask;
-import newtech.audiolibrary.utils.ConfigUtils;
-import newtech.audiolibrary.utils.ImageUtils;
-import newtech.audiolibrary.utils.MyFileUtils;
+import newtech.audiolibrary.R;
+import techbrain.libroparlante.adapters.PlayThread;
+import techbrain.libroparlante.bean.Book;
+import techbrain.libroparlante.bean.Chapter;
+import techbrain.libroparlante.utils.ConfigUtils;
+import techbrain.libroparlante.utils.ImageUtils;
 
 public class ChapterPlayer extends Activity {
 

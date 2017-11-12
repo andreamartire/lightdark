@@ -1,4 +1,4 @@
-package newtech.audiolibrary.buttons;
+package techbrain.libroparlante.buttons;
 
 import android.animation.Animator;
 import android.animation.Animator.AnimatorListener;

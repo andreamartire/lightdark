@@ -1,20 +1,19 @@
-package newtech.audiolibrary.adapters;
+package techbrain.libroparlante.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import newtech.audiolibrary.R;
-import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.buttons.ChapterDeleteButton;
-import newtech.audiolibrary.buttons.ChapterDownloadButton;
-import newtech.audiolibrary.buttons.ChapterPlayStreamButton;
+import techbrain.libroparlante.bean.Chapter;
+import techbrain.libroparlante.buttons.ChapterDeleteButton;
+import techbrain.libroparlante.buttons.ChapterDownloadButton;
+import techbrain.libroparlante.buttons.ChapterPlayStreamButton;
 
 /**
  * Created by MartireAn on 27/08/2017.

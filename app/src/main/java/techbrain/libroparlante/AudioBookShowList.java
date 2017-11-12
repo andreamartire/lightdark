@@ -1,4 +1,4 @@
-package newtech.audiolibrary;
+package techbrain.libroparlante;
 
 /**
  * Created by andrea on 18/07/17.
@@ -28,14 +28,15 @@ import com.google.android.gms.ads.MobileAds;
 import java.io.File;
 import java.io.Serializable;
 
-import newtech.audiolibrary.adapters.BookAdapter;
-import newtech.audiolibrary.adapters.PlayThread;
-import newtech.audiolibrary.bean.Book;
-import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.task.SimpleDownloadTask;
-import newtech.audiolibrary.utils.ConfigUtils;
-import newtech.audiolibrary.utils.ImageUtils;
-import newtech.audiolibrary.utils.MyFileUtils;
+import newtech.audiolibrary.R;
+import techbrain.libroparlante.adapters.BookAdapter;
+import techbrain.libroparlante.adapters.PlayThread;
+import techbrain.libroparlante.bean.Book;
+import techbrain.libroparlante.bean.Chapter;
+import techbrain.libroparlante.task.SimpleDownloadTask;
+import techbrain.libroparlante.utils.ConfigUtils;
+import techbrain.libroparlante.utils.ImageUtils;
+import techbrain.libroparlante.utils.MyFileUtils;
 
 public class AudioBookShowList extends Activity {
 

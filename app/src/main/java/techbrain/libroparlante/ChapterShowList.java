@@ -1,4 +1,4 @@
-package newtech.audiolibrary;
+package techbrain.libroparlante;
 
 /**
  * Created by andrea on 24/08/17.
@@ -21,14 +21,15 @@ import com.google.android.gms.ads.AdView;
 import java.io.File;
 import java.util.ArrayList;
 
-import newtech.audiolibrary.adapters.ChapterAdapter;
-import newtech.audiolibrary.adapters.PlayThread;
-import newtech.audiolibrary.bean.Book;
-import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.task.SimpleDownloadTask;
-import newtech.audiolibrary.utils.ConfigUtils;
-import newtech.audiolibrary.utils.ImageUtils;
-import newtech.audiolibrary.utils.MyFileUtils;
+import newtech.audiolibrary.R;
+import techbrain.libroparlante.adapters.ChapterAdapter;
+import techbrain.libroparlante.adapters.PlayThread;
+import techbrain.libroparlante.bean.Book;
+import techbrain.libroparlante.bean.Chapter;
+import techbrain.libroparlante.task.SimpleDownloadTask;
+import techbrain.libroparlante.utils.ConfigUtils;
+import techbrain.libroparlante.utils.ImageUtils;
+import techbrain.libroparlante.utils.MyFileUtils;
 
 public class ChapterShowList extends Activity {
 

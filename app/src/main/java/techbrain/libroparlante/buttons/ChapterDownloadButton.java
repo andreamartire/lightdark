@@ -1,23 +1,14 @@
-package newtech.audiolibrary.buttons;
+package techbrain.libroparlante.buttons;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-import newtech.audiolibrary.R;
-import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.task.DownloadTask;
+import techbrain.libroparlante.bean.Chapter;
+import techbrain.libroparlante.task.DownloadTask;
 
 /**
  * Created by MartireAn on 28/08/2017.

@@ -24,7 +24,7 @@
 
 
         <activity
-            android:name=".SplashActivity"
+            android:name="techbrain.libroparlante.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
@@ -36,21 +36,21 @@
         </activity>
 
         <activity
-            android:name=".AudioBookShowList"
+            android:name="techbrain.libroparlante.AudioBookShowList"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
-            android:name=".ChapterShowList"
+            android:name="techbrain.libroparlante.ChapterShowList"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait" >
         </activity>
 
         <activity
-            android:name=".ChapterPlayer"
+            android:name="techbrain.libroparlante.ChapterPlayer"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait" >

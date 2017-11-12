@@ -1,12 +1,12 @@
-package newtech.audiolibrary.buttons;
+package techbrain.libroparlante.buttons;
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 import android.view.View;
 
-import newtech.audiolibrary.ChapterPlayer;
-import newtech.audiolibrary.bean.Chapter;
+import techbrain.libroparlante.ChapterPlayer;
+import techbrain.libroparlante.bean.Chapter;
 
 /**
  * Created by MartireAn on 28/08/2017.

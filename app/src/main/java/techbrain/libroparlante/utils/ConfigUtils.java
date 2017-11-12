@@ -1,7 +1,6 @@
-package newtech.audiolibrary.utils;
+package techbrain.libroparlante.utils;
 
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -9,21 +8,17 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import newtech.audiolibrary.AudioBookShowList;
-import newtech.audiolibrary.SplashActivity;
-import newtech.audiolibrary.bean.Book;
-import newtech.audiolibrary.bean.Chapter;
+import techbrain.libroparlante.bean.Book;
+import techbrain.libroparlante.bean.Chapter;
 
 public final class ConfigUtils {
 

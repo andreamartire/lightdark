@@ -1,10 +1,7 @@
-package newtech.audiolibrary.buttons;
+package techbrain.libroparlante.buttons;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.view.ContextThemeWrapper;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 import android.view.View;
@@ -13,11 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import newtech.audiolibrary.R;
-import newtech.audiolibrary.bean.Chapter;
-import newtech.audiolibrary.utils.MyFileUtils;
+import techbrain.libroparlante.bean.Chapter;
+import techbrain.libroparlante.utils.MyFileUtils;
 
 /**
  * Created by MartireAn on 28/08/2017.

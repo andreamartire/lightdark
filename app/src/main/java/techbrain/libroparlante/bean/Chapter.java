@@ -1,4 +1,4 @@
-package newtech.audiolibrary.bean;
+package techbrain.libroparlante.bean;
 
 import java.io.File;
 import java.io.Serializable;

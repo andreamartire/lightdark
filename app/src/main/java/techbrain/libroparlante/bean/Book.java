@@ -1,4 +1,4 @@
-package newtech.audiolibrary.bean;
+package techbrain.libroparlante.bean;
 
 import android.graphics.drawable.Drawable;
 
@@ -6,12 +6,8 @@ import java.io.File;
 import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
 
-import newtech.audiolibrary.AudioBookShowList;
-import newtech.audiolibrary.utils.ConfigUtils;
+import techbrain.libroparlante.utils.ConfigUtils;
 
 /**
  * Created by MartireAn on 18/09/2017.
