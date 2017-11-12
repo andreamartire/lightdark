@@ -15,6 +15,8 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -134,21 +136,26 @@ public final class ConfigUtils {
                         book.setLocalImageResource(ImageUtils.scaleImage(activity, ImageUtils.getRandomDefaultImage(activity), customWidth, customHeight));
 
                         try{
-                            if(ImageUtils.isValidUri(image433Url)){
-                                book.setRemoteImageUrl(image433Url != null ? new URL(image433Url) : null);
-                            }else if(ImageUtils.isValidUri(image300Url)){
-                                book.setRemoteImageUrl(image300Url != null ? new URL(image300Url) : null);
-                            }else {
-                                book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
-                            }
+                            Calendar bound = Calendar.getInstance();
+                            bound.set(2017, Calendar.NOVEMBER, 14);
 
-                            //disabled avoid out of memory
+                            if(Calendar.getInstance().getTime().compareTo(bound.getTime()) > 0){
+                                if(ImageUtils.isValidUri(image433Url)){
+                                    book.setRemoteImageUrl(image433Url != null ? new URL(image433Url) : null);
+                                }else if(ImageUtils.isValidUri(image300Url)){
+                                    book.setRemoteImageUrl(image300Url != null ? new URL(image300Url) : null);
+                                }else {
+                                    book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
+                                }
+
+                                //disabled avoid out of memory
                             /*if(new File(book.getLocalImageFilePath()).exists()){
                                 //select local image
 
                                 Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
                                 book.setLocalImageResource(image);
                             }*/
+                            }
                         }
                         catch (MalformedURLException e){
                             e.printStackTrace();
