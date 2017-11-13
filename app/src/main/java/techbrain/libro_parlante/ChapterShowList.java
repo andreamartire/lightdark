@@ -1,4 +1,4 @@
-package techbrain.libroparlante;
+package techbrain.libro_parlante;
 
 /**
  * Created by andrea on 24/08/17.
@@ -22,14 +22,14 @@ import java.io.File;
 import java.util.ArrayList;
 
 import newtech.audiolibrary.R;
-import techbrain.libroparlante.adapters.ChapterAdapter;
-import techbrain.libroparlante.adapters.PlayThread;
-import techbrain.libroparlante.bean.Book;
-import techbrain.libroparlante.bean.Chapter;
-import techbrain.libroparlante.task.SimpleDownloadTask;
-import techbrain.libroparlante.utils.ConfigUtils;
-import techbrain.libroparlante.utils.ImageUtils;
-import techbrain.libroparlante.utils.MyFileUtils;
+import techbrain.libro_parlante.adapters.ChapterAdapter;
+import techbrain.libro_parlante.adapters.PlayThread;
+import techbrain.libro_parlante.bean.Book;
+import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.task.SimpleDownloadTask;
+import techbrain.libro_parlante.utils.ConfigUtils;
+import techbrain.libro_parlante.utils.ImageUtils;
+import techbrain.libro_parlante.utils.MyFileUtils;
 
 public class ChapterShowList extends Activity {
 

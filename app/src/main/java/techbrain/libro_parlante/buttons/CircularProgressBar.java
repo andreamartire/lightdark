@@ -1,4 +1,4 @@
-package techbrain.libroparlante.buttons;
+package techbrain.libro_parlante.buttons;
 
 import android.animation.Animator;
 import android.animation.Animator.AnimatorListener;

@@ -1,4 +1,4 @@
-package techbrain.libroparlante;
+package techbrain.libro_parlante;
 
 /**
  * Created by andrea on 06/09/17.
@@ -21,11 +21,11 @@ import com.google.android.gms.ads.AdView;
 import java.io.File;
 
 import newtech.audiolibrary.R;
-import techbrain.libroparlante.adapters.PlayThread;
-import techbrain.libroparlante.bean.Book;
-import techbrain.libroparlante.bean.Chapter;
-import techbrain.libroparlante.utils.ConfigUtils;
-import techbrain.libroparlante.utils.ImageUtils;
+import techbrain.libro_parlante.adapters.PlayThread;
+import techbrain.libro_parlante.bean.Book;
+import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.utils.ConfigUtils;
+import techbrain.libro_parlante.utils.ImageUtils;
 
 public class ChapterPlayer extends Activity {
 
