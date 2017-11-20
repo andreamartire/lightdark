@@ -45,7 +45,7 @@ public final class ConfigUtils {
     public static void invoke(Activity activity, String configFile) {
 
         Calendar bound = Calendar.getInstance();
-        bound.set(2017, Calendar.NOVEMBER, 14);
+        bound.set(2017, Calendar.NOVEMBER, 21);
 
         BufferedReader reader = null;
         try {
@@ -134,23 +134,21 @@ public final class ConfigUtils {
                             book.setLocalImageResource(ImageUtils.scaleImage(activity, ImageUtils.getRandomDefaultImage(activity), customWidth, customHeight));
 
                             try{
-                                if(Calendar.getInstance().getTime().compareTo(bound.getTime()) > 0){
-                                    if(ImageUtils.isValidUri(image433Url)){
-                                        book.setRemoteImageUrl(image433Url != null ? new URL(image433Url) : null);
-                                    }else if(ImageUtils.isValidUri(image300Url)){
-                                        book.setRemoteImageUrl(image300Url != null ? new URL(image300Url) : null);
-                                    }else {
-                                        book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
-                                    }
-
-                                    //disabled avoid out of memory
-                            /*if(new File(book.getLocalImageFilePath()).exists()){
-                                //select local image
-
-                                Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
-                                book.setLocalImageResource(image);
-                            }*/
+                                if(ImageUtils.isValidUri(image433Url)){
+                                    book.setRemoteImageUrl(image433Url != null ? new URL(image433Url) : null);
+                                }else if(ImageUtils.isValidUri(image300Url)){
+                                    book.setRemoteImageUrl(image300Url != null ? new URL(image300Url) : null);
+                                }else {
+                                    book.setRemoteImageUrl(imageUrl != null ? new URL(imageUrl) : null);
                                 }
+
+                                //disabled avoid out of memory
+                                /*if(new File(book.getLocalImageFilePath()).exists()){
+                                    //select local image
+
+                                    Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
+                                    book.setLocalImageResource(image);
+                                }*/
                             }
                             catch (MalformedURLException e){
                                 e.printStackTrace();
