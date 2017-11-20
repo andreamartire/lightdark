@@ -34,6 +34,7 @@ import techbrain.libro_parlante.adapters.PlayThread;
 import techbrain.libro_parlante.bean.Book;
 import techbrain.libro_parlante.bean.Chapter;
 import techbrain.libro_parlante.task.SimpleDownloadTask;
+import techbrain.libro_parlante.utils.AppRater;
 import techbrain.libro_parlante.utils.ConfigUtils;
 import techbrain.libro_parlante.utils.ImageUtils;
 import techbrain.libro_parlante.utils.MyFileUtils;
@@ -46,6 +47,8 @@ public class AudioBookShowList extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audiobooks);
+
+        //AppRater.app_launched(this);
 
         MobileAds.initialize(this, "ca-app-pub-1872225169177247~3010272652");
 
