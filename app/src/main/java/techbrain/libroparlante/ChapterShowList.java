@@ -49,72 +49,75 @@ public class ChapterShowList extends Activity {
         mAdView.loadAd(adRequest);
 
         book = (Book) getIntent().getSerializableExtra(BOOK);
-        // convert to linked book
-        book = ConfigUtils.bookWithChapters.get(book.getBookDir());
 
-        ArrayList<Chapter> chapters = (ArrayList<Chapter>) getIntent().getSerializableExtra(CHAPTERS);
+        if(book != null){
+            // convert to linked book
+            book = ConfigUtils.bookWithChapters.get(book.getBookDir());
 
-        ArrayAdapter<Chapter> arrayAdapter = new ChapterAdapter(this.getBaseContext(), R.layout.single_chapter, chapters);
-        ListView chaptersListView = (ListView) findViewById(R.id.chapters_listview);
-        chaptersListView.setAdapter(arrayAdapter);
-        /*chaptersListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
-                ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) view.findViewById(R.id.playButton);
+            ArrayList<Chapter> chapters = (ArrayList<Chapter>) getIntent().getSerializableExtra(CHAPTERS);
 
-                Chapter currentChapter = playStreamButton.getChapter();
+            ArrayAdapter<Chapter> arrayAdapter = new ChapterAdapter(this.getBaseContext(), R.layout.single_chapter, chapters);
+            ListView chaptersListView = (ListView) findViewById(R.id.chapters_listview);
+            chaptersListView.setAdapter(arrayAdapter);
+            /*chaptersListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
+                    ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) view.findViewById(R.id.playButton);
 
-                if(currentChapter != null && currentChapter.existsLocalFile()){
-                    ChapterPlayer.startPlayer(currentContext, currentChapter);
-                }else{
-                    Toast.makeText(currentContext, "Effettua prima il download del capitolo", Toast.LENGTH_LONG).show();
+                    Chapter currentChapter = playStreamButton.getChapter();
+
+                    if(currentChapter != null && currentChapter.existsLocalFile()){
+                        ChapterPlayer.startPlayer(currentContext, currentChapter);
+                    }else{
+                        Toast.makeText(currentContext, "Effettua prima il download del capitolo", Toast.LENGTH_LONG).show();
+                    }
                 }
+            });*/
+
+            Integer realWidth = ImageUtils.getRealWidthSize(getWindowManager());
+
+            Drawable bookImage = book.getLocalImageResource();
+            String localFilePath = book.getLocalImageFilePath();
+
+            if(localFilePath != null && new File(localFilePath).exists()){
+                bookImage = Drawable.createFromPath(localFilePath);
             }
-        });*/
 
-        Integer realWidth = ImageUtils.getRealWidthSize(getWindowManager());
+            final Context me = this;
 
-        Drawable bookImage = book.getLocalImageResource();
-        String localFilePath = book.getLocalImageFilePath();
+            ImageView bookImageView = (ImageView) findViewById(R.id.chapterListCurrentPlayingBookImage);
+            bookImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                Chapter playingChapter = PlayThread.getPlayerState(me);
 
-        if(localFilePath != null && new File(localFilePath).exists()){
-            bookImage = Drawable.createFromPath(localFilePath);
-        }
+                if(playingChapter != null && playingChapter.getBook().getBookTitle().equals(book.getBookTitle())){
+                    Book currentBook = playingChapter.getBook();
 
-        final Context me = this;
+                    //fetch chapters - not saved in player state
+                    currentBook = ConfigUtils.bookWithChapters.get(currentBook.getBookDir());
 
-        ImageView bookImageView = (ImageView) findViewById(R.id.chapterListCurrentPlayingBookImage);
-        bookImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            Chapter playingChapter = PlayThread.getPlayerState(me);
+                    playingChapter = playingChapter.getMatchingChapter(currentBook.getChapters());
 
-            if(playingChapter != null && playingChapter.getBook().getBookTitle().equals(book.getBookTitle())){
-                Book currentBook = playingChapter.getBook();
+                    //resume old playing chapter
+                    ChapterPlayer.startPlayer(me, playingChapter);
+                }
+                }
+            });
 
-                //fetch chapters - not saved in player state
-                currentBook = ConfigUtils.bookWithChapters.get(currentBook.getBookDir());
+            if(bookImage != null){
+                bookImageView.setImageDrawable(ImageUtils.scaleImage(this, bookImage, realWidth, (int) realWidth*3/5));
+            }
 
-                playingChapter = playingChapter.getMatchingChapter(currentBook.getChapters());
+            Chapter playingChapter = (Chapter) getIntent().getSerializableExtra(PLAYING_CHAPTER);
 
+            if(playingChapter != null){
                 //resume old playing chapter
-                ChapterPlayer.startPlayer(me, playingChapter);
+                ChapterPlayer.startPlayer(this, playingChapter);
             }
-            }
-        });
 
-        if(bookImage != null){
-            bookImageView.setImageDrawable(ImageUtils.scaleImage(this, bookImage, realWidth, (int) realWidth*3/5));
+            checkCurrentPlayingState();
         }
-
-        Chapter playingChapter = (Chapter) getIntent().getSerializableExtra(PLAYING_CHAPTER);
-
-        if(playingChapter != null){
-            //resume old playing chapter
-            ChapterPlayer.startPlayer(this, playingChapter);
-        }
-
-        checkCurrentPlayingState();
     }
 
     @Override
@@ -125,7 +128,7 @@ public class ChapterShowList extends Activity {
 
     private void checkCurrentPlayingState() {
         Chapter oldPlayerState = PlayThread.getPlayerState(this);
-        if(oldPlayerState != null && oldPlayerState.getBook().getBookTitle().equals(book.getBookTitle())){
+        if(book != null && oldPlayerState != null && oldPlayerState.getBook().getBookTitle().equals(book.getBookTitle())){
             if(MyFileUtils.exists(oldPlayerState.getLocalFilePath())){
                 //Toast.makeText(this, "Player was playing: " + oldPlayerState.getFileName() + " at duration: " + oldPlayerState.getCurrentDuration() + "/" + oldPlayerState.getTotalDuration(), Toast.LENGTH_LONG).show();
                 TextView playingBookTitle = (TextView) this.findViewById(R.id.chapterListPlayBook_title);

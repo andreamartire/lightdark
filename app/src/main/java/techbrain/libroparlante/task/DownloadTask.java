@@ -1,5 +1,6 @@
 package techbrain.libroparlante.task;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.PowerManager;
@@ -148,7 +149,9 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
                     connection.disconnect();
             }
 
-            fileDownloaded = total >= fileLength;
+            if(total > 0 && fileLength > 0){
+                fileDownloaded = total >= fileLength;
+            }
 
             if(!fileDownloaded){
                 if(retryNum < MAX_RETRY) {
@@ -208,11 +211,11 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         }
         else {
             Toast.makeText(context, "File downloaded", Toast.LENGTH_SHORT).show();
-
-            //force repaint chapter list view
-            ListView chapterListView = (ListView) view.getRootView().findViewById(R.id.chapters_listview);
-            final ArrayAdapter adapter = ((ArrayAdapter) chapterListView.getAdapter());
-            adapter.notifyDataSetChanged();
         }
+
+        //force repaint chapter list view
+        ListView chapterListView = (ListView) view.getRootView().findViewById(R.id.chapters_listview);
+        final ArrayAdapter adapter = ((ArrayAdapter) chapterListView.getAdapter());
+        adapter.notifyDataSetChanged();
     }
 }

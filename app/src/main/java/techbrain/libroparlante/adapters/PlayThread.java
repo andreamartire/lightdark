@@ -153,11 +153,15 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
     }
 
     private void updateSeekBar() {
-        int currentPos = mediaPlayer.getCurrentPosition();
-        //update seek bar
-        int newPerc = currentPos*100/mediaPlayer.getDuration();
-        SeekBar seekBar = (SeekBar) currentContext.findViewById(R.id.seekBar);
-        seekBar.setProgress(newPerc);
+        try{
+            int currentPos = mediaPlayer.getCurrentPosition();
+            //update seek bar
+            int newPerc = currentPos*100/mediaPlayer.getDuration();
+            SeekBar seekBar = (SeekBar) currentContext.findViewById(R.id.seekBar);
+            seekBar.setProgress(newPerc);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public static String formatDuration(int duration) {
@@ -178,13 +182,15 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
 
     public void toggle() {
         final ImageButton playPauseButton = (ImageButton) currentContext.findViewById(R.id.playPauseButton);
-        if(mediaPlayer.isPlaying()){
-            mediaPlayer.pause();
-            playPauseButton.setImageResource(R.drawable.ic_play_arrow_black_72dp);
-        }else{
-            mediaPlayer.start();
-            playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
-            updatePlayer();
+        if(mediaPlayer != null){
+            if(mediaPlayer.isPlaying()){
+                mediaPlayer.pause();
+                playPauseButton.setImageResource(R.drawable.ic_play_arrow_black_72dp);
+            }else{
+                mediaPlayer.start();
+                playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
+                updatePlayer();
+            }
         }
     }
 
@@ -200,29 +206,31 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
     }
 
     public void forwardPlay(int seconds) {
-        int currPos = mediaPlayer.getCurrentPosition();
-        // + 10 sec
-        int newPos = currPos + seconds*1000;
+        if(mediaPlayer != null){
+            int currPos = mediaPlayer.getCurrentPosition();
+            // + 10 sec
+            int newPos = currPos + seconds*1000;
 
-        int duration = mediaPlayer.getDuration();
+            int duration = mediaPlayer.getDuration();
 
-        if(newPos > duration){
-            // last second
-            newPos = duration - 1000;
-        }else if(newPos < 0){
-            // reset to start
-            newPos = 0;
-        }
+            if(newPos > duration){
+                // last second
+                newPos = duration - 1000;
+            }else if(newPos < 0){
+                // reset to start
+                newPos = 0;
+            }
 
-        boolean wasPlaying = mediaPlayer.isPlaying();
+            boolean wasPlaying = mediaPlayer.isPlaying();
 
-        if(wasPlaying){
-            mediaPlayer.pause();
-            mediaPlayer.seekTo(newPos);
-            updatePlayer();
-            mediaPlayer.start();
-        }else{
-            //TODO
+            if(wasPlaying){
+                mediaPlayer.pause();
+                mediaPlayer.seekTo(newPos);
+                updatePlayer();
+                mediaPlayer.start();
+            }else{
+                //TODO
+            }
         }
     }
 
