@@ -1,4 +1,4 @@
-package techbrain.libroparlante;
+package techbrain.libro_parlante;
 
 /**
  * Created by andrea on 18/07/17.
@@ -29,14 +29,14 @@ import java.io.File;
 import java.io.Serializable;
 
 import newtech.audiolibrary.R;
-import techbrain.libroparlante.adapters.BookAdapter;
-import techbrain.libroparlante.adapters.PlayThread;
-import techbrain.libroparlante.bean.Book;
-import techbrain.libroparlante.bean.Chapter;
-import techbrain.libroparlante.task.SimpleDownloadTask;
-import techbrain.libroparlante.utils.ConfigUtils;
-import techbrain.libroparlante.utils.ImageUtils;
-import techbrain.libroparlante.utils.MyFileUtils;
+import techbrain.libro_parlante.adapters.BookAdapter;
+import techbrain.libro_parlante.adapters.PlayThread;
+import techbrain.libro_parlante.bean.Book;
+import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.task.SimpleDownloadTask;
+import techbrain.libro_parlante.utils.ConfigUtils;
+import techbrain.libro_parlante.utils.ImageUtils;
+import techbrain.libro_parlante.utils.MyFileUtils;
 
 public class AudioBookShowList extends Activity {
 

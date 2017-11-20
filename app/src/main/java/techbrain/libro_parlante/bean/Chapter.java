@@ -1,4 +1,4 @@
-package techbrain.libroparlante.bean;
+package techbrain.libro_parlante.bean;
 
 import java.io.File;
 import java.io.Serializable;

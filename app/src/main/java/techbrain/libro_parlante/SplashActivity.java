@@ -1,11 +1,11 @@
-package techbrain.libroparlante;
+package techbrain.libro_parlante;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
 import newtech.audiolibrary.R;
-import techbrain.libroparlante.utils.ConfigUtils;
+import techbrain.libro_parlante.utils.ConfigUtils;
 
 /**
  * Created by andrea on 18/10/17.

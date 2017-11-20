@@ -1,4 +1,4 @@
-package techbrain.libroparlante.buttons;
+package techbrain.libro_parlante.buttons;
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatImageButton;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
-import techbrain.libroparlante.bean.Chapter;
-import techbrain.libroparlante.task.DownloadTask;
+import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.task.DownloadTask;
 
 /**
  * Created by MartireAn on 28/08/2017.

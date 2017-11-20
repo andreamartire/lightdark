@@ -1,4 +1,4 @@
-package techbrain.libroparlante.buttons;
+package techbrain.libro_parlante.buttons;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -12,8 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import newtech.audiolibrary.R;
-import techbrain.libroparlante.bean.Chapter;
-import techbrain.libroparlante.utils.MyFileUtils;
+import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.utils.MyFileUtils;
 
 /**
  * Created by MartireAn on 28/08/2017.

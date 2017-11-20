@@ -1,4 +1,4 @@
-package techbrain.libroparlante.task;
+package techbrain.libro_parlante.task;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,8 +20,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import newtech.audiolibrary.R;
-import techbrain.libroparlante.bean.Chapter;
-import techbrain.libroparlante.utils.MyFileUtils;
+import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.utils.MyFileUtils;
 
 /**
  * Created by andrea on 17/05/17.
