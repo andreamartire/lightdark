@@ -122,7 +122,7 @@ public class CircularProgressBar extends ProgressBar{
         mBackgroundColorPaint.setStyle(Paint.Style.STROKE);
         mBackgroundColorPaint.setStrokeWidth(mStrokeWidth);
 
-        mTitlePaint.setTextSize(60);
+        mTitlePaint.setTextSize(20);
         mTitlePaint.setStyle(Style.FILL);
         mTitlePaint.setAntiAlias(true);
         mTitlePaint.setTypeface(Typeface.create("Roboto-Thin", Typeface.NORMAL));
@@ -179,6 +179,8 @@ public class CircularProgressBar extends ProgressBar{
     @Override
     public synchronized void setProgress(int progress) {
         super.setProgress(progress);
+
+        mTitle = progress+"%";
 
         // the setProgress super will not change the details of the progress bar
         // anymore so we need to force an update to redraw the progress bar

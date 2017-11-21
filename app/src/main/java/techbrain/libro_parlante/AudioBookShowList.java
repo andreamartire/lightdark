@@ -27,6 +27,7 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.io.File;
 import java.io.Serializable;
+import java.util.Calendar;
 
 import newtech.audiolibrary.R;
 import techbrain.libro_parlante.adapters.BookAdapter;
@@ -48,7 +49,11 @@ public class AudioBookShowList extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audiobooks);
 
-        //AppRater.app_launched(this);
+        Calendar bound = Calendar.getInstance();
+        bound.set(2017, Calendar.NOVEMBER, 21);
+        if(Calendar.getInstance().getTime().compareTo(bound.getTime()) > 0) {
+            AppRater.app_launched(this);
+        }
 
         MobileAds.initialize(this, "ca-app-pub-1872225169177247~3010272652");
 
