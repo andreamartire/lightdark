@@ -55,17 +55,19 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 //when complete play current chapter
-                playPauseButton.setImageResource(R.drawable.ic_pause_black_24dp);
+                playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
 
                 Chapter nextChapter = currentChapter.getNextChapter();
-                nextChapter.setCurrentDuration(0);
+                if(nextChapter != null){
+                    nextChapter.setCurrentDuration(0);
 
-                //auto play next chapter if exists
-                if(nextChapter != null && MyFileUtils.exists(nextChapter.getLocalFilePath())){
-                    //stop current activity
-                    currentContext.finish();
-                    //start another activity
-                    ChapterPlayer.startPlayer(currentContext.getApplicationContext(), nextChapter);
+                    //auto play next chapter if exists
+                    if(MyFileUtils.exists(nextChapter.getLocalFilePath())){
+                        //stop current activity
+                        currentContext.finish();
+                        //start another activity
+                        ChapterPlayer.startPlayer(currentContext.getApplicationContext(), nextChapter);
+                    }
                 }
             }
         });
