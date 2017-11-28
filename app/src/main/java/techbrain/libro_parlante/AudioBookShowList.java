@@ -10,7 +10,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -78,6 +80,12 @@ public class AudioBookShowList extends Activity {
         });
 
         final SearchView searchView = (SearchView) findViewById(R.id.searchView);
+
+        ListView listView = (ListView)findViewById(R.id.audiobooks_listview);
+
+        ViewGroup myHeader = (ViewGroup) getLayoutInflater().inflate(R.layout.resume_book, listView, false);
+        listView.addHeaderView(myHeader, null, false);
+
         final LinearLayout currentPlayingInfo = (LinearLayout) findViewById(R.id.currentPlayingInfo);
 
         searchView.setSubmitButtonEnabled(true);
@@ -85,6 +93,7 @@ public class AudioBookShowList extends Activity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 bookAdapter.getFilter().filter(query);
+                bookAdapter.notifyDataSetChanged();
                 currentPlayingInfo.setVisibility(View.GONE);
                 return false;
             }
@@ -101,7 +110,7 @@ public class AudioBookShowList extends Activity {
             }
         });
 
-        ListView listView = (ListView)findViewById(R.id.audiobooks_listview);
+
         bookAdapter = new BookAdapter(getBaseContext(), R.layout.single_book, ConfigUtils.bookList);
         listView.setAdapter(bookAdapter);
         //init tap listener

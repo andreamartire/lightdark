@@ -297,10 +297,12 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         if(currentChapter != null){
             int totalDuration = currentChapter.getTotalDuration();
             int newCurrentDuration = totalDuration*progressChanged/100;
-            mediaPlayer.pause();
-            mediaPlayer.seekTo(newCurrentDuration);
-            updatePlayer();
-            mediaPlayer.start();
+            if(mediaPlayer != null){
+                mediaPlayer.pause();
+                mediaPlayer.seekTo(newCurrentDuration);
+                updatePlayer();
+                mediaPlayer.start();
+            }
         }
     }
 }
