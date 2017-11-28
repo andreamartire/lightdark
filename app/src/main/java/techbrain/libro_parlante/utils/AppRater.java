@@ -89,10 +89,6 @@ public class AppRater {
         b3.setText("No, grazie");
         b3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (editor != null) {
-                    editor.putBoolean("dontshowagain", true);
-                    editor.commit();
-                }
                 dialog.dismiss();
             }
         });
