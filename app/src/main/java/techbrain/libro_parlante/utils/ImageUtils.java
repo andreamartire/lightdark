@@ -52,7 +52,14 @@ public class ImageUtils {
 
     public static Drawable scaleImage(Context context, Drawable image, int width, int length){
         Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
-        return new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(bitmap, width, length, true));
+        Drawable drawable = null;
+        try{
+            drawable = new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(bitmap, width, length, true));
+        }
+        catch (Throwable e){
+            e.printStackTrace();
+        }
+        return drawable;
     }
 
     public static Integer getRealWidthSize(WindowManager windowManager){

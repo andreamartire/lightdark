@@ -36,6 +36,12 @@ public class AppRater {
         if (date_firstLaunch == 0) {
             date_firstLaunch = System.currentTimeMillis();
             editor.putLong("date_firstlaunch", date_firstLaunch);
+        }else{
+            if (!prefs.getBoolean("resetted_rater", false)){
+                editor.putBoolean("dontshowagain", false);
+                editor.putBoolean("resetted_rater", true);
+                editor.commit();
+            }
         }
 
         // Wait at least n days before opening
