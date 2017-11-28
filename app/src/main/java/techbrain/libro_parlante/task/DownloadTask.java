@@ -215,7 +215,9 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
 
         //force repaint chapter list view
         ListView chapterListView = (ListView) view.getRootView().findViewById(R.id.chapters_listview);
-        final ArrayAdapter adapter = ((ArrayAdapter) chapterListView.getAdapter());
-        adapter.notifyDataSetChanged();
+        if(chapterListView != null){
+            final ArrayAdapter adapter = ((ArrayAdapter) chapterListView.getAdapter());
+            adapter.notifyDataSetChanged();
+        }
     }
 }

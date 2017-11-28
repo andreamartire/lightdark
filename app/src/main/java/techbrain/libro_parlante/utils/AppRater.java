@@ -71,6 +71,10 @@ public class AppRater {
             } catch (android.content.ActivityNotFoundException anfe) {
                 mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + APP_PNAME)));
             }
+            if (editor != null) {
+                editor.putBoolean("dontshowagain", true);
+                editor.commit();
+            }
             dialog.dismiss();
             }
         });

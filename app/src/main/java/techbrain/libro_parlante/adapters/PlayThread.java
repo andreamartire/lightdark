@@ -294,11 +294,13 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
     }
 
     public void seekToPercentage(int progressChanged) {
-        int totalDuration = currentChapter.getTotalDuration();
-        int newCurrentDuration = totalDuration*progressChanged/100;
-        mediaPlayer.pause();
-        mediaPlayer.seekTo(newCurrentDuration);
-        updatePlayer();
-        mediaPlayer.start();
+        if(currentChapter != null){
+            int totalDuration = currentChapter.getTotalDuration();
+            int newCurrentDuration = totalDuration*progressChanged/100;
+            mediaPlayer.pause();
+            mediaPlayer.seekTo(newCurrentDuration);
+            updatePlayer();
+            mediaPlayer.start();
+        }
     }
 }
