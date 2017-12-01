@@ -100,8 +100,10 @@ public class ChapterShowList extends Activity {
 
                         playingChapter = playingChapter.getMatchingChapter(currentBook.getChapters());
 
-                        //resume old playing chapter
-                        ChapterPlayer.startPlayer(me, playingChapter);
+                        if(MyFileUtils.exists(playingChapter.getLocalFilePath())){
+                            //resume old playing chapter
+                            ChapterPlayer.startPlayer(me, playingChapter);
+                        }
                     }
                     }
                 });

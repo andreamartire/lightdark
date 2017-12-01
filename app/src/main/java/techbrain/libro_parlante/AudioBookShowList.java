@@ -172,10 +172,12 @@ public class AudioBookShowList extends Activity {
 
     private void checkCurrentPlayingState() {
         Chapter oldPlayerState = PlayThread.getPlayerState(this);
+
+        LinearLayout currPlayingInfo = (LinearLayout) this.findViewById(R.id.currentPlayingInfo);;
+
         if(oldPlayerState != null){
             if(MyFileUtils.exists(oldPlayerState.getLocalFilePath())){
                 //Toast.makeText(this, "Player was playing: " + oldPlayerState.getFileName() + " at duration: " + oldPlayerState.getCurrentDuration() + "/" + oldPlayerState.getTotalDuration(), Toast.LENGTH_LONG).show();
-                LinearLayout currPlayingInfo = (LinearLayout) this.findViewById(R.id.currentPlayingInfo);
                 currPlayingInfo.setVisibility(View.VISIBLE);
 
                 RelativeLayout currPlayingInfoRelative = (RelativeLayout) this.findViewById(R.id.currentPlayingInfoRelative);
@@ -220,11 +222,11 @@ public class AudioBookShowList extends Activity {
                     }
                 }
 
-                ImageView resumeBookImageView = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
-
                 Integer realWidth = ImageUtils.getRealWidthSize(getWindowManager());
                 int customWidth = realWidth;
                 int customHeight = customWidth*3/5;
+
+                ImageView resumeBookImageView = (ImageView) this.findViewById(R.id.currentPlayingBookImage);
 
                 //select downloaded image
                 resumeBookImageView.setImageDrawable(ImageUtils.scaleImage(this, image, customWidth, customHeight));
@@ -232,6 +234,7 @@ public class AudioBookShowList extends Activity {
             }
             else{
                 //Toast.makeText(this, "Old playing chapter was deleted", Toast.LENGTH_LONG).show();
+                currPlayingInfo.setVisibility(View.GONE);
             }
         }else{
             // TODO no book playing

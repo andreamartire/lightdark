@@ -104,7 +104,7 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                 }
             });
 
-        } catch (IOException e) {
+        } catch (Throwable e) {
             e.printStackTrace();
         }
 
@@ -185,13 +185,17 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
     public void toggle() {
         final ImageButton playPauseButton = (ImageButton) currentContext.findViewById(R.id.playPauseButton);
         if(mediaPlayer != null){
-            if(mediaPlayer.isPlaying()){
-                mediaPlayer.pause();
-                playPauseButton.setImageResource(R.drawable.ic_play_arrow_black_72dp);
-            }else{
-                mediaPlayer.start();
-                playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
-                updatePlayer();
+            try{
+                if(mediaPlayer.isPlaying()){
+                    mediaPlayer.pause();
+                    playPauseButton.setImageResource(R.drawable.ic_play_arrow_black_72dp);
+                }else{
+                    mediaPlayer.start();
+                    playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
+                    updatePlayer();
+                }
+            }catch (Throwable t){
+                t.printStackTrace();
             }
         }
     }
@@ -298,10 +302,14 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             int totalDuration = currentChapter.getTotalDuration();
             int newCurrentDuration = totalDuration*progressChanged/100;
             if(mediaPlayer != null){
-                mediaPlayer.pause();
-                mediaPlayer.seekTo(newCurrentDuration);
-                updatePlayer();
-                mediaPlayer.start();
+                try{
+                    mediaPlayer.pause();
+                    mediaPlayer.seekTo(newCurrentDuration);
+                    updatePlayer();
+                    mediaPlayer.start();
+                }catch (Throwable t){
+                    t.printStackTrace();
+                }
             }
         }
     }
