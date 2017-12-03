@@ -130,7 +130,9 @@ public class ChapterPlayer extends Activity {
     public void onBackPressed() {
         super.onBackPressed();
 
-        playThread.stop();
+        if(playThread != null){
+            playThread.stop();
+        }
     }
 
     public static void startPlayer(Context context, Chapter currentChapter){
