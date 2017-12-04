@@ -9,6 +9,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -211,14 +212,14 @@ public class AudioBookShowList extends Activity {
 
                             //execute asynch download
                             SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
-                            sdt.execute();
+                            sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                         }
                     }else{
                         Book book = oldPlayerState.getBook();
 
                         //execute asynch download
                         SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
-                        sdt.execute();
+                        sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                     }
                 }
 

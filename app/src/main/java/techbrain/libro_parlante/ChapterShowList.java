@@ -7,6 +7,7 @@ package techbrain.libro_parlante;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -165,7 +166,7 @@ public class ChapterShowList extends Activity {
 
                             //execute asynch download
                             SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
-                            sdt.execute();
+                            sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                         }
 
                     }else{
@@ -173,7 +174,7 @@ public class ChapterShowList extends Activity {
 
                         //execute asynch download
                         SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
-                        sdt.execute();
+                        sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                     }
                 }
 

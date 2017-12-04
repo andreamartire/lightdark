@@ -1,6 +1,7 @@
 package techbrain.libro_parlante.buttons;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 import android.view.View;
@@ -79,7 +80,7 @@ public class ChapterDownloadButton extends AppCompatImageButton {
                 // execute this when the downloader must be fired
                 final DownloadTask downloadTask = new DownloadTask(currentContext, downloadProgress, currentChapter, v);
 
-                downloadTask.execute();
+                downloadTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
             } catch (Exception e) {
                 e.printStackTrace();
             }

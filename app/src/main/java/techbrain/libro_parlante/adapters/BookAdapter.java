@@ -2,6 +2,7 @@ package techbrain.libro_parlante.adapters;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -103,7 +104,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
                             return 0;
                             }
                         });
-                        sdt.execute();
+                        sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
                         //if downloaded
                         if(new File(book.getLocalImageFilePath()).exists()){

@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -122,7 +123,7 @@ public class ChapterPlayer extends Activity {
                 }
             });
 
-            playThread.execute();
+            playThread.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         }
     }
 
