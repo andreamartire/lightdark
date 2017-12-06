@@ -3,11 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/shareElement"
+        app:showAsAction="never"
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        android:title="Condividi" />
+
+    <item
+        android:id="@+id/contactElement"
+        app:showAsAction="never"
+        android:title="Contattaci" />
+
+    <item
         android:id="@+id/infoElement"
         android:icon="@drawable/ic_info_outline_black_24dp"
-        android:orderInCategory="200"
-        app:showAsAction="always"
-        android:title="Credits" />
+        app:showAsAction="never"
+        android:title="Info" />
 
 </menu>
 
