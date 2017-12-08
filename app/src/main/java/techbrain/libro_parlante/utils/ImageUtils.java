@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-import newtech.audiolibrary.R;
+import techbrain.libro_parlante.R;
 
 public class ImageUtils {
 

@@ -21,7 +21,7 @@ import com.google.android.gms.ads.AdView;
 
 import java.io.File;
 
-import newtech.audiolibrary.R;
+import techbrain.libro_parlante.R;
 import techbrain.libro_parlante.adapters.PlayThread;
 import techbrain.libro_parlante.bean.Book;
 import techbrain.libro_parlante.bean.Chapter;
@@ -123,7 +123,7 @@ public class ChapterPlayer extends Activity {
                 }
             });
 
-            playThread.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            playThread.execute();//OnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         }
     }
 

@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import newtech.audiolibrary.R;
+import techbrain.libro_parlante.R;
 import techbrain.libro_parlante.utils.ConfigUtils;
 
 /**

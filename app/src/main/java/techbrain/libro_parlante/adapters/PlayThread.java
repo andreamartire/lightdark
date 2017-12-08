@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import techbrain.libro_parlante.ChapterPlayer;
-import newtech.audiolibrary.R;
+import techbrain.libro_parlante.R;
 import techbrain.libro_parlante.bean.Book;
 import techbrain.libro_parlante.bean.Chapter;
 import techbrain.libro_parlante.utils.ConfigUtils;

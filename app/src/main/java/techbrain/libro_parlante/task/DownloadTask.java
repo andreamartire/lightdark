@@ -19,7 +19,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import newtech.audiolibrary.R;
+import techbrain.libro_parlante.R;
 import techbrain.libro_parlante.bean.Chapter;
 import techbrain.libro_parlante.utils.MyFileUtils;
 

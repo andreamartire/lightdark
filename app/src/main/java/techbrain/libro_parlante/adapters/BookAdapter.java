@@ -16,7 +16,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.concurrent.Callable;
 
-import newtech.audiolibrary.R;
+import techbrain.libro_parlante.R;
 import techbrain.libro_parlante.bean.Book;
 import techbrain.libro_parlante.task.SimpleDownloadTask;
 import techbrain.libro_parlante.utils.ImageUtils;
@@ -106,7 +106,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
                         });
 
                         try{
-                            sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                            sdt.execute();//OnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                         }
                         catch (Throwable t){
                             t.printStackTrace();

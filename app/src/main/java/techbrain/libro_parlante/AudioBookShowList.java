@@ -41,7 +41,7 @@ import java.io.File;
 import java.io.Serializable;
 import java.util.Calendar;
 
-import newtech.audiolibrary.R;
+import techbrain.libro_parlante.R;
 import techbrain.libro_parlante.adapters.BookAdapter;
 import techbrain.libro_parlante.adapters.PlayThread;
 import techbrain.libro_parlante.bean.Book;
@@ -254,14 +254,14 @@ public class AudioBookShowList extends AppCompatActivity {
 
                             //execute asynch download
                             SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
-                            sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                            sdt.execute();//OnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                         }
                     }else{
                         Book book = oldPlayerState.getBook();
 
                         //execute asynch download
                         SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
-                        sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                        sdt.execute();//OnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                     }
                 }
 

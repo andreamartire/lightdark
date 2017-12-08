@@ -21,7 +21,7 @@ import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.ProgressBar;
 
-import newtech.audiolibrary.R;
+import techbrain.libro_parlante.R;
 
 public class CircularProgressBar extends ProgressBar{
     private static final String TAG = "CircularProgressBar";

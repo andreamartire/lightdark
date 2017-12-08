@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import newtech.audiolibrary.R;
+import techbrain.libro_parlante.R;
 import techbrain.libro_parlante.bean.Chapter;
 import techbrain.libro_parlante.buttons.ChapterDeleteButton;
 import techbrain.libro_parlante.buttons.ChapterDownloadButton;
