@@ -73,9 +73,8 @@ public class AudioBookShowList extends AppCompatActivity {
 
                 String shareBodyText = getResources().getString(R.string.share_message);
 
-                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Subject here");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
-                startActivity(Intent.createChooser(sharingIntent, "Shearing Option"));
+                startActivity(Intent.createChooser(sharingIntent, "Share"));
                 return true;
 
             case R.id.infoElement:
@@ -254,14 +253,22 @@ public class AudioBookShowList extends AppCompatActivity {
 
                             //execute asynch download
                             SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
-                            sdt.execute();//OnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                            try{
+                                sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                            } catch (Throwable t){
+                                t.printStackTrace();
+                            }
                         }
                     }else{
                         Book book = oldPlayerState.getBook();
 
                         //execute asynch download
                         SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
-                        sdt.execute();//OnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                        try{
+                            sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                        } catch (Throwable t){
+                            t.printStackTrace();
+                        }
                     }
                 }
 

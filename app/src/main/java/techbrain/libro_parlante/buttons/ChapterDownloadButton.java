@@ -80,7 +80,11 @@ public class ChapterDownloadButton extends AppCompatImageButton {
                 // execute this when the downloader must be fired
                 final DownloadTask downloadTask = new DownloadTask(currentContext, downloadProgress, currentChapter, v);
 
-                downloadTask.execute();//OnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                try{
+                    downloadTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                }catch (Throwable t){
+                    t.printStackTrace();
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }

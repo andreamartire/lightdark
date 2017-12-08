@@ -123,7 +123,12 @@ public class ChapterPlayer extends Activity {
                 }
             });
 
-            playThread.execute();//OnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            try{
+                playThread.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            } catch (Throwable t){
+                t.printStackTrace();
+            }
+
         }
     }
 

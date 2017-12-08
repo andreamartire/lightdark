@@ -70,9 +70,8 @@ public class ChapterShowList extends AppCompatActivity {
                     shareBodyText = "Ascolta " + book.getBookTitle() + " sull'app gratuita " + appName + " " + appUrl;
                 }
 
-                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Subject here");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
-                startActivity(Intent.createChooser(sharingIntent, "Shearing Option"));
+                startActivity(Intent.createChooser(sharingIntent, "Share"));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -209,7 +208,7 @@ public class ChapterShowList extends AppCompatActivity {
                             //execute asynch download
                             SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
                             try{
-                                sdt.execute();//OnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                                sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                             }
                             catch (Throwable t){
                                 t.printStackTrace();
@@ -222,7 +221,7 @@ public class ChapterShowList extends AppCompatActivity {
                         //execute asynch download
                         SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
                         try{
-                            sdt.execute();//OnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                            sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                         }
                         catch (Throwable t){
                             t.printStackTrace();

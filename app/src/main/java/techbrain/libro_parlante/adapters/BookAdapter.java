@@ -106,9 +106,8 @@ public class BookAdapter extends ArrayAdapter<Book> {
                         });
 
                         try{
-                            sdt.execute();//OnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-                        }
-                        catch (Throwable t){
+                            sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                        } catch (Throwable t){
                             t.printStackTrace();
                         }
 
