@@ -104,7 +104,13 @@ public class BookAdapter extends ArrayAdapter<Book> {
                             return 0;
                             }
                         });
-                        sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+                        try{
+                            sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                        }
+                        catch (Throwable t){
+                            t.printStackTrace();
+                        }
 
                         //if downloaded
                         if(new File(book.getLocalImageFilePath()).exists()){
