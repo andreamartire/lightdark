@@ -47,31 +47,37 @@ public class ChapterShowList extends AppCompatActivity {
 
     public Book book;
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.menu_toolbar_chapters, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        final Context me = this;
-//
-//        switch (item.getItemId()) {
-//            case R.id.chapterShareElement:
-//                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-//                sharingIntent.setType("text/plain");
-//
-//                String shareBodyText = getResources().getString(R.string.share_message);
-//
-//                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Subject here");
-//                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
-//                startActivity(Intent.createChooser(sharingIntent, "Shearing Option"));
-//                return true;
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_toolbar_chapters, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        final Context me = this;
+
+        switch (item.getItemId()) {
+            case R.id.chapterShareElement:
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+
+                String shareBodyText = getResources().getString(R.string.share_message);
+
+                if(book != null){
+                    String appName = getResources().getString(R.string.app_name);
+                    String appUrl = getResources().getString(R.string.app_url);
+                    shareBodyText = "Ascolta " + book.getBookTitle() + " sull'app gratuita " + appName + " " + appUrl;
+                }
+
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Subject here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
+                startActivity(Intent.createChooser(sharingIntent, "Shearing Option"));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -82,9 +88,9 @@ public class ChapterShowList extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-//        Toolbar myToolbar = (Toolbar) findViewById(R.id.chaptersToolbar);
-//        myToolbar.showOverflowMenu();
-//        setSupportActionBar(myToolbar);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.chaptersToolbar);
+        myToolbar.showOverflowMenu();
+        setSupportActionBar(myToolbar);
 
         book = (Book) getIntent().getSerializableExtra(BOOK);
 
