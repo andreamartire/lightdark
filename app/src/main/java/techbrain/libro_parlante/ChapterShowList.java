@@ -67,7 +67,7 @@ public class ChapterShowList extends AppCompatActivity {
                 if(book != null){
                     String appName = getResources().getString(R.string.app_name);
                     String appUrl = getResources().getString(R.string.app_url);
-                    shareBodyText = "Ascolta " + book.getBookTitle() + " sull'app gratuita " + appName + " " + appUrl;
+                    shareBodyText = "Ascolta \"" + book.getBookTitle() + "\" sull'app gratuita " + appName + " " + appUrl;
                 }
 
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);

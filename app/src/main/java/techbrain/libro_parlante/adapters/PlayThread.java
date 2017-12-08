@@ -43,6 +43,14 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
         this.currentChapter = currentChapter;
     }
 
+    public Chapter getCurrentChapter() {
+        return currentChapter;
+    }
+
+    public void setCurrentChapter(Chapter currentChapter) {
+        this.currentChapter = currentChapter;
+    }
+
     @Override
     protected String doInBackground(String... params) {
         //play local resource

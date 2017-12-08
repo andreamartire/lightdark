@@ -11,6 +11,10 @@ import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -28,11 +32,42 @@ import techbrain.libro_parlante.bean.Chapter;
 import techbrain.libro_parlante.utils.ConfigUtils;
 import techbrain.libro_parlante.utils.ImageUtils;
 
-public class ChapterPlayer extends Activity {
+public class ChapterPlayer extends AppCompatActivity {
 
     public static String CHAPTER = "CHAPTER";
 
     static PlayThread playThread;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_toolbar_player, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        final Context me = this;
+
+        switch (item.getItemId()) {
+            case R.id.playerShareElement:
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+
+                String shareBodyText = getResources().getString(R.string.share_message);
+
+                if(playThread.getCurrentChapter() != null && playThread.getCurrentChapter().getBook() != null){
+                    String appName = getResources().getString(R.string.app_name);
+                    String appUrl = getResources().getString(R.string.app_url);
+                    shareBodyText = "Ascolta \"" + playThread.getCurrentChapter().getBook().getBookTitle() + "\" sull'app gratuita " + appName + " " + appUrl;
+                }
+
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
+                startActivity(Intent.createChooser(sharingIntent, "Share"));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +77,10 @@ public class ChapterPlayer extends Activity {
         AdView mAdView = (AdView) findViewById(R.id.adViewPlayer);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.playerToolbar);
+        myToolbar.showOverflowMenu();
+        setSupportActionBar(myToolbar);
 
         Chapter currentChapter = (Chapter) getIntent().getSerializableExtra(CHAPTER);
         Book linkedBook = ConfigUtils.bookWithChapters.get(currentChapter.getBook().getBookDir());
