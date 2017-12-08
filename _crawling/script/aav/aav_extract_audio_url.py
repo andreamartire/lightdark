@@ -34,6 +34,18 @@ for i in range(len(rows)):
 			print("--- ADD ---"+str(regContent.match(rows[i]).group(1)))
 			listContentId.append(str(regContent.match(rows[i]).group(1)))
 
+#forced
+listContentId = []
+listContentId.append("ContentSet-ba2adb81-4f5d-4b1d-bd9c-260795ab83a0")
+listContentId.append("ContentSet-670645b1-6682-4f0f-8a04-eb2da46ad44f")
+listContentId.append("ContentSet-71db4d54-d2cb-4de5-8d6e-c3bea3be1cdd")
+listContentId.append("ContentSet-02accbcf-8600-414b-a388-ca3dbdebe343")
+listContentId.append("ContentSet-93d2d9c7-36c0-4549-9f12-630d1a1d60a7")
+listContentId.append("ContentSet-37b0616b-00fe-4d23-a558-fbac8ecd33d9")
+listContentId.append("ContentSet-167dcc4d-de1c-4e98-81cc-43278c181085")
+listContentId.append("ContentSet-bad82ff4-4925-4f23-9b8c-86deda1bf7ba")
+listContentId.append("ContentSet-1ea9f5c2-be75-43ba-8b03-0501cc41828d")
+
 #Example http://www.radio3.rai.it/dl/portaleRadio/Programmi/Page-9fe19bce-1c27-4b63-b41e-2d7581d21374.html?set=ContentSet-b63181f3-deec-4cb7-84db-96169b0725e7&type=A
 
 audiobooks = []

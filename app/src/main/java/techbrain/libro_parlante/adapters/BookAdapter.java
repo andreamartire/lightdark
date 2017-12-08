@@ -90,7 +90,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
                     }else{
                         final BookAdapter arrayAdapter = this;
                         //download file out of main thread
-                        SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), new Callable<Integer>() {
+                        SimpleDownloadTask sdt = new SimpleDownloadTask(context, book.getRemoteImageUrl(), book.getLocalImageFilePath(), new Callable<Integer>() {
                             @Override
                             public Integer call() throws Exception {
                             arrayAdapter.notifyDataSetChanged();

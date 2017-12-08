@@ -100,9 +100,9 @@ public class ChapterShowList extends AppCompatActivity {
             if(book != null){
                 ArrayList<Chapter> chapters = (ArrayList<Chapter>) getIntent().getSerializableExtra(CHAPTERS);
 
-                ArrayAdapter<Chapter> arrayAdapter = new ChapterAdapter(this.getBaseContext(), R.layout.single_chapter, chapters);
+                ArrayAdapter<Chapter> arrayChapterAdapter = new ChapterAdapter(this.getBaseContext(), R.layout.single_chapter, chapters);
                 ListView chaptersListView = (ListView) findViewById(R.id.chapters_listview);
-                chaptersListView.setAdapter(arrayAdapter);
+                chaptersListView.setAdapter(arrayChapterAdapter);
                 /*chaptersListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
@@ -117,6 +117,10 @@ public class ChapterShowList extends AppCompatActivity {
                         }
                     }
                 });*/
+
+//                for(Chapter ch : chapters){
+//                    ch.setChapterAdapter(arrayChapterAdapter);
+//                }
 
                 Integer realWidth = ImageUtils.getRealWidthSize(getWindowManager());
 
@@ -206,7 +210,7 @@ public class ChapterShowList extends AppCompatActivity {
                             Book book = oldPlayerState.getBook();
 
                             //execute asynch download
-                            SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
+                            SimpleDownloadTask sdt = new SimpleDownloadTask(this, book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
                             try{
                                 sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                             }
@@ -219,7 +223,7 @@ public class ChapterShowList extends AppCompatActivity {
                         Book book = oldPlayerState.getBook();
 
                         //execute asynch download
-                        SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
+                        SimpleDownloadTask sdt = new SimpleDownloadTask(this, book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
                         try{
                             sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                         }

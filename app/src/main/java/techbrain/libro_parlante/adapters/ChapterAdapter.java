@@ -42,6 +42,7 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
                 LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 convertView = vi.inflate(R.layout.single_chapter, null);
             }
+
             TextView chapterTitle = (TextView) convertView.findViewById(R.id.chapterTitle);
             chapterTitle.setText(chapter.getChapterTitle());
 

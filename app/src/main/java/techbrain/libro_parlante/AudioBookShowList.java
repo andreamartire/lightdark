@@ -252,7 +252,7 @@ public class AudioBookShowList extends AppCompatActivity {
                             Book book = oldPlayerState.getBook();
 
                             //execute asynch download
-                            SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
+                            SimpleDownloadTask sdt = new SimpleDownloadTask(this, book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
                             try{
                                 sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                             } catch (Throwable t){
@@ -263,7 +263,7 @@ public class AudioBookShowList extends AppCompatActivity {
                         Book book = oldPlayerState.getBook();
 
                         //execute asynch download
-                        SimpleDownloadTask sdt = new SimpleDownloadTask(book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
+                        SimpleDownloadTask sdt = new SimpleDownloadTask(this, book.getRemoteImageUrl(), book.getLocalImageFilePath(), null);
                         try{
                             sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                         } catch (Throwable t){
