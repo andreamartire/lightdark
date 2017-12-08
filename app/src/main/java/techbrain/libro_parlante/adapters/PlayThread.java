@@ -56,6 +56,10 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             public void onCompletion(MediaPlayer mp) {
                 //when complete play current chapter
                 playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
+                if(mediaPlayer != null){
+                    mediaPlayer.stop();
+                    mediaPlayer.release();
+                }
 
                 Chapter nextChapter = currentChapter.getNextChapter();
                 if(nextChapter != null){
