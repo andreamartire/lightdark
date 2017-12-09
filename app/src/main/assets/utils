@@ -1,0 +1,1 @@
+cat config.json | grep -P "\"url\": \"\K.*" -o > filtered

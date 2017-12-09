@@ -224,31 +224,33 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
     }
 
     public void forwardPlay(int seconds) {
-        if(mediaPlayer != null){
-            int currPos = mediaPlayer.getCurrentPosition();
-            // + 10 sec
-            int newPos = currPos + seconds*1000;
+        try{
+            if(mediaPlayer != null){
+                int currPos = mediaPlayer.getCurrentPosition();
+                // + 10 sec
+                int newPos = currPos + seconds*1000;
 
-            int duration = mediaPlayer.getDuration();
+                int duration = mediaPlayer.getDuration();
 
-            if(newPos > duration){
-                // last second
-                newPos = duration - 1000;
-            }else if(newPos < 0){
-                // reset to start
-                newPos = 0;
+                if(newPos > duration){
+                    // last second
+                    newPos = duration - 1000;
+                }else if(newPos < 0){
+                    // reset to start
+                    newPos = 0;
+                }
+
+                boolean wasPlaying = mediaPlayer.isPlaying();
+
+                if(wasPlaying){
+                    mediaPlayer.pause();
+                    mediaPlayer.seekTo(newPos);
+                    updatePlayer();
+                    mediaPlayer.start();
+                }
             }
-
-            boolean wasPlaying = mediaPlayer.isPlaying();
-
-            if(wasPlaying){
-                mediaPlayer.pause();
-                mediaPlayer.seekTo(newPos);
-                updatePlayer();
-                mediaPlayer.start();
-            }else{
-                //TODO
-            }
+        }catch (Throwable t){
+            t.printStackTrace();
         }
     }
 
