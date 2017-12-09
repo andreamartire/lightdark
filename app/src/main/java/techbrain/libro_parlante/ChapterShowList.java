@@ -161,11 +161,16 @@ public class ChapterShowList extends AppCompatActivity {
     }
 
     private void checkCurrentPlayingState() {
+        TextView playingBookTitle = (TextView) this.findViewById(R.id.chapterListPlayBook_title);
+        if(book != null){
+            playingBookTitle.setText(book.getBookTitle());
+        }
+
         Chapter oldPlayerState = PlayThread.getPlayerState(this);
         if(book != null && oldPlayerState != null && oldPlayerState.getBook().getBookTitle().equals(book.getBookTitle())){
             if(MyFileUtils.exists(oldPlayerState.getLocalFilePath())){
                 //Toast.makeText(this, "Player was playing: " + oldPlayerState.getFileName() + " at duration: " + oldPlayerState.getCurrentDuration() + "/" + oldPlayerState.getTotalDuration(), Toast.LENGTH_LONG).show();
-                TextView playingBookTitle = (TextView) this.findViewById(R.id.chapterListPlayBook_title);
+
                 playingBookTitle.setText(oldPlayerState.getBook().getBookTitle());
                 TextView playingChapterTitle = (TextView) this.findViewById(R.id.chapterListPlayChapter_title);
                 playingChapterTitle.setText(oldPlayerState.getChapterTitle());
