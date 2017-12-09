@@ -2,10 +2,12 @@ package techbrain.libro_parlante.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -14,6 +16,7 @@ import techbrain.libro_parlante.bean.Chapter;
 import techbrain.libro_parlante.buttons.ChapterDeleteButton;
 import techbrain.libro_parlante.buttons.ChapterDownloadButton;
 import techbrain.libro_parlante.buttons.ChapterPlayStreamButton;
+import techbrain.libro_parlante.utils.MyFileUtils;
 
 /**
  * Created by MartireAn on 27/08/2017.
@@ -35,7 +38,7 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        Chapter chapter = chapters.get(position);
+        final Chapter chapter = chapters.get(position);
 
         if (chapter != null){
             if (convertView == null){
@@ -43,17 +46,27 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
                 convertView = vi.inflate(R.layout.single_chapter, null);
             }
 
-            TextView chapterTitle = (TextView) convertView.findViewById(R.id.chapterTitle);
-            chapterTitle.setText(chapter.getChapterTitle());
-
-            ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) convertView.findViewById(R.id.playButton);
+            final ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) convertView.findViewById(R.id.playButton);
             playStreamButton.setChapter(chapter);
 
-            ChapterDownloadButton downloadButton = (ChapterDownloadButton) convertView.findViewById(R.id.downloadButton);
+            final ChapterDownloadButton downloadButton = (ChapterDownloadButton) convertView.findViewById(R.id.downloadButton);
             downloadButton.setChapter(chapter);
 
             ChapterDeleteButton deleteButton = (ChapterDeleteButton) convertView.findViewById(R.id.deleteButton);
             deleteButton.setChapter(chapter);
+
+            TextView chapterTitle = (TextView) convertView.findViewById(R.id.chapterTitle);
+            chapterTitle.setText(chapter.getChapterTitle());
+            chapterTitle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(!MyFileUtils.exists(chapter.getLocalFilePath())){
+                        downloadButton.callOnClick();
+                    }else{
+                        playStreamButton.callOnClick();
+                    }
+                }
+            });
 
             if(!chapter.isDownloading()){
                 if(chapter.existsLocalFile()){

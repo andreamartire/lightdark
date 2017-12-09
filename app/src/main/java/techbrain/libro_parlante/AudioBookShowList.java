@@ -112,6 +112,7 @@ public class AudioBookShowList extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         myToolbar.showOverflowMenu();
+        myToolbar.setTitleTextColor(0xFFFFFFFF);
         setSupportActionBar(myToolbar);
 
         MobileAds.initialize(this, "ca-app-pub-1872225169177247~3010272652");

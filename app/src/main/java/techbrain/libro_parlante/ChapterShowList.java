@@ -89,6 +89,7 @@ public class ChapterShowList extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.chaptersToolbar);
         myToolbar.showOverflowMenu();
+        myToolbar.setTitleTextColor(0xFFFFFFFF);
         setSupportActionBar(myToolbar);
 
         book = (Book) getIntent().getSerializableExtra(BOOK);
@@ -103,24 +104,6 @@ public class ChapterShowList extends AppCompatActivity {
                 ArrayAdapter<Chapter> arrayChapterAdapter = new ChapterAdapter(this.getBaseContext(), R.layout.single_chapter, chapters);
                 ListView chaptersListView = (ListView) findViewById(R.id.chapters_listview);
                 chaptersListView.setAdapter(arrayChapterAdapter);
-                /*chaptersListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-                    @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
-                        ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) view.findViewById(R.id.playButton);
-
-                        Chapter currentChapter = playStreamButton.getChapter();
-
-                        if(currentChapter != null && currentChapter.existsLocalFile()){
-                            ChapterPlayer.startPlayer(currentContext, currentChapter);
-                        }else{
-                            Toast.makeText(currentContext, "Effettua prima il download del capitolo", Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });*/
-
-//                for(Chapter ch : chapters){
-//                    ch.setChapterAdapter(arrayChapterAdapter);
-//                }
 
                 Integer realWidth = ImageUtils.getRealWidthSize(getWindowManager());
 

@@ -6,22 +6,29 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import techbrain.libro_parlante.R;
 
 /**
  * Created by andrea on 20/11/17.
  */
 
 public class AppRater {
-    private final static String APP_TITLE = "Libro Parlante";// App Name
-    private final static String APP_PNAME = "tech_brain.libro_parlante";// Package Name
 
+    private static String APP_TITLE = "";
+    private static String APP_PNAME = "";
     private final static int DAYS_UNTIL_PROMPT = 0;//Min number of days
     private final static int LAUNCHES_UNTIL_PROMPT = 3;//Min number of launches
 
     public static void app_launched(Context mContext) {
+
+        AppRater.APP_TITLE = mContext.getResources().getString(R.string.app_name);
+        AppRater.APP_PNAME = mContext.getPackageName();
+
         SharedPreferences prefs = mContext.getSharedPreferences("apprater", 0);
         if (prefs.getBoolean("dontshowagain", false)) {
             return ;
@@ -59,7 +66,7 @@ public class AppRater {
 
     public static void showRateDialog(final Context mContext, final SharedPreferences.Editor editor) {
         final Dialog dialog = new Dialog(mContext);
-        dialog.setTitle("Rate " + APP_TITLE);
+        dialog.setTitle("Valuta " + APP_TITLE);
 
         LinearLayout ll = new LinearLayout(mContext);
         ll.setOrientation(LinearLayout.VERTICAL);
@@ -67,6 +74,7 @@ public class AppRater {
         TextView tv = new TextView(mContext);
         tv.setText("Se ti piace quest'app, per favore lascia una recensione. Grazie per il tuo supporto!");
         tv.setWidth(240);
+        tv.setHeight(150);
         tv.setPadding(20, 20, 20, 20);
         ll.addView(tv);
 

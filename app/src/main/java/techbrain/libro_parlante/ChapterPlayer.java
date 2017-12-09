@@ -80,6 +80,7 @@ public class ChapterPlayer extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.playerToolbar);
         myToolbar.showOverflowMenu();
+        myToolbar.setTitleTextColor(0xFFFFFFFF);
         setSupportActionBar(myToolbar);
 
         Chapter currentChapter = (Chapter) getIntent().getSerializableExtra(CHAPTER);

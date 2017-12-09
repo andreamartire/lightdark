@@ -180,7 +180,7 @@ public class CircularProgressBar extends ProgressBar{
     public synchronized void setProgress(int progress) {
         super.setProgress(progress);
 
-        mTitle = progress+"%";
+        mTitle = progress+"";
 
         // the setProgress super will not change the details of the progress bar
         // anymore so we need to force an update to redraw the progress bar
