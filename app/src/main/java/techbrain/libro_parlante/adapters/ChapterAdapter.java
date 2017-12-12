@@ -38,52 +38,56 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        final Chapter chapter = chapters.get(position);
+        try {
+            final Chapter chapter = chapters.get(position);
 
-        if (chapter != null){
-            if (convertView == null){
-                LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView = vi.inflate(R.layout.single_chapter, null);
-            }
-
-            final ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) convertView.findViewById(R.id.playButton);
-            playStreamButton.setChapter(chapter);
-
-            final ChapterDownloadButton downloadButton = (ChapterDownloadButton) convertView.findViewById(R.id.downloadButton);
-            downloadButton.setChapter(chapter);
-
-            ChapterDeleteButton deleteButton = (ChapterDeleteButton) convertView.findViewById(R.id.deleteButton);
-            deleteButton.setChapter(chapter);
-
-            TextView chapterTitle = (TextView) convertView.findViewById(R.id.chapterTitle);
-            chapterTitle.setText(chapter.getChapterTitle());
-            chapterTitle.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(!MyFileUtils.exists(chapter.getLocalFilePath())){
-                        downloadButton.callOnClick();
-                    }else{
-                        playStreamButton.callOnClick();
-                    }
+            if (chapter != null){
+                if (convertView == null){
+                    LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    convertView = vi.inflate(R.layout.single_chapter, null);
                 }
-            });
 
-            if(!chapter.isDownloading()){
-                if(chapter.existsLocalFile()){
-                    playStreamButton.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-                    playStreamButton.setVisibility(View.VISIBLE);
-                    downloadButton.setVisibility(View.GONE);
-                    deleteButton.setVisibility(View.VISIBLE);
-                } else {
+                final ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) convertView.findViewById(R.id.playButton);
+                playStreamButton.setChapter(chapter);
+
+                final ChapterDownloadButton downloadButton = (ChapterDownloadButton) convertView.findViewById(R.id.downloadButton);
+                downloadButton.setChapter(chapter);
+
+                ChapterDeleteButton deleteButton = (ChapterDeleteButton) convertView.findViewById(R.id.deleteButton);
+                deleteButton.setChapter(chapter);
+
+                TextView chapterTitle = (TextView) convertView.findViewById(R.id.chapterTitle);
+                chapterTitle.setText(chapter.getChapterTitle());
+                chapterTitle.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(!MyFileUtils.exists(chapter.getLocalFilePath())){
+                            downloadButton.callOnClick();
+                        }else{
+                            playStreamButton.callOnClick();
+                        }
+                    }
+                });
+
+                if(!chapter.isDownloading()){
+                    if(chapter.existsLocalFile()){
+                        playStreamButton.setImageResource(R.drawable.ic_play_arrow_black_24dp);
+                        playStreamButton.setVisibility(View.VISIBLE);
+                        downloadButton.setVisibility(View.GONE);
+                        deleteButton.setVisibility(View.VISIBLE);
+                    } else {
+                        playStreamButton.setVisibility(View.GONE);
+                        downloadButton.setVisibility(View.VISIBLE);
+                        deleteButton.setVisibility(View.GONE);
+                    }
+                }else{
                     playStreamButton.setVisibility(View.GONE);
-                    downloadButton.setVisibility(View.VISIBLE);
+                    downloadButton.setVisibility(View.GONE);
                     deleteButton.setVisibility(View.GONE);
                 }
-            }else{
-                playStreamButton.setVisibility(View.GONE);
-                downloadButton.setVisibility(View.GONE);
-                deleteButton.setVisibility(View.GONE);
             }
+        }catch (Throwable t){
+            t.printStackTrace();
         }
 
         return convertView;

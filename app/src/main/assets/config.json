@@ -33,7 +33,7 @@
             ],
             "metadata": {
                 "author": "Antonio Gramsci",
-                "image": "liberliber.it/online/wp-content/uploads/2015/03/albero_riccio.jpg",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2015/03/albero_riccio.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -668,7 +668,7 @@
             ],
             "metadata": {
                 "author": "Charles Dickens",
-                "image": "liberliber.it/online/wp-content/uploads/2015/04/le_avventure_di_nicole_nickleby.jpg",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2015/04/le_avventure_di_nicole_nickleby.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -939,7 +939,7 @@
             ],
             "metadata": {
                 "author": "Maksim Gor'kij (Aleksej Maksimovi\u010d Pe\u0161kov)",
-                "image": "liberliber.it/online/wp-content/uploads/2015/04/il_burlone_gorkij.jpg",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2015/04/il_burlone_gorkij.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -1757,7 +1757,7 @@
             ],
             "metadata": {
                 "author": "Antonio Ghislanzoni",
-                "image": "liberliber.it/online/wp-content/uploads/2015/04/la_contessa_di_karolystria.jpg",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2015/04/la_contessa_di_karolystria.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -5954,7 +5954,7 @@
             ],
             "metadata": {
                 "author": "Ferdinando Paolieri",
-                "image": "liberliber.it/online/wp-content/uploads/2016/10/alinovi_bagnone_in_lunigiana.jpg",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2016/10/alinovi_bagnone_in_lunigiana.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -6200,7 +6200,7 @@
             ],
             "metadata": {
                 "author": "Ferdinando Paolieri",
-                "image": "liberliber.it/online/wp-content/uploads/2015/04/novelle_selvagge.jpg",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2015/04/novelle_selvagge.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -6372,7 +6372,7 @@
             ],
             "metadata": {
                 "author": "Ferdinando Paolieri",
-                "image": "liberliber.it/online/wp-content/uploads/2015/04/novelle_toscane.jpg",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2015/04/novelle_toscane.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -10461,7 +10461,7 @@
             ],
             "metadata": {
                 "author": "Matilde Serao",
-                "image": "liberliber.it/online/wp-content/uploads/2016/10/pensiero_malinconico.jpg",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2016/10/pensiero_malinconico.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -11064,7 +11064,7 @@
             ],
             "metadata": {
                 "author": "Gherardo Nerucci",
-                "image": "liberliber.it/online/wp-content/uploads/2015/04/sessanta_novelle_popolari_montalesi.jpg",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2015/04/sessanta_novelle_popolari_montalesi.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -18501,7 +18501,7 @@
             ],
             "metadata": {
                 "author": "Giovanni VERGA",
-                "image": "liberliber.it/online/wp-content/uploads/2015/03/i_malavoglia.jpg",
+                "image": "https://www.liberliber.it/online/wp-content/uploads/2015/03/i_malavoglia.jpg",
                 "other_images": {
                     "image_300": "",
                     "image_433": ""
@@ -54594,6 +54594,235 @@
                 },
                 "title": "La morte di Ivan Ilich",
                 "author": "Lev Tolstoj"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "Robinson Crusoe",
+                    "url": "http://www.boorp.com/libri_gratis_pdf/libri_gratis_pdf/audiolibri_gratis_adulti/Robinson_Crusoe_Audiolibro_MP3.mp3"
+                }
+            ],
+            "id": 8,
+            "metadata": {
+                "image": "",
+                "other_images": {
+                    "image_300": "",
+                    "image_433": ""
+                },
+                "provider": {
+                    "image": "",
+                    "name": "Libro Audio",
+                    "site": "libroaudio.it"
+                },
+                "title": "Robinson Crusoe",
+                "author": "Daniel Defoe"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "Il Vangelo di Matteo e il Dhammapada",
+                    "url": "http://www.boorp.com/libri_gratis_pdf/libri_gratis_pdf/audiolibri_gratis_adulti/Vangelo_e_Dhammapada_a_confronto.mp3"
+                }
+            ],
+            "id": 8,
+            "metadata": {
+                "image": "",
+                "other_images": {
+                    "image_300": "",
+                    "image_433": ""
+                },
+                "provider": {
+                    "image": "",
+                    "name": "Libro Audio",
+                    "site": "libroaudio.it"
+                },
+                "title": "Il Vangelo di Matteo e il Dhammapada",
+                "author": "Ginzo Robiginz"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "I misteri della jungla nera",
+                    "url": "http://www.boorp.com/libri_gratis_pdf/libri_gratis_pdf/audiolibri_gratis_adulti/I_misteri_della_Jungla_Nera.mp3"
+                }
+            ],
+            "id": 8,
+            "metadata": {
+                "image": "",
+                "other_images": {
+                    "image_300": "",
+                    "image_433": ""
+                },
+                "provider": {
+                    "image": "",
+                    "name": "Libro Audio",
+                    "site": "libroaudio.it"
+                },
+                "title": "I misteri della jungla nera",
+                "author": "Emilio Salgari"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "Il richiamo della foresta",
+                    "url": "http://www.boorp.com/libri_gratis_pdf/libri_gratis_pdf/audiolibri_gratis_adulti/Il_Richiamo_della_Foresta_versione_parlata.mp3"
+                }
+            ],
+            "id": 8,
+            "metadata": {
+                "image": "",
+                "other_images": {
+                    "image_300": "",
+                    "image_433": ""
+                },
+                "provider": {
+                    "image": "",
+                    "name": "Libro Audio",
+                    "site": "libroaudio.it"
+                },
+                "title": "Il richiamo della foresta",
+                "author": "Jack London"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "Le avventure di Tom Sawyer",
+                    "url": "http://www.boorp.com/libri_gratis_pdf/libri_gratis_pdf/audiolibri_gratis_adulti/Le_avventure_di_Tom_Sawyer_Audiolibro_MP3.mp3"
+                }
+            ],
+            "id": 8,
+            "metadata": {
+                "image": "",
+                "other_images": {
+                    "image_300": "",
+                    "image_433": ""
+                },
+                "provider": {
+                    "image": "",
+                    "name": "Libro Audio",
+                    "site": "libroaudio.it"
+                },
+                "title": "Le avventure di Tom Sawyer",
+                "author": "Mark Twain"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "I viaggi di Gulliver",
+                    "url": "http://www.boorp.com/libri_gratis_pdf/libri_gratis_pdf/audiolibri_gratis_adulti/I_viaggi_di_Gulliver.mp3"
+                }
+            ],
+            "id": 8,
+            "metadata": {
+                "image": "",
+                "other_images": {
+                    "image_300": "",
+                    "image_433": ""
+                },
+                "provider": {
+                    "image": "",
+                    "name": "Libro Audio",
+                    "site": "libroaudio.it"
+                },
+                "title": "I viaggi di Gulliver",
+                "author": "Jonathan Swift"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "Il soldatino di piombo",
+                    "url": "http://www.nostrofiglio.it/site_stored/imgs/0002/001/ilsoldatinodipiombo.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 1,
+                    "title": "Riccioli d'oro",
+                    "url": "http://www.nostrofiglio.it/site_stored/imgs/0002/002/ricciolidoro.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 2,
+                    "title": "Il sacrificio premiato",
+                    "url": "http://www.nostrofiglio.it/site_stored/imgs/0002/048/ilsacrificiopremiato.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 3,
+                    "title": "I fiocchi di neve",
+                    "url": "http://www.nostrofiglio.it/site_stored/imgs/0002/000/ifiocchidineve.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 4,
+                    "title": "Pollicina",
+                    "url": "http://www.nostrofiglio.it/site_stored/imgs/0002/045/pollicina.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 5,
+                    "title": "I tre porcellini",
+                    "url": "http://www.nostrofiglio.it/site_stored/imgs/0002/049/itreporcellini.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 6,
+                    "title": "Il brutto anatroccolo",
+                    "url": "http://www.nostrofiglio.it/site_stored/imgs/0002/043/il-brutto-anatroccolo.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 7,
+                    "title": "Il granchio e i colombi",
+                    "url": "http://www.nostrofiglio.it/site_stored/imgs/0002/044/ilgracchioeicolombi.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 8,
+                    "title": "Hansel e Gretel",
+                    "url": "http://www.nostrofiglio.it/site_stored/imgs/0002/046/hanselegretel.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 9,
+                    "title": "Cappuccetto Rosso",
+                    "url": "http://www.nostrofiglio.it/site_stored/imgs/0002/042/cappuccettorosso.mp3"
+                }
+            ],
+            "id": 8,
+            "metadata": {
+                "image": "",
+                "other_images": {
+                    "image_300": "",
+                    "image_433": ""
+                },
+                "provider": {
+                    "image": "",
+                    "name": "LaRadiolina.it",
+                    "site": "laradiolina.it"
+                },
+                "title": "Favole per bambini",
+                "author": "Autori Vari"
             }
         }
     ],

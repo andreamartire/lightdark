@@ -74,7 +74,7 @@ public class AppRater {
         TextView tv = new TextView(mContext);
         tv.setText("Se ti piace quest'app, per favore lascia una recensione. Grazie per il tuo supporto!");
         tv.setWidth(240);
-        tv.setHeight(150);
+        tv.setHeight(250);
         tv.setPadding(20, 20, 20, 20);
         ll.addView(tv);
 

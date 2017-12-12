@@ -89,7 +89,6 @@ public class ChapterShowList extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.chaptersToolbar);
         myToolbar.showOverflowMenu();
-        myToolbar.setTitleTextColor(0xFFFFFFFF);
         setSupportActionBar(myToolbar);
 
         book = (Book) getIntent().getSerializableExtra(BOOK);
