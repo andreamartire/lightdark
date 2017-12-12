@@ -34,6 +34,7 @@ public final class ConfigUtils {
     private static String image_300 = "image_300";
     private static String image_433 = "image_433";
     private static String name = "name";
+    private static String site = "site";
     private static String title = "title";
     private static String url = "url";
     private static String author = "author";
@@ -65,6 +66,7 @@ public final class ConfigUtils {
 
                         //setting provider
                         String providerName = DEFAULT_PROVIDER;
+                        String providerSite = "";
                         String bookTitle = DEFAULT_BOOK;
                         String imageUrl = null, image433Url = null, image300Url = null;
                         String authorBook = "";
@@ -77,6 +79,11 @@ public final class ConfigUtils {
                                     JsonElement providerNameObj = providerObj.getAsJsonObject().get(name);
                                     if(providerNameObj != null){
                                         providerName = providerNameObj.getAsString();
+                                    }
+
+                                    JsonElement providerSiteObj = providerObj.getAsJsonObject().get(site);
+                                    if(providerSiteObj != null){
+                                        providerSite = providerSiteObj.getAsString();
                                     }
                                 }
 
@@ -123,6 +130,7 @@ public final class ConfigUtils {
 
                             Book book = new Book(bookTitle);
                             book.setProviderName(providerName);
+                            book.setProviderSite(providerSite);
                             book.setDescr(descBook);
                             book.setAuthor(authorBook);
                             book.setAppDir(activity.getFilesDir().getAbsolutePath());

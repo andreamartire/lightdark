@@ -17,6 +17,7 @@ public class Book implements Serializable {
 
     String appDir;
     String providerName;
+    String providerSite;
     String bookTitle;
     String descr;
     String author;
@@ -42,6 +43,14 @@ public class Book implements Serializable {
 
     public String getBookDir() {
         return getAppDir() + File.separator + getProviderName() + File.separator + getBookTitle() + File.separator;
+    }
+
+    public String getProviderSite() {
+        return providerSite;
+    }
+
+    public void setProviderSite(String providerSite) {
+        this.providerSite = providerSite;
     }
 
     public String getDescr() {
