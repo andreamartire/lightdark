@@ -79,7 +79,7 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
             try {
 
                 connection = (HttpURLConnection) new URL(chapter.getUrl()).openConnection();
-                connection.setRequestProperty("User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36");
+                connection.setRequestProperty("User-Agent","Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36");
                 connection.connect();
 
                 // expect HTTP 200 OK, so we don't mistakenly save error report
@@ -202,7 +202,7 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         progressBar.post(new Runnable() {
             @Override
             public void run() {
-                progressBar.setVisibility(View.GONE);
+            progressBar.setVisibility(View.GONE);
             }
         });
 

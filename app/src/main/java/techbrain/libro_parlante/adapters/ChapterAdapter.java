@@ -6,6 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,16 +43,19 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
             final Chapter chapter = chapters.get(position);
 
             if (chapter != null){
-                if (convertView == null){
+                //if (convertView == null){
                     LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                    convertView = vi.inflate(R.layout.single_chapter, null);
-                }
+                    //convertView = vi.inflate(R.layout.single_chapter, null);
+                    convertView = vi.inflate(R.layout.single_chapter, parent, false);
+                //}
 
                 final ChapterPlayStreamButton playStreamButton = (ChapterPlayStreamButton) convertView.findViewById(R.id.playButton);
                 playStreamButton.setChapter(chapter);
 
                 final ChapterDownloadButton downloadButton = (ChapterDownloadButton) convertView.findViewById(R.id.downloadButton);
                 downloadButton.setChapter(chapter);
+
+                final ProgressBar progressBar = (ProgressBar) convertView.findViewById(R.id.progressBar);
 
                 ChapterDeleteButton deleteButton = (ChapterDeleteButton) convertView.findViewById(R.id.deleteButton);
                 deleteButton.setChapter(chapter);
@@ -61,11 +65,11 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
                 chapterTitle.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(!MyFileUtils.exists(chapter.getLocalFilePath())){
-                            downloadButton.callOnClick();
-                        }else{
-                            playStreamButton.callOnClick();
-                        }
+                    if(!MyFileUtils.exists(chapter.getLocalFilePath())){
+                        downloadButton.callOnClick();
+                    }else{
+                        playStreamButton.callOnClick();
+                    }
                     }
                 });
 
@@ -81,9 +85,13 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
                         deleteButton.setVisibility(View.GONE);
                     }
                 }else{
+                    //is downloading
                     playStreamButton.setVisibility(View.GONE);
                     downloadButton.setVisibility(View.GONE);
                     deleteButton.setVisibility(View.GONE);
+                    if(progressBar != null){
+                        progressBar.setVisibility(View.VISIBLE);
+                    }
                 }
             }
         }catch (Throwable t){
