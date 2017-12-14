@@ -34,12 +34,12 @@ public class SimpleDownloadTask extends AsyncTask<String, Integer, String> {
     String localFilePath;
     Callable<Integer> callback;
 
-    public SimpleDownloadTask(Context context, URL remoteFileURL, String localFilePath, Callable<Integer> calback){
+    public SimpleDownloadTask(Context context, URL remoteFileURL, String localFilePath, Callable<Integer> callback){
         super();
         this.context = context;
         this.remoteFileURL = remoteFileURL;
         this.localFilePath = localFilePath;
-        this.callback = calback;
+        this.callback = callback;
     }
 
     @Override

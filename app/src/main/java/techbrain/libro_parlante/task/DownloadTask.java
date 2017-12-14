@@ -3,6 +3,8 @@ package techbrain.libro_parlante.task;
 import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.PowerManager;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +20,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.concurrent.Callable;
 
 import techbrain.libro_parlante.R;
 import techbrain.libro_parlante.bean.Chapter;
@@ -39,13 +42,16 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
     private ProgressBar progressBar;
     private View view;
 
+    Callable<Integer> callback;
+
     private Chapter chapter;
 
-    public DownloadTask(Context context, ProgressBar progressBar, Chapter chapter, View view) {
+    public DownloadTask(Context context, ProgressBar progressBar, Chapter chapter, View view, Callable<Integer> callback) {
         this.context = context;
         this.progressBar = progressBar;
         this.chapter = chapter;
         this.view = view;
+        this.callback = callback;
     }
 
     @Override
@@ -171,6 +177,21 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
         chapter.setDownloading(false);
 
         String errorMessage = exception != null ? exception.getMessage() : "";
+
+        if(callback != null){
+            Handler mHandler = new Handler(Looper.getMainLooper());
+            mHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                //arrayAdapter.notifyDataSetChanged();
+                try {
+                    callback.call();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                }
+            });
+        }
 
         return fileDownloaded ? null : errorMessage;
     }

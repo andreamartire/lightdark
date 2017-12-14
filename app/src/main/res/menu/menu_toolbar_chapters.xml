@@ -3,10 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/chapterShareElement"
-        app:showAsAction="always"
-        android:actionProviderClass="android.widget.ShareActionProvider"
-        android:title="Condividi" />
+    android:id="@+id/chapterShareElement"
+    app:showAsAction="always"
+    android:actionProviderClass="android.widget.ShareActionProvider"
+    android:title="Condividi" />
+
+    <item
+        android:id="@+id/chapterDownloadAll"
+        app:showAsAction="ifRoom"
+        android:title="Scarica tutti i capitoli" />
 
 </menu>
 

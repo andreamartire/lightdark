@@ -22,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -34,6 +35,7 @@ import techbrain.libro_parlante.adapters.ChapterAdapter;
 import techbrain.libro_parlante.adapters.PlayThread;
 import techbrain.libro_parlante.bean.Book;
 import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.task.DownloadTask;
 import techbrain.libro_parlante.task.SimpleDownloadTask;
 import techbrain.libro_parlante.utils.ConfigUtils;
 import techbrain.libro_parlante.utils.ImageUtils;
@@ -73,6 +75,27 @@ public class ChapterShowList extends AppCompatActivity {
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
                 startActivity(Intent.createChooser(sharingIntent, "Share"));
                 return true;
+
+            case R.id.chapterDownloadAll:
+
+                try{
+                    if(book != null) {
+                        ArrayList<Chapter> chapters = book.getChapters();
+
+                        if(chapters != null && !chapters.isEmpty()){
+                            // execute this when the downloader must be fired
+                            //TODO final DownloadTask downloadTask = new DownloadTask(me, downloadProgress, chapters.get(0), v, null);
+                            //downloadTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+                            Toast.makeText(this, "Sei sicuro di voler scaricare tutti i capitoli?", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }catch (Throwable t){
+                    t.printStackTrace();
+                }
+
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
