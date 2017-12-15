@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.15"
             android:src="@drawable/ic_play_arrow_black_24dp"
+            android:background="@drawable/rounded_buttons"
             android:theme="@style/Widget.AppCompat.Button" />
 
         <techbrain.libro_parlante.buttons.ChapterDeleteButton
@@ -34,6 +35,7 @@
             android:layout_weight="0.15"
             android:src="@drawable/ic_delete_black_24dp"
             android:theme="@style/Widget.AppCompat.Button"
+            android:background="@drawable/rounded_buttons"
             android:visibility="gone" />
 
         <techbrain.libro_parlante.buttons.ChapterDownloadButton
@@ -42,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.12"
             android:src="@drawable/ic_file_download_black_24dp"
+            android:background="@drawable/rounded_buttons"
             android:theme="@style/Widget.AppCompat.Button" />
 
         <techbrain.libro_parlante.buttons.CircularProgressBar

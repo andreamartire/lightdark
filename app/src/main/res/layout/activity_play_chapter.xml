@@ -13,131 +13,136 @@
 
     </android.support.v7.widget.Toolbar>
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/bookImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:alpha="0.8"/>
 
-            <ImageView
-                android:id="@+id/bookImage"
-                android:layout_width="wrap_content"
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20pt"
+            android:layout_marginBottom="20pt">
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/playBook_title"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:alpha="0.8"/>
+                android:layout_weight=".20"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/playChapter_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".20"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textColor="@color/colorWhite"/>
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20pt"
-                android:layout_marginBottom="20pt">
+                android:layout_height="wrap_content">
 
                 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/playBook_title"
+                    android:id="@+id/playChapter_currentDuration"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight=".20"
                     android:textAlignment="center"
                     android:textSize="30sp"
-                    android:textColor="@color/colorWhite"/>
+                    android:textColor="@color/colorWhite" />
 
-                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/playChapter_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight=".20"
-                    android:textAlignment="center"
-                    android:textSize="30sp"
-                    android:textColor="@color/colorWhite"/>
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:id="@+id/playChapter_currentDuration"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight=".20"
-                        android:textAlignment="center"
-                        android:textSize="30sp"
-                        android:textColor="@color/colorWhite" />
-
-                </LinearLayout>
             </LinearLayout>
-        </RelativeLayout>
-
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:max="100"
-            android:progress="0"
-            android:progressDrawable="@drawable/progressbar"
-            android:secondaryProgress="0" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/backwardButton30"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_replay_30_black_72dp"
-                    android:background="@drawable/rounded_buttons" />
-
-                <ImageButton
-                    android:id="@+id/backwardButton10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_replay_10_black_72dp"
-                    android:background="@drawable/rounded_buttons" />
-
-                <ImageButton
-                    android:id="@+id/forwardButton10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_forward_10_black_72dp"
-                    android:background="@drawable/rounded_buttons" />
-
-                <ImageButton
-                    android:id="@+id/forwardButton30"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_forward_30_black_72dp"
-                    android:background="@drawable/rounded_buttons" />
-
         </LinearLayout>
+    </RelativeLayout>
 
-        <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/adViewPlayer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-1872225169177247/1877148212">
-        </com.google.android.gms.ads.AdView>
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/progressbar"
+        android:secondaryProgress="0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/playPauseButton"
+            android:id="@+id/backwardButton30"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_pause_black_72dp"
-            android:background="@drawable/rounded_buttons" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_replay_30_black_72dp"
+            android:background="@drawable/rounded_buttons"
+            android:padding="5dp" />
+
+        <ImageButton
+            android:id="@+id/backwardButton10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_replay_10_black_72dp"
+            android:background="@drawable/rounded_buttons"
+            android:padding="5dp" />
+
+        <ImageButton
+            android:id="@+id/forwardButton10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_forward_10_black_72dp"
+            android:background="@drawable/rounded_buttons"
+            android:padding="5dp" />
+
+        <ImageButton
+            android:id="@+id/forwardButton30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_forward_30_black_72dp"
+            android:background="@drawable/rounded_buttons"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1872225169177247/1877148212">
+    </com.google.android.gms.ads.AdView>
+
+    <ImageButton
+        android:id="@+id/playPauseButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_pause_black_72dp"
+        android:background="@drawable/rounded_buttons"
+        android:padding="5dp"/>
 
 </LinearLayout>

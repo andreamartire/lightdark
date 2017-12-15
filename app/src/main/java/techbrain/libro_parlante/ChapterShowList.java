@@ -6,6 +6,7 @@ package techbrain.libro_parlante;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -17,7 +18,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -83,11 +86,34 @@ public class ChapterShowList extends AppCompatActivity {
                         ArrayList<Chapter> chapters = book.getChapters();
 
                         if(chapters != null && !chapters.isEmpty()){
-                            // execute this when the downloader must be fired
-                            //TODO final DownloadTask downloadTask = new DownloadTask(me, downloadProgress, chapters.get(0), v, null);
-                            //downloadTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
-                            Toast.makeText(this, "Sei sicuro di voler scaricare tutti i capitoli?", Toast.LENGTH_LONG).show();
+                            final Dialog dialog = new Dialog(me,R.style.CustomDialogTheme);
+                            dialog.getWindow();
+                            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                            dialog.setContentView(R.layout.confirm_download_all);
+                            dialog.setCancelable(false);
+
+                            Button confirmBtn = (Button) dialog.findViewById(R.id.confirmDownAllBtn);
+                            Button cancelBtn = (Button) dialog.findViewById(R.id.cancelDownAllBtn);
+
+                            confirmBtn.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View arg0) {
+                                    dialog.dismiss();
+
+                                    // execute this when the downloader must be fired
+                                    //TODO final DownloadTask downloadTask = new DownloadTask(me, downloadProgress, chapters.get(0), v, null);
+                                    //downloadTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                                }
+                            });
+
+                            cancelBtn.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View arg0) {
+                                    dialog.dismiss();
+                                }
+                            });
+                            dialog.show();
                         }
                     }
                 }catch (Throwable t){

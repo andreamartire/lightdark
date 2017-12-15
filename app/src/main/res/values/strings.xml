@@ -6,10 +6,12 @@
     <string name="player.button.forward30"><![CDATA[>30s]]></string>
     <string name="info_title">Informazioni</string>
     <string name="info_message">Tutti i contenuti audio e le immagini sono liberamente accessibili in rete e scaricati direttamente dai siti web dei rispettivi possessori dei diritti. L\'applicazione non ha un server associato pertanto nessun contenuto è ospitato sui nostri sistemi. Per suggerimenti/segnalazioni: techbrain@autistici.org</string>
-    <string name="cancel">Annulla</string>
-    <string name="ok">Cancella</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="share_message">Dai un\'occhiata a "Libro Parlante" https://goo.gl/Jf4BTs</string>
     <string name="app_url">https://goo.gl/Jf4BTs</string>
     <string name="contact_email">techbrain@autistici.org</string>
+    <string name="label_confirm_down_all">Sei sicuro/a di voler scaricare tutti i capitoli?</string>
+    <string name="label_cancel">Annulla</string>
+    <string name="label_yes">Si</string>
+    <string name="label_confirm_delete">Sei sicuro/a di voler cancellare il file?</string>
 </resources>

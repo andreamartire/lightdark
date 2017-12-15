@@ -26,6 +26,7 @@
         <item name="android:fitsSystemWindows">true</item>
         <item name="android:colorBackgroundCacheHint">#00000000</item>
         <item name="android:background">#00000000</item>
+        <item name="android:gravity">center</item>
         -->
     </style>
 

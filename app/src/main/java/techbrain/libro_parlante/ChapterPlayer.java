@@ -162,12 +162,22 @@ public class ChapterPlayer extends AppCompatActivity {
                 }
             });
 
-            try{
-                playThread.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-            } catch (Throwable t){
-                t.printStackTrace();
-            }
+            boolean queued = false;
 
+            while (!queued){
+                try{
+                    playThread.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR);
+                    queued = true;
+                } catch (Throwable t){
+                    t.printStackTrace();
+                    queued = false;
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
         }
     }
 
