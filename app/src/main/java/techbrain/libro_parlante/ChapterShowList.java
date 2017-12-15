@@ -79,48 +79,48 @@ public class ChapterShowList extends AppCompatActivity {
                 startActivity(Intent.createChooser(sharingIntent, "Share"));
                 return true;
 
-            case R.id.chapterDownloadAll:
-
-                try{
-                    if(book != null) {
-                        ArrayList<Chapter> chapters = book.getChapters();
-
-                        if(chapters != null && !chapters.isEmpty()){
-
-                            final Dialog dialog = new Dialog(me,R.style.CustomDialogTheme);
-                            dialog.getWindow();
-                            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                            dialog.setContentView(R.layout.confirm_download_all);
-                            dialog.setCancelable(false);
-
-                            Button confirmBtn = (Button) dialog.findViewById(R.id.confirmDownAllBtn);
-                            Button cancelBtn = (Button) dialog.findViewById(R.id.cancelDownAllBtn);
-
-                            confirmBtn.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View arg0) {
-                                    dialog.dismiss();
-
-                                    // execute this when the downloader must be fired
-                                    //TODO final DownloadTask downloadTask = new DownloadTask(me, downloadProgress, chapters.get(0), v, null);
-                                    //downloadTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-                                }
-                            });
-
-                            cancelBtn.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View arg0) {
-                                    dialog.dismiss();
-                                }
-                            });
-                            dialog.show();
-                        }
-                    }
-                }catch (Throwable t){
-                    t.printStackTrace();
-                }
-
-                return true;
+//            case R.id.chapterDownloadAll:
+//
+//                try{
+//                    if(book != null) {
+//                        ArrayList<Chapter> chapters = book.getChapters();
+//
+//                        if(chapters != null && !chapters.isEmpty()){
+//
+//                            final Dialog dialog = new Dialog(me,R.style.CustomDialogTheme);
+//                            dialog.getWindow();
+//                            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+//                            dialog.setContentView(R.layout.confirm_download_all);
+//                            dialog.setCancelable(false);
+//
+//                            Button confirmBtn = (Button) dialog.findViewById(R.id.confirmDownAllBtn);
+//                            Button cancelBtn = (Button) dialog.findViewById(R.id.cancelDownAllBtn);
+//
+//                            confirmBtn.setOnClickListener(new View.OnClickListener() {
+//                                @Override
+//                                public void onClick(View arg0) {
+//                                    dialog.dismiss();
+//
+//                                    // execute this when the downloader must be fired
+//                                    //TODO final DownloadTask downloadTask = new DownloadTask(me, downloadProgress, chapters.get(0), v, null);
+//                                    //downloadTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+//                                }
+//                            });
+//
+//                            cancelBtn.setOnClickListener(new View.OnClickListener() {
+//                                @Override
+//                                public void onClick(View arg0) {
+//                                    dialog.dismiss();
+//                                }
+//                            });
+//                            dialog.show();
+//                        }
+//                    }
+//                }catch (Throwable t){
+//                    t.printStackTrace();
+//                }
+//
+//                return true;
 
             default:
                 return super.onOptionsItemSelected(item);
