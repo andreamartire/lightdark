@@ -73,13 +73,15 @@ public class ChapterDownloadButton extends AppCompatImageButton {
             Chapter currentChapter = downloadButton.getChapter();
 
             try{
-                //execute download
-                currentChapter.setDownloading(true);
+                if(!currentChapter.isDownloading()){
+                    //execute download
+                    currentChapter.setDownloading(true);
 
-                // execute this when the downloader must be fired
-                final DownloadTask downloadTask = new DownloadTask(currentContext, downloadProgress, currentChapter, v, null);
+                    // execute this when the downloader must be fired
+                    final DownloadTask downloadTask = new DownloadTask(currentContext, downloadProgress, currentChapter, v, null);
 
-                downloadTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                    downloadTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                }
             }catch (Throwable t){
                 t.printStackTrace();
             }
