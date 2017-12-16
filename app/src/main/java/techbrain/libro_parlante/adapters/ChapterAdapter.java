@@ -66,8 +66,11 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
                     @Override
                     public void onClick(View v) {
                     if(!MyFileUtils.exists(chapter.getLocalFilePath())){
-                        downloadButton.callOnClick();
+                        if(!chapter.isDownloading()){
+                            downloadButton.callOnClick();
+                        }
                     }else{
+                        //TODO check if it's playing
                         playStreamButton.callOnClick();
                     }
                     }
