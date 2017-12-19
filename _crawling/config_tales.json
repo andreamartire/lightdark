@@ -1,0 +1,79 @@
+{
+	"contents": [
+		{
+			"format": "mp3",
+			"id": 0,
+			"title": "Il soldatino di piombo",
+			"url": "http://www.nostrofiglio.it/site_stored/imgs/0002/001/ilsoldatinodipiombo.mp3"
+		},
+		{
+			"format": "mp3",
+			"id": 1,
+			"title": "Riccioli d'oro",
+			"url": "http://www.nostrofiglio.it/site_stored/imgs/0002/002/ricciolidoro.mp3"
+		},
+		{
+			"format": "mp3",
+			"id": 2,
+			"title": "Il sacrificio premiato",
+			"url": "http://www.nostrofiglio.it/site_stored/imgs/0002/048/ilsacrificiopremiato.mp3"
+		},
+		{
+			"format": "mp3",
+			"id": 3,
+			"title": "I fiocchi di neve",
+			"url": "http://www.nostrofiglio.it/site_stored/imgs/0002/000/ifiocchidineve.mp3"
+		},
+		{
+			"format": "mp3",
+			"id": 4,
+			"title": "Pollicina",
+			"url": "http://www.nostrofiglio.it/site_stored/imgs/0002/045/pollicina.mp3"
+		},
+		{
+			"format": "mp3",
+			"id": 5,
+			"title": "I tre porcellini",
+			"url": "http://www.nostrofiglio.it/site_stored/imgs/0002/049/itreporcellini.mp3"
+		},
+		{
+			"format": "mp3",
+			"id": 6,
+			"title": "Il brutto anatroccolo",
+			"url": "http://www.nostrofiglio.it/site_stored/imgs/0002/043/il-brutto-anatroccolo.mp3"
+		},
+		{
+			"format": "mp3",
+			"id": 7,
+			"title": "Il granchio e i colombi",
+			"url": "http://www.nostrofiglio.it/site_stored/imgs/0002/044/ilgracchioeicolombi.mp3"
+		},
+		{
+			"format": "mp3",
+			"id": 8,
+			"title": "Hansel e Gretel",
+			"url": "http://www.nostrofiglio.it/site_stored/imgs/0002/046/hanselegretel.mp3"
+		},
+		{
+			"format": "mp3",
+			"id": 9,
+			"title": "Cappuccetto Rosso",
+			"url": "http://www.nostrofiglio.it/site_stored/imgs/0002/042/cappuccettorosso.mp3"
+		}
+	],
+	"id": 8,
+	"metadata": {
+		"image": "",
+		"other_images": {
+			"image_300": "",
+			"image_433": ""
+		},
+		"provider": {
+			"image": "",
+			"name": "LaRadiolina.it",
+			"site": "laradiolina.it"
+		},
+		"title": "Favole per bambini",
+		"author": "Autori Vari"
+	}
+}

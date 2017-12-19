@@ -51,9 +51,9 @@ public class ImageUtils {
     }
 
     public static Drawable scaleImage(Context context, Drawable image, int width, int length){
-        Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
         Drawable drawable = null;
         try{
+            Bitmap bitmap = ((BitmapDrawable) image).getBitmap();
             drawable = new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(bitmap, width, length, true));
         }
         catch (Throwable e){

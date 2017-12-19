@@ -65,8 +65,12 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                 //when complete play current chapter
                 playPauseButton.setImageResource(R.drawable.ic_pause_black_72dp);
                 if(mediaPlayer != null){
-                    mediaPlayer.stop();
-                    mediaPlayer.release();
+                    try{
+                        mediaPlayer.stop();
+                        mediaPlayer.release();
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
                 }
 
                 Chapter nextChapter = currentChapter.getNextChapter();
@@ -94,6 +98,7 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
             mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
                 public void onPrepared(MediaPlayer mp) {
+                try{
                     //if resume was pressed
                     if(currentChapter.getCurrentDuration() > 0){
                         mediaPlayer.seekTo(currentChapter.getCurrentDuration());
@@ -102,6 +107,10 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
                     mediaPlayer.start();
 
                     updatePlayer();
+                }
+                catch (Exception e){
+                    e.printStackTrace();
+                }
                 }
             });
 

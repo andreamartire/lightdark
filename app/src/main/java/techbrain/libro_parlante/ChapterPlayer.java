@@ -83,98 +83,101 @@ public class ChapterPlayer extends AppCompatActivity {
         setSupportActionBar(myToolbar);
 
         Chapter currentChapter = (Chapter) getIntent().getSerializableExtra(CHAPTER);
-        Book linkedBook = ConfigUtils.bookWithChapters.get(currentChapter.getBook().getBookDir());
-        // convert to linked chapter. avoid to spread this logic
-        if(linkedBook != null && currentChapter != null){
-            currentChapter = currentChapter.getMatchingChapter(linkedBook.getChapters());
 
-            ImageView bookImage = (ImageView) findViewById(R.id.bookImage);
+        if(currentChapter != null){
+            Book linkedBook = ConfigUtils.bookWithChapters.get(currentChapter.getBook().getBookDir());
+            // convert to linked chapter. avoid to spread this logic
+            if(linkedBook != null && currentChapter != null){
+                currentChapter = currentChapter.getMatchingChapter(linkedBook.getChapters());
 
-            Point size = new Point();
-            getWindowManager().getDefaultDisplay().getSize(size);
+                ImageView bookImage = (ImageView) findViewById(R.id.bookImage);
 
-            if(currentChapter.getBook().getLocalImageResource() != null){
-                Drawable image = currentChapter.getBook().getLocalImageResource();
-                bookImage.setImageDrawable(ImageUtils.scaleImage(this, image, size.x, (int) size.x*3/5));
-            }
+                Point size = new Point();
+                getWindowManager().getDefaultDisplay().getSize(size);
 
-            if(currentChapter.getBook().getLocalImageFilePath() != null && new File(currentChapter.getBook().getLocalImageFilePath()).exists()){
-                Drawable drableBookImage = Drawable.createFromPath(currentChapter.getBook().getLocalImageFilePath());
-                bookImage.setImageDrawable(ImageUtils.scaleImage(this, drableBookImage, size.x, (int) size.x*3/5));
-            }
-
-            playThread = new PlayThread(this, currentChapter);
-
-            SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar);
-            seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                int progressChanged = 0;
-
-                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
-                    progressChanged = progress;
+                if(currentChapter.getBook().getLocalImageResource() != null){
+                    Drawable image = currentChapter.getBook().getLocalImageResource();
+                    bookImage.setImageDrawable(ImageUtils.scaleImage(this, image, size.x, (int) size.x*3/5));
                 }
 
-                public void onStartTrackingTouch(SeekBar seekBar) {
-
+                if(currentChapter.getBook().getLocalImageFilePath() != null && new File(currentChapter.getBook().getLocalImageFilePath()).exists()){
+                    Drawable drableBookImage = Drawable.createFromPath(currentChapter.getBook().getLocalImageFilePath());
+                    bookImage.setImageDrawable(ImageUtils.scaleImage(this, drableBookImage, size.x, (int) size.x*3/5));
                 }
 
-                public void onStopTrackingTouch(SeekBar seekBar) {
-                    playThread.seekToPercentage(progressChanged);
-                }
-            });
+                playThread = new PlayThread(this, currentChapter);
 
-            ImageButton playPauseButton = (ImageButton) findViewById(R.id.playPauseButton);
-            playPauseButton.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick (View v) {
-                    playThread.toggle();
-                }
-            });
+                SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar);
+                seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                    int progressChanged = 0;
 
-            ImageButton backwardButton10 = (ImageButton) findViewById(R.id.backwardButton10);
-            backwardButton10.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    playThread.backwardPlay(10);
-                }
-            });
+                    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
+                        progressChanged = progress;
+                    }
 
-            ImageButton backwardButton30 = (ImageButton) findViewById(R.id.backwardButton30);
-            backwardButton30.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    playThread.backwardPlay(30);
-                }
-            });
+                    public void onStartTrackingTouch(SeekBar seekBar) {
 
-            ImageButton forwardButton10 = (ImageButton) findViewById(R.id.forwardButton10);
-            forwardButton10.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    playThread.forwardPlay(10);
-                }
-            });
+                    }
 
-            ImageButton forwardButton30 = (ImageButton) findViewById(R.id.forwardButton30);
-            forwardButton30.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    playThread.forwardPlay(30);
-                }
-            });
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+                        playThread.seekToPercentage(progressChanged);
+                    }
+                });
 
-            boolean queued = false;
+                ImageButton playPauseButton = (ImageButton) findViewById(R.id.playPauseButton);
+                playPauseButton.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick (View v) {
+                        playThread.toggle();
+                    }
+                });
 
-            while (!queued){
-                try{
-                    playThread.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR);
-                    queued = true;
-                } catch (Throwable t){
-                    t.printStackTrace();
-                    queued = false;
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                ImageButton backwardButton10 = (ImageButton) findViewById(R.id.backwardButton10);
+                backwardButton10.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        playThread.backwardPlay(10);
+                    }
+                });
+
+                ImageButton backwardButton30 = (ImageButton) findViewById(R.id.backwardButton30);
+                backwardButton30.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        playThread.backwardPlay(30);
+                    }
+                });
+
+                ImageButton forwardButton10 = (ImageButton) findViewById(R.id.forwardButton10);
+                forwardButton10.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        playThread.forwardPlay(10);
+                    }
+                });
+
+                ImageButton forwardButton30 = (ImageButton) findViewById(R.id.forwardButton30);
+                forwardButton30.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        playThread.forwardPlay(30);
+                    }
+                });
+
+                boolean queued = false;
+
+                while (!queued){
+                    try{
+                        playThread.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR);
+                        queued = true;
+                    } catch (Throwable t){
+                        t.printStackTrace();
+                        queued = false;
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }
