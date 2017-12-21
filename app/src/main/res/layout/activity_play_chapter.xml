@@ -30,8 +30,8 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20pt"
-            android:layout_marginBottom="20pt">
+            android:layout_marginTop="10pt"
+            android:layout_marginBottom="10pt">
 
             <TextView xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/playBook_title"

@@ -54,7 +54,6 @@ public final class ConfigUtils {
                 reader = new BufferedReader(new InputStreamReader(activity.getAssets().open(configFile)));
 
                 String message = org.apache.commons.io.IOUtils.toString(reader);
-
                 JsonObject o = new JsonParser().parse(message).getAsJsonObject();
 
                 JsonElement audioBooks = o.get(audiobooks);
