@@ -40,6 +40,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name="techbrain.libro_parlante.FavouritesShowList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="techbrain.libro_parlante.ChapterShowList"
             android:label="@string/app_name"
             android:screenOrientation="portrait"

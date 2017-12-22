@@ -186,6 +186,34 @@ public class ChapterShowList extends AppCompatActivity {
                     }
                 });
 
+                final ImageView favouriteIcon = (ImageView) findViewById(R.id.chapterListFavouriteIcon);
+                favouriteIcon.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(favouriteIcon.getTag() == null){
+                            favouriteIcon.setTag(false);
+                        }
+                        if((Boolean) favouriteIcon.getTag()){
+                            favouriteIcon.setImageResource(R.drawable.ic_star_border_black_24dp);
+                            favouriteIcon.setTag(false);
+                            ConfigUtils.removeFavouriteBook(book);
+                            FavouritesShowList.saveFavourites(me);
+                            Toast.makeText(me, getResources().getString(R.string.favourite_removed), Toast.LENGTH_SHORT).show();
+                        }else{
+                            favouriteIcon.setImageResource(R.drawable.ic_star_black_24dp);
+                            favouriteIcon.setTag(true);
+                            ConfigUtils.addFavouriteBook(book);
+                            FavouritesShowList.saveFavourites(me);
+                            Toast.makeText(me, getResources().getString(R.string.favourite_added), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                if(ConfigUtils.isFavouriteBook(book)){
+                    favouriteIcon.setImageResource(R.drawable.ic_star_black_24dp);
+                    favouriteIcon.setTag(true);
+                }
+
                 if(bookImage != null){
                     bookImageView.setImageDrawable(ImageUtils.scaleImage(this, bookImage, realWidth, (int) realWidth*3/5));
                 }

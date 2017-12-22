@@ -46,6 +46,7 @@ import techbrain.libro_parlante.adapters.BookAdapter;
 import techbrain.libro_parlante.adapters.PlayThread;
 import techbrain.libro_parlante.bean.Book;
 import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.bean.Favourites;
 import techbrain.libro_parlante.task.SimpleDownloadTask;
 import techbrain.libro_parlante.utils.AppRater;
 import techbrain.libro_parlante.utils.ConfigUtils;
@@ -75,6 +76,14 @@ public class AudioBookShowList extends AppCompatActivity {
 
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
                 startActivity(Intent.createChooser(sharingIntent, "Share"));
+                return true;
+
+            case R.id.favourites:
+                Intent intent = new Intent(me, FavouritesShowList.class);
+
+                FavouritesShowList.loadFavourites(this);
+                startActivity(intent);
+
                 return true;
 
             case R.id.infoElement:

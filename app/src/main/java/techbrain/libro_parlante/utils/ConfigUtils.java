@@ -23,6 +23,7 @@ import techbrain.libro_parlante.bean.Chapter;
 public final class ConfigUtils {
 
     public static ArrayList<Book> bookList = new ArrayList<Book>();
+    public static ArrayList<Book> favouriteBooks = new ArrayList<Book>();
     public static HashMap<String, Book> bookWithChapters = new HashMap<String, Book>();
 
     public static String audiobooks = "audiobooks";
@@ -237,5 +238,32 @@ public final class ConfigUtils {
                 }
             }
         }
+    }
+
+    public static void addFavouriteBook(Book book){
+        ConfigUtils.favouriteBooks.add(book);
+    }
+
+    public static void removeFavouriteBook(Book book){
+        if(favouriteBooks != null && book != null){
+            for(Book b : favouriteBooks){
+                if(b.getBookTitle().equalsIgnoreCase(book.getBookTitle())){
+                    ConfigUtils.favouriteBooks.remove(b);
+                    return;
+                }
+            }
+        }
+    }
+
+    public static boolean isFavouriteBook(Book book) {
+        if(favouriteBooks != null && book != null){
+            for(Book b : favouriteBooks){
+                if(b.getBookTitle().equalsIgnoreCase(book.getBookTitle())){
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 }

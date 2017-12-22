@@ -9,6 +9,11 @@
         android:title="Condividi" />
 
     <item
+        android:id="@+id/favourites"
+        app:showAsAction="never"
+        android:title="Preferiti" />
+
+    <item
         android:id="@+id/contactElement"
         app:showAsAction="never"
         android:title="Contattaci" />
