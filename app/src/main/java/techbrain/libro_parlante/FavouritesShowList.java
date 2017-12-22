@@ -62,6 +62,7 @@ public class FavouritesShowList extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.favouriteToolbar);
         myToolbar.showOverflowMenu();
+        myToolbar.setTitle(R.string.favourite_title);
         setSupportActionBar(myToolbar);
 
         ListView listView = (ListView)findViewById(R.id.favourites_listview);

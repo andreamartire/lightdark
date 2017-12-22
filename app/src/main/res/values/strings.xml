@@ -16,4 +16,5 @@
     <string name="label_confirm_delete">Sei sicuro/a di voler cancellare il file?</string>
     <string name="favourite_removed">Audiolibro rimosso dai preferiti</string>
     <string name="favourite_added">Audiolibro aggiunto ai preferiti</string>
+    <string name="favourite_title">Preferiti</string>
 </resources>
