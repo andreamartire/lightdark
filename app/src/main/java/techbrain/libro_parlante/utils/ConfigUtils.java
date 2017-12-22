@@ -208,7 +208,23 @@ public final class ConfigUtils {
                     }
                 }
             }
-        } catch (IOException e) {
+
+            Book adsBook = new Book("ads boook");
+            adsBook.setAds(true);
+
+            int bookSize = bookList.size();
+            int counter = 3;
+            int step = 5;
+
+            while (counter <= bookSize){
+                bookList.add(counter, adsBook);
+                counter += step;
+                if(step < 6){
+                    step += 1;
+                }
+            }
+
+        } catch (Exception e) {
             //log the exception
         } finally {
             if (reader != null) {

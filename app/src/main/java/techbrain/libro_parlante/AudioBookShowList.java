@@ -114,12 +114,6 @@ public class AudioBookShowList extends AppCompatActivity {
         myToolbar.showOverflowMenu();
         setSupportActionBar(myToolbar);
 
-        MobileAds.initialize(this, "ca-app-pub-1872225169177247~3010272652");
-
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
         final Context me = this;
 
         final SearchView searchView = (SearchView) findViewById(R.id.searchView);
@@ -153,7 +147,7 @@ public class AudioBookShowList extends AppCompatActivity {
             }
         });
 
-        bookAdapter = new BookAdapter(getBaseContext(), R.layout.single_book, ConfigUtils.bookList);
+        bookAdapter = new BookAdapter(this, R.layout.single_book, ConfigUtils.bookList);
         listView.setAdapter(bookAdapter);
         //init tap listener
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -200,6 +194,12 @@ public class AudioBookShowList extends AppCompatActivity {
         });
 
         checkCurrentPlayingState();
+
+        MobileAds.initialize(this, "ca-app-pub-1872225169177247~3010272652");
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     @Override

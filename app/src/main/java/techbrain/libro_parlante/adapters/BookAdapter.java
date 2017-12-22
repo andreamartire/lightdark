@@ -1,5 +1,6 @@
 package techbrain.libro_parlante.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
@@ -11,6 +12,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -43,10 +47,10 @@ public class BookAdapter extends ArrayAdapter<Book> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        if (convertView == null){
+        //if (convertView == null){
             LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = vi.inflate(R.layout.single_book, null);
-        }
+        //}
 
         if(position >= books.size()){
             System.out.println("");
@@ -54,66 +58,75 @@ public class BookAdapter extends ArrayAdapter<Book> {
             final Book book = books.get(position);
 
             if (book != null){
+                if(book.isAds()){
+                    AdView mAdView = (AdView) ((Activity) context).findViewById(R.id.adsBookView);
+                    if(mAdView != null){
+                        mAdView.setVisibility(View.VISIBLE);
+                        AdRequest adRequest = new AdRequest.Builder().build();
+                        mAdView.loadAd(adRequest);
+                    }
+                }
+                else{
+                    TextView bookTitle = (TextView) convertView.findViewById(R.id.bookTitleView);
+                    bookTitle.setText(book.getBookTitle());
 
-                TextView bookTitle = (TextView) convertView.findViewById(R.id.bookTitleView);
-                bookTitle.setText(book.getBookTitle());
+                    TextView bookAuthor = (TextView) convertView.findViewById(R.id.bookAuthorView);
+                    bookAuthor.setText(book.getAuthor());
 
-                TextView bookAuthor = (TextView) convertView.findViewById(R.id.bookAuthorView);
-                bookAuthor.setText(book.getAuthor());
+                    TextView bookProvider = (TextView) convertView.findViewById(R.id.providerView);
+                    bookProvider.setText(book.getProviderSite());
 
-                TextView bookProvider = (TextView) convertView.findViewById(R.id.providerView);
-                bookProvider.setText(book.getProviderSite());
+                    ImageView imageView = (ImageView) convertView.findViewById(R.id.bookImageView);
 
-                ImageView imageView = (ImageView) convertView.findViewById(R.id.bookImageView);
+                    //default image
+                    imageView.setImageDrawable(book.getLocalImageResource());
 
-                //default image
-                imageView.setImageDrawable(book.getLocalImageResource());
+                    if(book.getRemoteImageUrl() != null){
 
-                if(book.getRemoteImageUrl() != null){
+                        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
 
-                    WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+                        Integer realWidth = ImageUtils.getRealWidthSize(wm);
 
-                    Integer realWidth = ImageUtils.getRealWidthSize(wm);
+                        final int xSize = realWidth*45/100;
+                        final int hSize = xSize*3/5;
 
-                    final int xSize = realWidth*45/100;
-                    final int hSize = xSize*3/5;
-
-                    //check if file name exists in book/metadata/
-                    if(new File(book.getLocalImageFilePath()).exists()){
-                        //select current image
-                        Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
-
-                        if(image != null){
-                            //select downloaded image
-                            imageView.setImageDrawable(ImageUtils.scaleImage(context, image, xSize, hSize));
-                        }
-                    }else{
-                        final BookAdapter arrayAdapter = this;
-                        //download file out of main thread
-                        SimpleDownloadTask sdt = new SimpleDownloadTask(context, book.getRemoteImageUrl(), book.getLocalImageFilePath(), new Callable<Integer>() {
-                            @Override
-                            public Integer call() throws Exception {
-                            arrayAdapter.notifyDataSetChanged();
-                            if(new File(book.getLocalImageFilePath()).exists()){
-                                //select local image
-
-                                Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
-                                //size based on screen width
-                                book.setLocalImageResource(ImageUtils.scaleImage(context, image, xSize, hSize));
-                            }
-                            return 0;
-                            }
-                        });
-
-                        try{
-                            sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-                        } catch (Throwable t){
-                            t.printStackTrace();
-                        }
-
-                        //if downloaded
+                        //check if file name exists in book/metadata/
                         if(new File(book.getLocalImageFilePath()).exists()){
+                            //select current image
                             Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
+
+                            if(image != null){
+                                //select downloaded image
+                                imageView.setImageDrawable(ImageUtils.scaleImage(context, image, xSize, hSize));
+                            }
+                        }else{
+                            final BookAdapter arrayAdapter = this;
+                            //download file out of main thread
+                            SimpleDownloadTask sdt = new SimpleDownloadTask(context, book.getRemoteImageUrl(), book.getLocalImageFilePath(), new Callable<Integer>() {
+                                @Override
+                                public Integer call() throws Exception {
+                                    arrayAdapter.notifyDataSetChanged();
+                                    if(new File(book.getLocalImageFilePath()).exists()){
+                                        //select local image
+
+                                        Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
+                                        //size based on screen width
+                                        book.setLocalImageResource(ImageUtils.scaleImage(context, image, xSize, hSize));
+                                    }
+                                    return 0;
+                                }
+                            });
+
+                            try{
+                                sdt.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                            } catch (Throwable t){
+                                t.printStackTrace();
+                            }
+
+                            //if downloaded
+                            if(new File(book.getLocalImageFilePath()).exists()){
+                                Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
+                            }
                         }
                     }
                 }

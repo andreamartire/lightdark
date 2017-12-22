@@ -25,6 +25,8 @@ public class Book implements Serializable {
 
     URL remoteImageUrl;
 
+    boolean isAds = false;
+
     // transient avoid loop in Gson conversion
     transient ArrayList<Chapter> chapters = new ArrayList<Chapter>();
     transient Drawable localImageResource;
@@ -43,6 +45,18 @@ public class Book implements Serializable {
 
     public String getBookDir() {
         return getAppDir() + File.separator + getProviderName() + File.separator + getBookTitle() + File.separator;
+    }
+
+    public void setBookDir(String bookDir) {
+        this.bookDir = bookDir;
+    }
+
+    public boolean isAds() {
+        return isAds;
+    }
+
+    public void setAds(boolean ads) {
+        isAds = ads;
     }
 
     public String getProviderSite() {

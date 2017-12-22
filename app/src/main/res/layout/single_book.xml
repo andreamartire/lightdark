@@ -4,6 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="horizontal" >
 
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adsBookView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1872225169177247/2541119276"
+        android:visibility="gone">
+    </com.google.android.gms.ads.AdView>
+
     <ImageView
         android:id="@+id/bookImageView"
         android:layout_width="match_parent"
