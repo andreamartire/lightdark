@@ -266,4 +266,16 @@ public final class ConfigUtils {
 
         return false;
     }
+
+    public static Book getBookWithChapters(Book localBook) {
+        if(ConfigUtils.bookList != null && localBook != null){
+            for(Book b : bookList){
+                if(b.getBookTitle().equalsIgnoreCase(localBook.getBookTitle())){
+                    return b;
+                }
+            }
+        }
+
+        return null;
+    }
 }

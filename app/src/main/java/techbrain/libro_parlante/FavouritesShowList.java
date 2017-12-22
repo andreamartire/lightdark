@@ -117,7 +117,16 @@ public class FavouritesShowList extends AppCompatActivity {
                 Favourites favourites = new Gson().fromJson(new FileReader(favouritesFilePath), Favourites.class);
                 System.out.println("Loaded favourites: " + favourites);
                 ConfigUtils.favouriteBooks.clear();
-                ConfigUtils.favouriteBooks.addAll(favourites.getBooks());
+
+                if(favourites != null && favourites.getBooks() != null){
+                    for(Book favBook : favourites.getBooks()){
+                        Book favBookWithChapters = ConfigUtils.getBookWithChapters(favBook);
+                        if(favBookWithChapters != null){
+                            ConfigUtils.favouriteBooks.add(favBookWithChapters);
+                        }
+                    }
+                }
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
