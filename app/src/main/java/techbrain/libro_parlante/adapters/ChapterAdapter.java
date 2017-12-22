@@ -76,25 +76,26 @@ public class ChapterAdapter extends ArrayAdapter<Chapter> {
                     }
                 });
 
-                if(!chapter.isDownloading()){
+                if(chapter.isDownloading()) {
+                    //is downloading
+                    deleteButton.setVisibility(View.GONE);
+                    downloadButton.setVisibility(View.GONE);
+                    playStreamButton.setVisibility(View.GONE);
+                    progressBar.setVisibility(View.VISIBLE);
+                }
+                else{
+                    //not downloading
                     if(chapter.existsLocalFile()){
+                        deleteButton.setVisibility(View.VISIBLE);
+                        downloadButton.setVisibility(View.GONE);
                         playStreamButton.setImageResource(R.drawable.ic_play_arrow_black_24dp);
                         playStreamButton.setVisibility(View.VISIBLE);
-                        downloadButton.setVisibility(View.GONE);
-                        deleteButton.setVisibility(View.VISIBLE);
                     } else {
-                        playStreamButton.setVisibility(View.GONE);
-                        downloadButton.setVisibility(View.VISIBLE);
                         deleteButton.setVisibility(View.GONE);
+                        downloadButton.setVisibility(View.VISIBLE);
+                        playStreamButton.setVisibility(View.GONE);
                     }
-                }else{
-                    //is downloading
-                    playStreamButton.setVisibility(View.GONE);
-                    downloadButton.setVisibility(View.GONE);
-                    deleteButton.setVisibility(View.GONE);
-                    if(progressBar != null){
-                        progressBar.setVisibility(View.VISIBLE);
-                    }
+                    progressBar.setVisibility(View.GONE);
                 }
             }
         }catch (Throwable t){

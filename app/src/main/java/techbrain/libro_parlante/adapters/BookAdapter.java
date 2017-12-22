@@ -11,10 +11,14 @@ import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+
+import org.apache.commons.io.LineIterator;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -47,10 +51,11 @@ public class BookAdapter extends ArrayAdapter<Book> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        //if (convertView == null){
-            LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        if (convertView == null){
             convertView = vi.inflate(R.layout.single_book, null);
-        //}
+        }
 
         if(position >= books.size()){
             System.out.println("");
@@ -58,15 +63,26 @@ public class BookAdapter extends ArrayAdapter<Book> {
             final Book book = books.get(position);
 
             if (book != null){
+                LinearLayout bookLayout = (LinearLayout) convertView.findViewById(R.id.bookLayout);
+                LinearLayout adsBookLayout = (LinearLayout) convertView.findViewById(R.id.adsBookLayout);
+
                 if(book.isAds()){
-                    AdView mAdView = (AdView) ((Activity) context).findViewById(R.id.adsBookView);
-                    if(mAdView != null){
-                        mAdView.setVisibility(View.VISIBLE);
-                        AdRequest adRequest = new AdRequest.Builder().build();
-                        mAdView.loadAd(adRequest);
+                    bookLayout.setVisibility(View.GONE);
+                    adsBookLayout.setVisibility(View.VISIBLE);
+
+                    if(adsBookLayout != null && adsBookLayout.getChildCount() == 0){
+                        AdView adView = new AdView(context);
+                        adView.setAdSize(AdSize.LARGE_BANNER);
+                        adView.setAdUnitId("ca-app-pub-1872225169177247/2541119276");
+
+                        adsBookLayout.addView(adView);
+                        adsBookLayout.setVisibility(View.VISIBLE);
                     }
                 }
                 else{
+                    bookLayout.setVisibility(View.VISIBLE);
+                    adsBookLayout.setVisibility(View.GONE);
+
                     TextView bookTitle = (TextView) convertView.findViewById(R.id.bookTitleView);
                     bookTitle.setText(book.getBookTitle());
 
@@ -77,7 +93,6 @@ public class BookAdapter extends ArrayAdapter<Book> {
                     bookProvider.setText(book.getProviderSite());
 
                     ImageView imageView = (ImageView) convertView.findViewById(R.id.bookImageView);
-
                     //default image
                     imageView.setImageDrawable(book.getLocalImageResource());
 
@@ -124,9 +139,9 @@ public class BookAdapter extends ArrayAdapter<Book> {
                             }
 
                             //if downloaded
-                            if(new File(book.getLocalImageFilePath()).exists()){
+                            /*if(new File(book.getLocalImageFilePath()).exists()){
                                 Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
-                            }
+                            }*/
                         }
                     }
                 }

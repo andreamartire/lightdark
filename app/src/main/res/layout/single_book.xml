@@ -1,54 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:orientation="vertical" >
 
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adsBookView"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-1872225169177247/2541119276"
-        android:visibility="gone">
-    </com.google.android.gms.ads.AdView>
+        android:layout_height="match_parent"
+        android:id="@+id/adsBookLayout"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/bookImageView"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:padding="1dip"/>
+        android:layout_height="match_parent"
+        android:id="@+id/bookLayout"
+        android:orientation="horizontal" >
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dip">
-
-        <TextView
-            android:id="@+id/bookTitleView"
+        <ImageView
+            android:id="@+id/bookImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="1dip"
-            android:textSize="20dip"/>
+            android:padding="1dip"/>
 
-        <TextView
-            android:id="@+id/bookAuthorView"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textStyle="italic"
-            android:textSize="14dip"/>
+            android:orientation="vertical"
+            android:padding="8dip">
 
-        <TextView
-            android:id="@+id/providerView"
-            android:layout_width = "wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="italic"
-            android:textSize="12dip"/>
+            <TextView
+                android:id="@+id/bookTitleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1dip"
+                android:textSize="20dip"/>
+
+            <TextView
+                android:id="@+id/bookAuthorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textSize="14dip"/>
+
+            <TextView
+                android:id="@+id/providerView"
+                android:layout_width = "wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textSize="12dip"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

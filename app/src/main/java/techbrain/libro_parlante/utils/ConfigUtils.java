@@ -219,8 +219,10 @@ public final class ConfigUtils {
             while (counter <= bookSize){
                 bookList.add(counter, adsBook);
                 counter += step;
-                if(step < 6){
-                    step += 1;
+                if(step == 5){
+                    step = 6;
+                }else{
+                    step = 5;
                 }
             }
 
