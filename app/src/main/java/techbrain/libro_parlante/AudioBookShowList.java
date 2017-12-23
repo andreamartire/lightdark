@@ -40,6 +40,7 @@ import com.google.android.gms.ads.MobileAds;
 import java.io.File;
 import java.io.Serializable;
 import java.util.Calendar;
+import java.util.Locale;
 
 import techbrain.libro_parlante.R;
 import techbrain.libro_parlante.adapters.BookAdapter;
@@ -113,9 +114,8 @@ public class AudioBookShowList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audiobooks);
 
-        Calendar bound = Calendar.getInstance();
-        bound.set(2017, Calendar.NOVEMBER, 21);
-        if(Calendar.getInstance().getTime().compareTo(bound.getTime()) > 0) {
+        String currLang = Locale.getDefault().getLanguage();
+        if("it".equalsIgnoreCase(currLang)){
             AppRater.app_launched(this);
         }
 
@@ -249,7 +249,7 @@ public class AudioBookShowList extends AppCompatActivity {
 
                 if(localImageFileName != null){
                     String localFileImage = oldPlayerState.getBook().getLocalImageFilePath();
-                    if(new File(localFileImage).exists()){
+                    /*if(new File(localFileImage).exists()){
                         //set file image
                         //select current image
                         Drawable imageFromLocalFile = Drawable.createFromPath(localFileImage);
@@ -278,7 +278,7 @@ public class AudioBookShowList extends AppCompatActivity {
                         } catch (Throwable t){
                             t.printStackTrace();
                         }
-                    }
+                    }*/
                 }
 
                 Integer realWidth = ImageUtils.getRealWidthSize(getWindowManager());

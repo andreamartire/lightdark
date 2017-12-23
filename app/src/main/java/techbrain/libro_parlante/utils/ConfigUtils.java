@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Locale;
 
 import techbrain.libro_parlante.bean.Book;
 import techbrain.libro_parlante.bean.Chapter;
@@ -46,12 +47,10 @@ public final class ConfigUtils {
 
     public static void invoke(Activity activity, String configFile) {
 
-        Calendar bound = Calendar.getInstance();
-        bound.set(2017, Calendar.NOVEMBER, 21);
-
         BufferedReader reader = null;
         try {
-            if(Calendar.getInstance().getTime().compareTo(bound.getTime()) > 0){
+            String currLang = Locale.getDefault().getLanguage();
+            if("it".equalsIgnoreCase(currLang)){
                 reader = new BufferedReader(new InputStreamReader(activity.getAssets().open(configFile)));
 
                 String message = org.apache.commons.io.IOUtils.toString(reader);
@@ -213,7 +212,7 @@ public final class ConfigUtils {
             Book adsBook = new Book("ads boook");
             adsBook.setAds(true);
 
-            int bookSize = bookList.size();
+            /*int bookSize = bookList.size();
             int counter = 3;
             int step = 5;
 
@@ -225,7 +224,7 @@ public final class ConfigUtils {
                 }else{
                     step = 5;
                 }
-            }
+            }*/
 
         } catch (Exception e) {
             //log the exception
