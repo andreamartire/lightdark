@@ -96,7 +96,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
                     //default image
                     imageView.setImageDrawable(book.getLocalImageResource());
 
-                    /*
+
                     if(book.getRemoteImageUrl() != null){
 
                         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -115,7 +115,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
                                 //select downloaded image
                                 imageView.setImageDrawable(ImageUtils.scaleImage(context, image, xSize, hSize));
                             }
-                        }else{
+                        }/*else{
                             final BookAdapter arrayAdapter = this;
                             //download file out of main thread
                             SimpleDownloadTask sdt = new SimpleDownloadTask(context, book.getRemoteImageUrl(), book.getLocalImageFilePath(), new Callable<Integer>() {
@@ -143,8 +143,8 @@ public class BookAdapter extends ArrayAdapter<Book> {
                             //if(new File(book.getLocalImageFilePath()).exists()){
                             //    Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
                             //}
-                        }
-                    }*/
+                        }*/
+                    }
                 }
             }
         }

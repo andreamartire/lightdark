@@ -249,7 +249,7 @@ public class AudioBookShowList extends AppCompatActivity {
 
                 if(localImageFileName != null){
                     String localFileImage = oldPlayerState.getBook().getLocalImageFilePath();
-                    /*if(new File(localFileImage).exists()){
+                    if(new File(localFileImage).exists()){
                         //set file image
                         //select current image
                         Drawable imageFromLocalFile = Drawable.createFromPath(localFileImage);
@@ -268,7 +268,7 @@ public class AudioBookShowList extends AppCompatActivity {
                                 t.printStackTrace();
                             }
                         }
-                    }else{
+                    }/*else{
                         Book book = oldPlayerState.getBook();
 
                         //execute asynch download
