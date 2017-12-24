@@ -138,11 +138,16 @@ public class ChapterShowList extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.chaptersToolbar);
         myToolbar.showOverflowMenu();
-        setSupportActionBar(myToolbar);
 
         book = (Book) getIntent().getSerializableExtra(BOOK);
 
         if(book != null){
+            if(book.getProviderName() != null){
+                myToolbar.setTitle(book.getProviderName());
+            }
+
+            setSupportActionBar(myToolbar);
+
             // convert to linked book
             book = ConfigUtils.bookWithChapters.get(book.getBookDir());
 
