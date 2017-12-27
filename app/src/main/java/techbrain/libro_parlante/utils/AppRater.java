@@ -30,7 +30,7 @@ public class AppRater {
         AppRater.APP_PNAME = mContext.getPackageName();
 
         SharedPreferences prefs = mContext.getSharedPreferences("apprater", 0);
-        if (prefs.getBoolean("dontshowagain", false)) {
+        if (prefs.getBoolean("dont_show_again", false)) {
             return ;
         }
 
@@ -46,11 +46,8 @@ public class AppRater {
             date_firstLaunch = System.currentTimeMillis();
             editor.putLong("date_firstlaunch", date_firstLaunch);
         }else{
-            if (!prefs.getBoolean("resetted_rater", false)){
-                editor.putBoolean("dontshowagain", false);
-                editor.putBoolean("resetted_rater", true);
-                editor.commit();
-            }
+            editor.putBoolean("dont_show_again", false);
+            editor.commit();
         }
 
         // Wait at least n days before opening
@@ -88,8 +85,7 @@ public class AppRater {
                 mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + APP_PNAME)));
             }
             if (editor != null) {
-                editor.putBoolean("dontshowagain", true);
-				editor.putBoolean("resetted_rater", true);
+                editor.putBoolean("dont_show_again", true);
                 editor.commit();
             }
             dialog.dismiss();

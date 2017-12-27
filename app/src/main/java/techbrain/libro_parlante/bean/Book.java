@@ -23,6 +23,8 @@ public class Book implements Serializable {
     String author;
     String bookDir;
 
+    boolean hasFileDownloaded = false;
+
     URL remoteImageUrl;
 
     boolean isAds = false;
@@ -49,6 +51,14 @@ public class Book implements Serializable {
 
     public void setBookDir(String bookDir) {
         this.bookDir = bookDir;
+    }
+
+    public boolean isHasFileDownloaded() {
+        return hasFileDownloaded;
+    }
+
+    public void setHasFileDownloaded(boolean hasFileDownloaded) {
+        this.hasFileDownloaded = hasFileDownloaded;
     }
 
     public boolean isAds() {

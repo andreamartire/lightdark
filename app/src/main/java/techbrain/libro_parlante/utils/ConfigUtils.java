@@ -14,6 +14,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Locale;
@@ -234,9 +236,39 @@ public final class ConfigUtils {
                     reader.close();
                 } catch (IOException e) {
                     //log the exception
+                    e.printStackTrace();
                 }
             }
         }
+
+        Collections.shuffle(bookList);
+
+        //detect books with file downloaded
+        if(bookList != null){
+            for (Book book : bookList){
+                if(book.getChapters() != null){
+                    for(Chapter chap : book.getChapters()){
+                        if(MyFileUtils.exists(chap.getLocalFilePath())){
+                            book.setHasFileDownloaded(true);
+                        }
+                    }
+                }
+            }
+        }
+
+        Collections.sort(bookList, new Comparator<Book>() {
+            @Override
+            public int compare(Book o1, Book o2) {
+                if(o1.isHasFileDownloaded()){
+                    return -1;
+                }
+                if(o2.isHasFileDownloaded()){
+                    return 1;
+                }
+                return 0;
+            }
+        });
+
     }
 
     public static void addFavouriteBook(Book book){

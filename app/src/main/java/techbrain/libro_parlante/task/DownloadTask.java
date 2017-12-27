@@ -171,6 +171,10 @@ public class DownloadTask extends AsyncTask<String, Integer, String> {
                 exception = null;
 
                 MyFileUtils.renameFile(filePathTmp, bookDir + File.separator + fileName);
+
+                if(chapter.getBook() != null){
+                    chapter.getBook().setHasFileDownloaded(true);
+                }
             }
         }
 

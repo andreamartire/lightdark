@@ -216,6 +216,8 @@ public class AudioBookShowList extends AppCompatActivity {
         super.onResume();
         checkCurrentPlayingState();
 
+        bookAdapter.notifyDataSetChanged();
+
         final SearchView searchView = (SearchView) findViewById(R.id.searchView);
         searchView.setFocusable(false);
         searchView.setQuery("", false);

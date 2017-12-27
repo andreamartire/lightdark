@@ -63,25 +63,28 @@ public class BookAdapter extends ArrayAdapter<Book> {
             final Book book = books.get(position);
 
             if (book != null){
+                LinearLayout rowBookLayout = (LinearLayout) convertView.findViewById(R.id.rowBookLayout);
+
+//                LinearLayout adsBookLayout = (LinearLayout) convertView.findViewById(R.id.adsBookLayout);
+
                 LinearLayout bookLayout = (LinearLayout) convertView.findViewById(R.id.bookLayout);
-                LinearLayout adsBookLayout = (LinearLayout) convertView.findViewById(R.id.adsBookLayout);
 
                 if(book.isAds()){
                     bookLayout.setVisibility(View.GONE);
-                    adsBookLayout.setVisibility(View.VISIBLE);
-
-                    if(adsBookLayout != null && adsBookLayout.getChildCount() == 0){
-                        AdView adView = new AdView(context);
-                        adView.setAdSize(AdSize.LARGE_BANNER);
-                        adView.setAdUnitId("ca-app-pub-1872225169177247/2541119276");
-
-                        adsBookLayout.addView(adView);
-                        adsBookLayout.setVisibility(View.VISIBLE);
-                    }
+//                    adsBookLayout.setVisibility(View.VISIBLE);
+//
+//                    if(adsBookLayout != null && adsBookLayout.getChildCount() == 0){
+//                        AdView adView = new AdView(context);
+//                        adView.setAdSize(AdSize.LARGE_BANNER);
+//                        adView.setAdUnitId("ca-app-pub-1872225169177247/2541119276");
+//
+//                        adsBookLayout.addView(adView);
+//                        adsBookLayout.setVisibility(View.VISIBLE);
+//                    }
                 }
                 else{
                     bookLayout.setVisibility(View.VISIBLE);
-                    adsBookLayout.setVisibility(View.GONE);
+                    //adsBookLayout.setVisibility(View.GONE);
 
                     TextView bookTitle = (TextView) convertView.findViewById(R.id.bookTitleView);
                     bookTitle.setText(book.getBookTitle());
@@ -96,6 +99,11 @@ public class BookAdapter extends ArrayAdapter<Book> {
                     //default image
                     imageView.setImageDrawable(book.getLocalImageResource());
 
+                    if(book.isHasFileDownloaded()){
+                        imageView.setBackgroundResource(R.color.colorLightBlue);
+                    }else{
+                        imageView.setBackgroundResource(R.color.colorWhite);
+                    }
 
                     if(book.getRemoteImageUrl() != null){
 
