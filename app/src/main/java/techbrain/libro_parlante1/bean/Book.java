@@ -1,4 +1,4 @@
-package techbrain.libro_parlante.bean;
+package techbrain.libro_parlante1.bean;
 
 import android.graphics.drawable.Drawable;
 
@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
 
-import techbrain.libro_parlante.utils.ConfigUtils;
+import techbrain.libro_parlante1.utils.ConfigUtils;
 
 /**
  * Created by MartireAn on 18/09/2017.

@@ -1,4 +1,4 @@
-package techbrain.libro_parlante.bean;
+package techbrain.libro_parlante1.bean;
 
 import java.util.ArrayList;
 

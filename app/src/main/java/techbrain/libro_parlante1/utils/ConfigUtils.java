@@ -1,4 +1,4 @@
-package techbrain.libro_parlante.utils;
+package techbrain.libro_parlante1.utils;
 
 import android.app.Activity;
 
@@ -13,15 +13,14 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Locale;
 
-import techbrain.libro_parlante.bean.Book;
-import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante1.bean.Book;
+import techbrain.libro_parlante1.bean.Chapter;
 
 public final class ConfigUtils {
 

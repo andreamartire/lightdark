@@ -1,16 +1,12 @@
-package techbrain.libro_parlante;
+package techbrain.libro_parlante1;
 
 /**
  * Created by andrea on 24/08/17.
  */
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,9 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -33,16 +27,15 @@ import com.google.android.gms.ads.AdView;
 import java.io.File;
 import java.util.ArrayList;
 
-import techbrain.libro_parlante.R;
-import techbrain.libro_parlante.adapters.ChapterAdapter;
-import techbrain.libro_parlante.adapters.PlayThread;
-import techbrain.libro_parlante.bean.Book;
-import techbrain.libro_parlante.bean.Chapter;
-import techbrain.libro_parlante.task.DownloadTask;
-import techbrain.libro_parlante.task.SimpleDownloadTask;
-import techbrain.libro_parlante.utils.ConfigUtils;
-import techbrain.libro_parlante.utils.ImageUtils;
-import techbrain.libro_parlante.utils.MyFileUtils;
+import techbrain.libro_parlante1.R;
+import techbrain.libro_parlante1.adapters.ChapterAdapter;
+import techbrain.libro_parlante1.adapters.PlayThread;
+import techbrain.libro_parlante1.bean.Book;
+import techbrain.libro_parlante1.bean.Chapter;
+import techbrain.libro_parlante1.task.SimpleDownloadTask;
+import techbrain.libro_parlante1.utils.ConfigUtils;
+import techbrain.libro_parlante1.utils.ImageUtils;
+import techbrain.libro_parlante1.utils.MyFileUtils;
 
 public class ChapterShowList extends AppCompatActivity {
 

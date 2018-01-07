@@ -1,4 +1,4 @@
-package techbrain.libro_parlante.adapters;
+package techbrain.libro_parlante1.adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,18 +12,17 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import techbrain.libro_parlante.ChapterPlayer;
-import techbrain.libro_parlante.R;
-import techbrain.libro_parlante.bean.Book;
-import techbrain.libro_parlante.bean.Chapter;
-import techbrain.libro_parlante.utils.ConfigUtils;
-import techbrain.libro_parlante.utils.MyFileUtils;
+import techbrain.libro_parlante1.ChapterPlayer;
+import techbrain.libro_parlante1.R;
+import techbrain.libro_parlante1.bean.Book;
+import techbrain.libro_parlante1.bean.Chapter;
+import techbrain.libro_parlante1.utils.ConfigUtils;
+import techbrain.libro_parlante1.utils.MyFileUtils;
 
 /**
  * Created by MartireAn on 10/09/2017.

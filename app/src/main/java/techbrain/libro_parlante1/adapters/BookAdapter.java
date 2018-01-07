@@ -1,9 +1,7 @@
-package techbrain.libro_parlante.adapters;
+package techbrain.libro_parlante1.adapters;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,20 +12,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
-
-import org.apache.commons.io.LineIterator;
-
 import java.io.File;
 import java.util.ArrayList;
-import java.util.concurrent.Callable;
 
-import techbrain.libro_parlante.R;
-import techbrain.libro_parlante.bean.Book;
-import techbrain.libro_parlante.task.SimpleDownloadTask;
-import techbrain.libro_parlante.utils.ImageUtils;
+import techbrain.libro_parlante1.R;
+import techbrain.libro_parlante1.bean.Book;
+import techbrain.libro_parlante1.utils.ImageUtils;
 
 /**
  * Created by MartireAn on 19/09/2017.
