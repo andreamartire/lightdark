@@ -1,4 +1,4 @@
-package techbrain.libro_parlante.buttons;
+package techbrain.libro_parlante1.buttons;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
-import techbrain.libro_parlante.bean.Chapter;
-import techbrain.libro_parlante.task.DownloadTask;
+import techbrain.libro_parlante1.bean.Chapter;
+import techbrain.libro_parlante1.task.DownloadTask;
 
 /**
  * Created by MartireAn on 28/08/2017.

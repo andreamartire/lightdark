@@ -1,52 +1,26 @@
-package techbrain.libro_parlante;
+package techbrain.libro_parlante1;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Config;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
-import android.widget.SearchView;
-import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.gson.Gson;
 
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Calendar;
 
-import techbrain.libro_parlante.adapters.BookAdapter;
-import techbrain.libro_parlante.adapters.PlayThread;
-import techbrain.libro_parlante.bean.Book;
-import techbrain.libro_parlante.bean.Chapter;
-import techbrain.libro_parlante.bean.Favourites;
-import techbrain.libro_parlante.task.SimpleDownloadTask;
-import techbrain.libro_parlante.utils.AppRater;
-import techbrain.libro_parlante.utils.ConfigUtils;
-import techbrain.libro_parlante.utils.ImageUtils;
-import techbrain.libro_parlante.utils.MyFileUtils;
+import techbrain.libro_parlante1.adapters.BookAdapter;
+import techbrain.libro_parlante1.bean.Book;
+import techbrain.libro_parlante1.bean.Favourites;
+import techbrain.libro_parlante1.utils.ConfigUtils;
+import techbrain.libro_parlante1.utils.MyFileUtils;
 
 public class FavouritesShowList extends AppCompatActivity {
 

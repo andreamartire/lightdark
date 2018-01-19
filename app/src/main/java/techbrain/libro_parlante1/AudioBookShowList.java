@@ -1,10 +1,9 @@
-package techbrain.libro_parlante;
+package techbrain.libro_parlante1;
 
 /**
  * Created by andrea on 18/07/17.
  */
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -12,18 +11,12 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.menu.MenuBuilder;
-import android.support.v7.widget.ShareActionProvider;
-import android.view.ActionProvider;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -39,20 +32,18 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.io.File;
 import java.io.Serializable;
-import java.util.Calendar;
 import java.util.Locale;
 
-import techbrain.libro_parlante.R;
-import techbrain.libro_parlante.adapters.BookAdapter;
-import techbrain.libro_parlante.adapters.PlayThread;
-import techbrain.libro_parlante.bean.Book;
-import techbrain.libro_parlante.bean.Chapter;
-import techbrain.libro_parlante.bean.Favourites;
-import techbrain.libro_parlante.task.SimpleDownloadTask;
-import techbrain.libro_parlante.utils.AppRater;
-import techbrain.libro_parlante.utils.ConfigUtils;
-import techbrain.libro_parlante.utils.ImageUtils;
-import techbrain.libro_parlante.utils.MyFileUtils;
+import techbrain.libro_parlante1.R;
+import techbrain.libro_parlante1.adapters.BookAdapter;
+import techbrain.libro_parlante1.adapters.PlayThread;
+import techbrain.libro_parlante1.bean.Book;
+import techbrain.libro_parlante1.bean.Chapter;
+import techbrain.libro_parlante1.task.SimpleDownloadTask;
+import techbrain.libro_parlante1.utils.AppRater;
+import techbrain.libro_parlante1.utils.ConfigUtils;
+import techbrain.libro_parlante1.utils.ImageUtils;
+import techbrain.libro_parlante1.utils.MyFileUtils;
 
 public class AudioBookShowList extends AppCompatActivity {
 

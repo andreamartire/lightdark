@@ -1,4 +1,4 @@
-package techbrain.libro_parlante.utils;
+package techbrain.libro_parlante1.utils;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -6,12 +6,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import techbrain.libro_parlante.R;
+import techbrain.libro_parlante1.R;
 
 /**
  * Created by andrea on 20/11/17.

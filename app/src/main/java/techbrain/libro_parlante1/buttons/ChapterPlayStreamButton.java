@@ -1,12 +1,12 @@
-package techbrain.libro_parlante.buttons;
+package techbrain.libro_parlante1.buttons;
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 import android.view.View;
 
-import techbrain.libro_parlante.ChapterPlayer;
-import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante1.ChapterPlayer;
+import techbrain.libro_parlante1.bean.Chapter;
 
 /**
  * Created by MartireAn on 28/08/2017.
