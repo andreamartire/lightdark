@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
     defaultConfig {
-        applicationId "tech_brain.libro_parlante"
+        applicationId "techbrain.libro_parlante"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 17

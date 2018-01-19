@@ -72,13 +72,17 @@ public class ChapterDeleteButton extends AppCompatImageButton {
                 confirmBtn.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View arg0) {
-                        dialog.dismiss();
-                        MyFileUtils.deleteFileIfExists(currentChapter.getLocalFilePath());
+                    dialog.dismiss();
+                    MyFileUtils.deleteFileIfExists(currentChapter.getLocalFilePath());
 
-                        //force repaint chapter list view
-                        ListView chapterListView = (ListView) linearLayout.getRootView().findViewById(R.id.chapters_listview);
+                    //force repaint chapter list view
+                    ListView chapterListView = (ListView) linearLayout.getRootView().findViewById(R.id.chapters_listview);
+                    if(chapterListView != null){
                         final ArrayAdapter adapter = ((ArrayAdapter) chapterListView.getAdapter());
-                        adapter.notifyDataSetChanged();
+                        if(adapter != null){
+                            adapter.notifyDataSetChanged();
+                        }
+                    }
                     }
                 });
 
