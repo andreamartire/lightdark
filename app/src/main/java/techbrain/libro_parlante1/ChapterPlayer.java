@@ -87,6 +87,12 @@ public class ChapterPlayer extends AppCompatActivity {
             Book linkedBook = ConfigUtils.bookWithChapters.get(currentChapter.getBook().getBookDir());
             // convert to linked chapter. avoid to spread this logic
             if(linkedBook != null && currentChapter != null){
+
+                if(linkedBook.getProviderName() != null){
+                    myToolbar.setTitle(linkedBook.getProviderName());
+                    setSupportActionBar(myToolbar);
+                }
+
                 currentChapter = currentChapter.getMatchingChapter(linkedBook.getChapters());
 
                 ImageView bookImage = (ImageView) findViewById(R.id.bookImage);

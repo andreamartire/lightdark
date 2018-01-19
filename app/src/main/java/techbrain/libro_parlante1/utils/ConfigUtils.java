@@ -300,7 +300,7 @@ public final class ConfigUtils {
     public static Book getBookWithChapters(Book localBook) {
         if(ConfigUtils.bookList != null && localBook != null){
             for(Book b : bookList){
-                if(b.getBookTitle().equalsIgnoreCase(localBook.getBookTitle())){
+                if(b.getBookDir().equalsIgnoreCase(localBook.getBookDir())){
                     return b;
                 }
             }
