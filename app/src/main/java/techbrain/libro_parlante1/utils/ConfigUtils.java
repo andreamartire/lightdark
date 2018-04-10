@@ -51,7 +51,7 @@ public final class ConfigUtils {
         BufferedReader reader = null;
         try {
             String currLang = Locale.getDefault().getLanguage();
-            if("it".equalsIgnoreCase(currLang)){
+            //f("it".equalsIgnoreCase(currLang)){
                 reader = new BufferedReader(new InputStreamReader(activity.getAssets().open(configFile)));
 
                 String message = org.apache.commons.io.IOUtils.toString(reader);
@@ -207,7 +207,7 @@ public final class ConfigUtils {
                             }
                         }
                     }
-                }
+                //}
             }
 
             Book adsBook = new Book("ads boook");

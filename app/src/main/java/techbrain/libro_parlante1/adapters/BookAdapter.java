@@ -2,6 +2,7 @@ package techbrain.libro_parlante1.adapters;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +15,11 @@ import android.widget.TextView;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.concurrent.Callable;
 
 import techbrain.libro_parlante1.R;
 import techbrain.libro_parlante1.bean.Book;
+import techbrain.libro_parlante1.task.SimpleDownloadTask;
 import techbrain.libro_parlante1.utils.ImageUtils;
 
 /**
@@ -113,7 +116,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
                                 //select downloaded image
                                 imageView.setImageDrawable(ImageUtils.scaleImage(context, image, xSize, hSize));
                             }
-                        }/*else{
+                        }else{
                             final BookAdapter arrayAdapter = this;
                             //download file out of main thread
                             SimpleDownloadTask sdt = new SimpleDownloadTask(context, book.getRemoteImageUrl(), book.getLocalImageFilePath(), new Callable<Integer>() {
@@ -141,7 +144,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
                             //if(new File(book.getLocalImageFilePath()).exists()){
                             //    Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
                             //}
-                        }*/
+                        }
                     }
                 }
             }
