@@ -54745,6 +54745,698 @@
                 "title": "I viaggi di Gulliver",
                 "author": "Jonathan Swift"
             }
+        },
+        {
+            "contents": [
+                {
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "Capitolo 1",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin001.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 1,
+                    "title": "Capitolo 2",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin002.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 2,
+                    "title": "Capitolo 3",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin003.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 3,
+                    "title": "Capitolo 4",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin004.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 4,
+                    "title": "Capitolo 5",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin005.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 5,
+                    "title": "Capitolo 6",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin006.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 6,
+                    "title": "Capitolo 7",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin007.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 7,
+                    "title": "Capitolo 8",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin008.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 8,
+                    "title": "Capitolo 9",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin009.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 9,
+                    "title": "Capitolo 10",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin010.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 10,
+                    "title": "Capitolo 11",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin011.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 11,
+                    "title": "Capitolo 12",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin012.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 12,
+                    "title": "Capitolo 13",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin013.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 13,
+                    "title": "Capitolo 14",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/robin014.mp3"
+                }
+            ],
+            "id": 8,
+            "metadata": {
+                "image": "https://blockchaininvest.io/wp-content/uploads/2018/01/Robin-Hood-Illustration.jpg",
+                "other_images": {
+                    "image_300": "",
+                    "image_433": ""
+                },
+                "provider": {
+                    "image": "",
+                    "name": "Audiolibri Corsari",
+                    "site": "audiolibricorsari.italianalmanac.org"
+                },
+                "title": "Robin Hood",
+                "author": "Alexandre Dumas"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "Capitolo 1",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola001.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 1,
+                    "title": "Capitolo 2",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola002.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 2,
+                    "title": "Capitolo 3",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola003.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 3,
+                    "title": "Capitolo 4",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola004.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 4,
+                    "title": "Capitolo 5",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola005.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 5,
+                    "title": "Capitolo 6",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola006.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 6,
+                    "title": "Capitolo 7",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola007.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 7,
+                    "title": "Capitolo 8",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola008.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 8,
+                    "title": "Capitolo 9",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola009.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 9,
+                    "title": "Capitolo 10",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola010.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 10,
+                    "title": "Capitolo 11",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola011.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 11,
+                    "title": "Capitolo 12",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola012.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 12,
+                    "title": "Capitolo 13",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola013.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 13,
+                    "title": "Capitolo 14",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola014.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 14,
+                    "title": "Capitolo 15",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola015.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 15,
+                    "title": "Capitolo 16",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola016.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 16,
+                    "title": "Capitolo 17",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola017.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 17,
+                    "title": "Capitolo 18",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola018.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 18,
+                    "title": "Capitolo 19",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola019.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 19,
+                    "title": "Capitolo 20",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola020.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 20,
+                    "title": "Capitolo 21",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola021.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 21,
+                    "title": "Capitolo 22",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola022.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 22,
+                    "title": "Capitolo 23",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola023.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 23,
+                    "title": "Capitolo 24",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola024.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 24,
+                    "title": "Capitolo 25",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola025.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 25,
+                    "title": "Capitolo 26",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola026.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 26,
+                    "title": "Capitolo 27",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola027.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 27,
+                    "title": "Capitolo 28",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola028.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 28,
+                    "title": "Capitolo 29",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola029.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 29,
+                    "title": "Capitolo 30",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola030.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 30,
+                    "title": "Capitolo 31",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola031.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 31,
+                    "title": "Capitolo 32",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola032.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 32,
+                    "title": "Capitolo 33",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola033.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 33,
+                    "title": "Capitolo 34",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola034.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 34,
+                    "title": "Capitolo 35",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola035.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 35,
+                    "title": "Capitolo 36",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola036.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 36,
+                    "title": "Capitolo 37",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola037.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 37,
+                    "title": "Capitolo 38",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola038.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 38,
+                    "title": "Capitolo 39",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola039.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 39,
+                    "title": "Capitolo 40",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola040.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 40,
+                    "title": "Capitolo 41",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola041.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 41,
+                    "title": "Capitolo 42",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola042.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 42,
+                    "title": "Capitolo 43",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola043.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 43,
+                    "title": "Capitolo 44",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola044.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 44,
+                    "title": "Capitolo 45",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola045.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 45,
+                    "title": "Capitolo 46",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola046.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 46,
+                    "title": "Capitolo 47",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola047.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 47,
+                    "title": "Capitolo 48",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola048.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 48,
+                    "title": "Capitolo 49",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola049.mp3"
+                },
+                {
+                    "format": "mp3",
+                    "id": 49,
+                    "title": "Capitolo 50",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/farandola050.mp3"
+                }
+            ],
+            "id": 8,
+            "metadata": {
+                "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Le_avventure_straordinarissime_di_Saturnino_Farandola2.jpg",
+                "other_images": {
+                    "image_300": "",
+                    "image_433": ""
+                },
+                "provider": {
+                    "image": "",
+                    "name": "Audiolibri Corsari",
+                    "site": "audiolibricorsari.italianalmanac.org"
+                },
+                "title": "I viaggi straordinarissimi di Saturnino Farandola",
+                "author": "Jules Verne"
+            }
+        },
+        {
+            "contents": [
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 0,
+                    "title": "Capitolo 1",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro001.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 1,
+                    "title": "Capitolo 2",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro002.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 2,
+                    "title": "Capitolo 3",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro003.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 3,
+                    "title": "Capitolo 4",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro004.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 4,
+                    "title": "Capitolo 5",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro005.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 5,
+                    "title": "Capitolo 6",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro006.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 6,
+                    "title": "Capitolo 7",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro007.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 7,
+                    "title": "Capitolo 8",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro008.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 8,
+                    "title": "Capitolo 9",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro009.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 9,
+                    "title": "Capitolo 10",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro010.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 10,
+                    "title": "Capitolo 11",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro011.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 11,
+                    "title": "Capitolo 12",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro012.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 12,
+                    "title": "Capitolo 13",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro013.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 13,
+                    "title": "Capitolo 14",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro014.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 14,
+                    "title": "Capitolo 15",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro015.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 15,
+                    "title": "Capitolo 16",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro016.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 16,
+                    "title": "Capitolo 17",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro017.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 17,
+                    "title": "Capitolo 18",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro018.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 18,
+                    "title": "Capitolo 19",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro019.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 19,
+                    "title": "Capitolo 20",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro020.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 20,
+                    "title": "Capitolo 21",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro021.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 21,
+                    "title": "Capitolo 22",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro022.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 22,
+                    "title": "Capitolo 23",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro023.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 23,
+                    "title": "Capitolo 24",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro024.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 24,
+                    "title": "Capitolo 25",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro025.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 25,
+                    "title": "Capitolo 26",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro026.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 26,
+                    "title": "Capitolo 27",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro027.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 27,
+                    "title": "Capitolo 28",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro028.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 28,
+                    "title": "Capitolo 29",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro029.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 29,
+                    "title": "Capitolo 30",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro030.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 30,
+                    "title": "Capitolo 31",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro031.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 31,
+                    "title": "Capitolo 32",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro032.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 32,
+                    "title": "Capitolo 33",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro033.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 33,
+                    "title": "Capitolo 34",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro034.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 34,
+                    "title": "Capitolo 35",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro035.mp3"
+                },
+                {
+                    "desc": "",
+                    "format": "mp3",
+                    "id": 35,
+                    "title": "Capitolo 36",
+                    "url": "http://audiolibricorsari.italianalmanac.org/audio/corsaro036.mp3"
+                },
+            ],
+            "metadata": {
+                "author": "Emilio Salgari",
+                "image": "http://1.citynews-veronasera.stgy.ovh/~media/original-hi/5473064502285/3452-4093-corsaro-nero.jpg",
+                "other_images": {
+                    "image_300": "",
+                    "image_433": ""
+                },
+                "provider": {
+                    "image": "",
+                    "name": "Audiolibri Corsari",
+                    "site": "audiolibricorsari.italianalmanac.org"
+                },
+                "title": "Il corsaro nero"
+            }
         }
     ],
     "config": {},
