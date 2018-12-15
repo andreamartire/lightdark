@@ -48,7 +48,12 @@ public final class ConfigUtils {
 
     public static void invoke(Activity activity, String configFile) {
 
+        Integer realWidth = ImageUtils.getRealWidthSize(activity.getWindowManager());
+        int customWidth = realWidth*45/100;
+        int customHeight = customWidth*3/5;
+
         BufferedReader reader = null;
+        int i = 0;
         try {
             String currLang = Locale.getDefault().getLanguage();
             //f("it".equalsIgnoreCase(currLang)){
@@ -61,7 +66,7 @@ public final class ConfigUtils {
                 if(audioBooks != null){
                     JsonArray audioBooksArray = audioBooks.getAsJsonArray();
 
-                    for (int i = 0 ; i < audioBooksArray.size(); i++) {
+                    for (i = 0 ; i < audioBooksArray.size(); i++) {
                         JsonObject obj = audioBooksArray.get(i).getAsJsonObject();
 
                         //setting provider
@@ -125,7 +130,7 @@ public final class ConfigUtils {
 
                             String descBook = "";
                             if(firstContentElement.getAsJsonObject().get("desc") != null){
-                                descBook = firstContentElement.getAsJsonObject().get("desc").getAsString();
+                                // descBook = firstContentElement.getAsJsonObject().get("desc").getAsString();
                             }
 
                             Book book = new Book(bookTitle);
@@ -136,10 +141,8 @@ public final class ConfigUtils {
                             book.setAppDir(activity.getFilesDir().getAbsolutePath());
 
                             //select random image
-                            Integer realWidth = ImageUtils.getRealWidthSize(activity.getWindowManager());
-                            int customWidth = realWidth*45/100;
-                            int customHeight = customWidth*3/5;
-                            book.setLocalImageResource(ImageUtils.scaleImage(activity, ImageUtils.getRandomDefaultImage(activity), customWidth, customHeight));
+
+                            book.setLocalImageResource(ImageUtils.getRandomDefaultImage(activity, customWidth, customHeight));
 
                             try{
                                 if(ImageUtils.isValidUri(image433Url)){
@@ -151,12 +154,12 @@ public final class ConfigUtils {
                                 }
 
                                 //disabled avoid out of memory
-                                /*if(new File(book.getLocalImageFilePath()).exists()){
-                                    //select local image
-
-                                    Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
-                                    book.setLocalImageResource(image);
-                                }*/
+                                //if(new File(book.getLocalImageFilePath()).exists()){
+                                //    //select local image
+//
+//                                    Drawable image = Drawable.createFromPath(book.getLocalImageFilePath());
+//                                    book.setLocalImageResource(image);
+//                                }
                             }
                             catch (MalformedURLException e){
                                 e.printStackTrace();
@@ -229,6 +232,7 @@ public final class ConfigUtils {
 
         } catch (Exception e) {
             //log the exception
+            e.printStackTrace();
         } finally {
             if (reader != null) {
                 try {
@@ -240,7 +244,7 @@ public final class ConfigUtils {
             }
         }
 
-        Collections.shuffle(bookList);
+        //Collections.shuffle(bookList);
 
         //detect books with file downloaded
         if(bookList != null){

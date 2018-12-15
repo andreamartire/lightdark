@@ -7,8 +7,8 @@
     <string name="info_title">Informazioni</string>
     <string name="info_message">Tutti i contenuti audio e le immagini sono liberamente accessibili in rete e scaricati direttamente dai siti web dei rispettivi possessori dei diritti. L\'applicazione non ha un server associato pertanto nessun contenuto è ospitato sui nostri sistemi. Per suggerimenti/segnalazioni: techbrain@autistici.org</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="share_message">Dai un\'occhiata a "Libro Parlante" https://tinyurl.com/ycgwj9ml</string>
-    <string name="app_url">https://tinyurl.com/ycgwj9ml</string>
+    <string name="share_message">Dai un\'occhiata a "Libro Parlante" https://bit.ly/2EmVyak</string>
+    <string name="app_url">https://bit.ly/2EmVyak</string>
     <string name="contact_email">techbrain@autistici.org</string>
     <string name="label_confirm_down_all">Sei sicuro/a di voler scaricare tutti i capitoli?</string>
     <string name="label_cancel">Annulla</string>

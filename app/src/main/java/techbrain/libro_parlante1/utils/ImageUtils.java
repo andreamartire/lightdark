@@ -1,6 +1,7 @@
 package techbrain.libro_parlante1.utils;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -22,18 +23,18 @@ public class ImageUtils {
 
     static ArrayList<Drawable> images;
 
-    public static Drawable getRandomDefaultImage(Context context) {
+    public static Drawable getRandomDefaultImage(Context context, Integer customWidth, Integer customHeight) {
         if(images == null){
             images = new ArrayList<>();
-            images.add(context.getResources().getDrawable(R.drawable.book1_small));
-            images.add(context.getResources().getDrawable(R.drawable.book2_small));
-            images.add(context.getResources().getDrawable(R.drawable.book3_small));
-            images.add(context.getResources().getDrawable(R.drawable.book4_small));
-            images.add(context.getResources().getDrawable(R.drawable.book5_small));
-            images.add(context.getResources().getDrawable(R.drawable.book6_small));
-            images.add(context.getResources().getDrawable(R.drawable.book7_small));
-            images.add(context.getResources().getDrawable(R.drawable.book8_small));
-            images.add(context.getResources().getDrawable(R.drawable.book9_small));
+            images.add(scaleImage(context, context.getResources().getDrawable(R.drawable.book1_small), customWidth, customHeight));
+            images.add(scaleImage(context, context.getResources().getDrawable(R.drawable.book2_small), customWidth, customHeight));
+            images.add(scaleImage(context, context.getResources().getDrawable(R.drawable.book3_small), customWidth, customHeight));
+            images.add(scaleImage(context, context.getResources().getDrawable(R.drawable.book4_small), customWidth, customHeight));
+            images.add(scaleImage(context, context.getResources().getDrawable(R.drawable.book5_small), customWidth, customHeight));
+            images.add(scaleImage(context, context.getResources().getDrawable(R.drawable.book6_small), customWidth, customHeight));
+            images.add(scaleImage(context, context.getResources().getDrawable(R.drawable.book7_small), customWidth, customHeight));
+            images.add(scaleImage(context, context.getResources().getDrawable(R.drawable.book8_small), customWidth, customHeight));
+            images.add(scaleImage(context, context.getResources().getDrawable(R.drawable.book9_small), customWidth, customHeight));
         }
         Collections.shuffle(images, new Random(System.nanoTime()));
 
