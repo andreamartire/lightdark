@@ -29,7 +29,7 @@ public class AppRater {
         AppRater.APP_PNAME = mContext.getPackageName();
 
         SharedPreferences prefs = mContext.getSharedPreferences("apprater", 0);
-        if (prefs.getBoolean("dont_show_again", false)) {
+        if (prefs.getBoolean("do_not_show_again", false)) {
             return ;
         }
 
@@ -40,18 +40,18 @@ public class AppRater {
         editor.putLong("launch_count", launch_count);
 
         // Get date of first launch
-        Long date_firstLaunch = prefs.getLong("date_firstlaunch", 0);
-        if (date_firstLaunch == 0) {
-            date_firstLaunch = System.currentTimeMillis();
-            editor.putLong("date_firstlaunch", date_firstLaunch);
+        Long date_first_launch = prefs.getLong("date_first_launch", 0);
+        if (date_first_launch == 0) {
+            date_first_launch = System.currentTimeMillis();
+            editor.putLong("date_first_launch", date_first_launch);
         }else{
-            editor.putBoolean("dont_show_again", false);
+            editor.putBoolean("do_not_show_again", false);
             editor.commit();
         }
 
         // Wait at least n days before opening
         if (launch_count >= LAUNCHES_UNTIL_PROMPT) {
-            if (System.currentTimeMillis() >= date_firstLaunch +
+            if (System.currentTimeMillis() >= date_first_launch +
                     (DAYS_UNTIL_PROMPT * 24 * 60 * 60 * 1000)) {
                 showRateDialog(mContext, editor);
             }
@@ -78,13 +78,14 @@ public class AppRater {
         b1.setText("Recensione " + APP_TITLE);
         b1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            String url = mContext.getResources().getString(R.string.app_url);
             try {
-                mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + APP_PNAME)));
+                mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
             } catch (android.content.ActivityNotFoundException anfe) {
-                mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + APP_PNAME)));
+                mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
             }
             if (editor != null) {
-                editor.putBoolean("dont_show_again", true);
+                editor.putBoolean("do_not_show_again", true);
                 editor.commit();
             }
             dialog.dismiss();

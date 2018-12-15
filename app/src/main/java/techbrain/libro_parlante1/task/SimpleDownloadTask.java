@@ -24,6 +24,10 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.concurrent.Callable;
 
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocketFactory;
+
 import techbrain.libro_parlante1.utils.ImageUtils;
 import techbrain.libro_parlante1.utils.MyFileUtils;
 

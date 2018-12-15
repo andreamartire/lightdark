@@ -285,32 +285,31 @@ public class PlayThread extends AsyncTask<String, Integer, String> {
     public static Chapter getPlayerState(Context context){
         Chapter linkedChapter = null;
 
-        if(context != null && context.getFilesDir() != null && context.getFilesDir().getAbsolutePath() != null){
-            String metadataFilePath = context.getFilesDir().getAbsolutePath() + File.separator + METADATA + File.separator;
-            String playerStateFilePath = metadataFilePath + File.separator + PLAYER_STATE_FILE;
+        try{
+            if(context != null && context.getFilesDir() != null && context.getFilesDir().getAbsolutePath() != null){
+                String metadataFilePath = context.getFilesDir().getAbsolutePath() + File.separator + METADATA + File.separator;
+                String playerStateFilePath = metadataFilePath + File.separator + PLAYER_STATE_FILE;
 
-            try{
-                Chapter loadedChapter = new Gson().fromJson(new FileReader(playerStateFilePath), Chapter.class);
-                System.out.println("Loaded chapter: " + loadedChapter);
+                    Chapter loadedChapter = new Gson().fromJson(new FileReader(playerStateFilePath), Chapter.class);
+                    System.out.println("Loaded chapter: " + loadedChapter);
 
-                Book linkedBook = ConfigUtils.bookWithChapters.get(loadedChapter.getBook().getBookDir());
+                    Book linkedBook = ConfigUtils.bookWithChapters.get(loadedChapter.getBook().getBookDir());
 
-                if(linkedBook == null){
-                    //is null when book title changes in config file
-                    return null;
-                }
-                // convert to linked chapter. avoid to spread this logic
-                linkedChapter = loadedChapter.getMatchingChapter(linkedBook.getChapters());
+                    if(linkedBook == null){
+                        //is null when book title changes in config file
+                        return null;
+                    }
+                    // convert to linked chapter. avoid to spread this logic
+                    linkedChapter = loadedChapter.getMatchingChapter(linkedBook.getChapters());
 
-                if(linkedChapter != null){
-                    linkedChapter.setCurrentDuration(loadedChapter.getCurrentDuration());
-                    linkedChapter.setTotalDuration(loadedChapter.getTotalDuration());
-                }
-
-            }catch (Exception e){
-                //nothing
-                e.printStackTrace();
+                    if(linkedChapter != null){
+                        linkedChapter.setCurrentDuration(loadedChapter.getCurrentDuration());
+                        linkedChapter.setTotalDuration(loadedChapter.getTotalDuration());
+                    }
             }
+        }catch (Exception e){
+            //nothing
+            e.printStackTrace();
         }
 
         return linkedChapter;
