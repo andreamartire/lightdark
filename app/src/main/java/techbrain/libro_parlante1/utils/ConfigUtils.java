@@ -244,7 +244,7 @@ public final class ConfigUtils {
             }
         }
 
-        //Collections.shuffle(bookList);
+        Collections.shuffle(bookList);
 
         //detect books with file downloaded
         if(bookList != null){
