@@ -1,4 +1,4 @@
-package techbrain.libro_parlante1.task;
+package techbrain.libro_parlante.task;
 
 /**
  * Created by MartireAn on 24/09/2017.
@@ -24,12 +24,8 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.concurrent.Callable;
 
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSocketFactory;
-
-import techbrain.libro_parlante1.utils.ImageUtils;
-import techbrain.libro_parlante1.utils.MyFileUtils;
+import techbrain.libro_parlante.utils.ImageUtils;
+import techbrain.libro_parlante.utils.MyFileUtils;
 
 public class SimpleDownloadTask extends AsyncTask<String, Integer, String> {
 

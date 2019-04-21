@@ -1,4 +1,4 @@
-package techbrain.libro_parlante1;
+package techbrain.libro_parlante;
 
 /**
  * Created by andrea on 24/08/17.
@@ -27,15 +27,14 @@ import com.google.android.gms.ads.AdView;
 import java.io.File;
 import java.util.ArrayList;
 
-import techbrain.libro_parlante1.R;
-import techbrain.libro_parlante1.adapters.ChapterAdapter;
-import techbrain.libro_parlante1.adapters.PlayThread;
-import techbrain.libro_parlante1.bean.Book;
-import techbrain.libro_parlante1.bean.Chapter;
-import techbrain.libro_parlante1.task.SimpleDownloadTask;
-import techbrain.libro_parlante1.utils.ConfigUtils;
-import techbrain.libro_parlante1.utils.ImageUtils;
-import techbrain.libro_parlante1.utils.MyFileUtils;
+import techbrain.libro_parlante.adapters.ChapterAdapter;
+import techbrain.libro_parlante.adapters.PlayThread;
+import techbrain.libro_parlante.bean.Book;
+import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.task.SimpleDownloadTask;
+import techbrain.libro_parlante.utils.ConfigUtils;
+import techbrain.libro_parlante.utils.ImageUtils;
+import techbrain.libro_parlante.utils.MyFileUtils;
 
 public class ChapterShowList extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package techbrain.libro_parlante1.task;
+package techbrain.libro_parlante.task;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -21,9 +21,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.Callable;
 
-import techbrain.libro_parlante1.R;
-import techbrain.libro_parlante1.bean.Chapter;
-import techbrain.libro_parlante1.utils.MyFileUtils;
+import techbrain.libro_parlante.R;
+import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.utils.MyFileUtils;
 
 /**
  * Created by andrea on 17/05/17.

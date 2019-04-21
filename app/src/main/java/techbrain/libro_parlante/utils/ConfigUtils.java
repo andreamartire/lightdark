@@ -1,4 +1,4 @@
-package techbrain.libro_parlante1.utils;
+package techbrain.libro_parlante.utils;
 
 import android.app.Activity;
 
@@ -19,14 +19,15 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Locale;
 
-import techbrain.libro_parlante1.bean.Book;
-import techbrain.libro_parlante1.bean.Chapter;
+import techbrain.libro_parlante.bean.Book;
+import techbrain.libro_parlante.bean.Chapter;
 
 public final class ConfigUtils {
 
     public static ArrayList<Book> bookList = new ArrayList<Book>();
     public static ArrayList<Book> favouriteBooks = new ArrayList<Book>();
     public static HashMap<String, Book> bookWithChapters = new HashMap<String, Book>();
+    public static Integer numBooks = 0;
 
     public static String audiobooks = "audiobooks";
     private static String contents = "contents";
@@ -66,6 +67,7 @@ public final class ConfigUtils {
                 if(audioBooks != null){
                     JsonArray audioBooksArray = audioBooks.getAsJsonArray();
 
+                    numBooks = audioBooksArray.size();
                     for (i = 0 ; i < audioBooksArray.size(); i++) {
                         JsonObject obj = audioBooksArray.get(i).getAsJsonObject();
 

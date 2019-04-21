@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="techbrain.libro_parlante1">
+    package="techbrain.libro_parlante">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -24,7 +24,7 @@
         <!-- Include the AdActivity configChanges and theme. -->
 
         <activity
-            android:name="techbrain.libro_parlante1.SplashActivity"
+            android:name="techbrain.libro_parlante.SplashActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -35,22 +35,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="techbrain.libro_parlante1.AudioBookShowList"
+            android:name="techbrain.libro_parlante.AudioBookShowList"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="techbrain.libro_parlante1.FavouritesShowList"
+            android:name="techbrain.libro_parlante.FavouritesShowList"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="techbrain.libro_parlante1.ChapterShowList"
+            android:name="techbrain.libro_parlante.ChapterShowList"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="techbrain.libro_parlante1.ChapterPlayer"
+            android:name="techbrain.libro_parlante.ChapterPlayer"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />

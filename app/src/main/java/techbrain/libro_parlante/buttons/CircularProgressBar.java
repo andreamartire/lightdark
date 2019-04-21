@@ -1,4 +1,4 @@
-package techbrain.libro_parlante1.buttons;
+package techbrain.libro_parlante.buttons;
 
 import android.animation.Animator;
 import android.animation.Animator.AnimatorListener;
@@ -21,7 +21,7 @@ import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.ProgressBar;
 
-import techbrain.libro_parlante1.R;
+import techbrain.libro_parlante.R;
 
 public class CircularProgressBar extends ProgressBar{
     private static final String TAG = "CircularProgressBar";

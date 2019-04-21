@@ -19,7 +19,7 @@
             android:text=""
             android:textSize="22dip"/>
 
-        <techbrain.libro_parlante1.buttons.ChapterPlayStreamButton
+        <techbrain.libro_parlante.buttons.ChapterPlayStreamButton
             android:id="@+id/playButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
             android:background="@drawable/rounded_buttons"
             android:theme="@style/Widget.AppCompat.Button" />
 
-        <techbrain.libro_parlante1.buttons.ChapterDeleteButton
+        <techbrain.libro_parlante.buttons.ChapterDeleteButton
             android:id="@+id/deleteButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
             android:background="@drawable/rounded_buttons"
             android:visibility="gone" />
 
-        <techbrain.libro_parlante1.buttons.ChapterDownloadButton
+        <techbrain.libro_parlante.buttons.ChapterDownloadButton
             android:id="@+id/downloadButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:background="@drawable/rounded_buttons"
             android:theme="@style/Widget.AppCompat.Button" />
 
-        <techbrain.libro_parlante1.buttons.CircularProgressBar
+        <techbrain.libro_parlante.buttons.CircularProgressBar
                 android:id="@+id/downloadProgress"
                 style="@style/Widget.ProgressBar.Holo.CircularProgressBar"
                 android:layout_width="30dip"

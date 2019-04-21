@@ -7,8 +7,8 @@ android {
         applicationId "techbrain.libro_parlante"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 21
-        versionName "21.0"
+        versionCode 22
+        versionName "22.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

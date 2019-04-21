@@ -1,4 +1,4 @@
-package techbrain.libro_parlante1.buttons;
+package techbrain.libro_parlante.buttons;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,9 +11,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import techbrain.libro_parlante1.R;
-import techbrain.libro_parlante1.bean.Chapter;
-import techbrain.libro_parlante1.utils.MyFileUtils;
+import techbrain.libro_parlante.R;
+import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.utils.MyFileUtils;
 
 /**
  * Created by MartireAn on 28/08/2017.

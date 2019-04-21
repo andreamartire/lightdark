@@ -1,4 +1,4 @@
-package techbrain.libro_parlante1;
+package techbrain.libro_parlante;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,11 +16,11 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.Serializable;
 
-import techbrain.libro_parlante1.adapters.BookAdapter;
-import techbrain.libro_parlante1.bean.Book;
-import techbrain.libro_parlante1.bean.Favourites;
-import techbrain.libro_parlante1.utils.ConfigUtils;
-import techbrain.libro_parlante1.utils.MyFileUtils;
+import techbrain.libro_parlante.adapters.BookAdapter;
+import techbrain.libro_parlante.bean.Book;
+import techbrain.libro_parlante.bean.Favourites;
+import techbrain.libro_parlante.utils.ConfigUtils;
+import techbrain.libro_parlante.utils.MyFileUtils;
 
 public class FavouritesShowList extends AppCompatActivity {
 

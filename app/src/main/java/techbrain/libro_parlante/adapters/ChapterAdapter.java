@@ -1,4 +1,4 @@
-package techbrain.libro_parlante1.adapters;
+package techbrain.libro_parlante.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import techbrain.libro_parlante1.R;
-import techbrain.libro_parlante1.bean.Chapter;
-import techbrain.libro_parlante1.buttons.ChapterDeleteButton;
-import techbrain.libro_parlante1.buttons.ChapterDownloadButton;
-import techbrain.libro_parlante1.buttons.ChapterPlayStreamButton;
-import techbrain.libro_parlante1.utils.MyFileUtils;
+import techbrain.libro_parlante.R;
+import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.buttons.ChapterDeleteButton;
+import techbrain.libro_parlante.buttons.ChapterDownloadButton;
+import techbrain.libro_parlante.buttons.ChapterPlayStreamButton;
+import techbrain.libro_parlante.utils.MyFileUtils;
 
 /**
  * Created by MartireAn on 27/08/2017.

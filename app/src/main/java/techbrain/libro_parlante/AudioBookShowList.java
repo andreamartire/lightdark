@@ -1,4 +1,4 @@
-package techbrain.libro_parlante1;
+package techbrain.libro_parlante;
 
 /**
  * Created by andrea on 18/07/17.
@@ -34,16 +34,15 @@ import java.io.File;
 import java.io.Serializable;
 import java.util.Locale;
 
-import techbrain.libro_parlante1.R;
-import techbrain.libro_parlante1.adapters.BookAdapter;
-import techbrain.libro_parlante1.adapters.PlayThread;
-import techbrain.libro_parlante1.bean.Book;
-import techbrain.libro_parlante1.bean.Chapter;
-import techbrain.libro_parlante1.task.SimpleDownloadTask;
-import techbrain.libro_parlante1.utils.AppRater;
-import techbrain.libro_parlante1.utils.ConfigUtils;
-import techbrain.libro_parlante1.utils.ImageUtils;
-import techbrain.libro_parlante1.utils.MyFileUtils;
+import techbrain.libro_parlante.adapters.BookAdapter;
+import techbrain.libro_parlante.adapters.PlayThread;
+import techbrain.libro_parlante.bean.Book;
+import techbrain.libro_parlante.bean.Chapter;
+import techbrain.libro_parlante.task.SimpleDownloadTask;
+import techbrain.libro_parlante.utils.AppRater;
+import techbrain.libro_parlante.utils.ConfigUtils;
+import techbrain.libro_parlante.utils.ImageUtils;
+import techbrain.libro_parlante.utils.MyFileUtils;
 
 public class AudioBookShowList extends AppCompatActivity {
 
@@ -81,7 +80,8 @@ public class AudioBookShowList extends AppCompatActivity {
             case R.id.infoElement:
                 //Toast.makeText(me, "Tutti i contenuti audio e le immagini sono liberamente accessibili in rete e scaricati direttamente dai siti web dei rispettivi possessori dei diritti. Nessun contenuto è ospitato su server dell'applicazione", Toast.LENGTH_LONG).show();
                 AlertDialog.Builder builder = new AlertDialog.Builder(me);
-                builder.setMessage(R.string.info_message)
+                String infoMsg = getResources().getString(R.string.info_message);
+                builder.setMessage(infoMsg + " - " + ConfigUtils.numBooks + " Audiolibri")
                         .setTitle(R.string.info_title);
 
                 AlertDialog dialog = builder.create();

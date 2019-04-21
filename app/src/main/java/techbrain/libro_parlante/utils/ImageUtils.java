@@ -1,7 +1,6 @@
-package techbrain.libro_parlante1.utils;
+package techbrain.libro_parlante.utils;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -17,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-import techbrain.libro_parlante1.R;
+import techbrain.libro_parlante.R;
 
 public class ImageUtils {
 
