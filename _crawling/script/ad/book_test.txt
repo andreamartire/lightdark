@@ -45,8 +45,10 @@
 										ANDRUETTO MARIA TERESA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ANGELA_Alberto">
 										ANGELA Alberto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ANGELA_Piero">
 										ANGELA Piero</a></div></li><li><div align="left"><a href="/elenco_libri_autore/angelini_cesare">
-										ANGELINI Cesare</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ANTONICELLI_Franco">
-										ANTONICELLI Franco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/appleby_ellen">
+										ANGELINI Cesare</a></div></li><li><div align="left"><a href="/elenco_libri_autore/angus_sam">
+										ANGUS SAM</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ANTONICELLI_Franco">
+										ANTONICELLI Franco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/antonioni_michelangelo">
+										ANTONIONI Michelangelo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/appleby_ellen">
 										APPLEBY ELLEN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/arachi_alessandra">
 										ARACHI Alessandra</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ARBASINO_Alberto">
 										ARBASINO Alberto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/arduino_giovanni">
@@ -56,7 +58,8 @@
 										ARSLAN Antonia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ashford_kathy">
 										ASHFORD KATHY</a></div></li><li><div align="left"><a href="/elenco_libri_autore/asimov_isaac">
 										ASIMOV Isaac</a></div></li><li><div align="left"><a href="/elenco_libri_autore/associazione_italiana_dislessia">
-										ASSOCIAZIONE ITALIANA DISLESSIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ATWOOD_Margaret">
+										ASSOCIAZIONE ITALIANA DISLESSIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/attadio_nicola">
+										ATTADIO Nicola</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ATWOOD_Margaret">
 										ATWOOD Margaret</a></div></li><li><div align="left"><a href="/elenco_libri_autore/atzori_simona">
 										ATZORI Simona</a></div></li><li><div align="left"><a href="/elenco_libri_autore/AUB_Max">
 										AUB Max</a></div></li><li><div align="left"><a href="/elenco_libri_autore/AUGIAS_Corrado">
@@ -66,11 +69,13 @@
 										Autore sconosciuto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/auxier_jonathan">
 										AUXIER JONATHAN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/avallone_silvia">
 										AVALLONE Silvia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/AVATI_Pupi">
-										AVATI Pupi</a></div></li></ul></li><li id="b"><a name="b" class="title">B</a><ul><li><div align="left"><a href="/elenco_libri_autore/baccalario_pierdomenico">
+										AVATI Pupi</a></div></li></ul></li><li id="b"><a name="b" class="title">B</a><ul><li><div align="left"><a href="/elenco_libri_autore/babbit_natalie">
+										BABBIT NATALIE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/baccalario_pierdomenico">
 										BACCALARIO Pierdomenico</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BACH_Richard">
 										BACH Richard</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bagnoli_michele">
 										BAGNOLI Michele</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bail_murray">
-										BAIL Murray</a></div></li><li><div align="left"><a href="/elenco_libri_autore/baldacci_david">
+										BAIL Murray</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bajani_andrea">
+										BAJANI Andrea</a></div></li><li><div align="left"><a href="/elenco_libri_autore/baldacci_david">
 										BALDACCI David</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BALDINI_Marco">
 										BALDINI Marco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BALLARIO_Pina">
 										BALLARIO Pina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ballerini_luigi">
@@ -84,7 +89,8 @@
 										BARAK Michael</a></div></li><li><div align="left"><a href="/elenco_libri_autore/baraldi_barbara">
 										BARALDI Barbara</a></div></li><li><div align="left"><a href="/elenco_libri_autore/barbero_alessandro">
 										BARBERO Alessandro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BARBERY_Muriel">
-										BARBERY Muriel</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BARICCO_A_MOISIO_L">
+										BARBERY Muriel</a></div></li><li><div align="left"><a href="/elenco_libri_autore/baresani_camilla">
+										BARESANI Camilla</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BARICCO_A_MOISIO_L">
 										BARICCO A. MOISIO L.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BARICCO_Alessandro">
 										BARICCO Alessandro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BARKER_Margaret">
 										BARKER Margaret</a></div></li><li><div align="left"><a href="/elenco_libri_autore/barklem_jill">
@@ -93,7 +99,8 @@
 										BARRIE JAMES MATTHEW</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bartlett_alicia_gimenez">
 										BARTLETT Alicia Gimenez</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bartocci_claudio">
 										BARTOCCI Claudio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/basile_giambattista">
-										BASILE Giambattista</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BASSANI_Giorgio">
+										BASILE Giambattista</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bass_guy">
+										BASS GUY</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BASSANI_Giorgio">
 										BASSANI Giorgio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BAT_Prunella">
 										BAT Prunella</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BATA_Carlo">
 										BATA' Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BATTAGLIA_Romano">
@@ -103,7 +110,8 @@
 										BEAH ISMAEL</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bechstein_ludwig">
 										BECHSTEIN Ludwig</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BECKETT_Samuel">
 										BECKETT Samuel</a></div></li><li><div align="left"><a href="/elenco_libri_autore/beerli_veronique">
-										BEERLI Veronique</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BELARDETTI_Margherita">
+										BEERLI Veronique</a></div></li><li><div align="left"><a href="/elenco_libri_autore/behr_hans_george">
+										BEHR HANS GEORGE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BELARDETTI_Margherita">
 										BELARDETTI Margherita</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BELLONCI_Maria">
 										BELLONCI Maria</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BELLOW_Saul">
 										BELLOW Saul</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BEN_JELLOUN_Tahar">
@@ -113,7 +121,8 @@
 										BENNI Stefano</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BERBEROVA_Nina">
 										BERBEROVA Nina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/beretta_cesare">
 										BERETTA Cesare</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bernanos_georges">
-										BERNANOS Georges</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bernhard_thomas">
+										BERNANOS Georges</a></div></li><li><div align="left"><a href="/elenco_libri_autore/berney_lou">
+										BERNEY Lou</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bernhard_thomas">
 										BERNHARD Thomas</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bernstein_harry">
 										BERNSTEIN Harry</a></div></li><li><div align="left"><a href="/elenco_libri_autore/berselli_edmondo">
 										BERSELLI Edmondo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BERTI_Enrico">
@@ -123,7 +132,8 @@
 										BETTIZZA Enzo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BEVILACQUA_Alberto">
 										BEVILACQUA Alberto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BIAGI_Enzo">
 										BIAGI Enzo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/biamonti_francesco">
-										BIAMONTI Francesco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BIANCHI_Enzo">
+										BIAMONTI Francesco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/biancardi_luciano">
+										BIANCARDI Luciano</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BIANCHI_Enzo">
 										BIANCHI Enzo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bianchi_marco">
 										BIANCHI Marco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bianchi_rizzi_augusto">
 										BIANCHI RIZZI Augusto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BIANCHINI_ANGELA">
@@ -153,8 +163,10 @@
 										BOGLIOLO Giovanni</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bolano_roberto">
 										BOLANO Roberto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/B_LL_Heinrich">
 										BOLL Heinrich</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BOMBECK_Erma">
-										BOMBECK Erma</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bonatti_walter">
-										BONATTI Walter</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bonetti_mathilde">
+										BOMBECK Erma</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bompiani_ginevra">
+										BOMPIANI Ginevra</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bonatti_walter">
+										BONATTI Walter</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bond_michael">
+										BOND MICHAEL</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bonetti_mathilde">
 										BONETTI Mathilde</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bonsanti_sandra">
 										BONSANTI Sandra</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bonvissuto_sandro">
 										BONVISSUTO Sandro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bordiglioni_s_bertolucci_f">
@@ -163,7 +175,8 @@
 										BORDIGLIONI Stefano - BADOCCO Manuela</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BORGES_Jorge_Luis">
 										BORGES Jorge Luis</a></div></li><li><div align="left"><a href="/elenco_libri_autore/borgese_giuseppe_antonio">
 										BORGESE Giuseppe Antonio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BORGESE_Sonia">
-										BORGESE Sonia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BOSCHETTI_Enzo">
+										BORGESE Sonia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/borromee_pierre">
+										BORROMEE Pierre</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BOSCHETTI_Enzo">
 										BOSCHETTI Enzo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bosco_federica">
 										BOSCO FEDERICA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BOSSI_FEDRIGOTTI_Isabella">
 										BOSSI FEDRIGOTTI Isabella</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bouchard_andrea">
@@ -172,7 +185,8 @@
 										BOWEN James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BOYNE_John">
 										BOYNE John</a></div></li><li><div align="left"><a href="/elenco_libri_autore/brackenbury_rosalind">
 										BRACKENBURY Rosalind</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BRADBURY_Ray">
-										BRADBURY Ray</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bradman_tony">
+										BRADBURY Ray</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bradley_alan">
+										BRADLEY Alan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bradman_tony">
 										BRADMAN TONY</a></div></li><li><div align="left"><a href="/elenco_libri_autore/brambilla_cristina">
 										BRAMBILLA Cristina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BRANCATI_Vitaliano">
 										BRANCATI Vitaliano</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BRANDUARDI_Carolina">
@@ -189,12 +203,14 @@
 										BROOK RHIDIAN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BROOKS_Helen">
 										BROOKS Helen</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BROOKS_Terry">
 										BROOKS Terry</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BROWN_Dan">
-										BROWN Dan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/browne_gerald">
+										BROWN Dan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/brown_peter">
+										BROWN PETER</a></div></li><li><div align="left"><a href="/elenco_libri_autore/browne_gerald">
 										BROWNE Gerald</a></div></li><li><div align="left"><a href="/elenco_libri_autore/browning_robert">
 										BROWNING ROBERT</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bruckner_karl">
 										BRUCKNER Karl</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bryson_bill">
 										BRYSON Bill</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BUCK_Pearl_S">
-										BUCK Pearl S.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BUFALINO_Gesualdo">
+										BUCK Pearl S.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/buckminster_fuller_r">
+										BUCKMINSTER FULLER R</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BUFALINO_Gesualdo">
 										BUFALINO Gesualdo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bulajic_stevan">
 										BULAJIC STEVAN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/buongiorno_teresa">
 										BUONGIORNO TERESA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/burgess_melvin">
@@ -202,10 +218,12 @@
 										BURGOS Elisabeth</a></div></li><li><div align="left"><a href="/elenco_libri_autore/burke_thomas">
 										BURKE Thomas</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BURNETT_Francis">
 										BURNETT Francis</a></div></li><li><div align="left"><a href="/elenco_libri_autore/burnett_william_riley">
-										BURNETT William Riley</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BURROUGHS_Edgar_R">
+										BURNETT William Riley</a></div></li><li><div align="left"><a href="/elenco_libri_autore/burpo_todd_vincent_lynn">
+										BURPO TODD - VINCENT LYNN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BURROUGHS_Edgar_R">
 										BURROUGHS Edgar R.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/buscaglia_leo">
 										BUSCAGLIA Leo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/busfield_andrea">
-										BUSFIELD Andrea</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BUTTAFAVA_Vittorio">
+										BUSFIELD Andrea</a></div></li><li><div align="left"><a href="/elenco_libri_autore/bussi_michel">
+										BUSSI Michel</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BUTTAFAVA_Vittorio">
 										BUTTAFAVA Vittorio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/BUZZATI_Dino">
 										BUZZATI Dino</a></div></li><li><div align="left"><a href="/elenco_libri_autore/byrne_rhonda">
 										BYRNE RHONDA</a></div></li></ul></li><li id="c"><a name="c" class="title">C</a><ul><li><div align="left"><a href="/elenco_libri_autore/cacucci_pino">
@@ -216,7 +234,8 @@
 										CALASSO Roberto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CALCAGNO_MATTEI_Bruna">
 										CALCAGNO MATTEI Bruna</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CALDWELL_Erskine">
 										CALDWELL Erskine</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CALVETTI_Paola">
-										CALVETTI Paola</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CALVINO_Italo">
+										CALVETTI Paola</a></div></li><li><div align="left"><a href="/elenco_libri_autore/calvini_f_vanoli_a">
+										CALVINI F. - VANOLI A</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CALVINO_Italo">
 										CALVINO Italo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cameron_peter">
 										CAMERON Peter</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CAMILLERI_Andrea">
 										CAMILLERI Andrea</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CAMPANILE_Achille">
@@ -226,9 +245,12 @@
 										CANETTI Elias</a></div></li><li><div align="left"><a href="/elenco_libri_autore/canopi_anna_maria">
 										CANOPI Anna Maria</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CAPOTE_Truman">
 										CAPOTE Truman</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CAPPELLI_Gabriella">
-										CAPPELLI Gabriella</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CAPPUCCIO_Silvana">
-										CAPPUCCIO Silvana</a></div></li><li><div align="left"><a href="/elenco_libri_autore/capuana_luigi">
-										CAPUANA LUIGI</a></div></li><li><div align="left"><a href="/elenco_libri_autore/caravaggi_paola">
+										CAPPELLI Gabriella</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cappello_pierluigi">
+										CAPPELLO PIERLUIGI</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CAPPUCCIO_Silvana">
+										CAPPUCCIO Silvana</a></div></li><li><div align="left"><a href="/elenco_libri_autore/capriolo_paola">
+										CAPRIOLO PAOLA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/capuana_luigi">
+										CAPUANA LUIGI</a></div></li><li><div align="left"><a href="/elenco_libri_autore/carabba_cesare">
+										CARABBA Cesare</a></div></li><li><div align="left"><a href="/elenco_libri_autore/caravaggi_paola">
 										CARAVAGGI PAOLA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CARCASI_Giulia">
 										CARCASI Giulia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CARDINI_Franco">
 										CARDINI Franco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/carey_peter">
@@ -255,14 +277,18 @@
 										CASATI Modignani Sveva</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cassandra_clare">
 										CASSANDRA Clare</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CASSOLA_Carlo">
 										CASSOLA Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CASTELLANETA_Carlo">
-										CASTELLANETA Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/catozzella_giuseppe">
+										CASTELLANETA Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/castiglioni_giudici_elisa">
+										CASTIGLIONI GIUDICI ELISA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/catozzella_giuseppe">
 										CATOZZELLA GIUSEPPE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CAVALIERE_Alberto">
 										CAVALIERE Alberto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cavazza_filippo">
-										CAVAZZA Filippo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CECHOV_Ant_n">
+										CAVAZZA Filippo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cazzullo_aldo_e_rosanna_francesco_maletto_cazzullo">
+										CAZZULLO ALDO E ROSANNA FRANCESCO MALETTO CAZZULLO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CECHOV_Ant_n">
 										CECHOV Anton</a></div></li><li><div align="left"><a href="/elenco_libri_autore/celestini_ascanio">
 										CELESTINI Ascanio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/celine_louis_ferdinand">
-										CELINE Louis Ferdinand</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cerami_vincenzo">
-										CERAMI Vincenzo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CERCENA_Vanna">
+										CELINE Louis Ferdinand</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cella_letizia">
+										CELLA LETIZIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cerami_vincenzo">
+										CERAMI Vincenzo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cerasoli_anna">
+										CERASOLI ANNA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CERCENA_Vanna">
 										CERCENA' Vanna</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cerchi_nadia">
 										CERCHI Nadia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CERVANTES_de_Miguel">
 										CERVANTES de Miguel</a></div></li><li><div align="left"><a href="/elenco_libri_autore/chatwin_bruce">
@@ -273,13 +299,20 @@
 										CHIDIAC May</a></div></li><li><div align="left"><a href="/elenco_libri_autore/chin_ning_chu">
 										CHIN NING CHU</a></div></li><li><div align="left"><a href="/elenco_libri_autore/chopra_deepak">
 										CHOPRA Deepak</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CHRISTIE_Agatha">
-										CHRISTIE Agatha</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cialente_fausta">
-										CIALENTE Fausta</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cimatti_felice">
-										CIMATTI Felice</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CITATI_Pietro">
+										CHRISTIE Agatha</a></div></li><li><div align="left"><a href="/elenco_libri_autore/chuvin_pierre">
+										CHUVIN Pierre</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cialente_fausta">
+										CIALENTE Fausta</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cibrario_benedetta">
+										CIBRARIO Benedetta</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cimatti_felice">
+										CIMATTI Felice</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cinquetti_nicola">
+										CINQUETTI NICOLA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CITATI_Pietro">
 										CITATI Pietro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CIUFFINI_Virginia">
-										CIUFFINI Virginia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CLAUDEL_Philippe">
+										CIUFFINI Virginia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/civardi_bruno">
+										CIVARDI BRUNO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CLAUDEL_Philippe">
 										CLAUDEL Philippe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/clavell_james">
-										CLAVELL James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/COCCIOLI_Carlo">
+										CLAVELL James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/clement_andrew">
+										CLEMENT ANDREW</a></div></li><li><div align="left"><a href="/elenco_libri_autore/clinton_bill_patterson_james">
+										CLINTON Bill - PATTERSON James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cobb_humphrey">
+										COBB Humphrey</a></div></li><li><div align="left"><a href="/elenco_libri_autore/COCCIOLI_Carlo">
 										COCCIOLI Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/COE_Jonathan">
 										COE Jonathan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/COELHO_Paulo">
 										COELHO Paulo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/COETZEE_J_M">
@@ -291,7 +324,8 @@
 										COLLODI Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/COLLOREDO_Sabina">
 										COLLOREDO Sabina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/colombo_gherardo">
 										COLOMBO Gherardo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/COMASTRI_Angelo">
-										COMASTRI Angelo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/comencini_cristina">
+										COMASTRI Angelo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/comastri_montanari_danila">
+										COMASTRI MONTANARI Danila</a></div></li><li><div align="left"><a href="/elenco_libri_autore/comencini_cristina">
 										COMENCINI Cristina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/comida_luciano">
 										COMIDA LUCIANO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CONAN_DOYLE_Arthur">
 										CONAN DOYLE Arthur</a></div></li><li><div align="left"><a href="/elenco_libri_autore/concina_bruno">
@@ -310,8 +344,10 @@
 										CORTIZAS ANTON</a></div></li><li><div align="left"><a href="/elenco_libri_autore/COSMACINI_G_RUGARDI_C">
 										COSMACINI G.-RUGARDI C.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/COSTA_Nicoletta">
 										COSTA Nicoletta</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cotroneo_roberto">
-										COTRONEO Roberto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/crawford_kirsty">
-										CRAWFORD Kirsty</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cricco_massimiliano_cresti_federico">
+										COTRONEO Roberto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cox_lynne">
+										COX LYNNE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/crawford_kirsty">
+										CRAWFORD Kirsty</a></div></li><li><div align="left"><a href="/elenco_libri_autore/creech_sharon">
+										CREECH SHARON</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cricco_massimiliano_cresti_federico">
 										CRICCO Massimiliano CRESTI Federico</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CRICHTON_Michael">
 										CRICHTON Michael</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CROCE_Elio">
 										CROCE Elio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/CRONIN_Archibald_J">
@@ -321,9 +357,12 @@
 										CUNNINGHAM Michael</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cussler_clive">
 										CUSSLER Clive</a></div></li><li><div align="left"><a href="/elenco_libri_autore/cussler_clive_perry_thomas">
 										CUSSLER Clive - PERRY Thomas</a></div></li></ul></li><li id="d"><a name="d" class="title">D</a><ul><li><div align="left"><a href="/elenco_libri_autore/d_agostino_andrea">
-										D AGOSTINO ANDREA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/d_amico_masolino">
+										D AGOSTINO ANDREA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/d_ambrosio_federico">
+										D AMBROSIO Federico</a></div></li><li><div align="left"><a href="/elenco_libri_autore/d_amico_masolino">
 										D AMICO MASOLINO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/d_attilia_m_f_zanini_r_f">
-										D ATTILIA M. F.  ZANINI R. F</a></div></li><li><div align="left"><a href="/elenco_libri_autore/D_ADAMO_Francesco">
+										D ATTILIA M. F.  ZANINI R. F</a></div></li><li><div align="left"><a href="/elenco_libri_autore/d_avena_alessandro">
+										D AVENA ALESSANDRO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/d_orta_marcello">
+										D ORTA MARCELLO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/D_ADAMO_Francesco">
 										D'ADAMO Francesco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/D_ARZO_Silvio">
 										D'ARZO Silvio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DADDI_Fabio">
 										DADDI Fabio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DAHL_Roald">
@@ -335,18 +374,23 @@
 										DAVIDSON SUSANNA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/dawson_greg">
 										DAWSON Greg</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DAY_GEORGE_Jessica">
 										DAY GEORGE Jessica</a></div></li><li><div align="left"><a href="/elenco_libri_autore/daynes_katie">
-										DAYNES KATIE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DE_AMICIS_Edmondo">
+										DAYNES KATIE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/dazzi_zita">
+										DAZZI ZITA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DE_AMICIS_Edmondo">
 										DE AMICIS Edmondo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DE_BEAUVOIR_Simone">
 										DE BEAUVOIR Simone</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_benedetti_neige">
 										DE BENEDETTI Neige</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DE_CARLO_Andrea">
 										DE CARLO Andrea</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_cataldo_giancarlo">
 										DE CATALDO Giancarlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_cespedes_alba">
 										De CESPEDES Alba</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DE_CRESCENZO_Luciano">
-										DE CRESCENZO Luciano</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_giovanni_maurizio">
+										DE CRESCENZO Luciano</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_fombelle_timothee">
+										DE FOMBELLE TIMOTHEE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_giovanni_maurizio">
 										DE GIOVANNI Maurizio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_gregorio_concita">
-										DE GREGORIO Concita</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_luca_erri">
+										DE GREGORIO Concita</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_kerangal_mhylis">
+										DE KERANGAL Mhylis</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_la_cruz_melissa">
+										DE LA CRUZ MELISSA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_luca_erri">
 										DE LUCA ERRI</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DE_LUCA_Erri_MATINO_Gennaro">
-										DE LUCA Erri - MATINO Gennaro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DE_MARI_Silvana">
+										DE LUCA Erri - MATINO Gennaro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_marchi_vichi">
+										DE MARCHI VICHI</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DE_MARI_Silvana">
 										DE MARI Silvana</a></div></li><li><div align="left"><a href="/elenco_libri_autore/de_maupassant_guy">
 										DE MAUPASSANT GUY</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DE_MELLO_Anthony">
 										DE MELLO Anthony</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DE_RIENZO_Giorgio">
@@ -372,12 +416,15 @@
 										DEL ZOTTO Carla</a></div></li><li><div align="left"><a href="/elenco_libri_autore/delacourt_gregoire">
 										DELACOURT Gregoire</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DELEDDA_Grazia">
 										DELEDDA Grazia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DELERM_Philippe">
-										DELERM Philippe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DELLA_PERUTA_Franco">
+										DELERM Philippe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/delizzos_fabio">
+										DELIZZOS Fabio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DELLA_PERUTA_Franco">
 										DELLA PERUTA Franco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DENNIS_Patrick">
-										DENNIS Patrick</a></div></li><li><div align="left"><a href="/elenco_libri_autore/denti_roberto">
+										DENNIS Patrick</a></div></li><li><div align="left"><a href="/elenco_libri_autore/denti_di_piraino_alberto">
+										DENTI DI PIRAINO Alberto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/denti_roberto">
 										DENTI ROBERTO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/dershowitz_alan_m">
 										DERSHOWITZ Alan M</a></div></li><li><div align="left"><a href="/elenco_libri_autore/desiati_mario">
-										DESIATI MARIO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/dessi_giuseppe">
+										DESIATI MARIO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/despain_bree">
+										DESPAIN Bree</a></div></li><li><div align="left"><a href="/elenco_libri_autore/dessi_giuseppe">
 										DESSI Giuseppe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DI_CAMILLO_Kate">
 										DI CAMILLO Kate</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DI_PAOLO_Paolo">
 										DI PAOLO Paolo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/di_pietrantonio_donatella">
@@ -396,14 +443,17 @@
 										DOCTOROW E. L</a></div></li><li><div align="left"><a href="/elenco_libri_autore/dodge_mary_mapes">
 										DODGE MARY MAPES</a></div></li><li><div align="left"><a href="/elenco_libri_autore/donald_walsch_neale">
 										DONALD WALSCH Neale</a></div></li><li><div align="left"><a href="/elenco_libri_autore/donaldson_julia">
-										DONALDSON JULIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/donini_r_brembati_f">
+										DONALDSON JULIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/doninelli_luca">
+										DONINELLI LUCA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/donini_r_brembati_f">
 										DONINI R. - BREMBATI F</a></div></li><li><div align="left"><a href="/elenco_libri_autore/donner_chris">
 										DONNER CHRIS</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DOSTOEVSKIJ_Fiodor">
 										DOSTOEVSKIJ Fiodor</a></div></li><li><div align="left"><a href="/elenco_libri_autore/dowd_siobhan">
 										DOWD Siobhan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DOYLE_Roddy">
-										DOYLE Roddy</a></div></li><li><div align="left"><a href="/elenco_libri_autore/draper_sharon_m">
+										DOYLE Roddy</a></div></li><li><div align="left"><a href="/elenco_libri_autore/dr_seuss">
+										DR SEUSS</a></div></li><li><div align="left"><a href="/elenco_libri_autore/draper_sharon_m">
 										DRAPER SHARON M</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DRAYSON_Nicholas">
-										DRAYSON Nicholas</a></div></li><li><div align="left"><a href="/elenco_libri_autore/druon_maurice">
+										DRAYSON Nicholas</a></div></li><li><div align="left"><a href="/elenco_libri_autore/dreikurs_rudolf">
+										DREIKURS Rudolf</a></div></li><li><div align="left"><a href="/elenco_libri_autore/druon_maurice">
 										DRUON Maurice</a></div></li><li><div align="left"><a href="/elenco_libri_autore/du_maurier_daphne">
 										DU MAURIER Daphne</a></div></li><li><div align="left"><a href="/elenco_libri_autore/duborsarsky_ursula">
 										DUBORSARSKY URSULA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/DUMAS_Alessandro">
@@ -420,7 +470,8 @@
 										ELIADE Mircea</a></div></li><li><div align="left"><a href="/elenco_libri_autore/elliot_jay_simon_william_l">
 										ELLIOT JAY - SIMON WILLIAM L</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ELLIS_Deborah">
 										ELLIS Deborah</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ende_michael">
-										ENDE MICHAEL</a></div></li><li><div align="left"><a href="/elenco_libri_autore/enquist_per_olov">
+										ENDE MICHAEL</a></div></li><li><div align="left"><a href="/elenco_libri_autore/englert_j_f">
+										ENGLERT J F</a></div></li><li><div align="left"><a href="/elenco_libri_autore/enquist_per_olov">
 										ENQUIST Per Olov</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ENSLER_Eve">
 										ENSLER Eve</a></div></li><li><div align="left"><a href="/elenco_libri_autore/EPHRON_Nora">
 										EPHRON Nora</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ERASMO_DA_ROTTERDAM">
@@ -445,8 +496,11 @@
 										FARINOTTI Pino</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FARRELL_Henry">
 										FARRELL Henry</a></div></li><li><div align="left"><a href="/elenco_libri_autore/faulkner_william">
 										FAULKNER WILLIAM</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FAUSTI_Silvano">
-										FAUSTI Silvano</a></div></li><li><div align="left"><a href="/elenco_libri_autore/feiffer_jules">
-										FEIFFER JULES</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FENIMORE_COOPER_James">
+										FAUSTI Silvano</a></div></li><li><div align="left"><a href="/elenco_libri_autore/favilli_elena_cavallo_francesca">
+										FAVILLI Elena - CAVALLO Francesca</a></div></li><li><div align="left"><a href="/elenco_libri_autore/feiffer_jules">
+										FEIFFER JULES</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fellowes_jessica">
+										FELLOWES Jessica</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fellowes_julian">
+										FELLOWES Julian</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FENIMORE_COOPER_James">
 										FENIMORE COOPER James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FENOGLIO_Beppe">
 										FENOGLIO Beppe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ferraioli_claudia">
 										FERRAIOLI CLAUDIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FERRANTE_Elena">
@@ -468,7 +522,8 @@
 										FIORAVANTI S. SPINA L.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FIORI_Fulvio">
 										FIORI Fulvio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fisher_staples_suzanna">
 										FISHER STAPLES SUZANNA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FITZGERALD_Francis_Scott">
-										FITZGERALD Francis Scott</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FLAGG_Fannie">
+										FITZGERALD Francis Scott</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fitzhugh_louise">
+										FITZHUGH LOUISE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FLAGG_Fannie">
 										FLAGG Fannie</a></div></li><li><div align="left"><a href="/elenco_libri_autore/flaubert_gustave">
 										FLAUBERT Gustave</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fleischer_leonore">
 										FLEISCHER Leonore</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fo_dario">
@@ -485,14 +540,17 @@
 										FORD G. M</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FORSTER_Morgan_Edward">
 										FORSTER Morgan Edward</a></div></li><li><div align="left"><a href="/elenco_libri_autore/foster_stephen">
 										FOSTER Stephen</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FOTHERINGHAM_William">
-										FOTHERINGHAM William</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fournier_jean_louis">
+										FOTHERINGHAM William</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fournier_alain">
+										FOURNIER ALAIN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fournier_jean_louis">
 										FOURNIER Jean Louis</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fowlie_wallace">
 										FOWLIE Wallace</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FRANCE_Anatole">
 										FRANCE Anatole</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FRANCESCHINI_Ezio">
 										FRANCESCHINI Ezio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/franco_massimo">
 										FRANCO Massimo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FRANK_Anna">
-										FRANK Anna</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fratelli_grimm">
-										FRATELLI GRIMM</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fredriksson_marianne">
+										FRANK Anna</a></div></li><li><div align="left"><a href="/elenco_libri_autore/franzoso_andrea">
+										FRANZOSO Andrea</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fratelli_grimm">
+										FRATELLI GRIMM</a></div></li><li><div align="left"><a href="/elenco_libri_autore/frediani_andrea">
+										FREDIANI Andrea</a></div></li><li><div align="left"><a href="/elenco_libri_autore/fredriksson_marianne">
 										FREDRIKSSON Marianne</a></div></li><li><div align="left"><a href="/elenco_libri_autore/frisch_max">
 										FRISCH Max</a></div></li><li><div align="left"><a href="/elenco_libri_autore/frith_alex">
 										FRITH ALEX</a></div></li><li><div align="left"><a href="/elenco_libri_autore/FROMM_Eric">
@@ -505,7 +563,8 @@
 										GAARDER Jostein</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GADDA_Carlo_Emilio">
 										GADDA Carlo Emilio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GAIMAN_Neil">
 										GAIMAN Neil</a></div></li><li><div align="left"><a href="/elenco_libri_autore/galimberti_fabrizio">
-										GALIMBERTI Fabrizio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GALLI_Osvaldo">
+										GALIMBERTI Fabrizio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gallaway_morgana">
+										GALLAWAY Morgana</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GALLI_Osvaldo">
 										GALLI Osvaldo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GALLMANN_Kuki">
 										GALLMANN Kuki</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gallo_carmine">
 										GALLO Carmine</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GALLOTTI_E_e_N">
@@ -513,9 +572,11 @@
 										GALSWORTHY John</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gamberale_chiara">
 										GAMBERALE Chiara</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gandolfi_silvana">
 										GANDOLFI SILVANA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gangemi_mimmo">
-										GANGEMI Mimmo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GARCIA_Cristina">
+										GANGEMI Mimmo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gannon_nicholas">
+										GANNON NICHOLAS</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GARCIA_Cristina">
 										GARCIA Cristina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/garcia_kami_sthol_margaret">
-										GARCIA Kami - STHOL Margaret</a></div></li><li><div align="left"><a href="/elenco_libri_autore/garlando_luigi">
+										GARCIA Kami - STHOL Margaret</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gardner_erle_s">
+										GARDNER Erle S</a></div></li><li><div align="left"><a href="/elenco_libri_autore/garlando_luigi">
 										GARLANDO Luigi</a></div></li><li><div align="left"><a href="/elenco_libri_autore/garnett_david">
 										GARNETT David</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gary_romain">
 										GARY ROMAIN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gary_romain">
@@ -533,13 +594,16 @@
 										GESTERN HELENE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GHAZY_Randa">
 										GHAZY Randa</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GHEZZI_Paolo">
 										GHEZZI Paolo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ghinelli_lorenza">
-										GHINELLI Lorenza</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ghizzoni_marco">
+										GHINELLI Lorenza</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ghitani_gamal">
+										GHITANI Gamal</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ghizzoni_marco">
 										GHIZZONI Marco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GIACON_Modesto">
 										GIACON Modesto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/giampiccoli_franco">
 										GIAMPICCOLI Franco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GIANINI_BELOTTI_Elena">
 										GIANINI BELOTTI Elena</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GIBRAN_Kahlil">
 										GIBRAN Kahlil</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gibson_william_sterling_bruce">
-										GIBSON William-STERLING Bruce</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GINZBURG_Natalia">
+										GIBSON William-STERLING Bruce</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gimenez_bartlett_alicia">
+										GIMENEZ Bartlett Alicia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gino_alex">
+										GINO ALEX</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GINZBURG_Natalia">
 										GINZBURG Natalia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GIONO_Jean">
 										GIONO Jean</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GIORDANO_Paolo">
 										GIORDANO Paolo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GIOVETTI_Paola">
@@ -551,17 +615,22 @@
 										GLASPELL Susan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GLEESON_Janet">
 										GLEESON Janet</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GNONE_Elisabetta">
 										GNONE Elisabetta</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GODDEN_Rumer">
-										GODDEN Rumer</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GOETHE_J_Wolfang">
+										GODDEN Rumer</a></div></li><li><div align="left"><a href="/elenco_libri_autore/goes_albrecht">
+										GOES Albrecht</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GOETHE_J_Wolfang">
 										GOETHE J. Wolfang</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GOGOL_N">
-										GOGOL N.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/goldberg_sloan_holly">
+										GOGOL N.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/going_k_l">
+										GOING K L</a></div></li><li><div align="left"><a href="/elenco_libri_autore/goldberg_sloan_holly">
 										GOLDBERG SLOAN HOLLY</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GOLDING_William">
 										GOLDING William</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GOLDONI_Luca">
 										GOLDONI Luca</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gombrich_ernst">
 										GOMBRICH ERNST</a></div></li><li><div align="left"><a href="/elenco_libri_autore/goncarov_ivan">
 										GONCAROV IVAN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GORDIMER_Nadine">
-										GORDIMER Nadine</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gordon_noah">
-										GORDON Noah</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GOSCINNY_SEMPE">
-										GOSCINNY - SEMPE'</a></div></li><li><div align="left"><a href="/elenco_libri_autore/grabol_niels">
+										GORDIMER Nadine</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gordon_l">
+										GORDON L</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gordon_noah">
+										GORDON Noah</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gori_leonardo">
+										GORI LEONARDO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GOSCINNY_SEMPE">
+										GOSCINNY - SEMPE'</a></div></li><li><div align="left"><a href="/elenco_libri_autore/grabenstein_chris">
+										GRABENSTEIN CHRIS</a></div></li><li><div align="left"><a href="/elenco_libri_autore/grabol_niels">
 										GRABOL NIELS</a></div></li><li><div align="left"><a href="/elenco_libri_autore/grahame_kenneth">
 										GRAHAME KENNETH</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gramellini_massimo">
 										GRAMELLINI Massimo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gramellini_massimo_gamberale_chiara">
@@ -569,13 +638,15 @@
 										GRANT JOHN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/granzotto_gianni">
 										GRANZOTTO Gianni</a></div></li><li><div align="left"><a href="/elenco_libri_autore/grass_gunter">
 										GRASS Gunter</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GRAY_John">
-										GRAY John</a></div></li><li><div align="left"><a href="/elenco_libri_autore/grazzani_roberta">
+										GRAY John</a></div></li><li><div align="left"><a href="/elenco_libri_autore/graziano_pier_giorgio">
+										GRAZIANO PIER GIORGIO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/grazzani_roberta">
 										GRAZZANI Roberta</a></div></li><li><div align="left"><a href="/elenco_libri_autore/greco_lorenzo">
 										GRECO Lorenzo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/green_gerald">
 										GREEN Gerald</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GREENE_Graham">
 										GREENE Graham</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gregorio_michael">
 										GREGORIO Michael</a></div></li><li><div align="left"><a href="/elenco_libri_autore/gregory_philippa">
-										GREGORY Philippa</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GRIGNOLA_A">
+										GREGORY Philippa</a></div></li><li><div align="left"><a href="/elenco_libri_autore/greison_gabriella">
+										GREISON GABRIELLA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GRIGNOLA_A">
 										GRIGNOLA A.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/grillandi_massimo">
 										GRILLANDI Massimo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GRIMALDI_Laura">
 										GRIMALDI Laura</a></div></li><li><div align="left"><a href="/elenco_libri_autore/GRISHAM_John">
@@ -600,13 +671,16 @@
 										HALE Shannon</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hamsun_knut">
 										HAMSUN Knut</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HANDKE_Peter">
 										HANDKE Peter</a></div></li><li><div align="left"><a href="/elenco_libri_autore/harden_blaine">
-										HARDEN Blaine</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hari_daoud">
+										HARDEN Blaine</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hardinge_frances">
+										HARDINGE FRANCES</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hari_daoud">
 										HARI Daoud</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HARRIS_Joanne">
 										HARRIS Joanne</a></div></li><li><div align="left"><a href="/elenco_libri_autore/harris_thomas">
 										HARRIS Thomas</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hart_john">
 										HART John</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hart_josephine">
-										HART Josephine</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HARUKI_Murakami">
-										HARUKI Murakami</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HAWKINS_Kirstan">
+										HART Josephine</a></div></li><li><div align="left"><a href="/elenco_libri_autore/haruf_kent">
+										HARUF Kent</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HARUKI_Murakami">
+										HARUKI Murakami</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hawking_lucy_stephen">
+										HAWKING LUCY STEPHEN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HAWKINS_Kirstan">
 										HAWKINS Kirstan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hawkins_paula">
 										HAWKINS Paula</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HAWTHORNE_N">
 										HAWTHORNE N.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HEARST_Dorothy">
@@ -615,7 +689,8 @@
 										HEMINGWAY Ernest</a></div></li><li><div align="left"><a href="/elenco_libri_autore/henry_sara_j">
 										HENRY Sara J.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HERMANSON_Marie">
 										HERMANSON Marie</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hernaux_annie">
-										HERNAUX Annie</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HERRIOT_James">
+										HERNAUX Annie</a></div></li><li><div align="left"><a href="/elenco_libri_autore/herrigel_eugen">
+										HERRIGEL Eugen</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HERRIOT_James">
 										HERRIOT James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hesse_hermann">
 										HESSE Hermann</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HESSE_Karen">
 										HESSE Karen</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HETMANN_Frederik">
@@ -632,7 +707,8 @@
 										HOROWITZ Anthony</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HOSSEINI_Khaled">
 										HOSSEINI Khaled</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hosseini_khaled">
 										HOSSEINI Khaled</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HOUBEN_Hubert">
-										HOUBEN Hubert</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hub_u_mule_j">
+										HOUBEN Hubert</a></div></li><li><div align="left"><a href="/elenco_libri_autore/howard_elizabeth_jane">
+										HOWARD Elizabeth Jane</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hub_u_mule_j">
 										HUB U MULE J</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hub_ulrich">
 										HUB ULRICH</a></div></li><li><div align="left"><a href="/elenco_libri_autore/HUBER_Moritz">
 										HUBER Moritz</a></div></li><li><div align="left"><a href="/elenco_libri_autore/hubert_annette_jackle_doris_streufert_sabine">
@@ -664,7 +740,9 @@
 										KANNEY Leander</a></div></li><li><div align="left"><a href="/elenco_libri_autore/karinthy_ferenc">
 										KARINTHY Ferenc</a></div></li><li><div align="left"><a href="/elenco_libri_autore/kastner_erich">
 										KASTNER Erich</a></div></li><li><div align="left"><a href="/elenco_libri_autore/KAYSERLING_Von_Eduard">
-										KAYSERLING Von Eduard</a></div></li><li><div align="left"><a href="/elenco_libri_autore/KEARNS_Suzanne">
+										KAYSERLING Von Eduard</a></div></li><li><div align="left"><a href="/elenco_libri_autore/kazerooni_abbas">
+										KAZEROONI Abbas</a></div></li><li><div align="left"><a href="/elenco_libri_autore/kazuo_ishiguro">
+										KAZUO Ishiguro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/KEARNS_Suzanne">
 										KEARNS Suzanne</a></div></li><li><div align="left"><a href="/elenco_libri_autore/keehn_sally_m">
 										KEEHN SALLY M</a></div></li><li><div align="left"><a href="/elenco_libri_autore/kehlmann_daniel">
 										KEHLMANN Daniel</a></div></li><li><div align="left"><a href="/elenco_libri_autore/KEITETSI_China">
@@ -690,10 +768,13 @@
 										KUREISHI HANIF</a></div></li><li><div align="left"><a href="/elenco_libri_autore/kurzem_mark">
 										KURZEM Mark</a></div></li></ul></li><li id="l"><a name="l" class="title">L</a><ul><li><div align="left"><a href="/elenco_libri_autore/LA_CAPRIA_Raffaele">
 										LA CAPRIA Raffaele</a></div></li><li><div align="left"><a href="/elenco_libri_autore/la_fontaine_jean_de">
-										LA FONTAINE JEAN DE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lagerlof_selma">
+										LA FONTAINE JEAN DE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lagerkvist_par_fabian">
+										LAGERKVIST Par Fabian</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lagerlof_selma">
 										LAGERLOF Selma</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LAGORIO_Gina">
 										LAGORIO Gina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lansdale_joe">
-										LANSDALE Joe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/larkin_matt">
+										LANSDALE Joe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lanza_di_trabia_raimonda_casagrande_ottavia">
+										LANZA DI TRABIA RAIMONDA - CASAGRANDE OTTAVIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lapena_shari">
+										LAPENA Shari</a></div></li><li><div align="left"><a href="/elenco_libri_autore/larkin_matt">
 										LARKIN Matt</a></div></li><li><div align="left"><a href="/elenco_libri_autore/larsson_stieg">
 										LARSSON Stieg</a></div></li><li><div align="left"><a href="/elenco_libri_autore/laurain_antoine">
 										LAURAIN Antoine</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lavatelli_anna_livarelli_anna">
@@ -706,14 +787,19 @@
 										LEBERT Norbert e Stephan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LEE_Harper">
 										LEE Harper</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LEE_MASTERS_Edgar">
 										LEE MASTERS Edgar</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lehrer_jonah">
-										LEHRER Jonah</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LENZ_Siegfried">
-										LENZ Siegfried</a></div></li><li><div align="left"><a href="/elenco_libri_autore/leoni_giulio">
+										LEHRER Jonah</a></div></li><li><div align="left"><a href="/elenco_libri_autore/leifsson_thorarinn">
+										LEIFSSON THORARINN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/leila">
+										LEILA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lem_stanislaw">
+										LEM Stanislaw</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LENZ_Siegfried">
+										LENZ Siegfried</a></div></li><li><div align="left"><a href="/elenco_libri_autore/leon_christophe">
+										LEON CHRISTOPHE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/leoni_giulio">
 										LEONI Giulio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/leopardi_giacomo">
 										LEOPARDI Giacomo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lernet_holenia_alexander">
 										LERNET Holenia Alexander</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LESSING_Doris">
 										LESSING Doris</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lester_anna">
 										LESTER ANNA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/leto_francesco">
-										LETO Francesco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/levene_rebecca">
+										LETO Francesco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/letture_lingua">
+										LETTURE LINGUA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/levene_rebecca">
 										LEVENE REBECCA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LEVI_Carlo">
 										LEVI Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LEVI_Lia">
 										LEVI Lia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LEVI_MONTALCINI_Rita">
@@ -732,26 +818,32 @@
 										LISCIANI Giuseppe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lo_iacono_simona">
 										LO IACONO Simona</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lobe_mira">
 										LOBE MIRA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lobo_antunes_antonio">
-										LOBO ANTUNES ANTONIO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lodi_mario">
+										LOBO ANTUNES ANTONIO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lobsang_rampa_t">
+										LOBSANG RAMPA T</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lodi_mario">
 										LODI Mario</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LONDON_Jack">
 										LONDON Jack</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lorenz_konrad">
 										LORENZ Konrad</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LORIT_Sergio">
 										LORIT Sergio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lothar_ernst">
-										LOTHAR Ernst</a></div></li><li><div align="left"><a href="/elenco_libri_autore/louis_edouard">
+										LOTHAR Ernst</a></div></li><li><div align="left"><a href="/elenco_libri_autore/loti_pierre">
+										LOTI Pierre</a></div></li><li><div align="left"><a href="/elenco_libri_autore/louis_edouard">
 										LOUIS Edouard</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lowry_lois">
 										LOWRY LOIS</a></div></li><li><div align="left"><a href="/elenco_libri_autore/loy_rosetta">
 										LOY Rosetta</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LUCARELLI_Carlo">
-										LUCARELLI Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LUNARI_Luigi">
+										LUCARELLI Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/luciani_domenica">
+										LUCIANI DOMENICA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/LUNARI_Luigi">
 										LUNARI Luigi</a></div></li><li><div align="left"><a href="/elenco_libri_autore/lussu_emilio">
 										LUSSU Emilio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/luzzati_emanuele">
-										LUZZATI EMANUELE</a></div></li></ul></li><li id="m"><a name="m" class="title">M</a><ul><li><div align="left"><a href="/elenco_libri_autore/MACHIAVELLI_Niccol">
+										LUZZATI EMANUELE</a></div></li></ul></li><li id="m"><a name="m" class="title">M</a><ul><li><div align="left"><a href="/elenco_libri_autore/machado_ana_maria">
+										MACHADO ANA MARIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MACHIAVELLI_Niccol">
 										MACHIAVELLI Niccolo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mackinnon_mairi">
 										MACKINNON MAIRI</a></div></li><li><div align="left"><a href="/elenco_libri_autore/maclean_norman">
 										MACLEAN Norman</a></div></li><li><div align="left"><a href="/elenco_libri_autore/macmullan">
 										MACMULLAN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mademba_bay">
-										MADEMBA Bay</a></div></li><li><div align="left"><a href="/elenco_libri_autore/maggiani_maurizio">
+										MADEMBA Bay</a></div></li><li><div align="left"><a href="/elenco_libri_autore/maffei_lamberto">
+										MAFFEI LAMBERTO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/maggiani_maurizio">
 										MAGGIANI Maurizio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/magnani_bosio_maria_enrica">
-										MAGNANI BOSIO Maria Enrica</a></div></li><li><div align="left"><a href="/elenco_libri_autore/magrelli_valerio">
+										MAGNANI BOSIO Maria Enrica</a></div></li><li><div align="left"><a href="/elenco_libri_autore/magnani_carla">
+										MAGNANI Carla</a></div></li><li><div align="left"><a href="/elenco_libri_autore/magrelli_valerio">
 										MAGRELLI Valerio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/magris_claudio">
 										MAGRIS Claudio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mahfuz_nagib">
 										MAHFUZ Nagib</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mahmoody_betty_hoffer_william">
@@ -760,28 +852,37 @@
 										MALMUSI Luciano</a></div></li><li><div align="left"><a href="/elenco_libri_autore/malvaldi_marco">
 										MALVALDI Marco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MANCINELLI_Laura">
 										MANCINELLI Laura</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mandino_og">
-										MANDINO Og</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MANGANELLI_Giorgio">
-										MANGANELLI Giorgio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MANN_Thomas">
-										MANN Thomas</a></div></li><li><div align="left"><a href="/elenco_libri_autore/manzini_antonio">
+										MANDINO Og</a></div></li><li><div align="left"><a href="/elenco_libri_autore/manfredi_massimo">
+										MANFREDI MASSIMO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MANGANELLI_Giorgio">
+										MANGANELLI Giorgio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mankell_henning">
+										MANKELL Henning</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MANN_Thomas">
+										MANN Thomas</a></div></li><li><div align="left"><a href="/elenco_libri_autore/manzi_alberto">
+										MANZI ALBERTO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/manzini_antonio">
 										MANZINI Antonio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MANZONI_Alessandro">
 										MANZONI Alessandro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MARAI_S_ndor">
 										MARAI Sandor</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MARAINI_D_SALVO_A_VEGETTI_FINZI_S">
 										MARAINI D.-SALVO A.-VEGETTI FINZI S.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MARAINI_Dacia">
-										MARAINI Dacia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/marchesini_anna">
+										MARAINI Dacia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/marangoni_guido">
+										MARANGONI Guido</a></div></li><li><div align="left"><a href="/elenco_libri_autore/marchesini_anna">
 										MARCHESINI ANNA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/marchi_cesare">
 										MARCHI Cesare</a></div></li><li><div align="left"><a href="/elenco_libri_autore/marcoaldi_franco">
 										MARCOALDI Franco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mari_michele">
-										MARI Michele</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MAROTTA_Giuseppe">
+										MARI Michele</a></div></li><li><div align="left"><a href="/elenco_libri_autore/marone_lorenzo">
+										MARONE Lorenzo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MAROTTA_Giuseppe">
 										MAROTTA Giuseppe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/marquez_gabriel_garcia">
-										MARQUEZ GABRIEL GARCIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MARSHALL_Bruce">
+										MARQUEZ GABRIEL GARCIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/marsalis_wynton">
+										MARSALIS WYNTON</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MARSHALL_Bruce">
 										MARSHALL Bruce</a></div></li><li><div align="left"><a href="/elenco_libri_autore/martel_yann">
 										MARTEL Yann</a></div></li><li><div align="left"><a href="/elenco_libri_autore/martigli_carlo_a">
 										MARTIGLI CARLO A</a></div></li><li><div align="left"><a href="/elenco_libri_autore/martin_ann_m">
-										MARTIN ANN M</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MARTINEZ_Eugenia">
+										MARTIN ANN M</a></div></li><li><div align="left"><a href="/elenco_libri_autore/martin_gaite_carmen">
+										MARTIN GAITE CARMEN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MARTINEZ_Eugenia">
 										MARTINEZ Eugenia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/martinez_tomas_eloy">
 										MARTINEZ Tomas Eloy</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MARTINI_Carlo_Maria">
 										MARTINI Carlo Maria</a></div></li><li><div align="left"><a href="/elenco_libri_autore/martini_dario">
-										MARTINI Dario</a></div></li><li><div align="left"><a href="/elenco_libri_autore/marzorati_cristina">
+										MARTINI Dario</a></div></li><li><div align="left"><a href="/elenco_libri_autore/marx_fitzgerald_laura">
+										MARX FITZGERALD LAURA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/marzano_michela">
+										MARZANO Michela</a></div></li><li><div align="left"><a href="/elenco_libri_autore/marzorati_cristina">
 										MARZORATI CRISTINA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MASINI_Beatrice">
 										MASINI Beatrice</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MASINI_Beatrice_e_PIUMINI_Roberto">
 										MASINI Beatrice e PIUMINI Roberto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mason_richard">
@@ -806,7 +907,8 @@
 										MAZETTI Katarina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MAZZAMUTO_Pietro">
 										MAZZAMUTO Pietro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MAZZANTINI_Margaret">
 										MAZZANTINI Margaret</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mazzarello_paolo">
-										MAZZARELLO Paolo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mazzetti_lorenza">
+										MAZZARELLO Paolo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mazzariol_giacomo">
+										MAZZARIOL Giacomo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mazzetti_lorenza">
 										MAZZETTI LORENZA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MAZZUCCO_Melania">
 										MAZZUCCO Melania</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mccarthy_cormac">
 										McCARTHY Cormac</a></div></li><li><div align="left"><a href="/elenco_libri_autore/McCOURT_Frank">
@@ -821,7 +923,8 @@
 										MCNUTT DOUGLASS DONALD</a></div></li><li><div align="left"><a href="/elenco_libri_autore/meier_stephan_r">
 										MEIER Stephan R</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mello_federico">
 										MELLO Federico</a></div></li><li><div align="left"><a href="/elenco_libri_autore/meltzer_brad">
-										MELTZER Brad</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MENDOZA_Eduardo">
+										MELTZER Brad</a></div></li><li><div align="left"><a href="/elenco_libri_autore/melville_herman">
+										MELVILLE Herman</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MENDOZA_Eduardo">
 										MENDOZA Eduardo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/meneghello_luigi">
 										MENEGHELLO Luigi</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mercier_pascal">
 										MERCIER Pascal</a></div></li><li><div align="left"><a href="/elenco_libri_autore/meriana_giovanni">
@@ -842,10 +945,12 @@
 										MITCHELL Margaret</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MITFORD_Nancy">
 										MITFORD Nancy</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MO_Yan">
 										MO Yan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/modiano_patrick">
-										MODIANO Patrick</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MOLNAR_Ferenc">
+										MODIANO Patrick</a></div></li><li><div align="left"><a href="/elenco_libri_autore/molesini_andrea">
+										MOLESINI ANDREA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MOLNAR_Ferenc">
 										MOLNAR Ferenc</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MONDADORI_Cristina">
 										MONDADORI Cristina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/mongredien_sue">
-										MONGREDIEN SUE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/monni_giuseppe_elia">
+										MONGREDIEN SUE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/monni_antonello">
+										MONNI Antonello</a></div></li><li><div align="left"><a href="/elenco_libri_autore/monni_giuseppe_elia">
 										MONNI Giuseppe Elia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/montanaro_giovanni">
 										MONTANARO GIOVANNI</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MONTANELLI_Indro">
 										MONTANELLI Indro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/monteilhet_hubert">
@@ -858,7 +963,8 @@
 										MORESCO Antonio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MORGAN_Marlo">
 										MORGAN Marlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/morgan_michaela">
 										MORGAN MICHAELA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/moriondo_roberta">
-										MORIONDO ROBERTA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/morpurgo_michael">
+										MORIONDO ROBERTA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/morosinotto_davide">
+										MOROSINOTTO DAVIDE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/morpurgo_michael">
 										MORPURGO Michael</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MOSCA_Giovanni">
 										MOSCA Giovanni</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MOSCA_Paolo">
 										MOSCA Paolo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/moyes_jojo">
@@ -868,7 +974,8 @@
 										MUNRO Alice</a></div></li><li><div align="left"><a href="/elenco_libri_autore/murail_marie_aude">
 										MURAIL Marie Aude</a></div></li><li><div align="left"><a href="/elenco_libri_autore/murakami_haruki">
 										MURAKAMI Haruki</a></div></li><li><div align="left"><a href="/elenco_libri_autore/MURGIA_Michela">
-										MURGIA Michela</a></div></li><li><div align="left"><a href="/elenco_libri_autore/musso_guillaune">
+										MURGIA Michela</a></div></li><li><div align="left"><a href="/elenco_libri_autore/musil_robert">
+										MUSIL Robert</a></div></li><li><div align="left"><a href="/elenco_libri_autore/musso_guillaune">
 										MUSSO Guillaune</a></div></li><li><div align="left"><a href="/elenco_libri_autore/myron_vicki">
 										MYRON Vicki</a></div></li></ul></li><li id="n"><a name="n" class="title">N</a><ul><li><div align="left"><a href="/elenco_libri_autore/nabokov_vladimir">
 										NABOKOV Vladimir</a></div></li><li><div align="left"><a href="/elenco_libri_autore/nanetti_angela">
@@ -882,15 +989,18 @@
 										NESBO JO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/nesi_edoardo">
 										NESI Edoardo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ness_patrick">
 										NESS PATRICK</a></div></li><li><div align="left"><a href="/elenco_libri_autore/nielsen_susin">
-										NIELSEN Susin</a></div></li><li><div align="left"><a href="/elenco_libri_autore/NIEVO_Stanislao">
+										NIELSEN Susin</a></div></li><li><div align="left"><a href="/elenco_libri_autore/nievo_ippolito">
+										NIEVO Ippolito</a></div></li><li><div align="left"><a href="/elenco_libri_autore/NIEVO_Stanislao">
 										NIEVO Stanislao</a></div></li><li><div align="left"><a href="/elenco_libri_autore/niggi_fulvia">
 										NIGGI FULVIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/nikki_loftin">
 										NIKKI LOFTIN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/NOIVILLE_Florence">
 										NOIVILLE Florence</a></div></li><li><div align="left"><a href="/elenco_libri_autore/norton_mary">
 										NORTON MARY</a></div></li><li><div align="left"><a href="/elenco_libri_autore/nostlinger_christine">
 										NOSTLINGER CHRISTINE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/nothomb_amelie">
-										NOTHOMB Amelie</a></div></li><li><div align="left"><a href="/elenco_libri_autore/NUVOLETTI_Giovanni">
-										NUVOLETTI Giovanni</a></div></li></ul></li><li id="o"><a name="o" class="title">O</a><ul><li><div align="left"><a href="/elenco_libri_autore/O_BRIEN_Fiona">
+										NOTHOMB Amelie</a></div></li><li><div align="left"><a href="/elenco_libri_autore/novelli_luca">
+										NOVELLI LUCA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/NUVOLETTI_Giovanni">
+										NUVOLETTI Giovanni</a></div></li></ul></li><li id="o"><a name="o" class="title">O</a><ul><li><div align="left"><a href="/elenco_libri_autore/o_loughlin_ann">
+										O LOUGHLIN ANN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/O_BRIEN_Fiona">
 										O'BRIEN Fiona</a></div></li><li><div align="left"><a href="/elenco_libri_autore/O_BRIEN_Robert">
 										O'BRIEN Robert</a></div></li><li><div align="left"><a href="/elenco_libri_autore/oates_joyce_carol">
 										OATES Joyce Carol</a></div></li><li><div align="left"><a href="/elenco_libri_autore/oberosler_don_roberto">
@@ -898,12 +1008,14 @@
 										OBERSKI Jona</a></div></li><li><div align="left"><a href="/elenco_libri_autore/odell_scott">
 										ODELL SCOTT</a></div></li><li><div align="left"><a href="/elenco_libri_autore/odifreddi_piergiorgio">
 										ODIFREDDI Piergiorgio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/OGGERO_Margherita">
-										OGGERO Margherita</a></div></li><li><div align="left"><a href="/elenco_libri_autore/oliva_giovanni">
+										OGGERO Margherita</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ohlsson_kristina">
+										OHLSSON KRISTINA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/oliva_giovanni">
 										OLIVA Giovanni</a></div></li><li><div align="left"><a href="/elenco_libri_autore/OLSCHKI_Marcella">
 										OLSCHKI Marcella</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ONDAATJE_Michael">
 										ONDAATJE Michael</a></div></li><li><div align="left"><a href="/elenco_libri_autore/oren_ram">
 										OREN Ram</a></div></li><li><div align="left"><a href="/elenco_libri_autore/orengo_nico">
-										ORENGO Nico</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ORR_Leonard_HALBIG_Konrad">
+										ORENGO Nico</a></div></li><li><div align="left"><a href="/elenco_libri_autore/orlew_uri">
+										ORLEW URI</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ORR_Leonard_HALBIG_Konrad">
 										ORR Leonard - HALBIG Konrad</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ORSENNA_Erik">
 										ORSENNA Erik</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ORTESE_Anna_Maria">
 										ORTESE Anna Maria</a></div></li><li><div align="left"><a href="/elenco_libri_autore/orvieto_laura">
@@ -916,10 +1028,13 @@
 										OZ Amos</a></div></li><li><div align="left"><a href="/elenco_libri_autore/OZICK_Cinzia">
 										OZICK Cinzia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ozkan_serdar">
 										OZKAN Serdar</a></div></li></ul></li><li id="p"><a name="p" class="title">P</a><ul><li><div align="left"><a href="/elenco_libri_autore/paasilinna_arto">
-										PAASILINNA Arto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/palacio_r_j">
+										PAASILINNA Arto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pace_federico">
+										PACE Federico</a></div></li><li><div align="left"><a href="/elenco_libri_autore/palacio_r_j">
 										PALACIO R. J</a></div></li><li><div align="left"><a href="/elenco_libri_autore/palahniuk_chuck">
-										PALAHNIUK Chuck</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PAMPARANA_Andrea_RIVA_Maria_Gloria">
-										PAMPARANA Andrea-RIVA Maria Gloria</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PAOLINI_Christopher">
+										PALAHNIUK Chuck</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pamio_marcello">
+										PAMIO Marcello</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PAMPARANA_Andrea_RIVA_Maria_Gloria">
+										PAMPARANA Andrea-RIVA Maria Gloria</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pamuk_orhan">
+										PAMUK Orhan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PAOLINI_Christopher">
 										PAOLINI Christopher</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PAPATHANASSOPOULUS_Maira">
 										PAPATHANASSOPOULUS Maira</a></div></li><li><div align="left"><a href="/elenco_libri_autore/parenti_pagani">
 										PARENTI - PAGANI</a></div></li><li><div align="left"><a href="/elenco_libri_autore/parenti_francesco">
@@ -929,11 +1044,13 @@
 										PARK LINDA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/parr_maria">
 										PARR MARIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/parton_sandra_e_allen">
 										PARTON Sandra e Allen</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PASTERNAK_Boris">
-										PASTERNAK Boris</a></div></li><li><div align="left"><a href="/elenco_libri_autore/paterson_kathryn">
+										PASTERNAK Boris</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pastoureau_michel_simonnet_dominique">
+										PASTOUREAU MICHEL - SIMONNET DOMINIQUE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/paterson_kathryn">
 										PATERSON KATHRYN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/patterson_james">
 										PATTERSON James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/patterson_james_grabenstein_chris">
 										PATTERSON JAMES - GRABENSTEIN CHRIS</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PAVESE_Cesare">
-										PAVESE Cesare</a></div></li><li><div align="left"><a href="/elenco_libri_autore/peixoto_jose_luis">
+										PAVESE Cesare</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pearce_philippa">
+										PEARCE PHILIPPA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/peixoto_jose_luis">
 										PEIXOTO Jose Luis</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PELOSO_Flavio">
 										PELOSO Flavio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PENNAC_Daniel">
 										PENNAC Daniel</a></div></li><li><div align="left"><a href="/elenco_libri_autore/percivale_tommaso">
@@ -941,8 +1058,10 @@
 										PERGAUD Louis</a></div></li><li><div align="left"><a href="/elenco_libri_autore/perissinotto_alessandro">
 										PERISSINOTTO Alessandro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PERNOUD_Regine">
 										PERNOUD Regine</a></div></li><li><div align="left"><a href="/elenco_libri_autore/perrault_charles">
-										PERRAULT CHARLES</a></div></li><li><div align="left"><a href="/elenco_libri_autore/perry_anne">
-										PERRY Anne</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PETACCO_Arrigo">
+										PERRAULT CHARLES</a></div></li><li><div align="left"><a href="/elenco_libri_autore/perroni_sergio_claudio">
+										PERRONI Sergio Claudio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/perry_anne">
+										PERRY Anne</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pessoa_fernando">
+										PESSOA Fernando</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PETACCO_Arrigo">
 										PETACCO Arrigo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/peters_julie_anne">
 										PETERS Julie Anne</a></div></li><li><div align="left"><a href="/elenco_libri_autore/peterson_john">
 										PETERSON JOHN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/petrosino_angelo">
@@ -952,7 +1071,8 @@
 										PICASSO Marina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/piccolo_francesco">
 										PICCOLO Francesco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/picouly_daniel">
 										PICOULY Daniel</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pilkey_dav">
-										PILKEY DAV</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PIOVENE_Guido">
+										PILKEY DAV</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pinelli_antonio">
+										PINELLI Antonio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PIOVENE_Guido">
 										PIOVENE Guido</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PIOVENE_Mimy">
 										PIOVENE Mimy</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pirandello_luigi">
 										PIRANDELLO Luigi</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pistacchio_mario_toffanello_laura">
@@ -964,13 +1084,15 @@
 										POLETTI Syria</a></div></li><li><div align="left"><a href="/elenco_libri_autore/poltawska_wanda">
 										POLTAWSKA Wanda</a></div></li><li><div align="left"><a href="/elenco_libri_autore/poluzzi_patrizia">
 										POLUZZI PATRIZIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/POMA_Elena">
-										POMA Elena</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PONTIGGIA_Giuseppe">
+										POMA Elena</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pontificia_commissio_biblica">
+										PONTIFICIA COMMISSIO BIBLICA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PONTIGGIA_Giuseppe">
 										PONTIGGIA Giuseppe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pontrandolfo_michele_valente_andrea">
 										PONTRANDOLFO MICHELE_VALENTE ANDREA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/portaluppi_angiola_maria">
 										PORTALUPPI Angiola Maria</a></div></li><li><div align="left"><a href="/elenco_libri_autore/powys_theodore_f">
 										POWYS THEODORE F</a></div></li><li><div align="left"><a href="/elenco_libri_autore/POZZA_Neri">
 										POZZA Neri</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pozzo_di_borgo_philippe">
-										POZZO DI BORGO Philippe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PRATOLINI_Vasco">
+										POZZO DI BORGO Philippe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/pratchett_terry">
+										PRATCHETT TERRY</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PRATOLINI_Vasco">
 										PRATOLINI Vasco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/praz_mario">
 										PRAZ Mario</a></div></li><li><div align="left"><a href="/elenco_libri_autore/presta_marco">
 										PRESTA Marco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/prisco_michele">
@@ -983,13 +1105,15 @@
 										PURICELLI Guerra Elisa</a></div></li><li><div align="left"><a href="/elenco_libri_autore/PUSKIN_Aleksandr_Sergeevic">
 										PUSKIN Aleksandr Sergeevic</a></div></li></ul></li><li id="q"><a name="q" class="title">Q</a><ul><li><div align="left"><a href="/elenco_libri_autore/qinn_spencer">
 										QINN SPENCER</a></div></li><li><div align="left"><a href="/elenco_libri_autore/quarenghi_giusi">
-										QUARENGHI GIUSI</a></div></li><li><div align="left"><a href="/elenco_libri_autore/queen_ellery">
+										QUARENGHI GIUSI</a></div></li><li><div align="left"><a href="/elenco_libri_autore/quarzo_guido">
+										QUARZO GUIDO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/queen_ellery">
 										QUEEN ELLERY</a></div></li><li><div align="left"><a href="/elenco_libri_autore/queneau_raymond">
 										QUENEAU Raymond</a></div></li><li><div align="left"><a href="/elenco_libri_autore/quenot_catherine">
 										QUENOT CATHERINE</a></div></li></ul></li><li id="r"><a name="r" class="title">R</a><ul><li><div align="left"><a href="/elenco_libri_autore/ragozzino_gino">
 										RAGOZZINO Gino</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RAMAT_Silvio">
 										RAMAT Silvio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RAMATI_Alexander">
-										RAMATI Alexander</a></div></li><li><div align="left"><a href="/elenco_libri_autore/raspe_burgher">
+										RAMATI Alexander</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ramondino_fabrizia">
+										RAMONDINO Fabrizia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/raspe_burgher">
 										RASPE BURGHER</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RASPE_Rudolf_Erich">
 										RASPE Rudolf Erich</a></div></li><li><div align="left"><a href="/elenco_libri_autore/rattaro_sara">
 										RATTARO Sara</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RATTAZZI_Delfina">
@@ -998,21 +1122,26 @@
 										RAVAGLI Vitaliano - WU Ming</a></div></li><li><div align="left"><a href="/elenco_libri_autore/rawlings_marjorie_k">
 										RAWLINGS MARJORIE K</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RE_Valentina">
 										RE Valentina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/REDFIELD_James">
-										REDFIELD James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/REICHL_Ruth">
+										REDFIELD James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/redondo_dolores">
+										REDONDO Dolores</a></div></li><li><div align="left"><a href="/elenco_libri_autore/REICHL_Ruth">
 										REICHL Ruth</a></div></li><li><div align="left"><a href="/elenco_libri_autore/REMARQUE_Erich_Maria">
 										REMARQUE Erich Maria</a></div></li><li><div align="left"><a href="/elenco_libri_autore/repossi_cesare">
 										REPOSSI Cesare</a></div></li><li><div align="left"><a href="/elenco_libri_autore/REPOSSI_Paolo">
 										REPOSSI Paolo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/REVEL_Jean_Fran_ois">
 										REVEL Jean Francois</a></div></li><li><div align="left"><a href="/elenco_libri_autore/reza_yasmina">
-										REZA Yasmina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RICE_Ben">
+										REZA Yasmina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/riccarelli_ugo">
+										RICCARELLI Ugo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RICE_Ben">
 										RICE Ben</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ricerca">
 										RICERCA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/richaud_frederic">
 										RICHAUD Frederic</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RICHMOND_Emma">
-										RICHMOND Emma</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RIGONI_STERN_Mario">
-										RIGONI STERN Mario</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RIMBAUD_Arthur">
+										RICHMOND Emma</a></div></li><li><div align="left"><a href="/elenco_libri_autore/riesco_nerea">
+										RIESCO NEREA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RIGONI_STERN_Mario">
+										RIGONI STERN Mario</a></div></li><li><div align="left"><a href="/elenco_libri_autore/riley_lucinda">
+										RILEY Lucinda</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RIMBAUD_Arthur">
 										RIMBAUD Arthur</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RIOTTA_Gianni">
 										RIOTTA Gianni</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RIVERA_LETELIER_Hern_n">
-										RIVERA LETELIER Hernan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ROBB_Candace">
+										RIVERA LETELIER Hernan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/rizzo_sebastiano">
+										RIZZO SEBASTIANO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ROBB_Candace">
 										ROBB Candace</a></div></li><li><div align="left"><a href="/elenco_libri_autore/robbins_harolds">
 										ROBBINS HAROLDS</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ROBERTS_Alison">
 										ROBERTS Alison</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ROCHE_Henri_Pierre">
@@ -1032,9 +1161,10 @@
 										ROSSI Marisa</a></div></li><li><div align="left"><a href="/elenco_libri_autore/rotary">
 										ROTARY</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ROTH_Joseph">
 										ROTH Joseph</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ROTH_Philip">
-										ROTH Philip</a></div></li><li><div align="left"><a href="/elenco_libri_autore/roveda_antonio">
-										ROVEDA ANTONIO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/rovelli_carlo">
-										ROVELLI Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ROWLING_J_K">
+										ROTH Philip</a></div></li><li><div align="left"><a href="/elenco_libri_autore/roveda_anselmo">
+										ROVEDA ANSELMO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/rovelli_carlo">
+										ROVELLI Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/roveredo_pino">
+										ROVEREDO Pino</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ROWLING_J_K">
 										ROWLING J. K.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/roy_arundhati">
 										ROY Arundhati</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ruesch_hans">
 										RUESCH Hans</a></div></li><li><div align="left"><a href="/elenco_libri_autore/RUGGIU_TRAVERSI_Francesca">
@@ -1073,7 +1203,8 @@
 										SCARF Maggie</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SCARPA_Tiziano">
 										SCARPA Tiziano</a></div></li><li><div align="left"><a href="/elenco_libri_autore/scerbanenco_giorgio">
 										SCERBANENCO Giorgio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/schelotto_gianna">
-										SCHELOTTO Gianna</a></div></li><li><div align="left"><a href="/elenco_libri_autore/schine_cathleen">
+										SCHELOTTO Gianna</a></div></li><li><div align="left"><a href="/elenco_libri_autore/schillaci_filippo">
+										SCHILLACI Filippo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/schine_cathleen">
 										SCHINE Cathleen</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SCHITZLER_Arthur">
 										SCHITZLER Arthur</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SCHLINK_Bernhard">
 										SCHLINK Bernhard</a></div></li><li><div align="left"><a href="/elenco_libri_autore/schmitt_eric_emmanuel">
@@ -1085,13 +1216,15 @@
 										SCIASCIA Leonardo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/sconosciuto">
 										SCONOSCIUTO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SCORZA_Manuel">
 										SCORZA Manuel</a></div></li><li><div align="left"><a href="/elenco_libri_autore/scurati_antonio">
-										SCURATI Antonio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SEGAL_Erich">
+										SCURATI Antonio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/secchi_angelo">
+										SECCHI Angelo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SEGAL_Erich">
 										SEGAL Erich</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SEIERSTAD_Asne">
 										SEIERSTAD Asne</a></div></li><li><div align="left"><a href="/elenco_libri_autore/seminara_elvira">
 										SEMINARA Elvira</a></div></li><li><div align="left"><a href="/elenco_libri_autore/sendker_jan_philipp">
 										SENDKER Jan-Philipp</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SENESI_Vauro">
 										SENESI Vauro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SENZAKI_N_REPS_P">
-										SENZAKI N.-REPS P.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SEPULVEDA_Luis">
+										SENZAKI N.-REPS P.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/sepetys_ruta">
+										SEPETYS Ruta</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SEPULVEDA_Luis">
 										SEPULVEDA Luis</a></div></li><li><div align="left"><a href="/elenco_libri_autore/serra_elvira">
 										SERRA Elvira</a></div></li><li><div align="left"><a href="/elenco_libri_autore/serra_michele">
 										SERRA MICHELE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SERRANO_Marcela">
@@ -1101,7 +1234,7 @@
 										SEVERGNINI Beppe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SEVERI_Paolo">
 										SEVERI Paolo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/sgarbi_giuseppe">
 										SGARBI Giuseppe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/sgardoli_guido">
-										SGARDOLI Guido</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SGORLON_Carlo">
+										SGARDOLI GUIDO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SGORLON_Carlo">
 										SGORLON Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SHAFAK_Elif">
 										SHAFAK Elif</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SHAFFER_Mary_Ann">
 										SHAFFER Mary Ann</a></div></li><li><div align="left"><a href="/elenco_libri_autore/shah_bina">
@@ -1123,9 +1256,12 @@
 										SINESIO DI CIRENE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SINGER_Isaac_B">
 										SINGER Isaac B.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/singer_israel">
 										SINGER ISRAEL</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SKARMETA_Antonio">
-										SKARMETA Antonio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/smith_rob_tom">
+										SKARMETA Antonio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/slater_kim">
+										SLATER KIM</a></div></li><li><div align="left"><a href="/elenco_libri_autore/smith_rob_tom">
 										SMITH Rob Tom</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SMITH_Wilbur">
-										SMITH Wilbur</a></div></li><li><div align="left"><a href="/elenco_libri_autore/snyder_zilpha_keatley">
+										SMITH Wilbur</a></div></li><li><div align="left"><a href="/elenco_libri_autore/smith_wilbur_churchill_david">
+										SMITH Wilbur - CHURCHILL David</a></div></li><li><div align="left"><a href="/elenco_libri_autore/smith_wilbur_harper_tom">
+										SMITH Wilbur - HARPER Tom</a></div></li><li><div align="left"><a href="/elenco_libri_autore/snyder_zilpha_keatley">
 										SNYDER ZILPHA KEATLEY</a></div></li><li><div align="left"><a href="/elenco_libri_autore/sobel_dava">
 										SOBEL Dava</a></div></li><li><div align="left"><a href="/elenco_libri_autore/socci_antonio">
 										SOCCI Antonio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/sofocle">
@@ -1141,10 +1277,14 @@
 										SPARK Muriel</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SPARKS_N_SPARKS_M">
 										SPARKS N. - SPARKS M.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SPARKS_Nicholas">
 										SPARKS Nicholas</a></div></li><li><div align="left"><a href="/elenco_libri_autore/spencer_johnson">
-										SPENCER Johnson</a></div></li><li><div align="left"><a href="/elenco_libri_autore/spina_l_fioravanti_s">
+										SPENCER Johnson</a></div></li><li><div align="left"><a href="/elenco_libri_autore/spina_alessandro">
+										SPINA Alessandro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/spina_l_fioravanti_s">
 										SPINA L. FIORAVANTI S.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/spinelli_jerry">
 										SPINELLI Jerry</a></div></li><li><div align="left"><a href="/elenco_libri_autore/springer_elisa">
-										SPRINGER Elisa</a></div></li><li><div align="left"><a href="/elenco_libri_autore/starnone_domenico">
+										SPRINGER Elisa</a></div></li><li><div align="left"><a href="/elenco_libri_autore/spyri_johanna">
+										SPYRI JOHANNA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/standiford_natalie">
+										STANDIFORD NATALIE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/stark_ulf">
+										STARK ULF</a></div></li><li><div align="left"><a href="/elenco_libri_autore/starnone_domenico">
 										STARNONE Domenico</a></div></li><li><div align="left"><a href="/elenco_libri_autore/STEEL_Danielle">
 										STEEL Danielle</a></div></li><li><div align="left"><a href="/elenco_libri_autore/STEELE_Jessica">
 										STEELE Jessica</a></div></li><li><div align="left"><a href="/elenco_libri_autore/stefansson_jon_kalman">
@@ -1154,14 +1294,16 @@
 										STELLA Gian Antonio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/STENDHAL">
 										STENDHAL</a></div></li><li><div align="left"><a href="/elenco_libri_autore/stephens_james">
 										STEPHENS James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/STEPHENS_Michael">
-										STEPHENS Michael</a></div></li><li><div align="left"><a href="/elenco_libri_autore/STEVENSON_R_L">
+										STEPHENS Michael</a></div></li><li><div align="left"><a href="/elenco_libri_autore/stevens_robin">
+										STEVENS ROBIN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/STEVENSON_R_L">
 										STEVENSON R.L.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/STILTON_Geronimo">
 										STILTON Geronimo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/stilton_tea">
 										STILTON Tea</a></div></li><li><div align="left"><a href="/elenco_libri_autore/stockett_kathryn">
 										STOCKETT Kathryn</a></div></li><li><div align="left"><a href="/elenco_libri_autore/stout_rex">
 										STOUT Rex</a></div></li><li><div align="left"><a href="/elenco_libri_autore/strindberg_august">
 										STRINDBERG August</a></div></li><li><div align="left"><a href="/elenco_libri_autore/STROUD_Jonathan">
-										STROUD Jonathan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/STUART_Julia">
+										STROUD Jonathan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/strugatzki_arkadi_e_boris">
+										STRUGATZKI ARKADI E BORIS</a></div></li><li><div align="left"><a href="/elenco_libri_autore/STUART_Julia">
 										STUART Julia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/stuart_julia">
 										STUART Julia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/STURIALE_Alice">
 										STURIALE Alice</a></div></li><li><div align="left"><a href="/elenco_libri_autore/SUAD">
@@ -1176,18 +1318,21 @@
 										TABITHA Suzuma</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TABUCCHI_Antonio">
 										TABUCCHI Antonio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TAMARO_Susanna">
 										TAMARO Susanna</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tarantino_ignazio">
-										TARANTINO Ignazio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tartt_donna">
+										TARANTINO Ignazio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tarchetti_igino_ugo">
+										TARCHETTI Igino Ugo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tartt_donna">
 										TARTT Donna</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tasinato_anna">
 										TASINATO Anna</a></div></li><li><div align="left"><a href="/elenco_libri_autore/taylor_bradford_barbara">
 										TAYLOR BRADFORD Barbara</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TEFKROS_Michailidis">
 										TEFKROS Michailidis</a></div></li><li><div align="left"><a href="/elenco_libri_autore/teller_janne">
-										TELLER Janne</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TERZANI_Tiziano">
+										TELLER Janne</a></div></li><li><div align="left"><a href="/elenco_libri_autore/terzani_folco">
+										TERZANI Folco</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TERZANI_Tiziano">
 										TERZANI Tiziano</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tesio_silvia">
 										TESIO Silvia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/testori_giovanni">
 										TESTORI Giovanni</a></div></li><li><div align="left"><a href="/elenco_libri_autore/thiaroye">
 										THIAROYE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/thomas">
 										THOMAS</a></div></li><li><div align="left"><a href="/elenco_libri_autore/THOMPSON_Jim">
-										THOMPSON Jim</a></div></li><li><div align="left"><a href="/elenco_libri_autore/THOR_Annika">
+										THOMPSON Jim</a></div></li><li><div align="left"><a href="/elenco_libri_autore/thon_ingunn">
+										THON INGUNN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/THOR_Annika">
 										THOR Annika</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ticli_dino">
 										TICLI DINO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tobagi_benedetta">
 										TOBAGI Benedetta</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TOBINO_Mario">
@@ -1198,7 +1343,8 @@
 										TOLSTOJ Lev N.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TOMASI_di_LAMPEDUSA_Giuseppe">
 										TOMASI di LAMPEDUSA Giuseppe</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TOMIZZA_Fulvio">
 										TOMIZZA Fulvio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tomlinson_jill">
-										TOMLINSON JILL</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TORTI_Giancarlo">
+										TOMLINSON JILL</a></div></li><li><div align="left"><a href="/elenco_libri_autore/torregrossa_giuseppina">
+										TORREGROSSA Giuseppina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TORTI_Giancarlo">
 										TORTI Giancarlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/torti_lucia">
 										TORTI Lucia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tournier_michel">
 										TOURNIER Michel</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TOVE_Jansson">
@@ -1207,8 +1353,10 @@
 										TRAVERS Pamela</a></div></li><li><div align="left"><a href="/elenco_libri_autore/trevor_william">
 										TREVOR William</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TROISI_Licia">
 										TROISI Licia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/trollope_anthony">
-										TROLLOPE Anthony</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tryon_thomas">
-										TRYON Thomas</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tumiati_lucia">
+										TROLLOPE Anthony</a></div></li><li><div align="left"><a href="/elenco_libri_autore/truzzi_marco">
+										TRUZZI MARCO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tryon_thomas">
+										TRYON Thomas</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tucidide">
+										TUCIDIDE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tumiati_lucia">
 										TUMIATI LUCIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/tunner_haley">
 										TUNNER Haley</a></div></li><li><div align="left"><a href="/elenco_libri_autore/turgenev_ivan">
 										TURGENEV Ivan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/TURRA_Anna">
@@ -1221,20 +1369,26 @@
 										UMANSKY Kaye</a></div></li><li><div align="left"><a href="/elenco_libri_autore/UMRIGAR_Thrity">
 										UMRIGAR Thrity</a></div></li><li><div align="left"><a href="/elenco_libri_autore/updike_john">
 										UPDIKE John</a></div></li><li><div align="left"><a href="/elenco_libri_autore/URE_John">
-										URE John</a></div></li></ul></li><li id="v"><a name="v" class="title">V</a><ul><li><div align="left"><a href="/elenco_libri_autore/VALMORI_Gianni">
-										VALMORI Gianni</a></div></li><li><div align="left"><a href="/elenco_libri_autore/van_dine_s_s">
+										URE John</a></div></li></ul></li><li id="v"><a name="v" class="title">V</a><ul><li><div align="left"><a href="/elenco_libri_autore/vaccari_giovanni">
+										VACCARI Giovanni</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VALMORI_Gianni">
+										VALMORI Gianni</a></div></li><li><div align="left"><a href="/elenco_libri_autore/vamba">
+										VAMBA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/van_dine_s_s">
 										VAN DINE  S. S</a></div></li><li><div align="left"><a href="/elenco_libri_autore/van_slyke_helen">
 										VAN SLYKE HELEN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/vanderpool_clare">
-										VANDERPOOL Clare</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VARGAS_Fred">
+										VANDERPOOL Clare</a></div></li><li><div align="left"><a href="/elenco_libri_autore/vanzina_enrico">
+										VANZINA Enrico</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VARGAS_Fred">
 										VARGAS Fred</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VARGAS_LLOSA_Mario">
 										VARGAS LLOSA Mario</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VASSALLI_Sebastiano">
 										VASSALLI Sebastiano</a></div></li><li><div align="left"><a href="/elenco_libri_autore/vassanji_m_g">
-										VASSANJI M. G</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VELADIANO_MariaPia">
+										VASSANJI M. G</a></div></li><li><div align="left"><a href="/elenco_libri_autore/vecchini_silvia">
+										VECCHINI SILVIA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VELADIANO_MariaPia">
 										VELADIANO MariaPia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VENERONI_Lino">
 										VENERONI Lino</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VENEZIA_Mariolina">
 										VENEZIA Mariolina</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VENTURI_Maria">
 										VENTURI Maria</a></div></li><li><div align="left"><a href="/elenco_libri_autore/venturini_simone">
-										VENTURINI Simone</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VERGA_Giovanni">
+										VENTURINI Simone</a></div></li><li><div align="left"><a href="/elenco_libri_autore/vercos">
+										VERCOS</a></div></li><li><div align="left"><a href="/elenco_libri_autore/verdone_carlo">
+										VERDONE Carlo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VERGA_Giovanni">
 										VERGA Giovanni</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VERNE_Jules">
 										VERNE Jules</a></div></li><li><div align="left"><a href="/elenco_libri_autore/veronesi_sandro">
 										VERONESI Sandro</a></div></li><li><div align="left"><a href="/elenco_libri_autore/veronesi_umberto">
@@ -1247,38 +1401,50 @@
 										VINCI Simona</a></div></li><li><div align="left"><a href="/elenco_libri_autore/viroli_maurizio">
 										VIROLI Maurizio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VITALI_Andrea">
 										VITALI Andrea</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VITTORINI_Elio">
-										VITTORINI Elio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VIZIINOS_Gherghios">
+										VITTORINI Elio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/vivanti_augusto">
+										VIVANTI Augusto</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VIZIINOS_Gherghios">
 										VIZIINOS Gherghios</a></div></li><li><div align="left"><a href="/elenco_libri_autore/voilquin_suzanne">
 										VOILQUIN Suzanne</a></div></li><li><div align="left"><a href="/elenco_libri_autore/volpi_domenico">
-										VOLPI Domenico</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VOLTAIRE">
+										VOLPI Domenico</a></div></li><li><div align="left"><a href="/elenco_libri_autore/volponi_paolo">
+										VOLPONI Paolo</a></div></li><li><div align="left"><a href="/elenco_libri_autore/VOLTAIRE">
 										VOLTAIRE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/von_feuerbach_anselm">
-										VON FEUERBACH Anselm</a></div></li></ul></li><li id="w"><a name="w" class="title">W</a><ul><li><div align="left"><a href="/elenco_libri_autore/wallace_edgar">
+										VON FEUERBACH Anselm</a></div></li><li><div align="left"><a href="/elenco_libri_autore/vuillard_eric">
+										VUILLARD Eric</a></div></li></ul></li><li id="w"><a name="w" class="title">W</a><ul><li><div align="left"><a href="/elenco_libri_autore/wallace_edgar">
 										WALLACE Edgar</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WALLACE_Karen">
 										WALLACE Karen</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WALLER_Robert_James">
-										WALLER Robert James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WATERHOUSE_Debra">
+										WALLER Robert James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/walsh_rodolfo">
+										WALSH RODOLFO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WATERHOUSE_Debra">
 										WATERHOUSE Debra</a></div></li><li><div align="left"><a href="/elenco_libri_autore/watson_winifred">
 										WATSON Winifred</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WAUGH_Evelin">
 										WAUGH Evelin</a></div></li><li><div align="left"><a href="/elenco_libri_autore/weil_simone">
 										WEIL Simone</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WEIR_Rosemary">
 										WEIR Rosemary</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WEISS_Brian">
-										WEISS Brian</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wells_herbert_george">
+										WEISS Brian</a></div></li><li><div align="left"><a href="/elenco_libri_autore/welch_james">
+										WELCH James</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wells_herbert_george">
 										WELLS HERBERT GEORGE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wendt_stephen">
 										WENDT Stephen</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wenxuan_cao">
-										WENXUAN CAO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/westall_robert">
+										WENXUAN CAO</a></div></li><li><div align="left"><a href="/elenco_libri_autore/werfel_franz">
+										WERFEL Franz</a></div></li><li><div align="left"><a href="/elenco_libri_autore/west_morris">
+										WEST Morris</a></div></li><li><div align="left"><a href="/elenco_libri_autore/westall_robert">
 										WESTALL Robert</a></div></li><li><div align="left"><a href="/elenco_libri_autore/westall_robert">
 										WESTALL ROBERT</a></div></li><li><div align="left"><a href="/elenco_libri_autore/westerfeld_scott">
-										WESTERFELD SCOTT</a></div></li><li><div align="left"><a href="/elenco_libri_autore/white_e_b">
-										WHITE E.B</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wiechert_ernst">
-										WIECHERT Ernst</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WIESE_L_Elie">
+										WESTERFELD SCOTT</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wharton_edith">
+										WHARTON Edith</a></div></li><li><div align="left"><a href="/elenco_libri_autore/white_e_b">
+										WHITE E.B</a></div></li><li><div align="left"><a href="/elenco_libri_autore/whybrow_ian">
+										WHYBROW IAN</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wiechert_ernst">
+										WIECHERT Ernst</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wieringa_tommy">
+										WIERINGA Tommy</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WIESE_L_Elie">
 										WIESE L. Elie</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wiesenthal_simon">
 										WIESENTHAL SIMON</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WIKHAM_Madeleine">
 										WIKHAM Madeleine</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WILBER_Ken">
 										WILBER Ken</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WILDE_Oscar">
 										WILDE Oscar</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wilde_stuart">
 										WILDE Stuart</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wildner_martina">
-										WILDNER MARTINA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WILLIAMS_Tennessee">
+										WILDNER MARTINA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/williams_naomi_j">
+										WILLIAMS Naomi J</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WILLIAMS_Tennessee">
 										WILLIAMS Tennessee</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WILSON_Jacqueline">
-										WILSON Jacqueline</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WINKERSON_David">
+										WILSON Jacqueline</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wilson_susan">
+										WILSON Susan</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WINKERSON_David">
 										WINKERSON David</a></div></li><li><div align="left"><a href="/elenco_libri_autore/winkler_henry_oliver_lin">
 										WINKLER Henry - OLIVER Lin</a></div></li><li><div align="left"><a href="/elenco_libri_autore/winowska_maria">
 										WINOWSKA Maria</a></div></li><li><div align="left"><a href="/elenco_libri_autore/WINTERSON_Jeanette">
@@ -1290,8 +1456,10 @@
 										WOOLF Virginia</a></div></li><li><div align="left"><a href="/elenco_libri_autore/wu_ming">
 										WU Ming</a></div></li></ul></li><li id="x"><a name="x" class="title">X</a><ul></ul></li><li id="y"><a name="y" class="title">Y</a><ul><li><div align="left"><a href="/elenco_libri_autore/YEHOSHUA_Abraham_B">
 										YEHOSHUA Abraham B.</a></div></li><li><div align="left"><a href="/elenco_libri_autore/YOSHIMOTO_Banana">
-										YOSHIMOTO Banana</a></div></li><li><div align="left"><a href="/elenco_libri_autore/yourcenar_marguerite">
-										YOURCENAR MARGUERITE</a></div></li></ul></li><li id="z"><a name="z" class="title">Z</a><ul><li><div align="left"><a href="/elenco_libri_autore/ZAF_N_Ruiz_Carlos">
+										YOSHIMOTO Banana</a></div></li><li><div align="left"><a href="/elenco_libri_autore/young_brigit">
+										YOUNG BRIGIT</a></div></li><li><div align="left"><a href="/elenco_libri_autore/yourcenar_marguerite">
+										YOURCENAR MARGUERITE</a></div></li><li><div align="left"><a href="/elenco_libri_autore/yukio_mishima">
+										YUKIO Mishima</a></div></li></ul></li><li id="z"><a name="z" class="title">Z</a><ul><li><div align="left"><a href="/elenco_libri_autore/ZAF_N_Ruiz_Carlos">
 										ZAFON Ruiz Carlos</a></div></li><li><div align="left"><a href="/elenco_libri_autore/zandel_diego">
 										ZANDEL Diego</a></div></li><li><div align="left"><a href="/elenco_libri_autore/zani_lino">
 										ZANI Lino</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ZANNONER_Paola">
@@ -1300,8 +1468,10 @@
 										ZECCHI Stefano</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ziarati_hamid">
 										ZIARATI Hamid</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ziliotto_donatella">
 										ZILIOTTO DONATELLA</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ZIMLER_Richard">
-										ZIMLER Richard</a></div></li><li><div align="left"><a href="/elenco_libri_autore/zivkovic_zoran">
+										ZIMLER Richard</a></div></li><li><div align="left"><a href="/elenco_libri_autore/zimmer_bradley_marion">
+										ZIMMER BRADLEY Marion</a></div></li><li><div align="left"><a href="/elenco_libri_autore/zivkovic_zoran">
 										ZIVKOVIC Zoran</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ZOCCHI_Chiara">
 										ZOCCHI Chiara</a></div></li><li><div align="left"><a href="/elenco_libri_autore/zorzi_alvise">
 										ZORZI Alvise</a></div></li><li><div align="left"><a href="/elenco_libri_autore/zucchi_maurizio">
 										ZUCCHI Maurizio</a></div></li><li><div align="left"><a href="/elenco_libri_autore/ZWEIG_Stefan">
+										ZWEIG Stefan</a></div></li></ul></li>	

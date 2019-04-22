@@ -10,7 +10,7 @@ headers = {
     'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
 }
 
-cookies = dict(PHPSESSID="nk0frnjcjcl4e9g7t7ksnfjkl3")
+cookies = dict(PHPSESSID="e3v0vq2e97u0oiukfvp21jqg83")
 
 print ('Start')
 
@@ -18,7 +18,7 @@ print ('Start')
 
 sourceMainPage = ""
 with open('book_test.txt', 'r') as myfile:
-		sourceMainPage = myfile.read().replace('\n', '')
+	sourceMainPage = myfile.read().replace('\n', '')
 
 rows = str(sourceMainPage).split("<li>")
 
@@ -26,10 +26,10 @@ rows = str(sourceMainPage).split("<li>")
 regContent = re.compile(".*?<a href=\"(/elenco_libri_autore/(.*?))\">")
 
 audiobooks = []
-listUrl = []
 
+#for each author
 for i in range(len(rows)):
-	print ("ROW: " + rows[i] + "\n");
+	print ("INDEX: " + str(i) + " - ROW: " + rows[i] + "\n");
 	
 	#<a href=\"https://www.liberliber.it/online/autori/autori-j/jerome-k-jerome/tre-uomini-in-una-barca-audiolibro/\">Tre uomini in una barca [audiolibro]</a></em>,  di <a href=\"https://www.liberliber.it/online/autori/autori-j/jerome-k-jerome/\">Jerome K. Jerome</a><br><span class=\"ll_libro_sottotitolo\">(per tacer del cane)</span></li>
 	if (regContent.match(rows[i])):
@@ -37,67 +37,61 @@ for i in range(len(rows)):
 		print("--- Link --- "+link+" ---")
 		author = str(regContent.match(rows[i]).group(2))
 		print("--- Author ---"+author+"---")
-		listUrl.append(link)
-		
-		book = {}
-		bookContents = []
-		
+				
 		print(link)
 
 		#wp = urllib.request.urlopen(link)
-		author_str = str(requests.get(link, headers = headers, cookies = cookies).text)
+		author_str = u''.join(requests.get(link, headers = headers, cookies = cookies).text).encode('utf-8').strip()
 		#author_str = str(wp.read())
 
-		#print (author_str)
+		singleBook = str(author_str).split("<li style='background-color:#1165ad;")
 		
-		booksHtml = str(author_str).split("<ul>")
+		#for each book
+		for j in range(len(singleBook)):
+			print ("singleBook: " + singleBook[j] + "\n");
+			
+			book = {}
+			bookContents = []
 
-		for i in range(len(booksHtml)):
-			print ("bookHtml: " + booksHtml[i] + "\n");
+			#<span class="toggle" >BARNUM_DUE_ALTRE_CRONACHE_DAL_GRANDE_SHOW</span>
+			titleReg = re.compile(".*<span class=\"toggle\" >(.*?)</span>")
 
-			singleBook = str(booksHtml[i]).split("<li style='background-color:#1165ad;")
+			title = ""
+			if(titleReg.match(singleBook[j])):
+				title = titleReg.match(singleBook[j]).group(1)
+			
+			#<a href="/download_file.php?file=LIBRI/LETTERA B/BARICCO ALESSANDRO/BARNUM_CORNACHE_DAL_GRANDE_SHOW/01_PARTE.mp3" style='color:#ffffff;'
+			chaptLinkReg = re.compile(".*<a href=\"(/download_file.php\?file=LIBRI/.*/(.*?)\.mp3)\" style")
 
-			for i in range(len(singleBook)):
-				#print ("singleBook: " + singleBook[i] + "\n");
+			#/download_file.php?file=
 
-				#<span class="toggle" >BARNUM_DUE_ALTRE_CRONACHE_DAL_GRANDE_SHOW</span>
-				titleReg = re.compile(".*<span class=\"toggle\" >(.*?)</span>")
-
-				title = ""
-				if(titleReg.match(singleBook[i])):
-					title = titleReg.match(singleBook[i]).group(1)
-				
+			chapterId = 0
+			bookRows = singleBook[j].split("\n")
+			for k in range(len(bookRows)):
+				print ("BOOK ROW: " + bookRows[k] + "\n");
 				#<a href="/download_file.php?file=LIBRI/LETTERA B/BARICCO ALESSANDRO/BARNUM_CORNACHE_DAL_GRANDE_SHOW/01_PARTE.mp3" style='color:#ffffff;'
-				chaptLinkReg = re.compile(".*<a href=\"(/download_file.php\?file=LIBRI/.*/(.*?)\.mp3)\" style")
+				if (chaptLinkReg.match(bookRows[k])):
+					url = chaptLinkReg.match(bookRows[k]).group(1)
+					chapTitle = chaptLinkReg.match(bookRows[k]).group(2)
+					print("--- Url ---" + url + "---")
+					print("--- Title ---" + chapTitle + "---")
 
-				#/download_file.php?file=
+					chapter = {}
+					chapter['id'] = chapterId
+					chapter['title'] = chapTitle.replace('_', ' ').title()
+					chapter['desc'] = ''
+					chapter['url'] = 'http://www.audioteca-adov.it' + url
+					chapter['format'] = 'mp3'
 
-				chapterId = 0
-				bookRows = singleBook[i].split("\n")
-				for i in range(len(bookRows)):
-					print ("BOOK ROW: " + bookRows[i] + "\n");
-					#<a href="/download_file.php?file=LIBRI/LETTERA B/BARICCO ALESSANDRO/BARNUM_CORNACHE_DAL_GRANDE_SHOW/01_PARTE.mp3" style='color:#ffffff;'
-					if (chaptLinkReg.match(bookRows[i])):
-						url = chaptLinkReg.match(bookRows[i]).group(1)
-						chapTitle = chaptLinkReg.match(bookRows[i]).group(2)
-						print("--- Url ---" + url + "---")
-						print("--- Title ---" + chapTitle + "---")
+					chapterId = chapterId + 1
 
-						chapter = {}
-						chapter['id'] = chapterId
-						chapter['title'] = chapTitle.replace('_', ' ').title()
-						chapter['desc'] = ''
-						chapter['url'] = 'http://www.audioteca-adov.it' + url
-						chapter['format'] = 'mp3'
+					print ('Chapter: ' + str(chapter))
 
-						chapterId = chapterId + 1
-
-						print ('Chapter: ' + str(chapter))
-
-						bookContents.append(chapter)
-		
+					bookContents.append(chapter)
+	
+			if(len(bookContents) > 0):
 				book['contents'] = bookContents
-		
+	
 				book['metadata'] = {		
 					'image': '',
 					'other_images' : {
@@ -109,12 +103,13 @@ for i in range(len(rows)):
 						'site' : 'http://www.audioteca-adov.it',
 						'image' : ''
 					},
+					'hidden': True,
 					'title': title.replace('_', ' ').title(),
 					'author': author.replace('_', ' ').title()
 				}
-		
+
 				print ('Book: ' + str(book))
-		
+
 				audiobooks.append(book)
 
 				data = {}
@@ -126,7 +121,8 @@ for i in range(len(rows)):
 				out_file.write(json.dumps(data, sort_keys=True, indent=4))
 				out_file.close()
 
-		time.sleep(10)
+		print ("INDEX: " + str(i) + "/" + str(len(rows)));
+		time.sleep(3)
 
 #json_data = json.dumps(data)
 
